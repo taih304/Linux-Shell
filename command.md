@@ -14,7 +14,7 @@ ref: s1ep1
 
 * ls -l 
 
-list in long format: show more detail of the file
+list in long format: show more detail of the file/ list detail information
 
 you can see many information like rw-rw-r-- : stand for read-write/read-write....
 
@@ -26,6 +26,18 @@ start with -: mean it is a file
 
 if start with d: it is a directory
 
+* ls -a
+list all file and directory (including hidden files)
+
+in the result, a file start with "." (dot) mean it is a hidden files
+
+**NOTE**
+
+you can combine:
+
+ls -l -a
+
+ls -la
 
 **change permission**
 
