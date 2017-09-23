@@ -39,6 +39,8 @@ ls -l -a
 
 ls -la
 
+ref: s1ep3
+
 **change permission**
 
 4: for read
@@ -55,3 +57,55 @@ chmod: change mod
 chmod <name of file/folder> mode
 
 ref:s1ep2
+
+
+**File permission**
+
+the typical file permission is; trwxrwxrwx
+
+with t: type: - :a file
+d: directory
+l: symbolic link
+
+the next 3 group is for the owner,the owners group, and all users.
+
+if a "-" (dash) mean a permission (r,w,x) is denied
+
+e.g:
+
+-rw-rw-r-- :it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
+=> no user can execute the file
+
+ref: s1ep4
+
+**mkdir**
+
+make a directory (a folder)
+
+mkdir <name of folder>
+
+**cp**
+
+copy
+
+for example, we have a folder terrorist
+
+cp test terrorist
+
+=> we copy the file test to folder terrorist
+
+ref s2ep1
+
+**rm**
+
+rm stands for remove: used to remove a file, not directory
+
+rm <name of file>
+
+ref s2ep1
+
+**mv**
+
+move a file from a directory to other
+
+ref s2ep1
