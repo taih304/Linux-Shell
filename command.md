@@ -149,3 +149,7 @@ to know all of wc, type "man wc"
 touch <name of document. extednd>
 
 e.g: touch index.html
+
+**grep**
+
+grep 'character' <file to lookup': look for character/strings in a specific file
