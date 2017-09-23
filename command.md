@@ -84,6 +84,18 @@ make a directory (a folder)
 
 mkdir <name of folder>
 
+**rmdir**
+
+remove directory
+
+you can only use this command to remove an empty directory
+
+**rm -r**
+
+rm -r is used to remove a non-empty directory
+
+rm -rv (or rm -r -v) : remove a non-empty directory with detailed information like: remove <name of file>
+
 **cp**
 
 copy
@@ -102,6 +114,8 @@ rm stands for remove: used to remove a file, not directory
 
 rm <name of file>
 
+rm * : to remove everything on the directory
+
 ref s2ep1
 
 **mv**
@@ -109,3 +123,29 @@ ref s2ep1
 move a file from a directory to other
 
 ref s2ep1
+
+** wildcard**
+
+* : alias
+
+? : every "?" stand for one character
+
+s2 ep: usage of 
+
+**wc**
+
+word count. used to count words in a file
+
+wc -w <name of file>
+
+wc -w: print words count
+
+wc -l :print newline count
+
+to know all of wc, type "man wc"
+
+**create new document**
+
+touch <name of document. extednd>
+
+e.g: touch index.html
