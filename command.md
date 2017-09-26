@@ -153,3 +153,41 @@ e.g: touch index.html
 **grep**
 
 grep 'character' <file to lookup': look for character/strings in a specific file
+
+**pipe**
+
+| is used for pipe
+
+e.g: 
+
+echo "terrorist" | grep 't'
+result: terrorist
+
+ls | grep "t"
+
+result: (every folder has "t")
+
+Desktop
+Documents
+examples.desktop
+get-pip.py
+iot-starter-book
+microbit-book
+Pictures
+sketchbook
+Templates
+
+grep -i "<word>" <file to search> : ignore the uppcase in search
+
+**cat**
+
+cat [option] [file] : display content of a file
+
+cat <name of file1> <name of file2> ; display the content of 2 file
+
+cat > (name of file) : create a file
+
+e.g: cat >terminal1 : create file terminal1
+Then the terminal will wait for you to type the content of the file, after finishing, type Ctrl+D
+
+
