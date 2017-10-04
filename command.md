@@ -96,6 +96,8 @@ rm -r is used to remove a non-empty directory
 
 rm -rv (or rm -r -v) : remove a non-empty directory with detailed information like: remove <name of file>
 
+to remove sudo file: sudo rm -rv <name of file>
+
 **cp**
 
 copy
