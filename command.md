@@ -2,6 +2,7 @@ Linux Shell Command
 ===================
 
 **pwd**
+
 print working directory
 
 => print the current working directory
@@ -27,6 +28,7 @@ start with -: mean it is a file
 if start with d: it is a directory
 
 * ls -a
+
 list all file and directory (including hidden files)
 
 in the result, a file start with "." (dot) mean it is a hidden files
@@ -74,6 +76,7 @@ if a "-" (dash) mean a permission (r,w,x) is denied
 e.g:
 
 -rw-rw-r-- :it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
+
 => no user can execute the file
 
 ref: s1ep4
@@ -191,5 +194,7 @@ cat > (name of file) : create a file
 
 e.g: cat >terminal1 : create file terminal1
 Then the terminal will wait for you to type the content of the file, after finishing, type Ctrl+D
+
+**open file**: gnome-open <name of file>
 
 
