@@ -33,6 +33,12 @@ list all file and directory (including hidden files)
 
 in the result, a file start with "." (dot) mean it is a hidden files
 
+**list all devices**
+
+cd /dev/
+
+ls
+
 **NOTE**
 
 you can combine:
