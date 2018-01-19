@@ -4,6 +4,6 @@ Learn Linux Shell
 
 Store Linux Shell code
 
-change DNS
+**change DNS**
 
 sudo name /etc/resolv.conf
