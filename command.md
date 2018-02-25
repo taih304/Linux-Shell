@@ -47,7 +47,6 @@ you can combine:
 
 ```
 ls -l -a
-
 ls -la
 ```
 
@@ -181,8 +180,8 @@ result: terrorist
 
 ls | grep "t"
 
-result: (every folder has "t")
-
+**result: (every folder has "t")**
+```
 Desktop
 Documents
 examples.desktop
@@ -192,7 +191,7 @@ microbit-book
 Pictures
 sketchbook
 Templates
-
+```
 grep -i "<word>" <file to search> : ignore the uppcase in search
 
 **cat**
