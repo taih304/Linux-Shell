@@ -14,7 +14,7 @@ print out all the folder in current directory
 ref: s1ep1
 
 ```
-* ls -l 
+ls -l 
 ```
 
 list in long format: show more detail of the file/ list detail information
