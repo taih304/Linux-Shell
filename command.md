@@ -52,7 +52,9 @@ ref: s1ep3
 **change permission**
 
 4: for read
+
 2: for write
+
 1: execute
 
 mode = 4+2+1 = 7: file can be read, write, execute
