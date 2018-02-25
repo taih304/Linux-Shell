@@ -13,7 +13,9 @@ print out all the folder in current directory
 
 ref: s1ep1
 
+```
 * ls -l 
+```
 
 list in long format: show more detail of the file/ list detail information
 
@@ -43,9 +45,11 @@ ls
 
 you can combine:
 
+```
 ls -l -a
 
 ls -la
+```
 
 ref: s1ep3
 
