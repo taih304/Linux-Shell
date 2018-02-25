@@ -66,7 +66,6 @@ chmod <name of file/folder> mode
 
 ref:s1ep2
 
-
 **File permission**
 
 the typical file permission is; trwxrwxrwx
@@ -93,20 +92,6 @@ make a directory (a folder)
 
 mkdir <name of folder>
 
-**rmdir**
-
-remove directory
-
-you can only use this command to remove an empty directory
-
-**rm -r**
-
-rm -r is used to remove a non-empty directory
-
-rm -rv (or rm -r -v) : remove a non-empty directory with detailed information like: remove <name of file>
-
-to remove sudo file: sudo rm -rv <name of file>
-
 **cp**
 
 copy
@@ -129,13 +114,27 @@ rm * : to remove everything on the directory
 
 ref s2ep1
 
+**rmdir**
+
+remove directory
+
+you can only use this command to remove an empty directory
+
+**rm -r**
+
+rm -r is used to remove a non-empty directory
+
+rm -rv (or rm -r -v) : remove a non-empty directory with detailed information like: remove <name of file>
+
+to remove sudo file: sudo rm -rv <name of file>
+
 **mv**
 
 move a file from a directory to other
 
 ref s2ep1
 
-** wildcard**
+**wildcard**
 
 * : alias
 
@@ -202,5 +201,5 @@ e.g: cat >terminal1 : create file terminal1
 Then the terminal will wait for you to type the content of the file, after finishing, type Ctrl+D
 
 **open file**: gnome-open <name of file>
-
-
+  
+**sudo lshw**: list hardware
