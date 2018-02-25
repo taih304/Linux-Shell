@@ -203,6 +203,7 @@ cat <name of file1> <name of file2> ; display the content of 2 file
 cat > (name of file) : create a file
 
 e.g: cat >terminal1 : create file terminal1
+
 Then the terminal will wait for you to type the content of the file, after finishing, type Ctrl+D
 
 **open file**: gnome-open <name of file>
