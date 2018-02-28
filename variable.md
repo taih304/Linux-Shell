@@ -44,7 +44,7 @@ result: 9
 
 REMEMBER: there is no () => WRONG
 
-**Display problem **
+**Display problem**
 
 ```
 a=29
