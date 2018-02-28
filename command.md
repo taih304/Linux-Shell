@@ -37,9 +37,14 @@ in the result, a file start with "." (dot) mean it is a hidden files
 
 **list all devices**
 
+```
 cd /dev/
-
 ls
+```
+List the current connected devices
+```
+dmesg | grep tty
+```
 
 **NOTE**
 
