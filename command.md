@@ -124,9 +124,7 @@ rm * : to remove everything on the directory
 
 ref s2ep1
 
-**rmdir**
-
-remove directory
+**rmdir:** remove directory
 
 you can only use this command to remove an empty directory
 
@@ -169,6 +167,14 @@ to know all of wc, type "man wc"
 touch <name of document. extednd>
 
 e.g: touch index.html
+
+Text editor:
+
+nano <name of file want to create>
+
+```shell
+nano index.html
+```
 
 **grep**
 
