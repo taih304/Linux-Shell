@@ -7,7 +7,11 @@ print working directory
 
 => print the current working directory
 
-**ls**
+### List
+
+```
+ls
+```
 
 print out all the folder in current directory
 
@@ -29,7 +33,9 @@ start with -: mean it is a file
 
 if start with d: it is a directory
 
-* ls -a
+```
+ls -a
+```
 
 list all file and directory (including hidden files)
 
@@ -96,11 +102,13 @@ e.g:
 
 ref: s1ep4
 
-**mkdir**
+### mkdir
 
 make a directory (a folder)
 
+```
 mkdir <name of folder>
+```
 
 **cp**
 
