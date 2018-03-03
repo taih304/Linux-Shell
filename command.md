@@ -162,15 +162,20 @@ wc -l :print newline count
 
 to know all of wc, type "man wc"
 
-**create new document**
+### Creating new document
 
+```
 touch <name of document. extednd>
+```
+```
+touch index.html
+```
 
-e.g: touch index.html
+### Text editor:
 
-Text editor:
-
+```
 nano <name of file want to create>
+```
 
 ```shell
 nano index.html
