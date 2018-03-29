@@ -15,3 +15,5 @@ Add new user: useradd
 ``date``
 
 ``hostname``
+
+``sh
