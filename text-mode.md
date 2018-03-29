@@ -16,4 +16,4 @@ Add new user: useradd
 
 ``hostname``
 
-``sh
+``shutdown``
