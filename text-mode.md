@@ -10,7 +10,7 @@ Add new user: useradd
 
 ### Command
 
-``who``: show how many user has log in
+``who``: show how many user has log in the system
 
 ``date``
 
