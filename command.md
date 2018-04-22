@@ -126,7 +126,7 @@ cp test terrorist
 
 ref s2ep1
 
-**rm**
+### Delete with ``rm``
 
 rm stands for remove: used to remove a file, not directory
 
