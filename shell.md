@@ -1,5 +1,5 @@
 ```sh
-#!/bash/sh
+#!/bin/sh
 echo "hello world"
 ```
 
