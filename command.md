@@ -1,5 +1,4 @@
-Linux Shell Command
-===================
+### Linux Shell Command
 
 ```
 cd ../..
@@ -236,3 +235,5 @@ Then the terminal will wait for you to type the content of the file, after finis
 **open file**: gnome-open <name of file>
   
 **sudo lshw**: list hardware
+
+To hide a file rename it to ``.itsname``
