@@ -8,6 +8,10 @@ cd ../..
 
 print the current working directory
 
+### Change password
+
+``passwd username``
+
 #### List
 
 ```
