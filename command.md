@@ -43,6 +43,8 @@ list all file and directory (including hidden files)
 
 in the result, a file start with "." (dot) mean it is a hidden files
 
+To hide a file rename it to ``.itsname``
+
 **list all devices**
 
 ```
@@ -235,5 +237,3 @@ Then the terminal will wait for you to type the content of the file, after finis
 **open file**: gnome-open <name of file>
   
 **sudo lshw**: list hardware
-
-To hide a file rename it to ``.itsname``
