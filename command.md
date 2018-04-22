@@ -25,8 +25,9 @@ you can see many information like rw-rw-r-- : stand for read-write/read-write...
 
 take this for example:
 
+```
 -rw-rw-r-- 1 anonymous anonymous 450 Sep 23 04:17 command.md
-
+```
 start with -: mean it is a file
 
 if start with d: it is a directory
