@@ -220,7 +220,7 @@ Pictures
 sketchbook
 Templates
 ```
-grep -i "<word>" <file to search> : ignore the uppcase in search
+grep -i "<!word>" <!file to search> : ignore the uppcase in search
 
 **cat**
 
