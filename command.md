@@ -1,6 +1,10 @@
 Linux Shell Command
 ===================
 
+```
+cd ../..
+```
+
 ``pwd`` print working directory
 
 print the current working directory
