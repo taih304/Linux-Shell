@@ -1,4 +1,4 @@
-### Linux Shell Command
+## Linux Shell Command
 
 ```
 cd ../..
@@ -8,7 +8,7 @@ cd ../..
 
 print the current working directory
 
-### List
+#### List
 
 ```
 ls
@@ -237,3 +237,8 @@ Then the terminal will wait for you to type the content of the file, after finis
 **open file**: gnome-open <name of file>
   
 **sudo lshw**: list hardware
+
+```
+ls --help
+man ls
+```
