@@ -1,11 +1,9 @@
 Linux Shell Command
 ===================
 
-**pwd**
+``pwd`` print working directory
 
-print working directory
-
-=> print the current working directory
+print the current working directory
 
 ### List
 
