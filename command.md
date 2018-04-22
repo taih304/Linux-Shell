@@ -12,7 +12,7 @@ print the current working directory
 
 ``passwd username``
 
-#### List
+### List
 
 ```
 ls
@@ -68,8 +68,9 @@ you can combine:
 ls -l -a
 ls -la
 ```
-
 ref: s1ep3
+
+### Permission
 
 **change permission**
 
@@ -226,7 +227,7 @@ Templates
 ```
 grep -i "<!word>" <!file to search> : ignore the uppcase in search
 
-**cat**
+### cat
 
 cat [option] [file] : display content of a file
 
