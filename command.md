@@ -239,7 +239,7 @@ e.g: cat >terminal1 : create file terminal1
 
 Then the terminal will wait for you to type the content of the file, after finishing, type Ctrl+D
 
-**open file**: gnome-open <name of file>
+**open file**: gnome-open <!name of file>
   
 **sudo lshw**: list hardware
 
