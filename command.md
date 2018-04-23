@@ -251,3 +251,11 @@ gnome-open <!name of file>
 ls --help
 man ls
 ```
+
+#### Move file, copy file to different location
+
+```
+sudo nautilus
+```
+
+Open the folder with root permission, then just drop and drag
