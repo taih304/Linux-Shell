@@ -85,9 +85,11 @@ mode = 4+2+1 = 7: file can be read, write, execute
 4+2: can be read and write
 ....
 
-chmod: change mod
+``chmod``: change mod
 
-chmod <name of file/folder> mode
+``chmod <name of file/folder> mode``
+
+e.g ``chmod 775 name.sh``
 
 ref:s1ep2
 
