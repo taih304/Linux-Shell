@@ -98,7 +98,9 @@ ref:s1ep2
 the typical file permission is; trwxrwxrwx
 
 with t: type: - :a file
+
 d: directory
+
 l: symbolic link
 
 the next 3 group is for the owner,the owners group, and all users.
@@ -107,7 +109,7 @@ if a "-" (dash) mean a permission (r,w,x) is denied
 
 e.g:
 
--rw-rw-r-- :it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
+``-rw-rw-r--``: it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
 
 => no user can execute the file
 
@@ -127,7 +129,7 @@ copy
 
 for example, we have a folder terrorist
 
-cp test terrorist
+``cp test terrorist``
 
 => we copy the file test to folder terrorist
 
@@ -137,7 +139,7 @@ ref s2ep1
 
 rm stands for remove: used to remove a file, not directory
 
-rm <name of file>
+``rm <name of file>``
 
 rm * : to remove everything on the directory
 
