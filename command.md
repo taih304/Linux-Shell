@@ -159,6 +159,10 @@ move a file from a directory to other
 
 ref s2ep1
 
+Rename: 
+
+``mv <name_want_to_change> <name_wish_to_change>``
+
 **wildcard**
 
 * : alias
