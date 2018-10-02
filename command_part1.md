@@ -133,3 +133,9 @@ sudo nautilus
 ```
 
 Open the folder with root permission, then just drop and drag
+
+### Find Out Which Process Is Listening Upon a Port
+
+```shell
+netstat -tulpn
+```
