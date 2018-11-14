@@ -17,3 +17,7 @@ Add new user: useradd
 ``hostname``
 
 ``shutdown``
+
+#### Go to trash folder
+
+``cd .local/share/Trash``
