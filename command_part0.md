@@ -83,7 +83,6 @@ ref: s1ep3
 mode = 4+2+1 = 7: file can be read, write, execute
 
 4+2: can be read and write
-....
 
 ``chmod``: change mod
 
@@ -91,17 +90,15 @@ mode = 4+2+1 = 7: file can be read, write, execute
 
 e.g ``chmod 775 name.sh``
 
-ref:s1ep2
-
 **File permission**
 
-the typical file permission is; trwxrwxrwx
+the typical file permission is: ``trwxrwxrwx``
 
 with t: type: - :a file
 
-d: directory
+``d``: directory
 
-l: symbolic link
+``l``: symbolic link
 
 the next 3 group is for the owner,the owners group, and all users.
 
@@ -112,8 +109,6 @@ e.g:
 ``-rw-rw-r--``: it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
 
 => no user can execute the file
-
-ref: s1ep4
 
 ### mkdir
 
@@ -127,10 +122,8 @@ mkdir <name of folder>
 
 copy
 
-for example, we have a folder terrorist
+for example, we have a folder ``username``
 
-``cp test terrorist``
+``cp test username``
 
-=> we copy the file test to folder terrorist
-
-ref s2ep1
+=> we copy the file test to folder ``username``
