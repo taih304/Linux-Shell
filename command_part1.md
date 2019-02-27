@@ -4,9 +4,7 @@ rm stands for remove: used to remove a file, not directory
 
 ``rm <name of file>``
 
-rm * : to remove everything on the directory
-
-ref s2ep1
+``rm *`` : to remove everything on the directory
 
 **rmdir:** remove directory
 
@@ -14,17 +12,16 @@ you can only use this command to remove an empty directory
 
 **rm -r**
 
-rm -r is used to remove a non-empty directory
+``rm -r`` is used to remove a non-empty directory
 
-rm -rv (or rm -r -v) : remove a non-empty directory with detailed information like: remove <name of file>
+``rm -rv`` (or rm -r -v) : remove a non-empty directory with detailed information like: remove <name of file>
 
-to remove sudo file: sudo rm -rv <name of file>
+to remove sudo file: ``sudo rm -rv <name of file>``
 
 **mv**
 
 move a file from a directory to other
 
-ref s2ep1
 Rename: 
 
 ``mv <name_want_to_change> <name_wish_to_change>``
