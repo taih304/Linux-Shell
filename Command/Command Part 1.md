@@ -18,34 +18,34 @@ you can only use this command to remove an empty directory
 
 to remove sudo file: ``sudo rm -rv <name of file>``
 
-**mv**
+### Move
 
-move a file from a directory to other
+``mv``: move a file from a directory to other
 
-Rename: 
+**Rename**: 
 
 ``mv <name_want_to_change> <name_wish_to_change>``
 
+### Wildcard
+
 **wildcard**
 
-* : alias
+``*`` : alias
 
-? : every "?" stand for one character
+``?`` : every "?" stand for one character
 
-s2 ep: usage of 
+### Word count
 
-**wc**
+``wc``: word count, used to count words in a file
 
-word count. used to count words in a file
-
+```shell
 wc -w <name of file>
+```
 
+* ``wc -w``: print words count
+* ``wc -l``: print newline count
 
-wc -w: print words count
-
-wc -l :print newline count
-
-to know all of wc, type "man wc"
+To know all about ``wc``, type ``man wc``
 
 ### Creating new document
 
@@ -96,7 +96,8 @@ Pictures
 sketchbook
 Templates
 ```
-grep -i "<!word>" <!file to search> : ignore the uppcase in search
+
+``grep -i "<!word>" <!file to search>``: ignore the uppcase in search
 
 ### cat
 

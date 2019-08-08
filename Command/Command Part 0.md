@@ -1,36 +1,62 @@
-## Linux Shell Command
+## Basic Command
 
-```
-cd ../..
-```
+``cd ../..``: change to previous folder
 
-``pwd`` print working directory
+``pwd``: print working directory
 
-print the current working directory
+``mkdir <name of folder>``: make a directory (a folder)
 
-### Change password
+``cp``: copy
 
-``passwd username``
+For example, we have a folder ``username``
+
+``cp test username``
+
+=> we copy the file test to folder ``username``
 
 ### List
 
-```
+``ls``: print out all the folder in current directory
+
+``ls -l``: list in long format, show more detail of the file/ list detail information
+
+``ls -a``: list all file and directory (including hidden files).
+
+In the result, a file start with "." (dot) mean it is a hidden files
+
+To hide a file rename it to ``.itsname``
+
+**list all devices**
+
+```shell
+cd /dev/
 ls
 ```
 
-print out all the folder in current directory
+List the current connected devices
 
-ref: s1ep1
-
-```
-ls -l 
+```shell
+dmesg | grep tty
 ```
 
-list in long format: show more detail of the file/ list detail information
+**NOTE**
 
-you can see many information like rw-rw-r-- : stand for read-write/read-write....
+Combine:
 
-take this for example:
+```shell
+ls -l -a
+ls -la
+```
+
+### System handler
+
+``passwd username``: Change password
+
+### Permission
+
+You can see many information like rw-rw-r-- : stand for read-write/read-write....
+
+Take this for example:
 
 ```
 -rw-rw-r-- 1 anonymous anonymous 450 Sep 23 04:17 command.md
@@ -38,39 +64,6 @@ take this for example:
 start with -: mean it is a file
 
 if start with d: it is a directory
-
-```
-ls -a
-```
-
-list all file and directory (including hidden files)
-
-in the result, a file start with "." (dot) mean it is a hidden files
-
-To hide a file rename it to ``.itsname``
-
-**list all devices**
-
-```
-cd /dev/
-ls
-```
-List the current connected devices
-```
-dmesg | grep tty
-```
-
-**NOTE**
-
-you can combine:
-
-```
-ls -l -a
-ls -la
-```
-ref: s1ep3
-
-### Permission
 
 **change permission**
 
@@ -80,7 +73,7 @@ ref: s1ep3
 
 1: execute
 
-mode = 4+2+1 = 7: file can be read, write, execute
+``mode = 4+2+1 = 7``: file can be read, write, execute
 
 4+2: can be read and write
 
@@ -94,7 +87,8 @@ e.g ``chmod 775 name.sh``
 
 the typical file permission is: ``trwxrwxrwx``
 
-with t: type: - :a file
+with ``t``: type
+``-``: a file
 
 ``d``: directory
 
@@ -109,21 +103,3 @@ e.g:
 ``-rw-rw-r--``: it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
 
 => no user can execute the file
-
-### mkdir
-
-make a directory (a folder)
-
-```
-mkdir <name of folder>
-```
-
-**cp**
-
-copy
-
-for example, we have a folder ``username``
-
-``cp test username``
-
-=> we copy the file test to folder ``username``
