@@ -54,7 +54,7 @@ ls -la
 
 ### Permission
 
-You can see many information like rw-rw-r-- : stand for read-write/read-write....
+You can see many information like ``rw-rw-r--`` : stand for read-write/read-write....
 
 Take this for example:
 
@@ -67,11 +67,11 @@ if start with d: it is a directory
 
 **change permission**
 
-4: for read
+``4``: for read
 
-2: for write
+``2``: for write
 
-1: execute
+``1``: execute
 
 ``mode = 4+2+1 = 7``: file can be read, write, execute
 
