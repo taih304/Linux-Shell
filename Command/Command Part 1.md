@@ -1,3 +1,7 @@
+``mv``: move a file from a directory to other
+
+``mv <name_want_to_change> <name_wish_to_change>``: rename
+
 ### Delete with ``rm``
 
 rm stands for remove: used to remove a file, not directory
@@ -13,14 +17,6 @@ rm stands for remove: used to remove a file, not directory
 ``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove <name of file>
 
 to remove sudo file: ``sudo rm -rv <name of file>``
-
-### Move
-
-``mv``: move a file from a directory to other
-
-**Rename**: 
-
-``mv <name_want_to_change> <name_wish_to_change>``
 
 ### Wildcard
 
