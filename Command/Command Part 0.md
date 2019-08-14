@@ -4,6 +4,8 @@
 
 ``pwd``: print working directory
 
+``realpath filename``: print out path of a file
+
 ``mkdir <name of folder>``: make a directory (a folder)
 
 ``cp``: copy
