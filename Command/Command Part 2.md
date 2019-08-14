@@ -15,3 +15,9 @@ libreoffice --writer file.doc
 ```shell
 sudo chmod -R 777 /dev/ttyUSB0
 ```
+
+### change DNS
+
+```shell
+sudo nano /etc/resolv.conf
+```
