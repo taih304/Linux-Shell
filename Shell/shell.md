@@ -1,11 +1,24 @@
+### Basic shell script
+
 ```sh
 #!/bin/sh
 echo "hello world"
 ```
 
-#!/bin/sh : cho biết đường dẫn chạy shell nào để biên dịch, một số trình biên dịch bỏ qua câu lênh này, vẫn chạy được
+``#!/bin/sh``: will export which path of shell to compile, some compiler bypass this command.
 
 Can be both ``#!bin/sh`` and ``#!bin/bash``
+
+### Run shell script
+
+**hello.sh**
+
+```shell
+chmod 775 hello.sh
+./hello.sh
+```
+
+``chmod`` might not need if the file is readable
 
 ### Conditional state
 
