@@ -6,15 +6,11 @@ rm stands for remove: used to remove a file, not directory
 
 ``rm *`` : to remove everything on the directory
 
-**rmdir:** remove directory
+``rmdir``: remove directory, You can only use this command to remove an empty directory
 
-you can only use this command to remove an empty directory
+``rm -r``: remove a non-empty directory
 
-**rm -r**
-
-``rm -r`` is used to remove a non-empty directory
-
-``rm -rv`` (or rm -r -v) : remove a non-empty directory with detailed information like: remove <name of file>
+``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove <name of file>
 
 to remove sudo file: ``sudo rm -rv <name of file>``
 
