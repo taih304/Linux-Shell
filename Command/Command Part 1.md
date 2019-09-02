@@ -1,8 +1,10 @@
+### Move mv
+
 ``mv``: move a file from a directory to other
 
 ``mv <name_want_to_change> <name_wish_to_change>``: rename
 
-### Delete with ``rm``
+### Remove rm
 
 rm stands for remove: used to remove a file, not directory
 
@@ -16,11 +18,9 @@ rm stands for remove: used to remove a file, not directory
 
 ``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove <name of file>
 
-to remove sudo file: ``sudo rm -rv <name of file>``
+To remove sudo file: ``sudo rm -rv <name of file>``
 
 ### Wildcard
-
-**wildcard**
 
 ``*`` : alias
 
@@ -48,9 +48,9 @@ touch <name of document. extednd>
 touch index.html
 ```
 
-### Text editor:
+### Text editor
 
-```
+```shell
 nano <name of file want to create>
 ```
 
@@ -58,15 +58,19 @@ nano <name of file want to create>
 nano index.html
 ```
 
-**grep**
+### grep
 
 grep 'character' <file to lookup': look for character/strings in a specific file
 
-**pipe**
+List the current connected devices
 
-| is used for pipe
+```shell
+dmesg | grep tty
+```
 
-e.g: 
+### pipe
+
+``|`` is used for pipe
 
 ```shell
 echo "terrorist" | grep 't'
@@ -74,9 +78,12 @@ echo "terrorist" | grep 't'
 
 result: terrorist
 
-ls | grep "t"
+``ls | grep "t"``
 
-**result: (every folder has "t")**
+**Result**
+
+(every folder has "t")
+
 ```
 Desktop
 Documents
@@ -109,14 +116,9 @@ Then the terminal will wait for you to type the content of the file, after finis
 gnome-open <!name of file>
 ```
 
-**sudo lshw**: list hardware
+### nautilus
 
-```shell
-ls --help
-man ls
-```
-
-#### Move file, copy file to different location
+Move file, copy file to different location
 
 ```shell
 sudo nautilus
@@ -124,7 +126,9 @@ sudo nautilus
 
 Open the folder with root permission, then just drop and drag
 
-### Find Out Which Process Is Listening Upon a Port
+### netstat
+
+Find Out Which Process Is Listening Upon a Port
 
 ```shell
 netstat -tulpn

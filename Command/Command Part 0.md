@@ -1,4 +1,4 @@
-## Basic Command
+### Basic Command
 
 ``cd ../..``: change to previous folder
 
@@ -28,6 +28,13 @@ In the result, a file start with "." (dot) mean it is a hidden files
 
 To hide a file rename it to ``.itsname``
 
+**Combine**
+
+```shell
+ls -l -a
+ls -la
+```
+
 **list all devices**
 
 ```shell
@@ -35,19 +42,11 @@ cd /dev/
 ls
 ```
 
-List the current connected devices
+**sudo lshw**: list hardware
 
 ```shell
-dmesg | grep tty
-```
-
-**NOTE**
-
-Combine:
-
-```shell
-ls -l -a
-ls -la
+ls --help
+man ls
 ```
 
 ### System handler
@@ -63,11 +62,12 @@ Take this for example:
 ```
 -rw-rw-r-- 1 anonymous anonymous 450 Sep 23 04:17 command.md
 ```
-start with -: mean it is a file
 
-if start with d: it is a directory
+start with ``-``: mean it is a file
 
-**change permission**
+if start with ``d``: it is a directory
+
+**Change permission**
 
 ``4``: for read
 
@@ -77,7 +77,7 @@ if start with d: it is a directory
 
 ``mode = 4+2+1 = 7``: file can be read, write, execute
 
-4+2: can be read and write
+``4+2``: can be read and write
 
 ``chmod``: change mod
 
