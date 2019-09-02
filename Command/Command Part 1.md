@@ -100,15 +100,15 @@ Templates
 
 ### cat
 
-``cat [option] [file]`` : display content of a file
+``cat [option] [file]``: display content of a file
 
 ``cat <name of file1> <name of file2>``: display the content of 2 file
 
-cat > (name of file) : create a file
+``cat > (name of file)``: create a file
 
-e.g: cat >terminal1 : create file terminal1
+e.g: ``cat > terminal1``: create file terminal1
 
-Then the terminal will wait for you to type the content of the file, after finishing, type Ctrl+D
+Then the terminal will wait for you to type the content of the file, after finishing, type ``Ctrl+D``.
 
 **open file**: 
 
@@ -118,18 +118,8 @@ gnome-open <!name of file>
 
 ### nautilus
 
-Move file, copy file to different location
-
-```shell
-sudo nautilus
-```
-
-Open the folder with root permission, then just drop and drag
+``sudo nautilus``: Open the folder with root permission
 
 ### netstat
 
-Find Out Which Process Is Listening Upon a Port
-
-```shell
-netstat -tulpn
-```
+``netstat -tulpn``: Find Out Which Process Is Listening Upon a Port
