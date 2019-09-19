@@ -49,12 +49,6 @@ cd /dev/
 ls
 ```
 
-``sudo lshw``: list hardware
-
-### System handler
-
-``passwd username``: Change password
-
 ### Permission
 
 You can see many information like ``rw-rw-r--`` : stand for read-write/read-write....
