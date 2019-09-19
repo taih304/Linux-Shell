@@ -60,13 +60,15 @@ nano index.html
 
 ### grep
 
-grep 'character' <file to lookup': look for character/strings in a specific file
+``grep 'character' <file to lookup'``: look for character/strings in a specific file
 
-List the current connected devices
+List the current connected devices:
 
 ```shell
 dmesg | grep tty
 ```
+
+List all files in GB size: ``du -h|grep 'G'``
 
 ### pipe
 
