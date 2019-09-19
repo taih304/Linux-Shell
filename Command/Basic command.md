@@ -49,55 +49,43 @@ cd /dev/
 ls
 ```
 
-### Permission
+### Move mv
 
-You can see many information like ``rw-rw-r--`` : stand for read-write/read-write....
+``mv``: move a file from a directory to other
 
-Take this for example:
+``mv <name_want_to_change> <name_wish_to_change>``: rename
 
+### Remove rm
+
+rm stands for remove: used to remove a file, not directory
+
+``rm <name of file>``
+
+``rm *`` : to remove everything on the directory
+
+``rmdir``: remove directory, You can only use this command to remove an empty directory
+
+``rm -r``: remove a non-empty directory
+
+``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove <name of file>
+
+To remove sudo file: ``sudo rm -rv <name of file>``
+
+### Wildcard
+
+``*`` : alias
+
+``?`` : every "?" stand for one character
+
+### Word count
+
+``wc``: word count, used to count words in a file
+
+```shell
+wc -w <name of file>
 ```
--rw-rw-r-- 1 anonymous anonymous 450 Sep 23 04:17 command.md
-```
 
-start with ``-``: mean it is a file
+* ``wc -w``: print words count
+* ``wc -l``: print newline count
 
-if start with ``d``: it is a directory
-
-**Change permission**
-
-``4``: for read
-
-``2``: for write
-
-``1``: execute
-
-``mode = 4+2+1 = 7``: file can be read, write, execute
-
-``4+2``: can be read and write
-
-``chmod``: change mod
-
-``chmod <name of file/folder> mode``
-
-e.g ``chmod 775 name.sh``
-
-**File permission**
-
-the typical file permission is: ``trwxrwxrwx``
-
-with ``t``: type
-``-``: a file
-
-``d``: directory
-
-``l``: symbolic link
-
-the next 3 group is for the owner,the owners group, and all users.
-
-if a "-" (dash) mean a permission (r,w,x) is denied
-
-e.g:
-
-``-rw-rw-r--``: it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
-
-=> no user can execute the file
+To know all about ``wc``, type ``man wc``
