@@ -20,6 +20,13 @@ For example, we have a folder ``username``
 
 ``ls``: print out all the folder in current directory
 
+Help: 
+
+```shell
+ls --help
+man ls
+```
+
 ``ls -l``: list in long format, show more detail of the file/ list detail information
 
 ``ls -a``: list all file and directory (including hidden files).
@@ -42,12 +49,7 @@ cd /dev/
 ls
 ```
 
-**sudo lshw**: list hardware
-
-```shell
-ls --help
-man ls
-```
+``sudo lshw``: list hardware
 
 ### System handler
 
