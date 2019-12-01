@@ -8,6 +8,8 @@ Note: if you type ``a = 9``, or you leave space between the "=",this will be an 
 
 error: command not found
 
+### Variable declare
+
 ```sh
 a=10
 echo $a #result: 9
@@ -17,7 +19,7 @@ a="string"
 echo $a #string
 ```
 
-**Add**
+### Add operator
 
 ```shell
 a=0
@@ -26,7 +28,7 @@ a=$((a+9))
 echo $a #result: 9
 ```
 
-**Represent pattern**
+### Represent pattern
 
 ```shell
 a=29
