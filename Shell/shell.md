@@ -21,8 +21,10 @@ chmod 775 hello.sh
 ### Variable
 
 ```sh
-a=9
-echo $a #Result: 9
+a=10
+echo $a #result: 9
+unset a #unset value of a
+echo $a #print out nothing
 ```
 
 ### Conditional state
