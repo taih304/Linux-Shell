@@ -9,16 +9,21 @@ echo "hello world"
 
 Can be both ``#!bin/sh`` and ``#!bin/bash``
 
-### Run shell script
+**Run shell script**
 
-**hello.sh**
-
-```shell
+```cmd
 chmod 775 hello.sh
 ./hello.sh
 ```
 
 ``chmod`` might not need if the file is readable
+
+### Variable
+
+```sh
+a=9
+echo $a #Result: 9
+```
 
 ### Conditional state
 
