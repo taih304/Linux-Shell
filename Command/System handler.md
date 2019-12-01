@@ -6,6 +6,8 @@
 
 ``df -h``: list size of hardware, and usage of percentage
 
+``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
+
 ### netstat
 
 ``netstat -tulpn``: Find Out Which Process Is Listening Upon a Port
