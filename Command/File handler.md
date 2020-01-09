@@ -53,12 +53,9 @@ e.g:
 
 ### Creating new document
 
-```
-touch <name of document. extednd>
-```
-```
-touch index.html
-```
+``touch <name of document.extended>``
+
+**E.g**: ``touch index.html``
 
 ### Text editor
 
