@@ -1,3 +1,9 @@
+### Check IP of current Linux device
+
+```
+ip addr show
+```
+
 ### change DNS
 
 ```shell
