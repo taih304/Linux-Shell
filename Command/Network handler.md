@@ -1,3 +1,9 @@
+### Set up WiFi
+
+```
+nmtui-connect
+```
+
 ### Check IP of current Linux device
 
 ```
