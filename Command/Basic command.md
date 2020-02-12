@@ -1,3 +1,5 @@
+**bin** : the directory bin store all the command line used in Linux
+
 ### Basic Command
 
 ``cd ../..``: change to previous folder
