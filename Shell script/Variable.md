@@ -41,3 +41,9 @@ echo $b #this is 29
 ```sh
 echo $(ls) #List out all file in current folder
 ```
+
+### Write content to a file
+
+``echo 8 > test.txt``: Write ``8`` to file ``test.txt``
+
+``echo 8 >> test.txt``: Append ``test.txt`` with value ``8``.

@@ -1,3 +1,21 @@
+### Creating a file
+
+The ``>`` operator will overwrite an existing file, while the ``>>`` operator will append the output to the file.
+
+``> filename.txt``: Create ``filename.txt``
+
+**With touch**: ``touch filename.extension``
+
+### Text editor
+
+```shell
+nano <name of file want to create>
+```
+
+```shell
+nano index.html
+```
+
 ## Permission
 
 You can see many information like ``rw-rw-r--`` : stand for read-write/read-write....
@@ -14,19 +32,17 @@ if start with ``d``: it is a directory
 
 **Change permission**
 
-``4``: for read
-
-``2``: for write
-
-``1``: execute
+* ``4``: for read
+* ``2``: for write
+* ``1``: execute
 
 ``mode = 4+2+1 = 7``: file can be read, write, execute
 
 ``4+2``: can be read and write
 
-``chmod``: change mod
+``chmod``: change mode
 
-``chmod <name of file/folder> mode``
+``chmod file_name_or_folder_name mode``
 
 e.g ``chmod 775 name.sh``
 
@@ -34,12 +50,10 @@ e.g ``chmod 775 name.sh``
 
 the typical file permission is: ``trwxrwxrwx``
 
-with ``t``: type
-``-``: a file
-
-``d``: directory
-
-``l``: symbolic link
+* ``t``: type
+* ``-``: a file
+* ``d``: directory
+* ``l``: symbolic link
 
 the next 3 group is for the owner,the owners group, and all users.
 
@@ -50,22 +64,6 @@ e.g:
 ``-rw-rw-r--``: it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
 
 => no user can execute the file
-
-### Creating new document
-
-``touch <name of document.extended>``
-
-**E.g**: ``touch index.html``
-
-### Text editor
-
-```shell
-nano <name of file want to create>
-```
-
-```shell
-nano index.html
-```
 
 ### ``grep`` for file handler
 

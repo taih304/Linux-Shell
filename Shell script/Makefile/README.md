@@ -1,7 +1,7 @@
 ### Step by step
 
 * **Step 1**: Go to the folder that you wanna create a Makefile
-* **Step 2**: Createa Makefile
+* **Step 2**: Create a Makefile
 * **Step 3**: Makefile architecture
 
     ```
