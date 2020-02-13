@@ -1,5 +1,7 @@
 **bin** : the directory bin store all the command line used in Linux
 
+``Ctrl+D`` logs out of the interface (quite similar to Ctr+C to exit)
+
 ### Basic Command
 
 ``cd ../..``: change to previous folder

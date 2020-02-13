@@ -10,7 +10,7 @@
 
 ### netstat
 
-``netstat -tulpn``: Find Out Which Process Is Listening Upon a Port
+``netstat -tulpn``: Find out which process is listening upon a port
 
 ### Cannot open /dev/ttyUSB0: Permission denied
 
@@ -56,12 +56,10 @@ Make program ``blink.sh`` run when computer reboot
 @reboot /bin/bash /home/pi/test/blink.sh  #1 space after /bin/bash
 ```
 
-``m``: minute
-
-``h``: hour
-
-``dom``: day of month
-
-``dow``: day of week
-
 ``/bin/bash`` is for bash shell
+
+* ``m``: minute
+* ``h``: hour
+* ``dom``: day of month
+* ``dow``: day of week
+
