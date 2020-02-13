@@ -9,10 +9,6 @@ The ``>`` operator will overwrite an existing file, while the ``>>`` operator wi
 ### Text editor
 
 ```shell
-nano <name of file want to create>
-```
-
-```shell
 nano index.html
 ```
 
