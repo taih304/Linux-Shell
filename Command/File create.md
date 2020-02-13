@@ -40,15 +40,13 @@ if start with ``d``: it is a directory
 
 ``4+2``: can be read and write
 
-``chmod``: change mode
-
-``chmod file_name_or_folder_name mode``
+``chmod``: change mode of folder or file
 
 e.g ``chmod 775 name.sh``
 
 **File permission**
 
-the typical file permission is: ``trwxrwxrwx``
+The typical file permission is: ``trwxrwxrwx``
 
 * ``t``: type
 * ``-``: a file
