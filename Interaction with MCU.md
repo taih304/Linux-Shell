@@ -52,14 +52,6 @@ Then:
 
 ``echo 8 > /dev/ttyUSB0``: Turn OFF
 
-### stty
-
-``stty`` displays or changes the characteristics of the terminal.
-
-```
-stty [-F DEVICE | --file=DEVICE] [SETTING]...
-```
-
 ### Read serial port data
 
 **Arduino**
