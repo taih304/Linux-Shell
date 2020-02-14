@@ -18,17 +18,30 @@ nano index.html
 
 ## Permission
 
-You can see many information like ``rw-rw-r--`` : stand for read-write/read-write....
+``r``,``w``: stand for read, write
 
-Take this for example:
+Permission ``-rw-rw-r--`` means:
+
+* The first character is ``-`` means it is a file
+* The next 3 characters ``rw-`` represents the permissions for the file's owner: in this case, the owner may read from, write to, or execute the file.
+* The next 3 characters ``rw-`` represent the permissions for members of the file group.
+* The next 3 characters ``r--`` is the permission for "others" (everyone else) 
+
+If a ``-`` means a permission (r,w,x) is denied.
+
+**Example**:
 
 ```
 -rw-rw-r-- 1 anonymous anonymous 450 Sep 23 04:17 command.md
 ```
 
-start with ``-``: mean it is a file
+This means it is a file, owner can both read and write the file, owner group can read and write, all userd can read the file but can't execute the file.
 
-if start with ``d``: it is a directory
+First character acceptance value 
+* ``t``: type
+* ``-``: a file
+* ``d``: directory
+* ``l``: symbolic link
 
 **Change permission**
 
@@ -42,26 +55,11 @@ if start with ``d``: it is a directory
 
 ``chmod``: change mode of folder or file
 
-e.g ``chmod 775 name.sh``
+E.g ``chmod 775 name.sh``
 
 **File permission**
 
 The typical file permission is: ``trwxrwxrwx``
-
-* ``t``: type
-* ``-``: a file
-* ``d``: directory
-* ``l``: symbolic link
-
-the next 3 group is for the owner,the owners group, and all users.
-
-if a "-" (dash) mean a permission (r,w,x) is denied
-
-e.g:
-
-``-rw-rw-r--``: it is a file, owner and both read and write the file, owner group can read and write, all user can read the file
-
-=> no user can execute the file
 
 ### ``grep`` for file handler
 
