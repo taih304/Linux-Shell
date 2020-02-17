@@ -32,3 +32,5 @@ To set up proxy from terminal
 ```shell
 export http_proxy=http://10.10.10.10:8080
 ```
+
+To unset proxy: ``unset http_proxy`` (follow the command above)
