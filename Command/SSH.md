@@ -10,7 +10,7 @@ To install: ``sudo apt-get install openssh-client``.
 
 For SSH client to access to SSH server, it also neccessary to use ``SSH key``.
 
-For example. to clone a repository from Github (as a SSH server) in an Ubuntu computer (SSH client). It needs ``SSH key``.
+For example. to clone a repository from Github or Gitlab (as a SSH server) in an Ubuntu computer (SSH client). It needs ``SSH key``.
 
 To create SSH key in Ubuntu: ``ssh-keygen -t rsa``
 
@@ -24,4 +24,4 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 # Copies the contents of the id_rsa.pub file to your clipboard
 ```
 
-Then go to Github and add this key.
+Then go to Github or Gitlab and add this key.
