@@ -8,6 +8,13 @@
 
 ``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
 
+### Error: ``sudo: unable to resolve host user_name``
+
+This error might happen as the devicename is changed
+
+* ``sudo nano /etc/hosts``
+* Then add ``127.0.0.1	user_name`` below the existed hosts
+
 ### netstat
 
 ``netstat -tulpn``: Find out which process is listening upon a port

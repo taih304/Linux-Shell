@@ -24,4 +24,4 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 # Copies the contents of the id_rsa.pub file to your clipboard
 ```
 
-Then go to Github and adds this key.
+Then go to Github and add this key.
