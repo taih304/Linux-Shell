@@ -8,6 +8,8 @@
 
 ``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
 
+``cat /sys/class/thermal/thermal_zone0/temp`` : read temperature on linux
+
 ### Error: ``sudo: unable to resolve host user_name``
 
 This error might happen as the devicename is changed
