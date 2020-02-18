@@ -57,6 +57,8 @@ First character acceptance value
 
 E.g ``chmod 775 name.sh``
 
+``chmod +x``: Make file executable
+
 **File permission**
 
 The typical file permission is: ``trwxrwxrwx``
