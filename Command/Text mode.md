@@ -1,8 +1,10 @@
-#### Text mode
-
 ``Ctrl+Alt+F1``: enter textmode
 
-Add new user: ``useradd``
+``Ctrl+Alt+F7``: switch back to desktop
+
+Add new user (this require admin privilege): 
+
+``$ sudo useradd``
 
 ### Command
 
