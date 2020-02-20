@@ -41,7 +41,7 @@ To hide a file rename it to ``.itsname``
 
 **Combine**
 
-```b
+```bash
 $ ls -l -a
 $ ls -la
 ```
@@ -71,9 +71,9 @@ rm stands for remove: used to remove a file, not directory
 
 ``rm -r``: remove a non-empty directory
 
-``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove <name of file>
+``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove ``name_of_file``
 
-To remove sudo file: ``sudo rm -rv <name of file>``
+To remove sudo file: ``sudo rm -rv name_of_file``
 
 ### Wildcard
 
@@ -86,7 +86,7 @@ To remove sudo file: ``sudo rm -rv <name of file>``
 ``wc``: word count, used to count words in a file
 
 ```shell
-wc -w <name of file>
+$ wc -w name_of_file
 ```
 
 * ``wc -w``: print words count
