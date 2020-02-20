@@ -50,6 +50,8 @@ In CLI:
 
 It works similar in GUI to set up connection
 
+**Notice**: Login with two account on Linux (E.g user account and guess account) will result in fail VPN start.
+
 ### Reference:
 
 * [Anyconnect VPN client](https://www.socsci.uci.edu/~jstern/uci_vpn_ubuntu/)
