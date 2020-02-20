@@ -1,3 +1,9 @@
+### Port
+
+16-bit port means computer can open up to 65536 port.
+
+### Command
+
 ``sudo lshw``: list hardware
 
 ``passwd username``: Change password
