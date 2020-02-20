@@ -10,7 +10,7 @@
 
 ``realpath filename``: print out path of a file
 
-``mkdir <name of folder>``: make a directory (a folder)
+``mkdir name_of_folder``: make a directory (a folder)
 
 ``cp``: copy
 
@@ -27,8 +27,8 @@ For example, we have a folder ``username``
 Help: 
 
 ```shell
-ls --help
-man ls
+$ ls --help
+$ man ls
 ```
 
 ``ls -l``: list in long format, show more detail of the file/ list detail information
@@ -41,23 +41,23 @@ To hide a file rename it to ``.itsname``
 
 **Combine**
 
-```shell
-ls -l -a
-ls -la
+```b
+$ ls -l -a
+$ ls -la
 ```
 
 **list all devices**
 
 ```shell
-cd /dev/
-ls
+$ cd /dev/
+$ ls
 ```
 
 ### Move mv
 
 ``mv``: move a file from a directory to other
 
-``mv <name_want_to_change> <name_wish_to_change>``: rename
+``$ mv name_want_to_change name_wish_to_change``: rename
 
 ### Remove rm
 
