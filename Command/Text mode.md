@@ -1,12 +1,8 @@
 #### Text mode
 
-ctr+alt+f1: enter textmode
+``Ctrl+Alt+F1``: enter textmode
 
-Like terminal with ctr+alt+T
-
-Enter username + password
-
-Add new user: useradd
+Add new user: ``useradd``
 
 ### Command
 
