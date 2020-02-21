@@ -6,6 +6,18 @@ Add new user (this require admin privilege):
 
 ``$ sudo useradd``
 
+Issue ``User is not in the sudoers file. This incident will be reported.``
+
+```bash
+$ sudo nano /etc/sudoers
+```
+
+Go to ``#User privilege specification``, then add 
+
+```
+new_user_name ALL=(ALL:ALL) ALL
+```
+
 ### Command
 
 ``who``: show how many user has log in the system
@@ -16,6 +28,4 @@ Add new user (this require admin privilege):
 
 ``shutdown``
 
-#### Go to trash folder
-
-``cd .local/share/Trash``
+``cd .local/share/Trash``: Go to trash folder
