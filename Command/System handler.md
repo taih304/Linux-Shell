@@ -2,25 +2,56 @@
 user_name$hostname #One host name can include many usaer_name
 ```
 
-### Port
+``Ctrl+Alt+F1``: enter textmode
 
-16-bit port means computer can open up to 65536 port.
+``Ctrl+Alt+F7``: switch back to desktop
 
-### Command
+* ``date``: show current date
 
-``sudo lshw``: list hardware
+### Hardware handler
 
-``passwd username``: Change password
+**Port**: 16-bit port means computer can open up to 65536 port.
 
-``du -h``: list out disk usage in MB
+**Hardware command**
 
-``df -h``: list size of hardware, and usage of percentage
+* ``sudo lshw``: list hardware
+* ``du -h``: list out disk usage in MB
+* ``df -h``: list size of hardware, and usage of percentage
+* ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
+* ``df -i``: list all inode
 
-``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
+**Issue**: Cannot open /dev/ttyUSB0: Permission denied
 
-``cat /sys/class/thermal/thermal_zone0/temp`` : read temperature on linux
+```bash
+$ sudo chmod -R 777 /dev/ttyUSB0
+```
 
-### Error: ``sudo: unable to resolve host user_name``
+### User setup
+
+All user information is stored in ``/etc/passwd``
+
+``passwd current_login_username``: Change password of current logged in username
+
+``sudo useradd user_name``: Add new user ``user_name`` (this require admin privilege)
+
+``sudo deluser user_name``: Delete ``user_name``
+
+* ``who``: show how many user has log in the system
+* ``hostname``
+
+**Issue**: ``User is not in the sudoers file. This incident will be reported.``
+
+```bash
+$ sudo nano /etc/sudoers
+```
+
+Go to ``#User privilege specification``, then add 
+
+```
+new_user_name ALL=(ALL:ALL) ALL
+```
+
+**Issue**: ``sudo: unable to resolve host user_name``
 
 This error might happen as the devicename is changed
 
@@ -29,17 +60,13 @@ This error might happen as the devicename is changed
 
 ``sudo nano /etc/hosts`` will also help you change the hostname
 
+### GUI setup
+
+``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
+
 ### netstat
 
 ``netstat -tulpn``: Find out which process is listening upon a port
-
-### Cannot open /dev/ttyUSB0: Permission denied
-
-```shell
-sudo chmod -R 777 /dev/ttyUSB0
-```
-
-``df -i``: list all inode
 
 ### Error IUSE 100% in ``CentOS``
 
@@ -47,7 +74,11 @@ If error happen, CentOS will not allow user to ``yum install`` more file.
 
 fix: ``sudo rm -rf /var/cache/*``
 
-### Program run at specific time
+### System handler
+
+* ``shutdown``
+
+**Program run at specific time**
 
 To let a program run in a specific time or when just start up
 
@@ -83,4 +114,3 @@ Make program ``blink.sh`` run when computer reboot
 * ``h``: hour
 * ``dom``: day of month
 * ``dow``: day of week
-
