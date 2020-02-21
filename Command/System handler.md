@@ -1,3 +1,7 @@
+```bash
+user_name$hostname #One host name can include many usaer_name
+```
+
 ### Port
 
 16-bit port means computer can open up to 65536 port.
@@ -22,6 +26,8 @@ This error might happen as the devicename is changed
 
 * ``sudo nano /etc/hosts``
 * Then add ``127.0.0.1	user_name`` below the existed hosts
+
+``sudo nano /etc/hosts`` will also help you change the hostname
 
 ### netstat
 
