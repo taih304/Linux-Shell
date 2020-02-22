@@ -1,6 +1,8 @@
+DRF1605H Zigbee module is able to communication with other MCU by UART with 3.3V logic level. So it is able to communicate and configured with computer when connected by CP2102.
+
 ### Connection
 
-| DRF1605H | Seeeduino |
+| DRF1605H | CP2102 |
 | ------- |:------:|
 | 3.3V   | 3.3V    |
 | GND     | GND    |
