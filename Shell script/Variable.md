@@ -72,6 +72,12 @@ All argument 2nd 3rd all
 total number of parameter: 3 (argument ./test.sh is not count)
 ```
 
+### printf
+
+``printf hello`` and ``printf "hello"`` will printf to a stream.
+
+``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
+
 ### Array
 
 ```sh
