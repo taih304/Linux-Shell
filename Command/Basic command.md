@@ -20,16 +20,9 @@ For example, we have a folder ``username``
 
 => we copy the file test to folder ``username``
 
-### List
+### ls to list
 
 ``ls``: print out all the folder in current directory
-
-Help: 
-
-```shell
-$ ls --help
-$ man ls
-```
 
 ``ls -l``: list in long format, show more detail of the file/ list detail information
 
@@ -59,13 +52,13 @@ list all file in current directory then output to a file (stream)
 ls -a > text.md
 ```
 
-### Move mv
+### mv to move
 
 ``mv``: move a file from a directory to other
 
 ``$ mv name_want_to_change name_wish_to_change``: rename
 
-### Remove rm
+### rm to remove
 
 rm stands for remove: used to remove a file, not directory
 
@@ -77,25 +70,41 @@ rm stands for remove: used to remove a file, not directory
 
 ``rm -r``: remove a non-empty directory
 
-``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove ``name_of_file``
+``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove ``filename``
 
-To remove sudo file: ``sudo rm -rv name_of_file``
+To remove sudo file: ``sudo rm -rv filename``
 
-### Wildcard
+### Help
+
+```shell
+$ ls --help
+```
+
+```shell
+$ man ls
+```
+
+### wildcard
 
 ``*`` : alias
 
 ``?`` : every "?" stand for one character
 
-### Word count
+### word count
 
 ``wc``: word count, used to count words in a file
 
 ```shell
-$ wc -w name_of_file
+$ wc -w filename #print total word in filename
 ```
 
-* ``wc -w``: print words count
-* ``wc -l``: print newline count
+**Result**: ``10 filename``
 
-To know all about ``wc``, type ``man wc``
+(``filename`` has 10 words)
+
+```shell
+$ wc -w test.sh
+```
+**Result**: ``10``
+
+* ``wc -l``: print newline count

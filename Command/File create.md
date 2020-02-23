@@ -1,10 +1,11 @@
-### Creating a file
+### Redirect
 
 The ``>`` operator will overwrite an existing file, while the ``>>`` operator will append the output to the file.
 
 ``> filename.txt``: Create ``filename.txt``
 
-**With touch**: ``touch filename.extension``
+* ``>``: redirect ouput to a file
+* ``<``: redirect input from a file
 
 ### Text editor
 
@@ -13,6 +14,8 @@ nano filename
 ```
 
 ``nano`` allows user to edit content of file or create a new one if not existed.
+
+**Create new file with touch**: ``touch filename.extension``
 
 ## Permission
 
@@ -61,30 +64,24 @@ E.g ``chmod 775 name.sh``
 
 The typical file permission is: ``trwxrwxrwx``
 
-### ``grep`` for file handler
-
-``grep 'character' <file to lookup'``: look for character/strings in a specific file
-
-``grep -i "<!word>" <!file to search>``: ignore the uppcase in search
-
-List the current connected devices:
-
-```shell
-dmesg | grep tty
-```
-
-List all files in GB size: ``du -h|grep 'G'``
-
 ### pipe
 
-``|`` is used for pipe
+``|`` (pipe): send the output of one program to the input of another
 
-```shell
-echo "terrorist" | grep 't'
+### grep
+
+```sh
+grep [OPTIONS] PATTERN [FILE...]
 ```
 
-result: terrorist
+``grep`` searches for PATTERN in each FILE.
 
-``ls | grep "t"``
+``grep "i" test.sh``: find all character ``i`` in ``test.sh``
 
-**Result:** Display all folder has "t" in its name
+``echo "test" | grep 't'``: print out where character ``t`` existed in ``test``.
+
+``ls | grep "t"``: display all folder has "t" in its name
+
+``dmesg | grep tty``: list the current connected devices
+
+``du -h|grep 'G'``: list all files in GB size: 
