@@ -10,6 +10,8 @@ error: command not found
 
 ### Variable declare
 
+``unset`` variable
+
 ```sh
 a=10
 echo $a #result: 9
@@ -19,13 +21,12 @@ a="string"
 echo $a #string
 ```
 
-### Add operator
+``readonly`` variable
 
-```shell
-a=0
-a=$((a+9))
-
-echo $a #result: 9
+```sh
+name="User name"
+readonly name
+name="change name" #Error: ./test.sh: line 4: name: readonly variable
 ```
 
 ### Represent pattern
@@ -35,6 +36,7 @@ a=29
 b="this is $a"
 echo $b #this is 29
 ```
+
 
 ### Command as variable
 
@@ -47,3 +49,41 @@ echo $(ls) #List out all file in current folder
 ``echo 8 > test.txt``: Write ``8`` to file ``test.txt``
 
 ``echo 8 >> test.txt``: Append ``test.txt`` with value ``8``.
+
+### Command line argument
+
+```sh
+echo "First argument $0"
+echo "Second argument $1"
+echo "Third argument $2"
+echo "All argument $@"
+echo "total number of parameter: $#"
+```
+
+**Run**: ``./test.sh 2nd 3rd all``
+
+**Result**
+
+```
+First argument ./test.sh
+Second argument 2nd
+Third argument 3rd
+All argument 2nd 3rd all
+total number of parameter: 3 (argument ./test.sh is not count)
+```
+
+### Array
+
+```sh
+array=("text" 1 2)
+echo ${array[0]} #text
+```
+
+```sh
+#Declare array value first
+array[0]="hello"
+array[1]=0
+
+echo ${array[0]} #hello
+echo ${array[1]} #0
+```

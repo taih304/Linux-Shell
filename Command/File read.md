@@ -8,6 +8,10 @@ Using ``cat`` to create a new file then enter the value for it: ``cat > filename
 
 After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
 
+### less
+
+``less file_name``: Read a file, the opened filename will be opened to cover the current terminal window.
+
 ### gnome to open a file: 
 
 ```shell
