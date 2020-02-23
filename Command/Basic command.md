@@ -53,6 +53,12 @@ $ cd /dev/
 $ ls
 ```
 
+list all file in current directory then output to a file (stream)
+
+```shell
+ls -a > text.md
+```
+
 ### Move mv
 
 ``mv``: move a file from a directory to other

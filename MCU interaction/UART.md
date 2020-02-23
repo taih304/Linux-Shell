@@ -1,4 +1,4 @@
-### Sending data with UART from Linux comnputer to Arduino
+### Sending data with UART from Linux computer to Arduino
 
 Send ``9``, ``8`` from Terminal Linux to turn ON/OFF LED on Arduino.
 
