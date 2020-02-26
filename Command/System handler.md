@@ -77,6 +77,7 @@ fix: ``sudo rm -rf /var/cache/*``
 ### System handler
 
 * ``shutdown``
+* ``cat /etc/os-release``: View OS information
 
 **Program run at specific time**
 
