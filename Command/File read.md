@@ -1,3 +1,11 @@
+### Read and print out every line of file
+
+```sh
+while read textLine; do    
+    echo $textLine    
+done < test.csv
+```
+
 ### cat
 
 ``cat [option] [file]``: display content of a file on terminal
