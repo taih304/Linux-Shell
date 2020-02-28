@@ -33,8 +33,6 @@ Sending a serial frame ``FC 00 91 08 A8 B8 F5`` will be count as sending 7 bytes
 
 ``FC 00 91 08 A8 B8 F5``: Return MAC address
 
-``FC 00 91 03 A3 B3 E6``: Read PAN ID
-
 ### Set up baudrate
 
 Set baudrate 38400: ``FC 01 91 06 03 F6 8D``. This will return on screen: ``00 03 08 04 00 00``
