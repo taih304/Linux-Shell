@@ -44,4 +44,16 @@ field2,field2Value
 field3,field3Value
 ```
 
-``awk -F, '{print $2}' data.csv``: Print argument 2 value of csv file
+``awk -F, '{print $2}' data.csv``: Print argument 2 value of csv file.
+
+Append parsed/read value to file ``result.csv``. ``awk`` can use regular expression to get data.
+
+``[<:]`` will get all value between 2 character ``<`` and ``:``.
+
+```sh
+awk -F'[<:]' '{print $2}' test.csv >> result.csv
+```
+**Notice**:
+
+* ``awk`` doesn't work with ``echo``.
+* All variables inside ``awk`` only existed in its scope.
