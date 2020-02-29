@@ -32,6 +32,8 @@ mosquitto_pub -h mqtt.eclipse.org -t "test/message" -m "Hello, world"
 mosquitto_sub -h mqtt.eclipse.org -t "test/message"
 ```
 
+MQTT cloud ``test.mosquitto.org`` no longer works.
+
 ### Build MQTT broker with Mosquitto
 
 Install: ``sudo apt install mosquitto``
