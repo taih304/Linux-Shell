@@ -14,7 +14,8 @@ user_name$hostname #One host name can include many usaer_name
 
 **Hardware command**
 
-* ``sudo lshw``: list hardware
+* ``sudo lshw``: list system hardware information
+* ``lsusb``: list USB devices
 * ``du -h``: list out disk usage in MB
 * ``df -h``: list size of hardware, and usage of percentage
 * ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux

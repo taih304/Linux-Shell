@@ -1,8 +1,12 @@
-### INSTALLING THE ACR122U NFC USB READER ON LINUX
+### Install ACR122U NFC USB reader on Linux 
 
 **Install driver**: ACR122U USB NFC Reader
 
 Then extract the driver with the correct Linux release version
+
+Then: 
+
+``lsusb``: ``Bus 001 Device 031: ID 072f:2200 Advanced Card Systems, Ltd ACR122U``
 
 **Install PCSC-TOOLS**
 
