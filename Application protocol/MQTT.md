@@ -22,6 +22,16 @@ Send raw message
 mosquitto_pub -d -h "demo.thingsboard.io" -t "v1/devices/me/telemetry" -u "O0kt6xUl6cTGv9RM7M9P" -m "{'uid': 12}"
 ```
 
+MQTT cloud: ``mqtt.eclipse.org``
+
+```sh
+mosquitto_pub -h mqtt.eclipse.org -t "test/message" -m "Hello, world"
+```
+
+```sh
+mosquitto_sub -h mqtt.eclipse.org -t "test/message"
+```
+
 ### Build MQTT broker with Mosquitto
 
 Install: ``sudo apt install mosquitto``
