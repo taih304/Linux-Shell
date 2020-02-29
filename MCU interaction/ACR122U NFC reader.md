@@ -4,9 +4,9 @@
 
 Then extract the driver with the correct Linux release version
 
-Then: 
+Then``lsusb`` to check the USB
 
-``lsusb``: ``Bus 001 Device 031: ID 072f:2200 Advanced Card Systems, Ltd ACR122U``
+**Result**: ``Bus 001 Device 031: ID 072f:2200 Advanced Card Systems, Ltd ACR122U``
 
 **Install PCSC-TOOLS**
 
