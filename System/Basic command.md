@@ -10,15 +10,13 @@
 
 ``realpath filename``: print out path of a file
 
-``mkdir name_of_folder``: make a directory (a folder)
+``mkdir foldername``: make a directory (a folder)
 
 ``cp``: copy
 
 For example, we have a folder ``username``
 
-``cp test username``
-
-=> we copy the file test to folder ``username``
+``cp test username``: copy the file ``test`` to folder ``username``
 
 ### ls to list
 
@@ -28,7 +26,7 @@ For example, we have a folder ``username``
 
 ``ls -a``: list all file and directory (including hidden files).
 
-In the result, a file start with "." (dot) mean it is a hidden files
+In the result, a file start with ``.`` (dot) mean it is a hidden files
 
 To hide a file rename it to ``.itsname``
 
@@ -46,11 +44,7 @@ $ cd /dev/
 $ ls
 ```
 
-list all file in current directory then output to a file (stream)
-
-```shell
-ls -a > text.md
-```
+``ls -a > text.md``: list all file in current directory then output to a file (stream)
 
 ### mv to move
 
@@ -62,7 +56,7 @@ ls -a > text.md
 
 rm stands for remove: used to remove a file, not directory
 
-``rm <name of file>``
+``rm filename``
 
 ``rm *`` : to remove everything on the directory
 
