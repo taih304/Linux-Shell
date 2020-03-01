@@ -9,6 +9,12 @@ a=$((a+9))
 echo $a #result: 9
 ```
 
+```sh
+a="hello"
+a+=" world"
+echo $a #hello world
+```
+
 ### expr
 
 ```sh
