@@ -51,11 +51,17 @@ b="this is $a"
 echo $b #this is 29
 ```
 
-
 ### Command as variable
 
 ```sh
 echo $(ls) #List out all file in current folder
+```
+
+Store command in a variable
+
+```sh
+a=$(ls)
+echo $a
 ```
 
 ### Write content to a file
