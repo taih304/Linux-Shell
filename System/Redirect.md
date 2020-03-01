@@ -59,7 +59,7 @@ grep [OPTIONS] PATTERN [FILE...]
 
 ``du -h|grep 'G'``: list all files in GB size: 
 
-Find a pattern include space in a file
+**Example**: Find a pattern include space in a file
 
 ```sh
 grep  "No smartcard" README.md
