@@ -71,6 +71,7 @@ echo $a
 * ``0``: Run successfully
 * ``1``: Miscellaneous errors: file not existed, divide by zero, impermissible operations,...
 * ``127``: command not found
+* ``255\*``: Exit status out of range
 
 ```sh
 ls
