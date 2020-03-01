@@ -70,7 +70,9 @@ echo $a
 
 * ``0``: Run successfully
 * ``1``: Miscellaneous errors: file not existed, divide by zero, impermissible operations,...
+* ``25``:	Inappropriate ioctl for device
 * ``127``: command not found
+* ``255\*``: Exit status out of range
 
 ```sh
 ls
