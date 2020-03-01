@@ -98,6 +98,22 @@ total number of parameter: 3 (argument ./test.sh is not count)
 
 ``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
 
+### Import file
+
+``file.sh``
+
+```sh
+string="Hello, World!"
+```
+
+To import file ``file.sh``, use: ``. file.sh`` or ``source file.sh``
+
+```sh
+# . file.sh
+source file.sh
+echo $string #Hello, World!
+```
+
 ### Array
 
 ```sh
