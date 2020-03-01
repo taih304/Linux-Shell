@@ -22,3 +22,9 @@ min = 1; time = 0;
 -brkint -icrnl -imaxbel iutf8
 -isig -icanon -iexten -echo -echoe -echok -echoctl -echnoke
 ```
+
+### /dev/null
+
+``echo a > /dev/null``: Redirect the standard output but you'll still see any errors
+
+``ecsdasdas &> /dev/null``: Redirect all output, including errors
