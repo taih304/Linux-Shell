@@ -4,9 +4,23 @@ echo a #result a
 
 **Error**
 
-Note: if you type ``a = 9``, or you leave space between the "=",this will be an error
+Note: if you type ``a = 9``, or you leave space between the ``=``, this will be an error.
 
 error: command not found
+
+### ``-e``
+
+To enable backlash, using ``-e``:
+
+```sh
+a="hello \n"
+a+="world"
+echo -e $a
+```
+```
+hello
+world
+```
 
 ### Variable declare
 
