@@ -7,6 +7,10 @@ The ``>`` operator will overwrite an existing file, while the ``>>`` operator wi
 * ``>``: redirect ouput to a file
 * ``<``: redirect input from a file
 
+**Example**
+
+``ls -a > text.md``: list all file in current directory then output to a file (stream)
+
 ### Text editor
 
 ```shell

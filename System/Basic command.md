@@ -44,8 +44,6 @@ $ cd /dev/
 $ ls
 ```
 
-``ls -a > text.md``: list all file in current directory then output to a file (stream)
-
 ### mv to move
 
 ``mv``: move a file from a directory to other

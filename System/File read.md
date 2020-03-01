@@ -18,12 +18,12 @@ After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
 
 ### less
 
-``less file_name``: Read a file, the opened filename will be opened to cover the current terminal window.
+``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
 
-### gnome to open a file: 
+### gnome to open a file
 
 ```shell
-gnome-open <!name of file>
+gnome-open filename
 ```
 
 ### nautilus
