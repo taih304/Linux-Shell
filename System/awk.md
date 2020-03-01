@@ -1,13 +1,3 @@
-Keep on appending data to ``data.csv``
-
-```sh
-echo "test" >> data.csv
-```
-
-```sh
-printf "test \n" >> data.csv
-```
-
 ### awk
 
 Print every line in the file

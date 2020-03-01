@@ -64,11 +64,18 @@ a=$(ls)
 echo $a
 ```
 
-### Write content to a file
+### Exit status
 
-``echo 8 > test.txt``: Write ``8`` to file ``test.txt``
+``$?``: Return the exit status of the latest executed command
 
-``echo 8 >> test.txt``: Append ``test.txt`` with value ``8``.
+* ``0``: Run successfully
+* ``1``: Miscellaneous errors: file not existed, divide by zero, impermissible operations,...
+* ``127``: command not found
+
+```sh
+ls
+echo $? #0
+```
 
 ### Command line argument
 
