@@ -89,3 +89,14 @@ grep [OPTIONS] PATTERN [FILE...]
 ``dmesg | grep tty``: list the current connected devices
 
 ``du -h|grep 'G'``: list all files in GB size: 
+
+Find a pattern include space in a file
+
+```sh
+grep  "No smartcard" README.md
+```
+
+```sh
+error_no_card_inserted="No smartcard"
+grep  "$error_no_card_inserted" README.md
+```
