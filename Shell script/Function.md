@@ -30,3 +30,16 @@ function_test(){
 function_test
 echo $? #10
 ```
+
+### Variable in function
+
+```sh
+temp=0
+
+function_test(){
+    temp="hello"
+}
+
+function_test
+echo $temp #hello
+```
