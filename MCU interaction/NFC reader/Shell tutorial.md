@@ -29,6 +29,10 @@ Then reboot the system.
 
 Start reading: ``pcsc_scan``
 
+``sudo service pcscd start``: start pcscd service
+
+``sudo service pcscd restart``: restart pcscd service
+
 ### Read UID
 
 On terminal
