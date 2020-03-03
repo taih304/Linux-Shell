@@ -18,6 +18,7 @@ user_name$hostname #One host name can include many usaer_name
 * ``lsusb``: list USB devices
 * ``du -h``: list out disk usage in MB
 * ``df -h``: list size of hardware, and usage of percentage
+* ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory
 * ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
 * ``df -i``: list all inode
 
