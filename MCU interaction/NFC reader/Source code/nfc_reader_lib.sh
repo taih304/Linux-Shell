@@ -13,8 +13,12 @@ nfc_start_reading(){
 }
 
 publish_data(){
-    while read textLine; do
-    mosquitto_pub -d -h $1 -t $2 -m "$textLine"    
+    while read textLine
+    do
+        if [ "$textLine" != "63 00" ]
+        then
+            mosquitto_pub -h $1 -t $2 -m "$textLine"
+        fi    
     done < .readUID.csv
 }
 

@@ -6,12 +6,10 @@
 ### Technical
 
 * Core: Shell interaction with ``pcsc_tools`` package
-* MQTT broker: mqtt.eclipse.org
+* MQTT broker: ``mqtt.eclipse.org``
 
 MQTT client listens for data: ``mosquitto_sub -h mqtt.eclipse.org -t "test/message"``
 
-### Backlog
+### Existed bug
 
-* Bug: No card is inserted
-* Bug: Card has been removed
 * Print out user unfriendly message
