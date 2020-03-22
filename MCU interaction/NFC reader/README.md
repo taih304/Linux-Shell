@@ -1,16 +1,44 @@
+### Device
+
+* NFC reader: ACR122U
+* Document: ACR122U USB NFC Reader, Application Programming Interface V2.04
+
 ### Appendix
 
 * PICC: proximity integrated circuit card
+* ATR: Answer to reset
 
-**ATR: Answer to reset**
+### Install ACR122U NFC USB reader on Linux 
 
-### Result
+**Install driver**: ACR122U USB NFC Reader
 
-3B 8F 80 01 80 4F 0C A0 00 00 03 06 03 00 03 00 00 00 00 68
+Then extract the driver with the correct Linux release version
 
-Read UID: FF CA 00 00 00
+Then``lsusb`` to check the USB
 
-* UID1: 04 5D 25 EA 73 4C 80 90 00 
-* UID2: 04 5C 26 EA 73 4C 80 90 00 
-* UID3: 04 54 26 EA 73 4C 80 90 00
-* RFID: 0B B0 B3 11 90 00 
+**Result**: ``Bus 001 Device 031: ID 072f:2200 Advanced Card Systems, Ltd ACR122U``
+
+**Install PCSC-TOOLS**
+
+First of all, update your system’s package lists as usual: ``sudo apt-get update``
+
+After that, download and install pcsc-tools: ``sudo apt-get install pcscd pcsc-tools``
+
+Then you need to blacklist the pre-installed drivers. You can do so by opening ``blacklist.conf``:
+
+``sudo nano /etc/modprobe.d/blacklist.conf``
+
+Add these two lines to the end of the file:
+
+```
+install nfc /bin/false
+install pn533 /bin/false
+```
+
+Then reboot the system.
+
+Start reading: ``pcsc_scan``
+
+``sudo service pcscd start``: start pcscd service
+
+``sudo service pcscd restart``: restart pcscd service

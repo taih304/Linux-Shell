@@ -1,31 +1,3 @@
-### If else
-
-```sh
-a=9
-b=10
-if [ $a -gt $b ] 
-then 
-	echo "A is greater than B" 
-else 
-	echo "A is less than B" 
-fi
-```
-
-```
-A is less than B
-```
-
-```sh
-string1=""
-string2="hello world 1"
-if [ $a -ne $b ] 
-then 
-	echo "A and B is not equal" 
-fi
-```
-```
-A and B is not equal
-```
 ### For loop
 
 Print out all argument name

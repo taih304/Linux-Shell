@@ -1,13 +1,12 @@
 ### Feature
 
-* NRF reader reads information from NFC tags and sends to MQTT broker
-* Read UID
+* ACR122U reads UID from NFC tags and sends to MQTT broker
+* RFID card/NFC tag: 13.56 MHz
 
 ### Technical
 
 * Core: Shell interaction with ``pcsc_tools`` package
 * MQTT broker: mqtt.eclipse.org
-* NFC reader: ACR122U
 
 MQTT client listens for data: ``mosquitto_sub -h mqtt.eclipse.org -t "test/message"``
 
