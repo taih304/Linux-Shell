@@ -123,18 +123,12 @@ source file.sh
 echo $string #Hello, World!
 ```
 
-### Array
+### Export file
 
 ```sh
-array=("text" 1 2)
-echo ${array[0]} #text
+echo "$(<jsonData.json)"
 ```
 
 ```sh
-#Declare array value first
-array[0]="hello"
-array[1]=0
-
-echo ${array[0]} #hello
-echo ${array[1]} #0
+echo "$(cat jsonData.json)"
 ```
