@@ -14,9 +14,11 @@
 
 ``cp``: copy
 
-For example, we have a folder ``username``
-
 ``cp test username``: copy the file ``test`` to folder ``username``
+
+``type linux_command``: information of that command
+
+``type cd``: information of ``cd`` command
 
 ### ls to list
 
