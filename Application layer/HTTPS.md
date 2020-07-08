@@ -1,5 +1,7 @@
 ### Get the valid certificate
 
+A valid digital certificate last for more than one year (the expire date can be checked easily)
+
 Get the certificate: ``openssl s_client -connect demo.thingsboard.io:443 -showcerts``
 
 Only the return certificate with ``Digital Signature Trust Co.,`` is valid, and can be used for HTTP client.
