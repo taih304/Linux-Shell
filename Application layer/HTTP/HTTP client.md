@@ -1,10 +1,10 @@
 ### GET request
 
-```sh
-curl -v -X GET youtube.com
-```
+With HTTP server: ``curl -v -X GET arduino.vn``
 
-Get data form Python HTTP server
+With HTTPS server: ``curl https://github.com``
+
+### Get data from Python HTTP server
 
 HTTP server: ``Python/Application layer/HTTP/HTTP server.md``
 
