@@ -46,6 +46,12 @@ $ cd /dev/
 $ ls
 ```
 
+``ls -li test.c``: List all files information
+
+**Output**: ``7997323 -rw-rw-r-- 1 username devicename 332 Thg 9   8 21:44 test.c``
+
+``7997323``: inode
+
 ### mv to move
 
 ``mv``: move a file from a directory to other
