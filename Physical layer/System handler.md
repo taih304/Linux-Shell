@@ -1,32 +1,10 @@
 ```bash
-user_name$hostname #One host name can include many usaer_name
+username$hostname #One host name can include many usaer_name
 ```
 
 ``Ctrl+Alt+F1``: enter textmode
 
 ``Ctrl+Alt+F7``: switch back to desktop
-
-* ``date``: show current date
-
-### Hardware handler
-
-**Port**: 16-bit port means computer can open up to 65536 port.
-
-**Hardware command**
-
-* ``sudo lshw``: list system hardware information
-* ``lsusb``: list USB devices
-* ``du -h``: list out disk usage in MB
-* ``df -h``: list size of hardware, and usage of percentage
-* ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory
-* ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
-* ``df -i``: list all inode
-
-**Issue**: Cannot open /dev/ttyUSB0: Permission denied
-
-```bash
-$ sudo chmod -R 777 /dev/ttyUSB0
-```
 
 ### User setup
 
@@ -76,16 +54,16 @@ If error happen, CentOS will not allow user to ``yum install`` more file.
 
 fix: ``sudo rm -rf /var/cache/*``
 
-### System handler
+## System handler
 
 * ``shutdown``
 * ``cat /etc/os-release``: View OS information
+* ``date``: show current date
+* ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
 
-**Program run at specific time**
+### Program run at specific time
 
-To let a program run in a specific time or when just start up
-
-``sudo crontab -e``
+To let a program run in a specific time or when just start up: ``sudo crontab -e``
 
 **Example**
 

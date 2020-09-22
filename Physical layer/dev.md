@@ -28,3 +28,9 @@ min = 1; time = 0;
 ``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
 
 ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
+
+### USB
+
+Detecting USB Drive: ``sudo fdisk -l``
+
+Mount the USB: ``mount /dev/sdb1 /mnt``

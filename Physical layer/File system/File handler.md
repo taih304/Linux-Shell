@@ -10,39 +10,19 @@ Using ``cat`` to create a new file then enter the value for it: ``cat > filename
 
 After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
 
-### less
+### Other commands
 
 ``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
 
-### gnome to open a file
-
-```shell
-gnome-open filename
-```
-
-### nautilus
+``gnome-open filename``: gnome to open a file
 
 ``sudo nautilus``: Open the folder with root permission
 
-### Open libreoffice doc
+``libreoffice --writer file.odt``or ``libreoffice --writer file.doc``: Open libreoffice doc
 
-```shell
-libreoffice --writer file.odt
-```
+``nano filename``: edit the content of file ``filename`` or create a new one if not existed.
 
-or 
-
-```shell
-libreoffice --writer file.doc
-```
-
-### nano
-
-``nano filename``: allows user to edit content of file or create a new one if not existed.
-
-### touch
-
-Create new file: ``touch filename.extension``
+``touch filename.txt`` Create new file ``filename.txt``
 
 ## Permission
 
@@ -90,3 +70,10 @@ E.g ``chmod 775 name.sh``
 **File permission**
 
 The typical file permission is: ``trwxrwxrwx``
+
+
+**Example**: Cannot open /dev/ttyUSB0: Permission denied
+
+```bash
+$ sudo chmod -R 777 /dev/ttyUSB0
+```
