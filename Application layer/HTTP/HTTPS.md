@@ -1,6 +1,6 @@
 ### Get the valid certificate
 
-A valid digital certificate last for more than one year (the expire date can be checked easily)
+A valid digital certificate last for more than one year (the expiry date can be checked easily)
 
 Get the certificate: ``openssl s_client -connect demo.thingsboard.io:443 -showcerts``
 
