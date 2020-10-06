@@ -1,1 +1,1 @@
-# Linux command and shell script
+# Linux commands and Shell script
