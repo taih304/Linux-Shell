@@ -1,3 +1,5 @@
+``Make`` is a build automation tool. Its file format is ``Makefile``.
+
 ### Architecture
 
 ```
