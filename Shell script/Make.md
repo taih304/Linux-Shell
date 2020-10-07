@@ -1,4 +1,4 @@
-``Make`` is a build automation tool. Its file format is ``Makefile``.
+``Make`` is a build automation tool. Its file format can be ``Makefile`` or ``makefile``.
 
 ### Architecture
 
@@ -16,6 +16,8 @@ target: prerequisites
 * **Step 2**: Run with command ``make``
 
 **Example**: Run the very first makefile
+
+``Makfile``:
 
 ```Makefile
 main:
