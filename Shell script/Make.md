@@ -126,3 +126,19 @@ compile:
 list:
 	$(LS)
 ```
+
+### .mak file
+
+A ``Makefile`` name can be name with ``name.mak`` for several makefile to be used for a project, E.g: ``makefile1.mak``, ``makefile2.mak``, ``makefile3.mak``,...
+
+``test.mak``
+
+```Makefile
+main:
+	@echo "Hello"
+
+test:
+	@echo "test script"
+```
+
+To run ``test.mak`` with target ``main``: ``make -f test.mak main``
