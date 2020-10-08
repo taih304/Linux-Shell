@@ -61,6 +61,11 @@ fix: ``sudo rm -rf /var/cache/*``
 * ``date``: show current date
 * ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
 
+Name of OS:
+
+* ``uname``: Name of OS
+* ``uname -v``: Name of Kernel version. E.g: ``#82-Ubuntu SMP Fri Sep 4 12:23:10 UTC 2020``
+
 ### Program run at specific time
 
 To let a program run in a specific time or when just start up: ``sudo crontab -e``
