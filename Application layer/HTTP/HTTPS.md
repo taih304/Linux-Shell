@@ -38,4 +38,4 @@ If using: ``openssl s_client -connect jsonplaceholder.typicode.com:443 -showcert
 
 ### Wireshark
 
-Filter HTTPS package: ``tcp.port == 443``
+Filter HTTPS request: ``tcp.port == 443``
