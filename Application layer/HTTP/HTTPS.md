@@ -35,3 +35,7 @@ openssl s_client -connect jsonplaceholder.typicode.com:443 -servername jsonplace
 ```
 
 If using: ``openssl s_client -connect jsonplaceholder.typicode.com:443 -showcerts``, there will be error: ``CONNECTED(00000003) 140035169920664:error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure:s23_clnt.c:769:``
+
+### Wireshark
+
+Filter HTTPS package: ``tcp.port == 443``
