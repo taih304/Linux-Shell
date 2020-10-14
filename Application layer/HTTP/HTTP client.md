@@ -19,3 +19,7 @@ File ``temp.md`` will have ``Hello, World``.
 ### Send data to a HTTP server
 
 Check ``HTTP.md`` in ``Platforms interaction/ThingsBoard``
+
+### Wireshark
+
+Filter HTTP request: ``http.request.method == GET``
