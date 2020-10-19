@@ -18,6 +18,8 @@
 
 ## File archive
 
+### zip and unzip
+
 Command: ``unzip``, ``zip`` for ``zipping`` and ``unzipping`` files
 
 ### ar
