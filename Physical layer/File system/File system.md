@@ -31,3 +31,17 @@ Command: ``unzip``, ``zip`` for ``zipping`` and ``unzipping`` files
 * r: create
 
 ``ar r testFile.zip test1.c test2.c``: Zip two files ``test1.c``, ``test2.c`` into ``testFile.zip``
+
+### tar
+
+``tar``: saves many files together into a single tape or disk archive. ``tar`` is also a file extension.
+
+``-c``: create a new archive
+
+``-f``: use archive file or device ARCHIVE
+
+Archive files to ``.tar`` file: ``tar -cf test.tar file1.md file2.md``
+
+Extract files from a ``.tar`` file: ``tar -xf test.tar``
+
+You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just arhive to ``.tar`` file.
