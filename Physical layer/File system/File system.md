@@ -20,7 +20,11 @@
 
 ### zip and unzip
 
-Command: ``unzip``, ``zip`` for ``zipping`` and ``unzipping`` files
+Zip several files: ``zip test.zip README.md document.md``
+
+### unzip
+
+Command ``unzip`` for ``unzipping`` files
 
 ### ar
 
