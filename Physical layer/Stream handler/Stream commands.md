@@ -4,6 +4,10 @@
 
 ### Basic Command
 
+**For space**:
+
+To work with a file containing space, like ``"Folder 1"``, add ``" "`` in the command: E.g ``cd "Folder 1"``
+
 ``cd ../..``: change to previous folder
 
 ``pwd``: print working directory
