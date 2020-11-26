@@ -16,6 +16,12 @@
 
 ``printenv``: Print out all environment variable
 
+### stat
+
+``stat``: Display file or file system status.
+
+E.g: ``stat folder_1``, ``stat test.txt``
+
 ## File archive
 
 ### zip and unzip
