@@ -43,7 +43,7 @@ If a ``-`` means a permission (r,w,x) is denied.
 -rw-rw-r-- 1 anonymous anonymous 450 Sep 23 04:17 command.md
 ```
 
-This means it is a file, owner can both read and write the file, owner group can read and write, all userd can read the file but can't execute the file.
+This means it is a file, owner can both read and write the file, owner group can read and write, all user can read the file but can't execute the file.
 
 First character acceptance value 
 * ``t``: type
