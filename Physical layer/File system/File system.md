@@ -16,6 +16,10 @@
 
 ``printenv``: Print out all environment variable
 
+All environment variable can be print out with ``echo $env``, e.g: ``echo $USER``
+
+E.g: ``echo user: $USER``
+
 ### stat
 
 ``stat``: Display file or file system status.
