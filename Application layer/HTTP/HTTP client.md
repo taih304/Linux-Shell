@@ -24,6 +24,12 @@ File ``temp.md`` will have ``Hello, World``.
 
 Check ``HTTP.md`` in ``Platforms interaction/ThingsBoard``
 
+**Send data to a Python HTTP server**
+
+HTTP server: Check ``HTTP server`` in ``HTTP server receives data from client`` in ``Python/Application layer/HTTP/HTTP server.md``
+
+Send data ``hello``: ``curl -v -X GET -d "hello" 192.168.0.103:8000``
+
 ## HTTP client with Wget
 
 Download content from a URL to a file: ``wget -O test.md github.com``
