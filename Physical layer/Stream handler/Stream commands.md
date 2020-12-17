@@ -119,4 +119,3 @@ $ ls
 **Other commands**
 
 * ``sudo lshw``: list system hardware information
-* ``lsusb``: list USB devices

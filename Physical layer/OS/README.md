@@ -52,7 +52,7 @@ This error might happen as the devicename is changed
 
 If error happen, CentOS will not allow user to ``yum install`` more file.
 
-fix: ``sudo rm -rf /var/cache/*``
+Problem solved: ``sudo rm -rf /var/cache/*``
 
 ## System handler
 

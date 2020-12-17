@@ -34,3 +34,5 @@ min = 1; time = 0;
 Detecting USB Drive: ``sudo fdisk -l``
 
 Mount the USB: ``mount /dev/sdb1 /mnt``
+
+List USB devices: ``lsusb``
