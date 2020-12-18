@@ -5,3 +5,15 @@
 ``ps ax | grep firefox``: Return nothing in Git Bash Windows
 
 A C compile program (``a.out``) program will run as a process and can be listed in ``ps``
+
+### kill
+
+``kill``: send a signal to a process
+
+``kill [options] <pid> [...]``
+
+The  default  signal  for kill is ``TERM`` (terminate).
+
+``kill 17375``: terminate process with PID ``17375``
+
+``kill -l`` or ``kill -L``: To display all the available signals you can use below command option
