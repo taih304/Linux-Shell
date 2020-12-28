@@ -1,4 +1,4 @@
-## Command
+## Read file
 
 ### cat
 
@@ -9,6 +9,18 @@
 Using ``cat`` to create a new file then enter the value for it: ``cat > filename1.md``.
 
 After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
+
+### source and ``.``
+
+``source``: ``source filename [arguments]``
+
+``.``: ``. filename [arguments]``
+
+``source`` and ``.`` execute commands from a file in the current shell. Read and execute commands from ``FILENAME`` in the current shell. 
+
+E.g: File ``test.txt`` has content ``ls``
+
+``source test.txt`` and ``. text.txt`` will run ``ls`` command
 
 ### Other commands
 
