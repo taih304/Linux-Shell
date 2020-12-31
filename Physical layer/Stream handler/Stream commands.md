@@ -1,5 +1,9 @@
 ``Ctrl+D`` logs out of the interface (quite similar to Ctr+C to exit)
 
+``which``: locate where a command is stored. 
+
+**E.g**: ``which ls``: ``/bin/ls``
+
 ### Basic Command
 
 **For space**:
