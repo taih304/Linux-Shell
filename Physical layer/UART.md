@@ -61,4 +61,11 @@ Serial.println("Hello, World");
 delay(1000);
 ```
 
-**Using cat to read**: ``cat /dev/ttyUSB0``
+**Using cat to read**: ``cat /dev/ttyUSB0``. This can just only read the baudrate of ``9660`` by default.
+
+To read with other baudrate value like ``115200``:
+
+```sh
+stty -F /dev/ttyUSB0 115200
+cat /dev/ttyUSB0
+```
