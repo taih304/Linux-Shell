@@ -103,4 +103,7 @@ To avoid this problem you can explicitly declare the target to be phony by makin
 .PHONY: test
 test:
         rm *.o temp
-```		
+```	
+### Operator
+
+``?=``: This is called a conditional variable assignment operator, because it only has an effect if the variable is not yet defined
