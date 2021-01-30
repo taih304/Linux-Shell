@@ -28,3 +28,15 @@ compile:
 list:
 	$(LS)
 ```
+
+**Example 3**: ``cd`` command in a makefile
+
+``cd`` command is performed in a sub-process shell, and affects neither ``make`` nor the shell you're working from.
+
+To work with other directory with ``cd``, take this example
+
+```
+all:
+        cd Linux-Shell; echo "Linux Shell folder"; \
+          gcc test test.c
+```
