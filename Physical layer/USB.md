@@ -1,34 +1,49 @@
-### Sending data with UART from Linux computer to Arduino
+## Commands
 
-Send ``9``, ``8`` from Terminal Linux to turn ON/OFF LED on Arduino.
+Detecting USB Drive: ``sudo fdisk -l``
 
-**On Arduino**
+Mount the USB: ``mount /dev/sdb1 /mnt``
 
-```c
-#include <Arduino.h>
+List USB devices: ``lsusb``
 
-char received;
-void setup() {
-  Serial.begin(9600);
-  pinMode(13, OUTPUT);
-}
+### stty
 
-void loop() {
+``stty`` displays or changes the characteristics of the terminal.
 
-  if (Serial.available()) {
-    received = Serial.read() - 48;
-    Serial.println(received);
-    if (received == 9)
-    {
-      digitalWrite(13, HIGH);
-    }
-    else if (received == 8)
-    {
-      digitalWrite(13, LOW);
-    }
-  }
-}
 ```
+stty [-F DEVICE | --file=DEVICE] [SETTING]...
+```
+
+**Example**
+
+View existed config information of ``ttyS0`` of Raspberry Pi
+
+```
+stty -F /dev/ttyS0
+```
+
+**Result**
+
+```
+speed 115200 baud; line = 0;
+min = 1; time = 0;
+-brkint -icrnl -imaxbel iutf8
+-isig -icanon -iexten -echo -echoe -echok -echoctl -echnoke
+```
+
+### /dev/null
+
+``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
+
+``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
+
+## Example
+
+### Example 1: Sending data from USB port of Linux computer to ATmega328
+
+Send ``9``, ``8`` from Terminal Linux to turn ON/OFF LED on ATmega328.
+
+**ATmega328 code**: ``Slave`` in ``AVR-Arduino-framework/Physical layer/UART/Master and Slave.md``
 
 **Using screen**
 
@@ -52,7 +67,7 @@ Then:
 
 ``echo 8 > /dev/ttyUSB0``: Turn OFF
 
-### Read serial port data
+### Example 2: Read serial port data
 
 **Arduino**
 
