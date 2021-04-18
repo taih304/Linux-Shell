@@ -3,10 +3,10 @@
 ### Add operator
 
 ```shell
-a=0
+a=10
 a=$((a+9))
 
-echo $a #result: 9
+echo $a #result: 19
 ```
 
 ```sh
@@ -19,4 +19,8 @@ echo $a #hello world
 
 ```sh
 echo $a `expr 1 + 3` #4
+```
+```sh
+arraySize=10
+echo $a `expr $arraySize + 3` #13
 ```

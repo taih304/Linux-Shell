@@ -42,6 +42,21 @@ done
 ```
 **Result**: ``name 1``, ``name 2``, ``name 3``,...
 
+With syntax like C
+```sh
+for ((i=1; i<=arraySize;i++))
+do
+    echo $i
+done
+```
+
+Using ``seq``
+```sh
+for index in $(seq 0 10)
+do
+    echo $index
+done
+```
 ### While loop
 
 Print out from 0 to 9
