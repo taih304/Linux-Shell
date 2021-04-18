@@ -50,6 +50,12 @@ echo ${array[0]} #text
 For array size: ``echo "${#array[@]}"``
 
 Read all values of an array
+
+```sh
+array=("Hello, World !" 1 2 3)
+printf '%s\n' "${array[@]}"
+```
+Or
 ```sh
 array=("Hello, World !" 1 2 3)
 for value in "${array[@]}"
@@ -79,3 +85,13 @@ array[1]=2
 ```
 
 * ``updateArrayWithIndex.sh``: Change value of a member isnide an array by the entered index.
+
+### Remove
+
+```sh
+array=("Hello, World !" 1 2 3)
+
+unset -v 'array[0]'
+
+printf '%s\n' "${array[@]}"
+```
