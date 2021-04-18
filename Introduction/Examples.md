@@ -10,7 +10,7 @@ $ echo $enteredString
 **Shell script**
 
 ```sh
-echo "Enter a string"
+printf "Enter a string"
 read enteredString
 echo "String is $enteredString"
 ```

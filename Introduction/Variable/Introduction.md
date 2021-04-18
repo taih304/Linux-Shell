@@ -8,6 +8,14 @@ Note: if you type ``a = 9``, or you leave space between the ``=``, this will be 
 
 error: command not found
 
+Set value to variable by other variable
+
+```sh
+a=4
+b=$a
+echo $b
+```
+
 ### ``-e``
 
 To enable backlash, using ``-e``:
@@ -132,3 +140,18 @@ echo "$(<jsonData.json)"
 ```sh
 echo "$(cat jsonData.json)"
 ```
+
+### Variable types
+
+Bash doesn't have variable types, types of variable are handled by ``declare`` command.
+
+```sh
+declare -i num
+num=42
+```
+
+Then ``declare -p num`` will give: ``declare -i num="42"``
+
+If ``num="Hello, World !"`` (string), then ``declare -p num`` will give: ``declare -i num="0"``
+
+``check_type.sh``: Check type of the entered string, whether it is integer or string.
