@@ -24,6 +24,8 @@ mosquitto_sub -h mqtt.eclipse.org -t "test/message"
 
 MQTT cloud ``test.mosquitto.org`` no longer works.
 
+As testing on April 26th 2020, MQTT cloud ``mqtt.eclipse.org`` and ``iot.eclipse.org`` no longer work.
+
 ### Build MQTT broker with Mosquitto
 
 Install: ``sudo apt install mosquitto``
