@@ -9,6 +9,7 @@ Mosquitto client: ``sudo apt install mosquitto-clients``
 * ``-f``: file
 * ``-m``: message
 * ``-v``: print publish message verbosely
+* ``-P``: password
 
 ### Send data to a MQTT broker
 
