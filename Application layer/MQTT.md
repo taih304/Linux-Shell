@@ -1,3 +1,9 @@
+## MQTT.js
+
+If ``MQTT.js`` is install, command ``mqtt`` is available for Bash.
+
+## Mosquitto
+
 ### MQTT client install
 
 Mosquitto client: ``sudo apt install mosquitto-clients``
@@ -43,3 +49,7 @@ Publish a message to topic ``test/message`` on ``localhost``:
 ```shell
 $ mosquitto_pub -h localhost -t "test/message" -m "Hello, world"
 ```
+
+### WebSocket is disabled
+
+According to [Mosquitto broker conf docs](https://mosquitto.org/man/mosquitto-conf-5.html), Websockets support is currently disabled by default at compile time. So you will need to build a version of Mosquitto from source for websocket support.
