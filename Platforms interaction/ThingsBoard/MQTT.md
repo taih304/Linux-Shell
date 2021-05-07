@@ -8,6 +8,12 @@ mosquitto_pub -d -h "demo.thingsboard.io" -t "v1/devices/me/telemetry" -u "O0kt6
 mosquitto_pub -d -h "demo.thingsboard.io" -t "v1/devices/me/telemetry" -u "O0kt6xUl6cTGv9RM7M9P" -m "{'uid': 12}"
 ```
 
+On local server with specific port:
+
+```shell
+mosquitto_pub -h 172.16.8.58 -p 1884 -t "v1/devices/me/telemetry" -u "qdpLoC8hu4Y6CgsXhaY9" -m "{\"mqtt-number\": 0}" -d
+```
+
 ### Control device with RPC
 
 ```sh
