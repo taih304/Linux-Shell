@@ -22,6 +22,8 @@ function_test para1 para2
 
 **Function with return value**
 
+When a bash function completes, its return value is the status of the last statement executed in the function, ``0`` for success and non-zero decimal number in the ``1 - 255`` range for failure. You can't return a string in bash functions.
+
 ```sh
 function_test(){
     return 10
@@ -29,6 +31,15 @@ function_test(){
 
 function_test
 echo $? #10
+```
+
+```sh
+function_test(){
+    return "02"$1
+}
+
+function_test 1
+echo $? #21
 ```
 
 ### Variable in function
