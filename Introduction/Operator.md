@@ -9,6 +9,8 @@ a=$((a+9))
 echo $a #result: 19
 ```
 
+Or it can be: ``a=$(( a + 9 ))``
+
 ```sh
 a="hello"
 a+=" world"

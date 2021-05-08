@@ -58,7 +58,6 @@ Problem solved: ``sudo rm -rf /var/cache/*``
 
 * ``shutdown``
 * ``cat /etc/os-release``: View OS information
-* ``date``: show current date
 * ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
 
 Name of OS:

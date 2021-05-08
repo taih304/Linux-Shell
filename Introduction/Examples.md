@@ -36,18 +36,6 @@ If filename exists (regardless whether it is a file or directory), you will get 
 
 **Example 4**
 
-Print out ``Hello, World!`` after every 1 second with ``sleep``
-
-```sh
-while [ true ]
-do
-	echo "Hello, World!"
-	sleep 1
-done
-```
-
-**Example 5**
-
 Execute a function after pressing exit with ``trap``
 
 ``trap handler_function condition_code``
