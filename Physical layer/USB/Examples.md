@@ -21,4 +21,11 @@ To disable this feature: ``stty -F /dev/ttyACM0 -hupcl``
 
 Read serial port data
 
-**Using cat**: ``cat /dev/ttyUSB0``.
+**Using cat**: 
+
+```sh
+while [ true ]
+do
+    cat /dev/ttyUSB0
+done 
+```
