@@ -1,4 +1,6 @@
-### Send data
+## curl
+
+### Telemetry
 
 Send data to Live Demo server:
 
@@ -34,7 +36,7 @@ do
 done	
 ```
 
-### Control devices with RPC
+### RPC
 
 Get return value from control widget of ThingsBoard dashboard
 
@@ -61,4 +63,34 @@ do
 	echo $params
 	sleep 1
 done
+```
+
+## netcat
+
+**Telemetry**
+
+```sh
+data="{'number':'erin'}"
+http_request="POST /api/v1/O0kt6xUl6cTGv9RM7M9P/telemetry HTTP/1.1\r\n"
+http_request+="Host:demo.thingsboard.io\r\n"
+http_request+="Content-Type: application/json\r\n"
+http_request+="Content-Length: "
+http_request+=${#data}
+http_request+="\r\n\r\n"
+http_request+=$data
+http_request+="\r\n"
+
+echo -e $http_request | nc demo.thingsboard.io 80
+```
+
+**RPC**
+
+```sh
+http_request="GET /api/v1/O0kt6xUl6cTGv9RM7M9P/rpc HTTP/1.1\r\n"
+http_request+="Host:demo.thingsboard.io\r\n\r\n"
+
+while [ true ]
+do
+    echo -e $http_request | nc demo.thingsboard.io 80
+done    
 ```
