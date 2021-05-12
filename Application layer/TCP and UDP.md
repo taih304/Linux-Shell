@@ -29,3 +29,12 @@ Sending data to another TCP client.
 ``nc -l 8000 < data.csv``: TCP server sends ``data.csv`` to every TCP client which listens to it.
 
 ``nc 127.0.0.1 8000 < data.csv``: TCP client sends ``data.csv`` to every TCP client which it is listening to.
+
+**Note**: Those commands just send the file only one time, even if putting with ``nc -kl``. To send the file forever:
+
+```sh
+while [ true ]
+do
+    nc -l 8000 < data.csv
+done 
+```
