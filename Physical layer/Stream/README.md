@@ -19,3 +19,10 @@ echo $text
 ```
 
 Run ``./test.sh 123``: ``hello 123``
+
+``printf`` ends when encountering the space
+
+```sh
+string="Hello, World !"
+printf $string #Hello,
+```
