@@ -2,13 +2,15 @@
 
 ### Example 1 
 
-Receives data from another TCP client.
+Receives data from TCP trasmitters.
 
 ``nc -l 8000``: Start listening on port 8000. This will listen for only one connection on port 8000. After receiving and finishing its first connection, the command will stop.
 
-Then other TCP client can starts sending data to it.
+``nc -kl 8000``: Forces ``nc`` to stay listening for another connection after its current connection is completed.
 
-**TCP client**:
+Then other TCP transmitters can start sending data to it.
+
+**TCP transmitter**:
 
 * Terminal console
 
@@ -16,9 +18,9 @@ In other terminal console: ``nc 127.0.0.1 8000``. This will listen to the IP ``1
 
 Then every thing typed in every console will be broad cast to the others.
 
-``nc -kl 8000``: Forces ``nc`` to stay listening for another connection after its current connection is completed.
+Send a string to TCP receiver: ``echo Hello, World ! | nc 192.168.107.219 8000`` 
 
-* ESP8266: For a TCP client that sends a string to netcat TCP client: Check ``TCP client.md`` in ``ESP8266-Arduino-framework/Application layer/``
+* ESP8266: For a TCP client/transmitter that sends a string to netcat TCP client: Check ``TCP client.md`` in ``ESP8266-Arduino-framework/Application layer/``
 
 * Web browser: Type ``localhost:8000`` on web browser, then ``nc -l 8000`` will print out the response.
 
