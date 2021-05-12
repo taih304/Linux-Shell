@@ -1,6 +1,7 @@
 ### Redirect
 
-The ``>`` operator will overwrite an existing file, while the ``>>`` operator will append the output to the file.
+* ``>``: Write data to a file, this will overwrite an existing file
+* ``>>``: Append the output to the file
 
 ``> filename.txt``: Create ``filename.txt``
 
@@ -35,7 +36,9 @@ done < test.csv
 
 To redirect an error compiled script to a file: ``fail_script 2> outputfile``
 
-E.g: ``echoa 2> text.md``
+Example: 
+
+``echoa 2> text.md``: Write the result of an error command (``echoa``) to ``text.md``
 
 ### pipe
 
@@ -43,11 +46,11 @@ E.g: ``echoa 2> text.md``
 
 ### grep
 
+``grep`` searches for PATTERN in each FILE.
+
 ```sh
 grep [OPTIONS] PATTERN [FILE...]
 ```
-
-``grep`` searches for PATTERN in each FILE.
 
 ``grep "i" test.sh``: find all character ``i`` in ``test.sh``
 
