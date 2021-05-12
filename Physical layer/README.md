@@ -44,10 +44,6 @@ This error might happen as the devicename is changed
 
 ``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
 
-### netstat
-
-``netstat -tulpn``: Find out which process is listening upon a port
-
 ### Error IUSE 100% in ``CentOS``
 
 If error happen, CentOS will not allow user to ``yum install`` more file.
