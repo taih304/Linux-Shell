@@ -1,4 +1,4 @@
-## HTTP client with cURL
+## cURL
 
 ### GET request
 
@@ -30,11 +30,17 @@ HTTP server: Check ``HTTP server`` in ``HTTP server receives data from client`` 
 
 Send data ``hello``: ``curl -v -X GET -d "hello" 192.168.0.103:8000``
 
-## HTTP client with Wget
+## Wget
 
 Download content from a URL to a file: ``wget -O test.md github.com``
 
 Download an image from a URL that purely returns that image to a file: ``wget -O test.png https://vignette.wikia.nocookie.net/testwikia/images/4/44/png_image.png/revision/latest?cb=20200927143723``
+
+## netcat
+
+With HTTP server: ``printf 'GET / HTTP/1.1\r\nHost:example.com\r\n\r\n' | nc example.com 80``
+
+With HTTPS server: ``nc`` doesn't support HTTPS
 
 ## Wireshark
 
