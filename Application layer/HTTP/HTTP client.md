@@ -38,7 +38,11 @@ Download an image from a URL that purely returns that image to a file: ``wget -O
 
 ## netcat
 
-With HTTP server: ``printf 'GET / HTTP/1.1\r\nHost:example.com\r\n\r\n' | nc example.com 80``
+With HTTP server:
+
+``printf "GET / HTTP/1.1\r\nHost:example.com\r\n\r\n" | nc example.com 80``
+
+``echo -e "GET / HTTP/1.1\r\nHost:example.com\r\n\r\n" | nc example.com 80``
 
 With HTTPS server: ``nc`` doesn't support HTTPS
 
