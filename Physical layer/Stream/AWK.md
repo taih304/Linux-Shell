@@ -22,6 +22,13 @@ For only argument 2 in field1: ``awk '/field1/ {print $2}' data.md``.
 
 **Result**: ``field1Value``
 
+Store the result of ``awk`` as a variable:
+
+```sh
+string=$(awk '/field1/ {print $2}' data.md)
+echo "string is $string"
+``` 
+
 ### CSV data
 
 ``-F,``: ``,`` as seperator
