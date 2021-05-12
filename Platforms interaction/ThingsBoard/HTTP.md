@@ -103,27 +103,27 @@ Performing telemetry and RPC with HTTPS Live demo ThingsBoard.
 
 ```sh
 data="{'string':'Hello, World !'}"
-http_request="POST /api/v1/O0kt6xUl6cTGv9RM7M9P/telemetry HTTP/1.1\r\n"
-http_request+="Host:demo.thingsboard.io\r\n"
-http_request+="Content-Type: application/json\r\n"
-http_request+="Content-Length: "
-http_request+=${#data}
-http_request+="\r\n\r\n"
-http_request+=$data
-http_request+="\r\n"
+https_request="POST /api/v1/O0kt6xUl6cTGv9RM7M9P/telemetry HTTP/1.1\r\n"
+https_request+="Host:demo.thingsboard.io\r\n"
+https_request+="Content-Type: application/json\r\n"
+https_request+="Content-Length: "
+https_request+=${#data}
+https_request+="\r\n\r\n"
+https_request+=$data
+https_request+="\r\n"
 
-echo -e $http_request | openssl s_client -connect demo.thingsboard.io:443
+echo -e $https_request | openssl s_client -connect demo.thingsboard.io:443
 ```
 
 **RPC**
 
 ```sh
-http_request="GET /api/v1/O0kt6xUl6cTGv9RM7M9P/rpc HTTP/1.1\r\n"
-http_request+="Host:demo.thingsboard.io\r\n\r\n"
+https_request="GET /api/v1/O0kt6xUl6cTGv9RM7M9P/rpc HTTP/1.1\r\n"
+https_request+="Host:demo.thingsboard.io\r\n\r\n"
 
 while [ true ]
 do
-    echo -e $http_request | openssl s_client -quiet -connect demo.thingsboard.io:443
+    echo -e $https_request | openssl s_client -quiet -connect demo.thingsboard.io:443
 done   
 ```
 
