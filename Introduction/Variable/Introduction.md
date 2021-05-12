@@ -18,7 +18,7 @@ echo $b
 
 ### ``-e``
 
-To enable backlash, using ``-e``:
+``echo -e``: enable interpretation of backslash escapes:
 
 ```sh
 a="hello \n"
