@@ -1,4 +1,10 @@
-### awk
+``Gawk``  is  the GNU Project's implementation of the ``AWK`` programming language, and is implemented with command ``awk``.
+
+``awk -f filename.txt``: Read content of file ``filename.txt``
+
+## Examples
+
+### Example 1
 
 Print every line in the file
 
@@ -28,8 +34,9 @@ Store the result of ``awk`` as a variable:
 string=$(awk '/field1/ {print $2}' data.md)
 echo "string is $string"
 ``` 
+### Example 2
 
-### CSV data
+Working with CSV data
 
 ``-F,``: ``,`` as seperator
 
