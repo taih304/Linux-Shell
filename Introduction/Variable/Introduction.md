@@ -16,6 +16,10 @@ b=$a
 echo $b
 ```
 
+``-n``: Print a string to stream without a newline
+
+E.g: ``echo -n 123 > /dev/ttyUSB0``
+
 ### ``-e``
 
 ``echo -e``: enable interpretation of backslash escapes:
