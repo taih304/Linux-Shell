@@ -9,13 +9,15 @@ DRF1605H Zigbee module is able to communicate with other MCU by UART with 3.3V l
 | TX (5 J2)  | RX   |
 | RX (4 J2)      | TX   |
 
+DRF1605H works normally with PlatformIO by reading its data from Serial port.
+
 ### Working with Serial frame on GTKTerm
 
 Notice that serial frame must be enter with space like ``FC 02``.
 
 Go to ``View`` -> ``Hexadecimal``. Then choose ``Send hexadecimal data``.
 
-Set up Port: ``Configuration`` -> Choose connected port, then choose 8 bits data, baudrate 38400 (default). Other remain value like parity, stop-bit can be set to any other value.
+Set up Port: ``Configuration`` -> Choose connected port, then choose 8 bits data, baudrate ``38400`` (default). Other remain value like parity, stop-bit can be set to any other value.
 
 Set address ``56 78``: ``FC 02 91 01 56 78 5E``. If entering this command for the first time, it will return ``56 78``. If keep entering this command for the next time, other hex string will be returned.
 
@@ -38,14 +40,6 @@ Sending a serial frame ``FC 00 91 08 A8 B8 F5`` will be count as sending 7 bytes
 Set baudrate 38400: ``FC 01 91 06 03 F6 8D``. This will return on screen: ``00 03 08 04 00 00``
 
 ``FC 00 91 07 97 A7 D2``: Test UART baudrate
-
-### Working with PlatformIO
-
-```bash
-pio device monitor --port /dev/ttyUSB0 --baud 38400 --echo --encoding hexlify
-```
-
-``--encoding``: Set the encoding for the serial port (e.g. hexlify, Latin1, UTF-8), default UTF-8.
 
 ### Issue with Serial Monitor and Putty
 
