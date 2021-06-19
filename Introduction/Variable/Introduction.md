@@ -139,6 +139,20 @@ echo "$(<jsonData.json)"
 echo "$(cat jsonData.json)"
 ```
 
+## let
+
+```sh
+let "a = 10"
+echo $a
+```
+
+For hex number:
+
+```sh
+let "a = 0x10"
+echo $a
+```
+
 ### Variable types
 
 Bash doesn't have variable types, types of variable are handled by ``declare`` command.
