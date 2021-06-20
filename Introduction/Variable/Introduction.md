@@ -18,7 +18,7 @@ echo $b
 
 ``-n``: Print a string to stream without a newline
 
-E.g: ``echo -n 123 > /dev/ttyUSB0``
+E.g: ``echo -n 123``
 
 ### ``-e``
 
