@@ -21,7 +21,7 @@ do
 done
 ```
 
-To run environment variable: ``echo -e " HTTP/1.1 200\r\n\r\n$(date)" | nc 127.0.0.1 -kl 8000``
+To return environment variable: ``echo -e " HTTP/1.1 200\r\n\r\n$(date)" | nc 127.0.0.1 -kl 8000``
 
 To return a HTML webpage: ``echo -e " HTTP/1.1 200\r\n\r\n$(cat index.html)" | nc 127.0.0.1 -kl 8000``
 
