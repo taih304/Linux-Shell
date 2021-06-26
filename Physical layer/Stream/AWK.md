@@ -20,11 +20,11 @@ field2 field2Value
 field3 field3Value
 ```
 
-Read field1 ``awk '/field1/ {print}' data.csv``
+Read field1 ``awk '/field1/ {print}' data.md``
 
 **Result**: ``field1 field1Value``
 
-For only argument 2 in field1: ``awk '/field1/ {print $2}' data.md``.
+For only argument 2 in ``field1``: ``awk '/field1/ {print $2}' data.md``.
 
 **Result**: ``field1Value``
 
