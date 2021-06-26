@@ -14,6 +14,8 @@ Start forever:
 echo -e "HTTP/1.1 200\r\n\r\n Hello, World !" | nc -kl 8000
 ```
 
+This will also print out the HTTP request from the HTTP client and return a string to the HTTP client.
+
 ```sh
 while true;
 do
@@ -27,7 +29,7 @@ To return a HTML webpage: ``echo -e " HTTP/1.1 200\r\n\r\n$(cat index.html)" | n
 
 ## Examples
 
-**Example 1**: Print out the name of the routing on other HTTP client like web browser 
+**Example 1**: Print out the name of the routing on other HTTP client like web browser
 
 ```sh
 while true;
