@@ -23,6 +23,11 @@ do
     echo $value
 done
 ```
+To store proper decimal or hex value inside array:
+```sh
+dec_array=($((24)) $((0x00)) $((11)) $((255)))
+hex_array=($((0x24)) $((0x00)) $((0x1A)) $((0x10)))
+```
 **Example 2**: Ask user to enter value of array
 ```sh
 arraySize=3
