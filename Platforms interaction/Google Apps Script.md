@@ -1,6 +1,6 @@
 ### GET request
 
-Script with Google Apps Script: **Example 2** in [HTTP requests.md: GET request](https://github.com/TranPhucVinh/JavaScript/blob/master/JavaScript%20frameworks/Google%20Apps%20Script/HTTP%20requests.md) in JavaScript.
+Script with Google Apps Script: **Example 2** in **HTTP requests.md: GET request** in ``JavaScript/Frameworks/Google Apps Script/``.
 
 Send data with parameter ``id`` to Google Sheet with GET request: 
 
@@ -12,7 +12,7 @@ curl -X GET https://script.google.com/macros/s/AKfycby2CHiFSrC4tPpgKx1dscjO-wqM4
 
 ### POST request
 
-Script with Google Apps Script: **Example 1** in [HTTP requests.md: POST request](https://github.com/TranPhucVinh/JavaScript/blob/master/JavaScript%20frameworks/Google%20Apps%20Script/HTTP%20requests.md) in JavaScript.
+Script with Google Apps Script: **Example 1** in **HTTP requests.md: POST request** in ``JavaScript/Frameworks/Google Apps Script/``.
 
 Send data with parameter ``id`` to Google Sheet with POST request: 
 
