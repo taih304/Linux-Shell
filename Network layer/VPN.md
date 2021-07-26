@@ -7,7 +7,7 @@ $ sudo apt-get update
 $ sudo apt-get install lib32z1 lib32ncurses5
 ```
 
-Download the ``Anyconnect VPN client``.
+Go to [UCI OIT Cisco Anyconnect/Linux instruction page](https://uci.service-now.com/kb_view.do?sysparm_article=KB0010201) and download the ``Anyconnect VPN client``.
 
 Then extract this file:  ``tar -xzvf anyconnect-predeploy-linux-64-4.3.05017-k9.tar\ 6.59.23\ AM.gz``
 
@@ -32,13 +32,14 @@ $ alias vpn='/opt/cisco/anyconnect/bin/vpn'
 $ alias vpnui='/opt/cisco/anyconnect/bin/vpnui'
 ```
 
-Also add these aliases to the end of your ~/.bashrc or ~/.bash_aliases file:
+Also add these aliases to the end of your ``~/.bashrc`` or ``~/.bash_aliases`` file:
 
 ```sh
 $ cat >> ~/.bash_aliases
 alias vpn='/opt/cisco/anyconnect/bin/vpn'
 alias vpnui='/opt/cisco/anyconnect/bin/vpnui'
 ```
+Then ``Ctr+C`` to save.
 
 ### CLI vs UI
 
