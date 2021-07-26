@@ -41,6 +41,8 @@ alias vpnui='/opt/cisco/anyconnect/bin/vpnui'
 ```
 Then ``Ctr+C`` to save.
 
+After successfully installed, folder ``anyconnect-linux64-4.6.02074`` can be deleted.
+
 ### CLI vs UI
 
 Type ``vpn`` for CLI or ``vpnui`` for UI
