@@ -28,6 +28,16 @@ To store proper decimal or hex value inside array:
 dec_array=($((24)) $((0x00)) $((11)) $((255)))
 hex_array=($((0x24)) $((0x00)) $((0x1A)) $((0x10)))
 ```
+To send all data from hex_array to ``/dev/ttyUSB0``:
+
+```sh
+array=($((0x48)) $((0x65)) $((0x6c)) $((0x6c)) $((0x6f)) $((0x2c)) $((0x20)) $((0x57)) $((0x6f)) $((0x72)) $((0x6c)) $((0x64)) $((0x20)) $((0x21)))
+
+for value in "${array[@]}"
+do
+    echo $value > /dev/ttyUSB0
+done
+```
 **Example 2**: Ask user to enter value of array
 ```sh
 arraySize=3
