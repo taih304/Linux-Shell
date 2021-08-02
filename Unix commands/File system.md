@@ -1,31 +1,18 @@
-``Ctrl+D`` logs out of the interface (quite similar to Ctr+C to exit)
-
-``which``: locate where a command is stored. 
-
-**E.g**: ``which ls``: ``/bin/ls``
-
-### Basic Command
-
-**For space**:
-
-To work with a file containing space, like ``"Folder 1"``:
-
-* Add ``" "`` in the command: E.g ``cd "Folder 1"``
-* Add ``\`` in the command: E.g ``cd Folder\ 1/"``
-
-``cd ../..``: change to previous folder
-
 ``pwd``: print working directory
 
 ``realpath filename``: print out path of a file
 
 ``mkdir foldername``: make a directory (a folder)
 
+### cp
+
 ``cp``: copy
 
 ``cp test username``: copy the file ``test`` to folder ``username``
 
-``type linux_command``: information of that command
+### type
+
+``type command_name``: information of that command
 
 ``type cd``: information of ``cd`` command
 
@@ -50,41 +37,6 @@ To work with a file containing space, like ``"Folder 1"``:
 ``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove ``filename``
 
 To remove sudo file: ``sudo rm -rv filename``
-
-### --help
-
-```shell
-$ ls --help
-```
-
-```shell
-$ man ls
-```
-
-### wildcard
-
-``*`` : alias
-
-``?`` : every "?" stand for one character
-
-### wc
-
-``wc``: word count, used to count words in a file
-
-```shell
-$ wc -w filename #print total word in filename
-```
-
-**Result**: ``10 filename``
-
-(``filename`` has 10 words)
-
-```shell
-$ wc -w test.sh
-```
-**Result**: ``10``
-
-* ``wc -l``: print newline count
 
 ## ls
 

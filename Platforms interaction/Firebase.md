@@ -1,3 +1,5 @@
+## Realtime Database
+
 Read data of ``test.json`` database
 
 ```sh
@@ -14,3 +16,9 @@ Send data with POST to ``test.json`` database
 ```sh
 curl -X POST -d '{"string": "display"}' https://private-cloud-server-227507.firebaseio.com/test.json  
 ```
+
+## Firestore Database
+
+**Step 1**: Start collection
+
+Start a collection by enter a Collection ID
