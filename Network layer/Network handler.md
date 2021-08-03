@@ -4,6 +4,12 @@
 nmtui-connect
 ```
 
+List the credentials of all the connected WiFi: ``ls /etc/NetworkManager/system-connections/``
+
+For information of the specific SSID: ``cat /etc/NetworkManager/system-connections/SSID``
+
+For the SSID with space, use ``\``: ``cat /etc/NetworkManager/system-connections/SSID\ space``
+
 ### Check IP of current Linux device
 
 ```
