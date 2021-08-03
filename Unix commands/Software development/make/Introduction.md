@@ -13,22 +13,25 @@ target: prerequisites
 Run the very first makefile
 
 ```Makefile
-main:
-    echo "Hello"
+target1:
+	echo "target 1"
+target2:
+	echo "target 2"
 ```
+If running ``make`` (with no specific target), the first target in the Makefile will be executed.
 
-**Output**
+``make target1`` will output:
 
 ```
-echo "Hello"
+echo "target 1"
 Hello
 ```
 
 To avoid echoing (print out only ``Hello``) 
 
 ```Makefile
-main:
-    @echo "Hello"
+target1:
+    @echo "target1"
 ```
 
 Run a shell script and avoid echoing:
@@ -45,8 +48,6 @@ main:
 	@ls #list all file
 	@cat main.c #open a file
 ```
-
-If running ``make`` (with no specific target), the first target in the Makefile will be executed.
 
 ### Variable
 
@@ -91,9 +92,9 @@ main:
 
 **Output** ``100 200``
 
-### Make target
+### Up to date error
 
-If there is a file name ``test`` in the folder, running ``make test`` will result in error as
+If there is a file name ``test`` (E.g ``test.c``, ``test.txt``) in the folder, running ``make test`` will result in error as
 
 ``make: 'test' is up to date.``
 
