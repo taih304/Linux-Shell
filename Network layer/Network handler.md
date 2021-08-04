@@ -10,6 +10,10 @@ For information of the specific SSID: ``cat /etc/NetworkManager/system-connectio
 
 For the SSID with space, use ``\``: ``cat /etc/NetworkManager/system-connections/SSID\ space``
 
+Connect with a SSID by ``nmcli``: ``nmcli dev wifi connect SSID password password``
+
+For SSID with spaces: ``nmcli dev wifi connect SSID\ with\ space password password``
+
 ### Check IP of current Linux device
 
 ```
