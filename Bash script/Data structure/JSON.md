@@ -7,9 +7,9 @@ a="{'field1': 10}"
 echo $a
 ```
 
-### Parse JSON with shell script
+### jq
 
-``jq`` is a command-line JSON processor.
+``jq`` is a lightweight and flexible command-line JSON processor. Download ``jq`` from [stedolan/jq](https://github.com/stedolan/jq)
 
 ``jsonData.json``
 
