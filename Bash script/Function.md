@@ -42,7 +42,9 @@ function_test 1
 echo $? #21
 ```
 
-### Variable in function
+## Value type and reference type.md
+
+**Change value in normal way**
 
 ```sh
 temp=0
