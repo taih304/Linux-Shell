@@ -8,7 +8,9 @@ function_test
 
 **Result**: ``Hello, World!``
 
-**Function with parameters**
+### Function with parameters
+
+**Example 1**
 
 ```sh
 function_test(){
@@ -20,7 +22,36 @@ function_test para1 para2
 
 **Result**: ``parameter 1 is para1 and parameter 2 is para2``
 
-**Function with return value**
+**Example 2**
+
+Number variable as a function parameter
+
+```sh
+a=190
+
+change_value(){
+    echo "variable a is $1"
+}
+
+change_value $a
+```
+**Result**: ``variable a is 190``
+
+String variable (even including spaces) as a function parameter
+
+```c
+a="Hello, World !"
+
+change_value(){
+    # $1="hello"
+    echo "variable a is $1"
+}
+
+change_value "$a"
+```
+**Result**: ``variable a is Hello, World !``
+
+### Function with return value
 
 When a bash function completes, its return value is the status of the last statement executed in the function, ``0`` for success and non-zero decimal number in the ``1 - 255`` range for failure. You can't return a string in bash functions.
 
