@@ -42,7 +42,7 @@ Example:
 
 ### pipe
 
-``|`` (pipe): send the output of one program to the input of another
+``|`` (pipe): send the output of one program to the input of another program, **not file**.
 
 ### grep
 
