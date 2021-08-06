@@ -53,3 +53,15 @@ echo $a
 ```
 
 **Result**: ``10``
+
+**Example 3**
+
+Change value of a field of a JSON variable
+
+```sh
+a="{\"field1\": 10, \"field2\": \"Hello, World\"}"
+echo $a
+b=`expr $(echo $a|jq '.field1') + 20`
+a="{\"field1\": $b, \"field2\": \"Hello, World\"}"
+echo $a
+```
