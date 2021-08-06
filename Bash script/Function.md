@@ -8,6 +8,36 @@ function_test
 
 **Result**: ``Hello, World!``
 
+**Local variable**
+
+```sh
+a=190
+
+change_value(){
+    echo $a #190
+    local a=23
+    echo $a #23
+}
+
+change_value
+```
+**Global variable**: A global variable can be define inside a function
+
+```sh
+declare_variable_b(){
+    b=123
+}
+
+change_variable_b(){
+    b=0
+}
+
+declare_variable_b
+echo $b #123
+change_variable_b
+echo $b #0
+```
+
 ### Function with parameters
 
 **Example 1**
@@ -43,7 +73,6 @@ String variable (even including spaces) as a function parameter
 a="Hello, World !"
 
 change_value(){
-    # $1="hello"
     echo "variable a is $1"
 }
 
@@ -86,4 +115,20 @@ function_test(){
 
 function_test
 echo $a #hello
+```
+**Pass by value**: Can't implement
+```sh
+a=0
+
+function_test(){
+    $1="hello" #this is totally wrong
+}
+
+function_test $a
+echo $a
+```
+**Result**
+```
+./test.sh: line 4: 0=hello: command not found
+0
 ```
