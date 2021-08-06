@@ -20,9 +20,10 @@ echo $a #hello world
 ### expr
 
 ```sh
-echo $a `expr 1 + 3` #4
+echo `expr 1 + 3` #4
 ```
 ```sh
-arraySize=10
-echo $a `expr $arraySize + 3` #13
+a=10
+b=`expr $a + 3`
+echo $b  #13
 ```

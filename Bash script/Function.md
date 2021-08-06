@@ -78,12 +78,12 @@ echo $? #21
 **Change value in normal way**
 
 ```sh
-temp=0
+a=0
 
 function_test(){
-    temp="hello"
+    a="hello"
 }
 
 function_test
-echo $temp #hello
+echo $a #hello
 ```
