@@ -8,6 +8,15 @@ function_test
 
 **Result**: ``Hello, World!``
 
+Or function can define as:
+
+```sh
+function function_test(){
+    echo "Hello, World!"
+}
+
+function_test
+```
 **Local variable**
 
 ```sh
@@ -131,4 +140,33 @@ echo $a
 ```
 ./test.sh: line 4: 0=hello: command not found
 0
+```
+**Pass by reference**
+
+Change value of a number variable by function
+
+```sh
+a=123
+
+function_test(){
+    local -n ref_var=$1
+    ref_var=0
+}
+
+echo $a
+function_test a #Must be function_test a, notfunction_test $a
+echo $a
+```
+Change value of a string variable by function
+```sh
+a="Displayed string"
+
+function_test(){
+    local -n ref_var=$1
+    ref_var="Hello, World !"
+}
+
+echo $a
+function_test a
+echo $a
 ```
