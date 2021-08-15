@@ -20,19 +20,19 @@ Mosquitto client: ``sudo apt install mosquitto-clients``
 
 ### Send data to a MQTT broker
 
-MQTT cloud: ``mqtt.eclipse.org``
+MQTT cloud: ``broker.emqx.io``
 
 ```sh
-mosquitto_pub -h mqtt.eclipse.org -t "test/message" -m "Hello, world"
+mosquitto_pub -h broker.emqx.io -t "test/message" -m "Hello, World !"
 ```
 
 ```sh
-mosquitto_sub -h mqtt.eclipse.org -t "test/message"
+mosquitto_sub -h broker.emqx.io -t "test/message"
 ```
-
-MQTT cloud ``test.mosquitto.org`` no longer works.
 
 As testing on April 26th 2020, MQTT cloud ``mqtt.eclipse.org`` and ``iot.eclipse.org`` no longer work.
+
+As testing on April 15th 2021, MQTT cloud ``test.mosquitto.org`` no longer works.
 
 ### Build MQTT broker with Mosquitto
 
