@@ -1,9 +1,3 @@
-## MQTT.js
-
-If ``MQTT.js`` is install, command ``mqtt`` is available for Bash.
-
-## Mosquitto
-
 ### MQTT client install
 
 Mosquitto client: ``sudo apt install mosquitto-clients``
