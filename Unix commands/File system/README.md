@@ -70,10 +70,6 @@ $ ls
 
 ``7997323``: inode
 
-**Other commands**
-
-* ``sudo lshw``: list system hardware information
-
 ### printf
 
 ``printf hello`` and ``printf "hello"`` will printf to a stream.
