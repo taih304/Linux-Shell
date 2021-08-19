@@ -28,13 +28,43 @@ E.g: ``stat folder_1``, ``stat test.txt``
 
 ## File archive
 
-### zip and unzip
+### zip
 
 Zip several files: ``zip test.zip README.md document.md``
 
 ### unzip
 
 Command ``unzip`` for ``unzipping`` files
+
+### unrar
+
+
+**Error**``unrar`` or ``Extract here`` give empty folder
+
+That happens as Ubutnu is using ``unrar-free``.
+
+Check: ``dpkg --list | grep unrar``
+
+Give:
+
+```
+ii  unrar-free                                  1:0.0.1+cvs20140707-4~build0.16.04.1            amd64        Unarchiver for .rar files
+```
+
+**Problem solve**: Uninstall ``unrar-free`` and install ``unrar`` 
+
+```sh
+sudo apt-get remove unrar-free -y && sudo apt-get install unrar -y
+```
+Check: ``dpkg --list | grep unrar``
+
+Give:
+
+```
+ii  unrar                                       1:5.3.2-1+deb9u1build0.16.04.1                  amd64        Unarchiver for .rar files (non-free version)
+```
+
+The ``Extract here`` for ``rar`` files will be available, extracted folder will not be empty. 
 
 ### ar
 
