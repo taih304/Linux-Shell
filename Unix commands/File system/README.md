@@ -70,6 +70,10 @@ $ ls
 
 ``7997323``: inode
 
+### dir
+
+``dir``: print out all files and folders in current directory
+
 ### printf
 
 ``printf hello`` and ``printf "hello"`` will printf to a stream.
