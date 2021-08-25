@@ -1,6 +1,6 @@
 ``seq 1 10``: Print out from 1 to 10
 
-### Add operator
+### + operator
 
 ```shell
 a=10
@@ -15,6 +15,15 @@ Or it can be: ``a=$(( a + 9 ))``
 a="hello"
 a+=" world"
 echo $a #hello world
+```
+
+### XOR operator
+
+```sh
+a=1
+b=$((a^=1))
+echo $b #0
+echo $a #0
 ```
 
 ### expr
