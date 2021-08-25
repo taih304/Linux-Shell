@@ -23,18 +23,6 @@ fi
 a is not equal to b
 ```
 
-NOT operator
-
-```sh
-a=0
-  
-#Check whether they are equal 
-if [ !$a ] 
-then 
-    echo "a is 0"
-fi 
-```
-
 With ``-gt``
 
 ```sh
@@ -64,6 +52,29 @@ then
 else
   STATEMENTS3
 fi
+```
+
+**NOT operator**
+
+```sh
+a=0
+
+if [ !$a ] 
+then 
+    echo "a is 0"
+fi 
+```
+
+With more than 1 condition, use ``[[]]``:
+
+```sh
+a=0
+b=0
+
+if [[ !$a && !$b ]] 
+then 
+    echo "a and b are both 0"
+fi 
 ```
 
 **String compare**
