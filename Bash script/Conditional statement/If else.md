@@ -23,6 +23,18 @@ fi
 a is not equal to b
 ```
 
+NOT operator
+
+```sh
+a=0
+  
+#Check whether they are equal 
+if [ !$a ] 
+then 
+    echo "a is 0"
+fi 
+```
+
 With ``-gt``
 
 ```sh
