@@ -31,6 +31,16 @@ curl -X GET https://api.telegram.org/bot1203028769:AAHeZRPPItDZpSD-wTZIHZxEfBitW
 curl -X GET https://api.telegram.org/bot1203028769:AAHeZRPPItDZpSD-wTZIHZxEfBitWIA3YSw/sendMessage -d @message.json --header "Content-Type:application/json"
 ```
 
+To perform those operations inside a forever loop:
+
+```sh
+while true;
+do
+   # curl commands above
+   sleep 1
+done
+```
+
 ## openssl
 
 **/getMe**
