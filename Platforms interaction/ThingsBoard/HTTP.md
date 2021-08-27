@@ -102,17 +102,28 @@ Performing telemetry and RPC with HTTPS Live demo ThingsBoard.
 **Telemetry**
 
 ```sh
-data="{'string':'Hello, World !'}"
-https_request="POST /api/v1/O0kt6xUl6cTGv9RM7M9P/telemetry HTTP/1.1\r\n"
-https_request+="Host:demo.thingsboard.io\r\n"
-https_request+="Content-Type: application/json\r\n"
-https_request+="Content-Length: "
-https_request+=${#data}
-https_request+="\r\n\r\n"
-https_request+=$data
-https_request+="\r\n"
+number=0
 
-echo -e $https_request | openssl s_client -connect demo.thingsboard.io:443
+form_https_request(){
+   data="{'number':$number}"
+   https_request="POST /api/v1/O0kt6xUl6cTGv9RM7M9P/telemetry HTTP/1.1\r\n"
+   https_request+="Host:demo.thingsboard.io\r\n"
+   https_request+="Content-Type: application/json\r\n"
+   https_request+="Content-Length: "
+   https_request+=${#data}
+   https_request+="\r\n\r\n"
+   https_request+=$data
+   https_request+="\r\n"
+}
+
+while true;
+do
+   form_https_request
+   echo $https_request
+   echo -e $https_request | openssl s_client -connect demo.thingsboard.io:443
+   number=$((number+1))
+   sleep 1
+done
 ```
 
 **RPC**
