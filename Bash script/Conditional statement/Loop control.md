@@ -70,6 +70,18 @@ do
 done
 ```
 
+For infinite loop
+
+```sh
+while true 
+do
+   echo "true hello"
+   sleep 1
+done
+```
+
+Or ``while [ true ]``
+
 ### Until condition
 
 ```sh

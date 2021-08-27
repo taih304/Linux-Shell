@@ -43,13 +43,18 @@ done
 
 ## openssl
 
-**/getMe**
+**/getUpdates**
 
 ```sh
-https_request="GET /bot1284804357:AAHRiRkFpUL6rRsQVO10iRQ485uwqrHLFaE/getMe HTTP/1.1\r\n"
-https_request+="Host:api.telegram.org\r\n\r\n"
+https_request="GET /bot1284804357:AAHRiRkFpUL6rRsQVO10iRQ485uwqrHLFaE/getUpdates HTTP/1.1\r\n"
+https_request+="Host:api.telegram.org\r\n"
+https_request+="Connection: close\r\n\r\n"
 
-echo -e $https_request | openssl s_client -quiet -connect api.telegram.org:443
+while true;
+do
+   echo -e $https_request | openssl s_client -quiet -connect api.telegram.org:443
+   sleep 1
+done
 ```
 
 **Send message with query string**
