@@ -28,6 +28,10 @@ You can put two or more commands on the same line separated by the semicolon ``;
 command1 ; command2  
 ```
 
+### ``:`` (colon)
+
+The no-op command in shell is ``:`` (colon).
+
 ### ``&``
 
 The ``&`` makes the command run in the background.
