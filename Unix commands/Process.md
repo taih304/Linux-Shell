@@ -6,6 +6,8 @@
 
 A C compile program (``a.out``) program will run as a process and can be listed in ``ps``
 
+``pstree``: View the tree of running process
+
 ### kill
 
 ``kill``: send a signal to a process
