@@ -1,3 +1,15 @@
+## Types
+
+``sysfs`` is a pseudo file system (``/sys``) provided by the Linux kernel that exports information about various kernel subsystems, hardware devices, and associated device drivers from the kernel's device model to user space through virtual files.
+
+``procfs`` is pseudo filesystem (``/proc``) containing information about the system resources, including currently running processes, kernel, hardware. 
+
+On PC with an OS, as ``ls`` on ``/sys/class/gpio`` only return ``export`` and ``unexport`` (GPIO chip like ``gpiochip0``, ``gpiochip100``, ``gpiochip504``,... are included) so the virtual GPIO files sytem can't be created.
+
+``echo 1  > export`` has error: ``bash: echo: write error: Invalid argument``
+
+## Commands
+
 ``pwd``: print working directory
 
 ``realpath filename``: print out path of a file

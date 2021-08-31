@@ -38,7 +38,6 @@ Command ``unzip`` for ``unzipping`` files
 
 ### unrar
 
-
 **Error**``unrar`` or ``Extract here`` give empty folder
 
 That happens as Ubutnu is using ``unrar-free``.
