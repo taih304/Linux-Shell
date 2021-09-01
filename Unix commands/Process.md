@@ -2,6 +2,8 @@
 
 ``ps``: Report process status
 
+Help with specific details: ``ps --help <simple|list|output|threads|misc|all>`` or ``ps --help <s|l|o|t|m|a>``
+
 ``ps ax | grep firefox``: Return nothing in Git Bash Windows
 
 A C compile program (``a.out``) program will run as a process and can be listed in ``ps``
