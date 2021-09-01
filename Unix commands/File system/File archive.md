@@ -1,31 +1,3 @@
-### df
-
-``df [OPTION] [FILE]``: Show information about the file system on which each FILE resides, or all file systems by default.
-
-* ``df -h``: list size of hardware, and usage of percentage
-* ``df -i``: list all inode
-
-### du
-
-`` du [OPTION] [FILE]``: Summarize disk usage of the set of FILEs, recursively for directories.
-
-* ``du -h``: list out disk usage in MB
-* ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory
-
-### printenv
-
-``printenv``: Print out all environment variable
-
-All environment variable can be print out with ``echo $env``, e.g: ``echo $USER``
-
-E.g: ``echo user: $USER``
-
-### stat
-
-``stat``: Display file or file system status.
-
-E.g: ``stat folder_1``, ``stat test.txt``
-
 ## File archive
 
 ### zip

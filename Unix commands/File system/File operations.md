@@ -1,5 +1,15 @@
 ## Read file
 
+``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
+
+``nano filename``: edit the content of file ``filename`` or create a new one if not existed.
+
+``touch filename.txt``: Create new file ``filename.txt``
+
+``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
+
+``sudo nautilus``: Open the folder with root permission
+
 ### cat
 
 ``cat [option] [file]``: display content of a file on terminal
@@ -9,6 +19,20 @@
 Using ``cat`` to create a new file then enter the value for it: ``cat > filename1.md``.
 
 After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
+
+### df
+
+``df [OPTION] [FILE]``: Show information about the file system on which each FILE resides, or all file systems by default.
+
+* ``df -h``: list size of hardware, and usage of percentage
+* ``df -i``: list all inode
+
+### du
+
+`` du [OPTION] [FILE]``: Summarize disk usage of the set of FILEs, recursively for directories.
+
+* ``du -h``: list out disk usage in MB
+* ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory
 
 ### source and ``.``
 
@@ -22,19 +46,13 @@ E.g: File ``test.txt`` has content ``ls``
 
 ``source test.txt`` and ``. text.txt`` will run ``ls`` command
 
-### Other commands
+### printenv
 
-``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
+``printenv``: Print out all environment variable
 
-``gnome-open filename``: gnome to open a file
+All environment variable can be print out with ``echo $env``, e.g: ``echo $USER``
 
-``sudo nautilus``: Open the folder with root permission
-
-``libreoffice --writer file.odt``or ``libreoffice --writer file.doc``: Open libreoffice doc
-
-``nano filename``: edit the content of file ``filename`` or create a new one if not existed.
-
-``touch filename.txt`` Create new file ``filename.txt``
+E.g: ``echo user: $USER``
 
 ## Permission
 
@@ -89,3 +107,9 @@ The typical file permission is: ``trwxrwxrwx``
 ```bash
 $ sudo chmod -R 777 /dev/ttyUSB0
 ```
+
+## Other commands
+
+``gnome-open filename``: gnome to open a file
+
+``libreoffice --writer file.odt``or ``libreoffice --writer file.doc``: Open libreoffice doc
