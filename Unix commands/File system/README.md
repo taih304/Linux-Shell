@@ -24,9 +24,11 @@ To view virtual GPIO debug information: ``cat /sys/kernel/debug/gpio``
 
 ### cp
 
-``cp``: copy
+``cp``: Copy ``SOURCE`` to ``DEST``, or multiple ``SOURCE(s)`` to ``DIRECTORY``.
 
-``cp test username``: copy the file ``test`` to folder ``username``
+``cp test test_copy``: copy the file ``test`` to file/folder ``test_copy``. It will overwrite the content of file ``test_copy`` if existed or create ``test_copy`` if not exit. If folder ``test_copy`` exists, ``test`` will be copied inside.
+
+Copy to folder can also end with ``/``: ``cp test test_copy/``
 
 ### type
 
