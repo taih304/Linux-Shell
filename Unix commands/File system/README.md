@@ -77,13 +77,6 @@ $ ls -l -a
 $ ls -la
 ```
 
-**list all devices**
-
-```shell
-$ cd /dev/
-$ ls
-```
-
 ``ls -li test.c``: List all files information
 
 **Output**: ``7997323 -rw-rw-r-- 1 username devicename 332 Thg 9   8 21:44 test.c``
