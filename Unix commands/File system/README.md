@@ -30,6 +30,10 @@ To view virtual GPIO debug information: ``cat /sys/kernel/debug/gpio``
 
 Copy to folder can also end with ``/``: ``cp test test_copy/``
 
+Copy a file to the current running terminal, i.e opening that file: ``cp test.c /dev/tty``
+
+Copy input from the current running terminal to a file, i.e writing to that file: ``cp /dev/tty test.c``
+
 ### type
 
 ``type command_name``: information of that command
