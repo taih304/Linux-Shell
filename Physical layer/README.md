@@ -62,8 +62,7 @@ Name of OS:
 * ``uname``: Name of OS
 * ``uname -v``: Name of Kernel version. E.g: ``#82-Ubuntu SMP Fri Sep 4 12:23:10 UTC 2020``
 
-## Devices
-
+* ``sudo lshw``: list system hardware information
 
 ### Program run at specific time
 
