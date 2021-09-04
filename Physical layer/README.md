@@ -53,6 +53,7 @@ Problem solved: ``sudo rm -rf /var/cache/*``
 ## System handler
 
 * ``shutdown``
+* ``reboot``
 * ``cat /etc/os-release``: View OS information
 * ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
 
