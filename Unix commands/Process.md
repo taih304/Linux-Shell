@@ -20,7 +20,7 @@ The  default  signal  for kill is ``TERM`` (terminate).
 
 ``kill 17375``: terminate process with PID ``17375``
 
-``kill -l``: To display all the available signals
+``kill -l``: display all the available signals
 
 ### netstat
 

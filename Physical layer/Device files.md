@@ -1,6 +1,8 @@
 ``/dev`` is the location of special or device files.
 
-``/dev/tty`` is the current running terminal.
+``/dev/tty`` is the current running terminal. 
+
+``tty`` command will print out the file name of the terminal connected to standard input. E.g: ``tty`` returns ``/dev/pts/19``
 
 ``/dev/pts`` stores all number of the current opening terminal. Choosing the right terminal number will output data to the right terminal.
 
