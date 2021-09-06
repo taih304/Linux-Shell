@@ -44,6 +44,13 @@ This error might happen as the devicename is changed
 
 ``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
 
+``\033[8;h;wt`` can be used to change the size of the current running terminal. ``\033`` is the ASCII control character ``ESC``, and ``h`` and ``w`` are height and width in decimal.
+
+
+```sh
+printf '\033[8;64;240t' #must have ''
+```
+
 ### Error IUSE 100% in ``CentOS``
 
 If error happen, CentOS will not allow user to ``yum install`` more file.
