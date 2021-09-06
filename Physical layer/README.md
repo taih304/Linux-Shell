@@ -1,10 +1,10 @@
 ```bash
-username$hostname #One host name can include many usaer_name
+username$hostname #One host name can include many user_name
 ```
 
-``Ctrl+Alt+F1``: enter textmode
+``Ctrl+Alt+F1`` to ``Ctrl+Alt+F6``: enter terminal from ``tty1`` to ``tty6``.
 
-``Ctrl+Alt+F7``: switch back to desktop
+``Ctrl+Alt+F7``: switch back to desktop and terminal ``tty``.
 
 ### User setup
 
