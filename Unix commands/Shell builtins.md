@@ -29,3 +29,22 @@ Then add, for example an alias name ``get_idf``:
 ```c
 alias get_idf='. /esp/esp-idf/export.sh'
 ```
+
+### test
+
+``test`` is used for testing conditions. ``1`` for false and ``0`` for true
+
+```sh
+test 9 == 0
+echo $? #1
+test 9 = 0
+echo $? #1
+test 9 == 9
+echo $? #0
+test 9 = 9
+echo $? #0
+test 9==0 #Wrong condition compare
+echo $? #0
+test 9=0 #Wrong condition compare
+echo $? #0
+```
