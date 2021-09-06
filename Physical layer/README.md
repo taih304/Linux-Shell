@@ -2,7 +2,7 @@
 username$hostname #One host name can include many user_name
 ```
 
-``Ctrl+Alt+F1`` to ``Ctrl+Alt+F6``: enter terminal from ``tty1`` to ``tty6``.
+``Ctrl+Alt+F1`` to ``Ctrl+Alt+F6``: enter terminal from ``tty1`` to ``tty6``, which is also known as text terminal.
 
 ``Ctrl+Alt+F7``: switch back to desktop and terminal ``tty``.
 
@@ -16,7 +16,7 @@ All user information is stored in ``/etc/passwd``
 
 ``sudo deluser user_name``: Delete ``user_name``
 
-* ``who``: show how many user has log in the system
+* ``who``: show how many user has logged in the system
 * ``hostname``
 
 **Issue**: ``User is not in the sudoers file. This incident will be reported.``

@@ -26,6 +26,8 @@ To view virtual GPIO debug information: ``cat /sys/kernel/debug/gpio``
 
 ``mkdir foldername``: make a directory (a folder)
 
+``file file_name``: determine file type of ``file_name``
+
 ### cp
 
 ``cp``: Copy ``SOURCE`` to ``DEST``, or multiple ``SOURCE(s)`` to ``DIRECTORY``.
