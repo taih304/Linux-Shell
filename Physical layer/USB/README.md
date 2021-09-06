@@ -31,7 +31,7 @@ min = 1; time = 0;
 -isig -icanon -iexten -echo -echoe -echok -echoctl -echnoke
 ```
 
-By default, the ``/dev/tty`` device operate with baudrate 9600. 
+By default, the USB devices (located in ``/dev``) operate with baudrate 9600.
 
 For other baudrate value configuration, like ``115200``: ``stty -F /dev/ttyUSB0 115200``
 
