@@ -18,98 +18,56 @@ To view virtual GPIO debug information: ``cat /sys/kernel/debug/gpio``
 
 ``devpts`` is a virtual filesystem contains solely devices files used to implement terminal emulators. It is normally mounted at ``/dev/pts`` and represent slaves to the multiplexing master located at ``/dev/ptmx``.
 
-## Commands
+## File permission
 
-``pwd``: print working directory
+``r``,``w``: stand for read, write
 
-``realpath filename``: print out path of a file
+Permission ``-rw-rw-r--`` means:
 
-``mkdir foldername``: make a directory (a folder)
+* The first character is ``-`` means it is a file
+* The next 3 characters ``rw-`` represents the permissions for the file's owner: in this case, the owner may read from, write to, or execute the file.
+* The next 3 characters ``rw-`` represent the permissions for members of the file group.
+* The next 3 characters ``r--`` is the permission for "others" (everyone else) 
 
-``file file_name``: determine file type of ``file_name``
+If a ``-`` means a permission (r,w,x) is denied.
 
-### type
+**Example**:
 
-``type command_name``: information of that command
+```
+-rw-rw-r-- 1 anonymous anonymous 450 Sep 23 04:17 command.md
+```
 
-``type cd``: information of ``cd`` command
+This means it is a file, owner can both read and write the file, owner group can read and write, all user can read the file but can't execute the file.
 
-### mv
+First character acceptance value 
+* ``t``: type
+* ``-``: a file
+* ``d``: directory
+* ``l``: symbolic link
 
-``mv``: move a file from a directory to other
+**Change permission**
 
-``$ mv name_want_to_change name_wish_to_change``: rename
+* ``4``: for read
+* ``2``: for write
+* ``1``: execute
 
-### rm
+``mode = 4+2+1 = 7``: file can be read, write, execute
 
-``rm``: remove a file, not directory
+``4+2``: can be read and write
 
-``rm filename``
+``chmod``: change mode of folder or file
 
-``rm *`` : to remove everything on the directory
+E.g ``chmod 775 name.sh``
 
-``rmdir``: remove directory, You can only use this command to remove an empty directory
+``chmod +x``: Make file executable
 
-``rm -r``: remove a non-empty directory
+**File permission**
 
-``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove ``filename``
+The typical file permission is: ``trwxrwxrwx``
 
-To remove sudo file: ``sudo rm -rv filename``
 
-## ls
-
-``ls``: print out all the folder in current directory
-
-``ls -l``: list in long format, show more detail of the file/ list detail information
-
-``ls -a``: list all file and directory (including hidden files).
-
-In the result, a file start with ``.`` (dot) mean it is a hidden files
-
-To hide a file rename it to ``.itsname``
-
-**Combine**
+**Example**: Cannot open /dev/ttyUSB0: Permission denied
 
 ```bash
-$ ls -l -a
-$ ls -la
-```
-
-``ls -li test.c``: List all files information
-
-**Output**: ``7997323 -rw-rw-r-- 1 username devicename 332 Thg 9   8 21:44 test.c``
-
-``7997323``: inode
-
-### dir
-
-``dir``: print out all files and folders in current directory
-
-### printf
-
-``printf hello`` and ``printf "hello"`` will printf to a stream.
-
-``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
-
-Store value of ``printf`` to a variable:
-
-```sh
-text=$(printf "hello")
-echo $text
-```
-
-Represent pattern:
-
-```sh
-text=$(printf "hello %d" $1)
-echo $text
-```
-
-Run ``./test.sh 123``: ``hello 123``
-
-``printf`` ends when encountering the space
-
-```sh
-string="Hello, World !"
-printf $string #Hello,
+$ sudo chmod -R 777 /dev/ttyUSB0
 ```

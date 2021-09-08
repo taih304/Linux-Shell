@@ -18,6 +18,57 @@ Write content to a file
 
 ``tee -a filename``: Appened the written content to ``filename``
 
+### printf
+
+``printf hello`` and ``printf "hello"`` will printf to a stream.
+
+``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
+
+Store value of ``printf`` to a variable:
+
+```sh
+text=$(printf "hello")
+echo $text
+```
+
+Represent pattern:
+
+```sh
+text=$(printf "hello %d" $1)
+echo $text
+```
+
+Run ``./test.sh 123``: ``hello 123``
+
+``printf`` ends when encountering the space
+
+```sh
+string="Hello, World !"
+printf $string #Hello,
+```
+
+### mv
+
+``mv``: move a file from a directory to other
+
+``$ mv name_want_to_change name_wish_to_change``: rename
+
+### rm
+
+``rm``: remove a file, not directory
+
+``rm filename``
+
+``rm *`` : to remove everything on the directory
+
+``rmdir``: remove directory, You can only use this command to remove an empty directory
+
+``rm -r``: remove a non-empty directory
+
+``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove ``filename``
+
+To remove sudo file: ``sudo rm -rv filename``
+
 ### Redirect
 
 * ``>``: Redirect ouput to a file, this can be used to write data to a file, this will overwrite an existing file
