@@ -1,5 +1,3 @@
-## Read file
-
 ``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
 
 ``file file_name``: determine file type of ``file_name``
@@ -24,19 +22,13 @@ Using ``cat`` to create a new file then enter the value for it: ``cat > filename
 
 After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
 
-### df
+### read
 
-``df [OPTION] [FILE]``: Show information about the file system on which each FILE resides, or all file systems by default.
+Read a line from the standard input and split it into fields.
 
-* ``df -h``: list size of hardware, and usage of percentage
-* ``df -i``: list all inode
+``read -a store_array``: Read enterd string in the current running terminal and store to ``store_array``. The stored string will be broken if encounter space.
 
-### du
-
-`` du [OPTION] [FILE]``: Summarize disk usage of the set of FILEs, recursively for directories.
-
-* ``du -h``: list out disk usage in MB
-* ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory
+``read -a store_array -N 14``: Read 14 entered characters from the current running terminal (including space), it will break if having enough character.
 
 ### source and ``.``
 
@@ -58,7 +50,7 @@ All environment variable can be print out with ``echo $env``, e.g: ``echo $USER`
 
 E.g: ``echo user: $USER``
 
-## ls
+### ls
 
 ``ls``: print out all the folder in current directory
 
@@ -88,6 +80,20 @@ $ ls -la
 ``type command_name``: information of that command
 
 ``type cd``: information of ``cd`` command
+
+### df
+
+``df [OPTION] [FILE]``: Show information about the file system on which each FILE resides, or all file systems by default.
+
+* ``df -h``: list size of hardware, and usage of percentage
+* ``df -i``: list all inode
+
+### du
+
+`` du [OPTION] [FILE]``: Summarize disk usage of the set of FILEs, recursively for directories.
+
+* ``du -h``: list out disk usage in MB
+* ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory
 
 ## Other commands
 
