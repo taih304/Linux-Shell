@@ -52,9 +52,11 @@ done < test.csv
 * stdout: 1
 * stderr: 2
 
-To redirect an error compiled script to a file: ``fail_script 2> outputfile``
-
 **Note**: Must be ``0>``, ``1>`` and ``2>``
+
+``ls 1> test.txt``: Send result of ``ls`` to ``test.txt``
+
+``fail_script 2> outputfile``: redirect an error compiled script to a file: 
 
 Example: 
 
