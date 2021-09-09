@@ -4,6 +4,10 @@
 
 ``tty`` command will print out the file name of the terminal connected to standard input. E.g: ``tty`` returns ``/dev/pts/19``
 
+``/dev/fd``: for each process, the kernel provides the special virtual directory ``/dev/fd``. This directory contains filenames of the form ``/dev/fd/n``, where ``n`` is a number corresponding to one of the open file descriptors for the process.
+
+``/dev/fd/0``, ``/dev/fd/1`` and ``/dev/fd/2`` are corresponded to ``stdin`` and ``stdout`` and ``stderr``.
+
 ``/dev/pts`` stores all number of the current opening terminal. Choosing the right terminal number will output data to the right terminal.
 
 E.g:
