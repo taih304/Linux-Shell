@@ -8,6 +8,8 @@
 
 ``/dev/fd/0``, ``/dev/fd/1`` and ``/dev/fd/2`` are corresponded to ``stdin`` and ``stdout`` and ``stderr``.
 
+As a convenience, the names ``/dev/stdin``, ``/dev/stdout``, and ``/dev/stderr`` are provided as symbolic links to, respectively, ``/dev/fd/0``, ``/dev/fd/1``, and ``/dev/fd/2``.
+
 ``/dev/pts`` stores all number of the current opening terminal. Choosing the right terminal number will output data to the right terminal.
 
 E.g:
