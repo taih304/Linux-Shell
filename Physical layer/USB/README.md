@@ -6,12 +6,6 @@ Mount the USB: ``mount /dev/sdb1 /mnt``
 
 List USB devices: ``lsusb``
 
-### screen
-
-The ``screen`` package is pre-installed on most Linux distros nowadays. Install: ``sudo apt install screen``
-
-To end ``screen``: ``Ctr+A+D``.
-
 ### Cannot open /dev/ttyUSB0: Permission denied
 
 This error happen as your user account is not added to ``dialout`` or ``tty`` group.
