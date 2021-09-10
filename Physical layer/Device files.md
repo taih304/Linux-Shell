@@ -22,6 +22,12 @@ To view the corressponding ID of the those devices: ``xinput``
 
 ``id=2`` corrresponds to ``event2``.
 
+### /dev/null
+
+``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
+
+``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
+
 ### stty
 
 ``stty`` displays or changes the characteristics of the terminal.

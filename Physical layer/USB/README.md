@@ -6,12 +6,6 @@ Mount the USB: ``mount /dev/sdb1 /mnt``
 
 List USB devices: ``lsusb``
 
-### /dev/null
-
-``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
-
-``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
-
 ### screen
 
 The ``screen`` package is pre-installed on most Linux distros nowadays. Install: ``sudo apt install screen``
