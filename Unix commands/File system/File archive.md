@@ -1,5 +1,3 @@
-## File archive
-
 ### zip
 
 Zip several files: ``zip test.zip README.md document.md``
