@@ -4,9 +4,9 @@
 
 ``tty`` command will print out the file name of the terminal connected to standard input. E.g: ``tty`` returns ``/dev/pts/19``
 
-``/dev/fd``: for each process, the kernel provides the special virtual directory ``/dev/fd``. This directory contains filenames of the form ``/dev/fd/n``, where ``n`` is a number corresponding to one of the open file descriptors for the process.
+``/dev/fd``: for each process, the kernel provides the special virtual directory ``/dev/fd``. This directory contains filenames of the form ``/dev/fd/n``, where ``n`` is a number corresponding to one of the open file descriptors for the process. ``/dev/fd`` is actually a symbolic link to the Linux-specific ``/proc/self/fd`` directory.
 
-``/dev/fd/0``, ``/dev/fd/1`` and ``/dev/fd/2`` are corresponded to ``stdin`` and ``stdout`` and ``stderr``.
+``/dev/fd/0``, ``/dev/fd/1`` and ``/dev/fd/2`` are corresponded to ``stdin`` and ``stdout`` and ``stderr``. 
 
 As a convenience, the names ``/dev/stdin``, ``/dev/stdout``, and ``/dev/stderr`` are provided as symbolic links to, respectively, ``/dev/fd/0``, ``/dev/fd/1``, and ``/dev/fd/2``.
 
