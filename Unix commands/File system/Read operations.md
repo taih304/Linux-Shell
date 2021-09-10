@@ -52,11 +52,13 @@ E.g: ``echo user: $USER``
 
 ### ls
 
-``ls``: print out all the folder in current directory
+Print out all the folder in current directory
 
-``ls -l``: list in long format, show more detail of the file/ list detail information
+``-l``: list in long format, show more detail of the file/list detail information
 
-``ls -a``: list all file and directory (including hidden files).
+``-i``: view inode
+
+``-a``: list all file and directory (including hidden files).
 
 In the result, a file start with ``.`` (dot) mean it is a hidden files
 
@@ -69,11 +71,19 @@ $ ls -l -a
 $ ls -la
 ```
 
-``ls -li test.c``: List all files information
+``ls -li test.c``: List all files information (including inode)
 
-**Output**: ``7997323 -rw-rw-r-- 1 username devicename 332 Thg 9   8 21:44 test.c``
+Result of ``ls -l``:
 
-``7997323``: inode
+```
+-rw-rw-r--  1 owner group   1108 Feb  5  2021 test.md
+drwxrwxr-x  8 owner group   4096 Jul 26 11:48 Folder 1
+lrwxrwxrwx  1 owner group      9 Sep 10 23:30 symlink_file -> test.md
+```
+
+(From left to right): File type + permission, links, owner, group, file size, Creation date, file name
+
+File types include file (``-``), directory (``d``) and symbolic link (``l``).
 
 ### type
 
