@@ -10,12 +10,13 @@ username$hostname #One host name can include many user_name
 
 All user information is stored in ``/etc/passwd``
 
-``passwd current_login_username``: Change password of current logged in username
-
 ``sudo useradd user_name``: Add new user ``user_name`` (this require admin privilege)
 
 ``sudo deluser user_name``: Delete ``user_name``
 
+``sudo -sH``: Run as root (enter ``/root`` directory)
+
+* ``passwd current_login_username``: Change password of current logged in username
 * ``who``: show how many user has logged in the system
 * ``hostname``
 
