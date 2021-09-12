@@ -61,13 +61,14 @@ E.g ``chmod 775 name.sh``
 
 ``chmod +x``: Make file executable
 
-**File permission**
-
 The typical file permission is: ``trwxrwxrwx``
-
 
 **Example**: Cannot open /dev/ttyUSB0: Permission denied
 
 ```bash
 $ sudo chmod -R 777 /dev/ttyUSB0
 ```
+
+File type + file permission can be view by ``stat`` command. File type + file permission are displayed under octal numeral system.
+
+E.g: ``stat test.c`` gives ``Access: (0664/-rw-rw-r--)``
