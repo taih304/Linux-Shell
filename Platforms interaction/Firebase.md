@@ -71,4 +71,6 @@ curl -X POST -H "Content-Type: application/json" -d '{"fields": {"Field1": {"str
 "stringValue": "string value 3"}}}' https://firestore.googleapis.com/v1beta1/projects/boarding-house-960ec/databases/"(default)"/documents/User?&key=AIzaSyB0Y1VLzTTN8AQ4lQlSadI_9VUziY4QfG8
 ```
 
+For document that includes space, replace the space by ``%20``. E.g: Document ``User database`` will be ``User%20database``.
+
 **Reference**: [Firebase Firestore REST example](https://stackoverflow.com/questions/46762667/firebase-firestore-rest-example)
