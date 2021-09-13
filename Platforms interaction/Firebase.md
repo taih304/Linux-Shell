@@ -37,8 +37,6 @@ service cloud.firestore {
 }
 ```
 
-**Step 2**: Forming HTTP request
-
 Change the rule to allow all HTTP request from HTTP clients:
 
 ```js
@@ -52,6 +50,28 @@ service cloud.firestore {
     }
   }
 }
+```
+
+**Step 2**: Forming HTTP request with ``v1beta1``
+
+API to gets a single document:
+
+```sh
+GET /v1beta1/{name=projects/*/databases/*/documents/*/**}
+```
+
+### Example
+
+Get all documents data of a project:
+
+```sh
+curl -X GET https://firestore.googleapis.com/v1beta1/projects/private-cloud-server-227507/databases/"(default)"/documents/NFC%20LOCK?&key=AIzaSyCAfDD1v8kG3dRVTDH3CPd9gXhhKPaNmy0
+```
+
+For data of a specific document, like ``uuid``:
+
+```sh
+curl -X GET https://firestore.googleapis.com/v1beta1/projects/private-cloud-server-227507/databases/"(default)"/documents/NFC%20LOCK/uuid?&key=AIzaSyCAfDD1v8kG3dRVTDH3CPd9gXhhKPaNmy0
 ```
 
 Send data to a document of a project:
