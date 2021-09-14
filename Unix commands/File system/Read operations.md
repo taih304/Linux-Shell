@@ -81,7 +81,12 @@ drwxrwxr-x  8 owner group   4096 Jul 26 11:48 Folder 1
 lrwxrwxrwx  1 owner group      9 Sep 10 23:30 symlink_file -> test.md
 ```
 
-(From left to right): File type + permission, links, owner, group, file size, Creation date, file name
+(From left to right): File type + permission, links, owner, group, file size, Creation date or last modified time, file name
+
+E.g: 
+
+* ``Feb  5  2021`` of ``test.md`` is creation date
+* ``Jul 26 11:48`` is modified date.
 
 File types include file (``-``), directory (``d``) and symbolic link (``l``).
 
