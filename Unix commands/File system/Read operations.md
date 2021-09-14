@@ -88,7 +88,16 @@ E.g:
 * ``Feb  5  2021`` of ``test.md`` is creation date
 * ``Jul 26 11:48`` is modified date.
 
-File types include file (``-``), directory (``d``) and symbolic link (``l``).
+File types include file (``-``), directory (``d``), character device (``c``) and symbolic link (``l``).
+
+For character devices (located in ``/dev``), e.g:
+
+```
+crw-------  1 root root    238,   0 Sep 14 15:39 Character device
+crw-------  1 root root      5,   1 Sep 14 11:54 console
+```
+
+(From left to right): File type + permission, owner, group, major number, minor number, Creation date or last modified time, file name.
 
 ### type
 
