@@ -10,6 +10,10 @@ On PC with an OS, as ``ls`` on ``/sys/class/gpio`` only return ``export`` and ``
 
 To view virtual GPIO debug information: ``cat /sys/kernel/debug/gpio``
 
+``sys/dev`` stores all block (``block`` directory) and character (``char``) devices.
+
+``sys/dev/char`` has structure: ``major_number:minor_number``. Eg: ``10:1``.
+
 ### procfs
 
 ``procfs`` is pseudo filesystem (``/proc``) containing information about the system resources, including currently running processes, kernel, hardware. 
