@@ -3,7 +3,10 @@
 ```Makefile
 test:
 	@echo a
-	
+
+shell:
+	@echo $(shell ls -l)#To get the result of a shell command, add shell keyword
+
 build_c: 
 	@(gcc test.c)
 
