@@ -41,12 +41,34 @@ main: test
 	@./test.sh
 ```
 
-Run the a list of command in makefile
+Work with command:
 
 ```Makefile
-main:
+shell:
 	@ls #list all file
 	@cat main.c #open a file
+```
+
+``cd`` command is performed in a sub-process shell, and affects neither ``make`` nor the shell you're working from. This Makefile gives no effect and the folder doesn't change
+
+```Makefile
+shell:
+	@(cd ..)
+```
+
+To work with other directory with ``cd``, take this example
+
+```Makefile
+all:
+        cd Linux-Shell; echo "Linux Shell folder"; \
+          gcc test test.c
+```
+
+To get the result of a shell command, add ``shell`` keyword:
+
+```Makefile
+shell:
+	@echo $(shell ls -l)
 ```
 
 ### Variable
