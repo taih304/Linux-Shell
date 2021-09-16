@@ -2,8 +2,6 @@
 
 Detecting USB Drive: ``sudo fdisk -l``
 
-Mount the USB: ``mount /dev/sdb1 /mnt``
-
 List USB devices: ``lsusb``
 
 ### Cannot open /dev/ttyUSB0: Permission denied

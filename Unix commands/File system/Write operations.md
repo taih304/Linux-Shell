@@ -53,6 +53,18 @@ printf $string #Hello,
 
 ``$ mv name_want_to_change name_wish_to_change``: rename
 
+### mount
+
+mount a filesystem
+
+``mount source_block_device target_folder``: Mount ``source_block_device`` (the source block device like ``USB``, ``SD card``,...)  to ``target_folder`` (the target folder). Note that ``target_folder`` must exist before mounting.
+
+E.g: 
+
+``sudo mount /dev/sdc1 mount_folder``: Mount SD card ``sdc1`` to ``mount_folder`` 
+
+``mount /dev/sdb1 /mnt``: Mount the USB ``sdb1``
+
 ### rm
 
 ``rm``: remove a file, not directory
