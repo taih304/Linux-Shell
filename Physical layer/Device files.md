@@ -8,7 +8,7 @@
 
 ``/dev/fd/0``, ``/dev/fd/1`` and ``/dev/fd/2`` are corresponded to ``stdin`` and ``stdout`` and ``stderr``. 
 
-As a convenience, the names ``/dev/stdin``, ``/dev/stdout``, and ``/dev/stderr`` are provided as symbolic links to, respectively, ``/dev/fd/0``, ``/dev/fd/1``, and ``/dev/fd/2``.
+As a convenience, the names ``/dev/stdin``, ``/dev/stdout``, and ``/dev/stderr`` are provided as symbolic links to, respectively, ``//proc/self/fd/0``, ``/proc/self/fd/1``, and ``/proc/self/fd/2``.
 
 ``/dev/pts`` stores all number of the current opening terminal. Choosing the right terminal number will output data to the right terminal.
 
@@ -27,6 +27,10 @@ To view the corressponding ID of the those devices: ``xinput``
 ``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
 
 ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
+
+### Block devices
+
+SD card, SD card adapter or USB are detected as ``sdc`` like ``sdc``, ``sdc1``,... ``sdc`` are block device.
 
 ### stty
 
