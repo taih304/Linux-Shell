@@ -23,3 +23,16 @@ Update the ``PATH`` to the environment variable in file ``/etc/bash.bashrc``. Fo
 ```sh
 export PATH=$HOME/ESP8266-Toolchain-217/compiler/crosstool-NG/builds/xtensa-lx106-elf/bin:$PATH
 ```
+
+If setting the wrong ``PATH`` (as Local Environment Variable or System wide variables), like this:
+
+```sh
+#This is a wrong PATH
+export PATH=~/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/
+```
+
+(Must be this: ``export PATH=~/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:$PATH``)
+
+Then this wrong PATH will effect all built-in commands like ``ls``, ``cd``, ``cat``,... 
+
+Error: ``ls: command not found``
