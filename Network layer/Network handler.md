@@ -20,12 +20,6 @@ For SSID with spaces: ``nmcli dev wifi connect SSID\ with\ space password passwo
 ip addr show
 ```
 
-### change DNS
-
-```shell
-sudo nano /etc/resolv.conf
-```
-
 ### Install other package on Linux or Linux Docker
 
 For example, Install ``Node.js`` on Debian docker container
