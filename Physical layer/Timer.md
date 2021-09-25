@@ -1,6 +1,7 @@
 ### Commands
 
 * ``date``: show current date
+* ``cal``: print a calendar
 
 ### Environment variable
 
