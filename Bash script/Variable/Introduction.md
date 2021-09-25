@@ -91,6 +91,18 @@ ls
 echo $? #0
 ```
 
+**Example**: Check if the script has successfully executed
+
+```sh
+script_result=$?
+if [ !$script_result ] 
+then
+    echo "Script executes successfully"
+else
+    echo "Script doesn't execute successfully"
+fi
+```
+
 ### Command line argument
 
 ```sh
