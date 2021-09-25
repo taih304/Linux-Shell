@@ -23,6 +23,16 @@ $ wc -w test.sh
 
 * ``wc -l``: print newline count
 
+### head
+
+Output the first part of files
+
+``head text.txt``: Read the first 10 lines of file ``text.txt``
+
+``head -n`` with ``n`` is the specific number of first lines that wish to read
+
+``head -2 text.txt``: Read the last 2 lines of file ``text.txt``
+
 ### tail
 
 Output the last part of files
