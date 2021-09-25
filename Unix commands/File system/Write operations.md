@@ -117,6 +117,12 @@ done < test.csv
 
 **Note**: Must be ``0>``, ``1>`` and ``2>``
 
+``2>&1``: Send standard error (``2``) to where ever standard output (``1``) is being redirected as well.
+
+E.g: 
+
+``curl http://www.google.com > /dev/null 2>&1``: This sends standard error and standard output to ``/dev/null``, which means it ignores any output at all.
+
 ``ls 1> test.txt``: Send result of ``ls`` to ``test.txt``
 
 ``fail_script 2> outputfile``: redirect an error compiled script to a file: 
