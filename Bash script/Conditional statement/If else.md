@@ -99,3 +99,9 @@ If using ``if [ $string1 == $string2 ]``, there will be a warning:
 ```
 
 This happens because ``$string`` is a string containing spaces or other special characters, and single square brackets are used (which is a shortcut for the test command), then the string may be **split out into multiple words**. Each of these is treated as a separate argument.
+
+``''`` can't be used in this case: 
+
+```sh
+if [ '$string1' == '$string2' ] #Wrong
+```
