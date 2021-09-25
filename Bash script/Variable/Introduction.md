@@ -117,13 +117,16 @@ echo "total number of parameter: $#"
 
 **Result**
 
-```
+```sh
 First argument ./test.sh
 Second argument 2nd
 Third argument 3rd
-All argument 2nd 3rd all
-total number of parameter: 3 (argument ./test.sh is not count)
+All argument 2nd 3rd all //An array: {"2nd", "3rd", "all"}
+total number of parameter: 3 //argument ./test.sh is not count
 ```
+
+* ``$*``: Stores all the arguments that were entered on the command line (``$1``, ``$2``,...).
+* ``$@``: Stores all the arguments that were entered on the command line, individually quoted ("$1" "$2" ...) as an array.
 
 ### Import file
 
