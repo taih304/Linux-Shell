@@ -10,11 +10,11 @@ You can put two or more commands on the same line separated by the semicolon ``;
 command1 ; command2  
 ```
 
-### ``:`` (colon)
+### : (colon)
 
 The no-op command in shell is ``:`` (colon).
 
-### ``&`` (comtrol operator)
+### & (comtrol operator)
 
 If a command is terminated by the control operator ``&``, the shell executes the command asynchronously in a subshell. This is known as executing the command in the background, and these are referred to as asynchronous commands.
 
@@ -26,3 +26,11 @@ If a command is terminated by the control operator ``&``, the shell executes the
 username@hostname: [1] 20014
 username@hostname: folder_1 folder_2
 ```
+
+### &&
+
+```sh
+command1 && command2
+```
+
+``command2`` is executed if, and only if, command1 returns an exit status of ``0`` (success).
