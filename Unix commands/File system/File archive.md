@@ -53,7 +53,7 @@ The ``Extract here`` for ``rar`` files will be available, extracted folder will 
 
 ``-f``: use archive file or device ARCHIVE
 
-Archive files to ``.tar`` file: ``tar -cf test.tar file1.md file2.md``
+Archive multiple files to a ``.tar`` file: ``tar -cf test.tar file1.md file2.md``
 
 Extract files from a ``.tar`` file: ``tar -xf test.tar``
 

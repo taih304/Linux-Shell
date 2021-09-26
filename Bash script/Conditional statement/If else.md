@@ -114,3 +114,16 @@ This happens because ``$string`` is a string containing spaces or other special 
 ```sh
 if [ '$string1' == '$string2' ] #Wrong
 ```
+
+### Flags
+
+``-d``: Check if directory existed
+
+```sh
+if [ -d "folder_name" ]
+then 
+    echo "Directory exist"
+else     
+    echo "Directory not exist"
+fi 
+```
