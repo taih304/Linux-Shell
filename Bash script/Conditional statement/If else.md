@@ -23,6 +23,15 @@ fi
 a is not equal to b
 ```
 
+Short form
+
+```sh
+a=10 
+b=20 
+
+[ $a == $b ] && echo "$a is equal to $b" || echo "$a is not equal to $b"
+```
+
 With ``-gt``
 
 ```sh
