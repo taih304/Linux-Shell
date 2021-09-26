@@ -63,6 +63,14 @@ b="this is $a"
 echo $b #this is 29
 ```
 
+That doesn't work with ``''``:
+
+```shell
+a=29
+b='this is $a'
+echo $b #this is $a
+```
+
 ### Command as variable
 
 ```sh
