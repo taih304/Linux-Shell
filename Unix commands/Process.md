@@ -1,3 +1,5 @@
+``echo $$``: Print out the ``PID`` of the current running shell
+
 ### ps
 
 ``ps``: Report process status
