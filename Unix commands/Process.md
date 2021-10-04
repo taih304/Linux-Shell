@@ -28,6 +28,12 @@ Running ``ps`` return:
 
 ``pstree`` will view the tree of running process
 
+View process tree of a specific proccess, like ``2029``:  ``pstree -p 2029``
+
+### pgrep and  pkill 
+
+``pgrep``, ``pkill``: look  up  or signal processes based on name and other attributes
+       
 ### kill
 
 ``kill``: send a signal to a process
