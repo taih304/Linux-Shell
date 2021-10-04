@@ -22,13 +22,11 @@ Running ``ps`` return:
 18739 pts/19   00:00:00 ps
 ```
 
-Help with specific details: ``ps --help <simple|list|output|threads|misc|all>`` or ``ps --help <s|l|o|t|m|a>``
-
 ``ps ax | grep firefox``: Return nothing in Git Bash Windows
 
-A C compile program (``a.out``) program will run as a process and can be listed in ``ps``
+### pstree
 
-``pstree``: View the tree of running process
+``pstree`` will view the tree of running process
 
 ### kill
 
