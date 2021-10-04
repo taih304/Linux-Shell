@@ -1,8 +1,18 @@
 ``echo $$``: Print out the ``PID`` of the current running shell
 
+``echo $PPID`` or ``ps -e | grep $PPID``: Print out the parent process of the current running shell
+
 ### ps
 
 ``ps``: Report process status
+
+``-e``: See every process on the system
+
+E.g: ``ps -e | grep $PPID``: Find the parent process of the current running shell
+
+``-o``: User-defined format.
+
+E.g: ``ps -o ppid= -p 9801``: Find the parent process of process ``9801``
 
 Running ``ps`` return:
 
