@@ -10,7 +10,7 @@ Get value of virtual pin ``V0``
 curl -v http://blynk-cloud.com/rYt4dTj5QqvSNFRZeS_ccmAm13Dcx-DX/get/V0
 ```
 
-Get value of pin GPIO0
+Get value of digital pin GPIO0
 
 ```sh
 curl -v http://blynk-cloud.com/rYt4dTj5QqvSNFRZeS_ccmAm13Dcx-DX/get/D0
