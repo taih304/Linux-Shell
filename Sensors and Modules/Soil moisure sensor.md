@@ -29,3 +29,18 @@ Request: ``01 03 01 00 00 02 c5 f7`` -> Response: 01 03 04 00 01 00 02 2A 32
 Read 1 register, starting from register baud rate address ``0x0100``: 
 
 Request: ``01 03 01 01 00 01 d4 36`` -> Response: ``01 03 02 00 02 39 85``
+
+## Measurement
+
+Read humidity: Register ``0x0002`` and ``0x0012``
+
+* Request: 01 03 00 02 00 01 25 ca -> Response: 01 03 02 03 A6 38 CE
+* Request: 01 03 00 12 00 01 24 0f -> Response: 01 03 02 03 A2 39 0D
+
+Read temperature: Register ``0x0003``
+
+Request: 01 03 00 03 00 01 74 0a -> Response: 01 03 02 01 3C B9 C5 -> 31.6 *C
+
+Humid and temp:
+
+Request: 01 03 00 02 00 02 65 cb -> Response: 01 03 04 03 8F 01 3C CA 1D -> 91.1% 31.6 *C
