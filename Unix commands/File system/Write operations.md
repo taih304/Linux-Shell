@@ -24,6 +24,13 @@ Write content to a file
 
 ``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
 
+``printf`` ends when encountering the space
+
+```sh
+string="Hello, World !"
+printf $string #Hello,
+```
+
 Store value of ``printf`` to a variable:
 
 ```sh
@@ -34,18 +41,20 @@ echo $text
 Represent pattern:
 
 ```sh
+printf "%lf" 1.2 #1.200000
+printf "%.2f" 1.2 #1.20
+printf "%d" 12 #12
+printf "%04d" 12 #0012
+printf "%x" 10
+```
+
+```sh
 text=$(printf "hello %d" $1)
 echo $text
 ```
 
 Run ``./test.sh 123``: ``hello 123``
 
-``printf`` ends when encountering the space
-
-```sh
-string="Hello, World !"
-printf $string #Hello,
-```
 
 ### mv
 

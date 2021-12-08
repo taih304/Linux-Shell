@@ -34,6 +34,8 @@ hello
 world
 ```
 
+**Application**: Sending number to USB port instead of string with ``-e``.
+
 ### Variable declare
 
 ``unset`` variable
