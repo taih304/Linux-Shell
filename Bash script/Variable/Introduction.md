@@ -34,7 +34,15 @@ hello
 world
 ```
 
-**Application**: Sending number to USB port instead of string with ``-e``.
+Notice that all implementation above print out the string, not number. To print out a number, use escape sequence ``\x`` for hex
+
+```sh
+echo -e '\x61' #For number 0x61
+```
+
+Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the terminal
+
+**Application**: Using ``-e`` will help sending a number to USB port instead of string.
 
 ### Variable declare
 

@@ -42,6 +42,11 @@ To disable this feature: ``stty -F /dev/ttyACM0 -hupcl``
 * ``echo H > /dev/ttyUSB0`` or ``echo 'H' > /dev/ttyUSB0``: Turn ON
 * ``echo L > /dev/ttyUSB0`` or ``echo 'L' > /dev/ttyUSB0``: Turn OFF
 
+Sending number to turn, off the MCU GPIO:
+
+* Using echo: ``echo -e "\x1" > /dev/ttyUSB0``
+* Using printf: ``printf  "\x1" > /dev/ttyUSB0``
+
 ### Example 2
 
 Read serial port data

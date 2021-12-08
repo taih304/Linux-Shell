@@ -55,6 +55,15 @@ echo $text
 
 Run ``./test.sh 123``: ``hello 123``
 
+Notice that all implementation above print out the string, not number. To print out a number, use escape sequence ``\x`` for hex
+
+```sh
+printf "\x61" #For number 0x61
+```
+
+Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the terminal
+
+**Application**: Using ``\x`` will help sending a number to USB port instead of string.
 
 ### mv
 
