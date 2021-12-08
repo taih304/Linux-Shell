@@ -49,7 +49,7 @@ Sending number to turn, off the MCU GPIO:
 
 ### Example 2
 
-Read serial port data
+Read data from USB port
 
 **Using cat**: 
 
@@ -57,5 +57,18 @@ Read serial port data
 while [ true ]
 do
     cat /dev/ttyUSB0
+done 
+```
+
+**Using read**: Read a number of bytes from the USB port
+
+```sh
+while [ true ]
+do
+    read -a store_array -N 14 < /dev/ttyUSB0
+    for value in ${store_array[@]}
+    do
+        echo $value
+    done 
 done 
 ```
