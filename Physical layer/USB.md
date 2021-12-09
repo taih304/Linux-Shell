@@ -77,3 +77,23 @@ do
     done 
 done 
 ```
+
+## Example 3
+
+Two way communication
+
+* If MCU received ``0x12`` from PC, sends ``Received 0x12`` to PC USB port.
+* If MCU received ``0x34`` from PC, sends ``Received 0x34`` to PC USB port.
+
+```sh
+while [ true ]
+do
+    printf "\x34" > /dev/ttyACM0
+    read -a store_array -N 13 < /dev/ttyACM0
+    for value in ${store_array[@]}
+    do
+        echo $value
+    done 
+    sleep 1
+done 
+```
