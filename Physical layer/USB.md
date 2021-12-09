@@ -45,7 +45,12 @@ To disable this feature: ``stty -F /dev/ttyACM0 -hupcl``
 Sending number to turn, off the MCU GPIO:
 
 * Using echo: ``echo -e "\x1" > /dev/ttyUSB0``
-* Using printf: ``printf  "\x1" > /dev/ttyUSB0``
+* Using printf: ``printf "\x1" > /dev/ttyUSB0``
+
+To send more than 2 bytes to MCU: 
+
+* ``echo -e "\x12\x34" > /dev/ttyUSB0``
+* ``printf "\x12\x34" > /dev/ttyACM0``
 
 ### Example 2
 
