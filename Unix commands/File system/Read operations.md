@@ -32,6 +32,14 @@ Read a line from the standard input and split it into fields.
 
 ``read -a store_array -N 14``: Read 14 entered characters from the current running terminal (including space), it will break if having enough character.
 
+Read and print out every line of file
+
+```sh
+while read textLine; do    
+    echo $textLine    
+done < test.csv
+```
+
 ### source and ``.``
 
 ``source``: ``source filename [arguments]``
