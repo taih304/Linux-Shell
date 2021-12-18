@@ -6,6 +6,14 @@
 
 Without any arguments, the ``set`` command lists all the shell variables, including their values.
 
+With argument:
+
+```sh
+username@hostname:set a b c
+username@hostname:echo $1 $2 $3
+a b c
+```
+
 ### PATH
 
 ``PATH`` is an environmental variable in Linux and other Unix-like operating systems that tells the shell which directories to search for executable files (i.e., ready-to-run programs) in response to commands issued by a user. Multiple values for an environment variable are seperated by a ``:``
