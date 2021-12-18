@@ -1,3 +1,9 @@
+## General
+
+Shell builtins commands include: ``alias``, ``cd``, ``echo``, ``test``, ``unset`` and ``wait``.
+
+## Commands
+
 ### cd
 
 ``cd ../..``: change to previous folder
