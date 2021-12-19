@@ -56,9 +56,10 @@ hello, world !
 Read and print out every line of file
 
 ```sh
-while read textLine; do    
+while read textLine
+do    
     echo $textLine    
-done < test.csv
+done < test.c
 ```
 
 ### source and ``.``
