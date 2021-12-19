@@ -43,7 +43,7 @@ ls || cd Folder/
 username$hostname: [ "a" == "a" ] && echo "Strings are equal" || echo "Strings are not equal"
 ```
 
-### ;
+### ; (semicolon)
 
 You can put two or more commands on the same line separated by the semicolon ``;``. All the arguments before ``;`` will be treated as a separate command from all the arguments after the ``;``. All the commands will be executed sequentially waiting for each command to finish before starting the new one.
 
