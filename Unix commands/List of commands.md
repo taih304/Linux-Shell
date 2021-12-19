@@ -55,7 +55,7 @@ command1 ; command2
 
 The no-op command in shell is ``:`` (colon).
 
-### & (comtrol operator)
+### & (control operator)
 
 If a command is terminated by the control operator ``&``, the shell executes the command asynchronously in a subshell. This is known as executing the command in the background, and these are referred to as asynchronous commands.
 
