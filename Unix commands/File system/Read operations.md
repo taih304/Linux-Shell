@@ -37,6 +37,16 @@ username$hostname: echo $var_2
 World ! String
 ```
 
+By default, unless the ``-r`` option is specified, backslash ('\') shall act as an escape character. Use ``-r`` and ``<<`` to handle with backslash, space reading.
+
+```sh
+username$hostname: read -r var_1 << "end_string"
+> hello, world !
+> end_string
+username$hostname: echo $var_1
+hello, world !
+```
+
 ``-a``: array
 
 ``read -a store_array``: Read enterd string in the current running terminal and store to ``store_array``. The stored string will be broken if encounter space.
