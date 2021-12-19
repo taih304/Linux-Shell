@@ -26,6 +26,17 @@ After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
 
 Read a line from the standard input and split it into fields.
 
+Read the entered string into variable
+
+```sh
+username$hostname: read var_1 var_2
+Hello, World ! String
+username$hostname: echo $var_1
+Hello,
+username$hostname: echo $var_2
+World ! String
+```
+
 ``-a``: array
 
 ``read -a store_array``: Read enterd string in the current running terminal and store to ``store_array``. The stored string will be broken if encounter space.
