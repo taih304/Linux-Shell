@@ -103,7 +103,7 @@ To remove sudo file: ``sudo rm -rv filename``
 
 * ``>``: Redirect ouput to a file, this can be used to write data to a file, this will overwrite an existing file
 * ``<``: redirect input from a file
-* ``>>``: Append the output to the file
+* ``>>``: Append the output to the file or creates the file if it doesn't exist.
 
 **Example 1**
 
