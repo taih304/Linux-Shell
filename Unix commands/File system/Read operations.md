@@ -61,6 +61,18 @@ do
     echo $textLine    
 done < test.c
 ```
+**Notice**: If the file has no new line at the end, the software above is unable to read the last line
+
+To read the whole file when that file has no new line at the end:
+
+```sh
+textLine=""
+while read textLine
+do   
+    echo $textLine    
+done < test.csv
+echo $textLine
+```
 
 ### source and ``.``
 
