@@ -150,4 +150,4 @@ Example:
 
 ### pipe
 
-``|`` (pipe): send the output of one program to the input of another program, **not file**.
+``|`` (pipe): send the output of the program on the left to the input of the program on the right, **not file**.
