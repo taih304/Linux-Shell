@@ -103,8 +103,10 @@ To remove sudo file: ``sudo rm -rv filename``
 
 * ``>``: Redirect ouput to a file, this can be used to write data to a file, this will overwrite an existing file
 * ``<``: redirect input from a file
-* ``>>``: Append the output to the file
-
+* ``>>``: Append the output to the file or creates the file if it doesn't exist.
+* ``<<``: here document. The program will end when encountering the string value specified by the here document. Check [read -r](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Unix%20commands/File%20system/Read%20operations.md#read) for example
+* ``<<<``: here-string. Send a string to a program
+ 
 **Example 1**
 
 ``> filename.txt``: Create ``filename.txt``
@@ -119,14 +121,11 @@ Write content to a file
 
 ``printf "test \n" >> data.csv``
 
-**Example 2**: Read and print out every line of file
+**Example 2**: Here-string example
 
-```sh
-while read textLine; do    
-    echo $textLine    
-done < test.csv
 ```
-
+grep "b" <<< "abcd"
+```
 ### File description
 
 * stdin: 0

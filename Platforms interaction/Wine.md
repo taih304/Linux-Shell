@@ -9,3 +9,5 @@ Install Wine on Ubuntu 16.04
 **Step 4**: ``sudo apt-get install --install-recommends winehq-devel``
 
 **Step 5**: Run ``winecfg`` to set up configuration for Wine
+
+After installing Wine, Windows Command Prompt can be run with this command: ``wine cmd`` 

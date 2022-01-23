@@ -43,7 +43,7 @@ ls || cd Folder/
 username$hostname: [ "a" == "a" ] && echo "Strings are equal" || echo "Strings are not equal"
 ```
 
-### ;
+### ; (semicolon)
 
 You can put two or more commands on the same line separated by the semicolon ``;``. All the arguments before ``;`` will be treated as a separate command from all the arguments after the ``;``. All the commands will be executed sequentially waiting for each command to finish before starting the new one.
 
@@ -55,7 +55,7 @@ command1 ; command2
 
 The no-op command in shell is ``:`` (colon).
 
-### & (comtrol operator)
+### & (control operator)
 
 If a command is terminated by the control operator ``&``, the shell executes the command asynchronously in a subshell. This is known as executing the command in the background, and these are referred to as asynchronous commands.
 

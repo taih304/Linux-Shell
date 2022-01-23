@@ -6,7 +6,7 @@
 
 ``ps``: Report process status
 
-``-e``: See every process on the system
+``-e``: List all process on the system
 
 E.g: ``ps -e | grep $PPID``: Find the parent process of the current running shell
 
