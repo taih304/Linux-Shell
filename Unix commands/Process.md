@@ -46,6 +46,8 @@ The  default  signal  for kill is ``TERM`` (terminate).
 
 ``kill 17375``: terminate process with PID ``17375``
 
+``kill -12 12976`` or ``kill -USR2 12976``: Send USR2 signal to PID ``12976``
+
 ``kill -l``: display all the available signals
 
 ### netstat
