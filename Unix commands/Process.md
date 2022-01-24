@@ -8,6 +8,8 @@
 
 ``-e``: List all process on the system
 
+``-f``: Full-format listing
+
 E.g: ``ps -e | grep $PPID``: Find the parent process of the current running shell
 
 ``-o``: User-defined format.
