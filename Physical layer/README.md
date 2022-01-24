@@ -59,10 +59,14 @@ To end ``screen``: ``Ctr+A+D``.
 
 ## System handler
 
+The ``/sys/class/`` directory offers a view of the device drivers grouped by classes.
+
+``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
+
+
 * ``shutdown``
 * ``reboot``
 * ``cat /etc/os-release``: View OS information
-* ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
 
 Name of OS:
 
