@@ -74,6 +74,17 @@ done < test.csv
 echo $textLine
 ```
 
+Attempt to ``read`` with ``echo`` and ``pipe`` fail in Bash
+
+```sh
+$ echo 1 2 3 4 5 | read a b dump
+$ echo $b $a 
+  
+$
+```
+
+That happens as ``bash`` runs the right-hand side of a pipeline in a subshell context, so changes to variables (which is what read does) are not preserved — they die when the subshell does, at the end of the command.
+
 ### source and ``.``
 
 ``source``: ``source filename [arguments]``
