@@ -8,6 +8,8 @@
 
 ``-e``: List all process on the system
 
+``-f``: Full-format listing
+
 E.g: ``ps -e | grep $PPID``: Find the parent process of the current running shell
 
 ``-o``: User-defined format.
@@ -43,6 +45,8 @@ View process tree of a specific proccess, like ``2029``:  ``pstree -p 2029``
 The  default  signal  for kill is ``TERM`` (terminate).
 
 ``kill 17375``: terminate process with PID ``17375``
+
+``kill -12 12976`` or ``kill -USR2 12976``: Send USR2 signal to PID ``12976``
 
 ``kill -l``: display all the available signals
 

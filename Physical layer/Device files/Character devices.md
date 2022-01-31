@@ -1,10 +1,12 @@
 ``/dev/tty`` is the current running terminal, which is character special.
 
+``/dev/mem`` is a character device file that is an image of the main memory of the computer.  It may be used, for example, to examine (and even patch) the system. Byte addresses in ``/dev/mem`` are interpreted as physical memory addresses.
+
 ``/dev/fd``: for each process, the kernel provides the special virtual directory ``/dev/fd``. This directory contains filenames of the form ``/dev/fd/n``, where ``n`` is a number corresponding to one of the open file descriptors for the process. ``/dev/fd`` is actually a symbolic link to the Linux-specific ``/proc/self/fd`` directory.
 
 ``/dev/fd/0``, ``/dev/fd/1`` and ``/dev/fd/2`` are corresponded to ``stdin`` and ``stdout`` and ``stderr``. 
 
-As a convenience, the names ``/dev/stdin``, ``/dev/stdout``, and ``/dev/stderr`` are provided as symbolic links to, respectively, ``//proc/self/fd/0``, ``/proc/self/fd/1``, and ``/proc/self/fd/2``.
+As a convenience, the names ``/dev/stdin``, ``/dev/stdout``, and ``/dev/stderr`` are provided as symbolic links to, respectively, ``/proc/self/fd/0``, ``/proc/self/fd/1``, and ``/proc/self/fd/2``.
 
 ``/dev/pts`` stores all number of the current opening terminal. Choosing the right terminal number will output data to the right terminal.
 
