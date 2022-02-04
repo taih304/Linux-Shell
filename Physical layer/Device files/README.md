@@ -4,7 +4,7 @@
 
 ``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
 
-``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
+E.g: ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
 
 ### stty
 
