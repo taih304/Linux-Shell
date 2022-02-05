@@ -28,6 +28,15 @@ To view the corressponding ID of the those devices: ``xinput``
 
 ``id=2`` corrresponds to ``event2``.
 
+To view all major and minor number of input: ``ls -l /dev/input``
+
+```
+crw-rw---- 1 root input 13, 64 Feb  5 10:15 event0
+crw-rw---- 1 root input 13, 65 Feb  5 10:15 event1
+```
+
+Then ``13`` is major number, ``64`` and ``65`` are minor numbers.
+
 ## Memory
 
 ``/dev/mem`` is a character device file that is an image of the main memory of the computer.  It may be used, for example, to examine (and even patch) the system. Byte addresses in ``/dev/mem`` are interpreted as physical memory addresses.

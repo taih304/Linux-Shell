@@ -1,3 +1,5 @@
+List all character devices and block devices with major number: ``cat /proc/devices``
+
 ``/dev`` is the location of special or device files.
 
 ### /dev/null
