@@ -8,6 +8,16 @@ List all character devices and block devices with major number: ``cat /proc/devi
 
 E.g: ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
 
+### /dev/kmsg
+
+Kernel log is stored inside the kernel log buffer, which is a ring buffer, and is exported to userspace through ``/dev/kmsg``. The usual way to read it is using dmesg.
+
+``dmesg`` (diagnostic message) prints the message buffer of the kernel.
+
+``dmesg`` will print time like ``[43307.062926]``
+
+``dmesg -T`` will print time like ``[Fri Aug  6 21:16:06 2021]``
+
 ### stty
 
 ``stty`` displays or changes the characteristics of the terminal.
