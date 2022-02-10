@@ -12,6 +12,8 @@ E.g: ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit sta
 
 Kernel log is stored inside the kernel log buffer, which is a ring buffer, and is exported to userspace through ``/dev/kmsg``. The usual way to read it is using dmesg.
 
+To view the kernel log realtime: ``cat /dev/kmsg``
+
 ``dmesg`` (diagnostic message) prints the message buffer of the kernel.
 
 ``dmesg`` will print time like ``[43307.062926]``
