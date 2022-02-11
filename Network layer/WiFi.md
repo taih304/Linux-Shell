@@ -1,3 +1,11 @@
+## /etc/NetworkManager
+
+List the credentials of all the connected WiFi: ``ls /etc/NetworkManager/system-connections/``
+
+For information of the specific SSID: ``cat /etc/NetworkManager/system-connections/SSID``
+
+For the SSID with space, use ``\``: ``cat /etc/NetworkManager/system-connections/SSID\ space``
+
 ## nmtui
 
 ``nmtui``: Text user interface for controlling NetworkManager
@@ -9,12 +17,6 @@ Install: ``sudo apt-get install network-manager``
 ```
 nmtui-connect
 ```
-
-List the credentials of all the connected WiFi: ``ls /etc/NetworkManager/system-connections/``
-
-For information of the specific SSID: ``cat /etc/NetworkManager/system-connections/SSID``
-
-For the SSID with space, use ``\``: ``cat /etc/NetworkManager/system-connections/SSID\ space``
 
 Connect with a SSID by ``nmcli``: ``nmcli dev wifi connect SSID password password``
 
