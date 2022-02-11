@@ -1,3 +1,9 @@
+## nmtui
+
+``nmtui``: Text user interface for controlling NetworkManager
+
+Install: ``sudo apt-get install network-manager``
+
 ### Set up WiFi
 
 ```
@@ -13,6 +19,8 @@ For the SSID with space, use ``\``: ``cat /etc/NetworkManager/system-connections
 Connect with a SSID by ``nmcli``: ``nmcli dev wifi connect SSID password password``
 
 For SSID with spaces: ``nmcli dev wifi connect SSID\ with\ space password password``
+
+## iwconfig
 
 ### Configuration
 
