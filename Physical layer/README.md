@@ -59,6 +59,8 @@ To end ``screen``: ``Ctr+A+D``.
 
 ## System handler
 
+``less /proc/cpuinfo``: View CPU info
+
 The ``/sys/class/`` directory offers a view of the device drivers grouped by classes.
 
 ``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
