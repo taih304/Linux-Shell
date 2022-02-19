@@ -1,3 +1,5 @@
+**Shell** is a command interpreter, which interprets the command which the user gives to the kernel. It can also be defined as an interface between a user and operating system.
+
 ### Basic shell script
 
 ```sh
