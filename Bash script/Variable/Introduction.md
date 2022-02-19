@@ -20,6 +20,8 @@ echo $b
 
 E.g: ``echo -n 123``
 
+Shell variables are stored as string variables. With ``a=10``, the ``10`` stored in ‘a’ is not treated as a number, but as a string of characters ``1`` and ``0``.
+
 ### ``-e``
 
 ``echo -e``: enable interpretation of backslash escapes:
