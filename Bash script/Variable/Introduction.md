@@ -123,7 +123,9 @@ else
 fi
 ```
 
-### Command line argument
+### Positional parameters
+
+Positional parameters is the way to handle with command line argument when running a bash script
 
 ```sh
 echo "First argument $0"
