@@ -59,7 +59,7 @@ a="string"
 echo $a #string
 ```
 
-``readonly`` variable
+``readonly`` variable make the variable become the constant.
 
 ```sh
 name="User name"
