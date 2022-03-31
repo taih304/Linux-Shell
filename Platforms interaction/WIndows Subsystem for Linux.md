@@ -1,0 +1,3 @@
+**Windows Subsystem for Linux (WSL)** lets developers run a GNU/Linux environment, including most command-line tools, utilities, and applications, directly on Windows, unmodified, without the overhead of a traditional virtual machine or dual-boot setup.
+
+**Windows Subsystem for Linux version 2 (WSL2)** runs a Linux kernel inside a light-weight (Hyper-V) VM providing a Linux user-space environment in which regular Linux distributions such as Ubuntu can be installed. WSL2 provides seamless integration between Windows and Linux, fast boot times, a small resource footprint, and requires no VM configuration or management.
