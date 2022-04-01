@@ -57,4 +57,6 @@ Archive multiple files to a ``.tar`` file: ``tar -cf test.tar file1.md file2.md`
 
 Extract files from a ``.tar`` file: ``tar -xf test.tar``
 
+``tar`` can be used to extract ``tgz`` file: E.g: ``tar -xf p4v.tgz``
+
 You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just arhive to ``.tar`` file.
