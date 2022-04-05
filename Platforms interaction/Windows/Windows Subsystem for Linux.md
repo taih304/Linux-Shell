@@ -26,3 +26,7 @@ To run a program with GUI on Linux OS app, like gedit, xeyes,... X11 XLaunch has
 After intalling XLaunch successfully, go to MobaXterm then connect to the Linux OS appp then run the GUI app like ``gedit``.
 
 If running the command for those GUI program on the Linux OS app, like ``xeyes``, there will be error: ``Error: Can't open display:``
+
+**Issue**: GUI can't be displayed on MobaXterm with error like below
+
+This issue might happen when first time install WSL and the Linux OS app. To solve, run ``wsl --update``
