@@ -27,6 +27,8 @@ After intalling XLaunch successfully, go to MobaXterm then connect to the Linux 
 
 If running the command for those GUI program on the Linux OS app, like ``xeyes``, there will be error: ``Error: Can't open display:``
 
-**Issue**: GUI can't be displayed on MobaXterm with error like below
+**Issue**: GUI can't be displayed on MobaXterm with error like the image below
+
+![](../../Environment/Images/wsl_fail_to_run_gui.PNG)
 
 This issue might happen when first time install WSL and the Linux OS app. To solve, run ``wsl --update``
