@@ -18,3 +18,11 @@ To log out from that Linux OS app to get back to the Windows CLI, run ``exit``.
 
 * Set WSL2 as default: ``wsl --set-default-version 2``
 * List all installed Linux OS app: ``wsl -l`` and ``wsl -l -v``
+
+### Running GUI
+
+To run a program with GUI on Linux OS app, like gedit, xeyes,... X11 XLaunch has to be installed then run that program on MobaXterm.
+
+After intalling XLaunch successfully, go to MobaXterm then connect to the Linux OS appp then run the GUI app like ``gedit``.
+
+If running the command for those GUI program on the Linux OS app, like ``xeyes``, there will be error: ``Error: Can't open display:``
