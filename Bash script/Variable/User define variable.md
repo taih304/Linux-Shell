@@ -46,7 +46,7 @@ Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the
 
 **Application**: Using ``-e`` will help sending a number to USB port instead of string.
 
-### Variable declare
+### Variable define
 
 ``unset`` variable
 
