@@ -50,3 +50,5 @@ export PATH=~/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/
 Then this wrong PATH will effect all built-in commands like ``ls``, ``cd``, ``cat``,... 
 
 Error: ``ls: command not found``
+
+To view all environment variables, use ``export`` or ``env`` command.
