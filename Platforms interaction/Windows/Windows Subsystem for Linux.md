@@ -6,6 +6,8 @@
 
 Installing WSL will then allow Ubuntu as a Microsoft app to run normally on Windows OS PC. Ubuntu like Ubuntu 20.04 can be installed to run as an app on Windows OS PC from Microsoft Store. After installing, drive C of the Windows OS PC is mounted on: ``/mnt/C``. Get to this location to perform file operations between the Ubuntu App and the Windows OS.
 
+To check the folder of the installed Ubuntu, run ``\\wsl$`` on the address bar.
+
 ### Command
 
 After installing WSL, all WSL command must be run on the Windows CLI like command prompt, Git Bash,... as those command will give direct effect to the Linux environment host on that Windows OS PC.
