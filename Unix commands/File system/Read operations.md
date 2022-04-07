@@ -4,6 +4,8 @@
 
 ``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
 
+``readlink``: Get path of a file. User have to be inside the folder where that file is in then type ``readlink -f file.txt``
+
 ``pwd``: print working directory
 
 ``dir``: print out all files and folders in current directory

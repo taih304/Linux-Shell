@@ -22,7 +22,7 @@ echo $c #Hello, World !
 ```
 **Notice**: 
 
-If declare ``a`` with ``'`` like this:
+If define ``a`` with ``'`` like this:
 
 ```sh
 a="{'field1': 10, 'field2': 'Hello, World'}"

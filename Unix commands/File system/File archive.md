@@ -59,4 +59,4 @@ Extract files from a ``.tar`` file: ``tar -xf test.tar``
 
 ``tar`` can be used to extract ``tgz`` file: E.g: ``tar -xf p4v.tgz``
 
-You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just arhive to ``.tar`` file.
+You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just archive to ``.tar`` file.
