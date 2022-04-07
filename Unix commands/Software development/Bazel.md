@@ -42,3 +42,37 @@ If building successfully, the workspace architecture will be:
 ```
 
 To run the built program: ``bazel run test_bazel``
+
+### Build with header files/library files
+
+```c
+|--main.c
+|--head.c
+|--head.h
+|--WORKSPACE
+|--BUILD
+```
+
+Now change ``BUILD`` file to:
+
+```
+cc_library(
+    name = "library_name",
+    srcs = ["head.c"],
+    hdrs = ["head.h"],
+)
+
+cc_binary(
+    name = "test_bazel",
+    srcs = ["main.c"],
+    deps = [
+        ":library_name",        
+    ],
+)
+```
+
+``main.c``, ``head.c`` and ``head.h`` are all defined in [GCC compiler: Build source file](https://github.com/TranPhucVinh/C/blob/master/Introduction/Environment/GCC%20compiler.md#build-source-file)
+
+To build: ``bazel build test_bazel``
+
+To run: ``bazel build test_bazel``
