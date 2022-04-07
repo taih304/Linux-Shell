@@ -75,4 +75,8 @@ cc_binary(
 
 To build: ``bazel build test_bazel``
 
-To run: ``bazel build test_bazel``
+To run: ``bazel run test_bazel``
+
+**Build with header files/library files inside specific folder**: Check [cJSON implementation in C](https://github.com/TranPhucVinh/C/blob/master/Introduction/Data%20structure/JSON/README.md) for that implementation.
+
+``include`` keyword in ``BUILD`` file is used to include the general folder for ``include`` in C source code like ``#include "header.h``. With ``includes = ["cJSON-1.7.15"],`` in ``BUILD`` file, user can call ``#include "cJSON.h"`` instead of ``#include "cJSON-1.7.15/cJSON.h"``
