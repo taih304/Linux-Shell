@@ -45,6 +45,14 @@ The folder architecture where ``c_make_test`` is in now will be:
 
 Then run: ``make``, binary file ``test_c_make`` will be created. Then run ``test_c_make`` to run the C program.
 
+If there is error with the source file, running ``cmake c_make_test/`` will be file then run ``make`` will have error.
+
+Project name can be used with ``${PROJECT_NAME}``:
+
+```CMake
+add_executable(${PROJECT_NAME} main.c)
+```
+
 # API
 
 ### register_component()
