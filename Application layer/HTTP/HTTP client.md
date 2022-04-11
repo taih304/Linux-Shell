@@ -2,7 +2,7 @@
 
 ### GET request
 
-With HTTP server: ``curl -v -X GET arduino.vn``
+With HTTP server: ``curl -v -X GET example.com``
 
 With HTTPS server: ``curl https://github.com``
 
