@@ -78,6 +78,33 @@ add_executable(${PROJECT_NAME} main.c header.c)
 //Operations go here
 ```
 
+**Creating library with add_library()**:
+
+With files architecture like above:
+
+```CMake
+# set the project name
+project(test_c_make)
+
+# add the executable
+add_executable(${PROJECT_NAME} main.c)
+
+add_library(
+    header
+    header.h
+    header.c)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE header)
+```
+
+``add_library()``: Default for ``add_library()`` is to build static library. So when running the ``CMakeLists.txt`` above, there will be:
+
+```
+[ 50%] Linking C static library libheader.a
+```
+
+Other library types can be specified like ``SHARED``, ``STATIC``, ``MODULE``.
+
 # API
 
 ### register_component()
