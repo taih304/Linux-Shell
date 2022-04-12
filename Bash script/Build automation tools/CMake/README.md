@@ -4,7 +4,7 @@ CMake is an open-source, cross-platform family of tools designed to build, test 
 
 ### Install
 
-CMake can be installed with ``sudo apt install cmake`` or install with the tar file.
+CMake can be installed with ``sudo apt install cmake`` or installed with the tar file.
 
 For installing with tar file, install ``cmake-3.23.0.tar.gz`` file from CMake webpage then extract to folder ``cmake-3.23.0``.
 
@@ -53,6 +53,29 @@ Project name can be used with ``${PROJECT_NAME}``:
 
 ```CMake
 add_executable(${PROJECT_NAME} main.c)
+```
+
+### Build the program with source files
+
+```
+|--main.c
+|--header.c
+|--header.h
+|--CMakeLists.txt
+```
+
+```CMake
+project(test_c_make)
+
+# add the executable
+add_executable(${PROJECT_NAME} main.c header.c)
+```
+
+``main.c`` then just simply includes ``header.h``:
+
+```c
+#include "header.h"
+//Operations go here
 ```
 
 # API
