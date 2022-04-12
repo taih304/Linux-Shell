@@ -4,7 +4,9 @@ CMake is an open-source, cross-platform family of tools designed to build, test 
 
 ### Install
 
-Install ``cmake-3.23.0.tar.gz`` file from CMake webpage then extract to folder ``cmake-3.23.0``.
+CMake can be installed with ``sudo apt install cmake`` or install with the tar file.
+
+For installing with tar file, install ``cmake-3.23.0.tar.gz`` file from CMake webpage then extract to folder ``cmake-3.23.0``.
 
 Inside folder ``cmake-3.23.0``, run file ``./bootstrap`` to setup CMake. Also read file ``README.rst`` for any further information.
 
