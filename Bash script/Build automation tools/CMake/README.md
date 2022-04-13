@@ -12,7 +12,7 @@ Inside folder ``cmake-3.23.0``, run file ``./bootstrap`` to setup CMake. Also re
 
 After successfully setup CMake, command ``cmake`` will be available. Folder ``cmake-3.23.0`` can then be deleted.
 
-### Build the first program
+### Build the first C program
 
 Set up a working folder for CMake project like ``c_make_test``:
 
