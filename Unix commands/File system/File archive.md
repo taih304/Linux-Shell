@@ -1,3 +1,11 @@
+# Archive vs compression
+
+**Compression** will reduce the file size.
+
+**Archive** just simply packing all the files into an archive object luke tar, zip. The newly archived file will have its size less than the total size of all packed file by just a few memory.
+
+# Commands
+
 ### zip
 
 Zip several files: ``zip test.zip README.md document.md``
