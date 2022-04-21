@@ -116,3 +116,51 @@ cc_binary(
     data = ["test.json"],
 )
 ```
+
+With file ``test.json`` inside folder ``file`` and ``BUILD`` file like this:
+
+```
+|--main.c
+|--file
+	|--test.json
+|--WORKSPACE
+|--BUILD
+```
+
+```
+cc_binary(
+    name = "test_bazel",
+    srcs = ["main.c"],
+    data = ["file/test.json"],
+)
+```
+
+Running the bazel build file will result in error:
+
+```
+Unable to open file test.json
+```
+
+**Problem solved**:
+
+``BUILD`` in ``file``:
+
+```
+exports_files(["test.json"])
+```
+
+``BUILD`` in main workspace:
+
+```
+cc_binary(
+    name = "test_bazel",
+    srcs = ["main.c"],
+    data = ["//file:test.json"],
+)
+```
+
+To read ``test.json`` inside folder ``file``, the source code now need to change to:
+
+```c
+printf("%s\n", read_file("file/test.json"));
+```
