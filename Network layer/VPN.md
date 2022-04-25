@@ -1,3 +1,5 @@
+## Cisco AnyConnect client
+
 ### Install Cisco AnyConnect client
 
 First, make sure you have the necessary Debian/Ubuntu support packages installed:
@@ -58,3 +60,7 @@ It works similar in GUI to set up connection
 ### Reference:
 
 * [Anyconnect VPN client](https://www.socsci.uci.edu/~jstern/uci_vpn_ubuntu/)
+
+## VPN for Google Chrome
+
+There are various Google extensions to support running VPN on Google Chrome, like Betternet.
