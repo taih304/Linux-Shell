@@ -1,4 +1,14 @@
-## Environment Variable
+# Environment Variable
+
+## Local Environment Variable
+
+These environment variables last only till the current session.
+
+To add or modify a local environment variable, use ``export``
+
+``export a=4``
+
+Check this environment variable: ``echo $a``
 
 ### set command
 
@@ -18,19 +28,19 @@ a b c
 
 ``PATH`` is an environmental variable in Linux and other Unix-like operating systems that tells the shell which directories to search for executable files (i.e., ready-to-run programs) in response to commands issued by a user. Multiple values for an environment variable are seperated by a ``:``
 
-### Local Environment Variable
+## User Environment Variable
 
-To add or modify a local environment variable, use ``export``
+These are the variables which are defined for a particular user and are loaded every time a user logs in using a local terminal session. These variables are typically set in and loaded from following configuration files: ``.bashrc``, ``.bash_profile``, ``.bash_login``, ``.profile`` files which are present in user’s home directory.
 
-``export a=4``
+**Configuration files**
 
-Check this environment variable: ``echo $a``
+``.bashrc``:  This file is user specific file that gets loaded each time user creates a new local session i.e. opens a new terminal. All environment variables created in this file would take effect every time a new local session is started. To activate the change after setting up the environment variable, reboot the system or run ``source ~/.bashrc``.
 
-### User wide variables
+``.bash_profile``: This file is user specific remote login file. Environment variables listed in this file are invoked every time the user is logged in remotely i.e. using ssh session. 
 
-To activate the change after setting up the environment variable, reboot the system or run ``source ~/.bashrc``
+## System wide Environment Variables
 
-### System wide variables
+These are the environment variables which are available system-wide, i.e. for all the users present on that system. These variables are present in system-wide configuration files present in following directories and files: ``/etc/environment``, ``/etc/profile``, ``/etc/profile.d/``, ``/etc/bash.bashrc``. These variables are loaded every time system is powered on.
 
 Update the ``PATH`` to the environment variable in file ``/etc/bash.bashrc``. For example:
 
