@@ -111,7 +111,7 @@ E.g: ``echo user: $USER``
 
 Print out all the folder in current directory
 
-``-l``: list in long format, show more detail of the file/list detail information
+``-l``: list in long format, show more detail of the file/list detail information, ``ll`` is the alias for ``ls -l``.
 
 ``-i``: view inode
 
