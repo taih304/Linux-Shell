@@ -6,6 +6,8 @@ View status of process ``16965``: ``cat /proc/16965/status``
 
 ## Job
 
+In computing, a **job** is a unit of work or unit of execution. A component of a job (as a unit of work) is called a task or a step (if sequential, as in a job stream). As a unit of execution, a job may be concretely identified with a single process.
+
 To run a job **in the background**, use [ampersand symbol (&)](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Unix%20commands/List%20of%20commands.md#-control-operator)
 
 ``jobs`` command will list the jobs that are currently running or suspended in the background.
