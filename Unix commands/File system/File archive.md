@@ -1,3 +1,11 @@
+# Archive vs compression
+
+**Compression** will reduce the file size.
+
+**Archive** just simply packing all the files into an archive object luke tar, zip. The newly archived file will have its size less than the total size of all packed file by just a few memory.
+
+# Commands
+
 ### zip
 
 Zip several files: ``zip test.zip README.md document.md``
@@ -58,5 +66,7 @@ Archive multiple files to a ``.tar`` file: ``tar -cf test.tar file1.md file2.md`
 Extract files from a ``.tar`` file: ``tar -xf test.tar``
 
 ``tar`` can be used to extract ``tgz`` file: E.g: ``tar -xf p4v.tgz``
+
+For ``.gz`` file: ``tar -xzvf fovio_client.tar.gz``. If not using ``-xzvf``, ``.gz`` file can't be extracted.
 
 You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just archive to ``.tar`` file.

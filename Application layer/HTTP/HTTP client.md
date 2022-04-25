@@ -2,11 +2,13 @@
 
 ### GET request
 
-With HTTP server: ``curl -v -X GET arduino.vn``
+With HTTP server: ``curl -v -X GET example.com``
 
 With HTTPS server: ``curl https://github.com``
 
-Download an image from a HTTPS server: ``curl -o test.jpg https://vignette.wikia.nocookie.net/testwikia/images/4/44/png_image.png/revision/latest?cb=20200927143723``
+Download an image from a HTTPS server: ``curl -o output_image_name.png image_URL``
+
+E.g ``curl -o test.jpg https://vignette.wikia.nocookie.net/testwikia/images/4/44/png_image.png/revision/latest?cb=20200927143723``
 
 ### Get data from Python HTTP server
 

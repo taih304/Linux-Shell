@@ -19,6 +19,8 @@ sudo usermod -a -G tty yourname
 sudo usermod -a -G dialout yourname
 ```
 
+Or ``sudo usermod -aG tty ${USER}``
+
 After this, logout your account to see the effect (Press Log out button in Settings)
 
 ## Examples

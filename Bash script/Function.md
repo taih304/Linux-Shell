@@ -33,7 +33,7 @@ change_value
 **Global variable**: A global variable can be define inside a function
 
 ```sh
-declare_variable_b(){
+define_variable_b(){
     b=123
 }
 
@@ -41,7 +41,7 @@ change_variable_b(){
     b=0
 }
 
-declare_variable_b
+define_variable_b
 echo $b #123
 change_variable_b
 echo $b #0

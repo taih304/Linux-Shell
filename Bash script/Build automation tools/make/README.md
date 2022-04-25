@@ -1,4 +1,4 @@
-``Make`` is a build automation tool. Its file format can be ``Makefile`` or ``makefile``.
+``Make`` is a build automation tool which only runs on Unix-alike OS. Its file format can be ``Makefile`` or ``makefile``.
 
 To run makefile, take those steps
 
