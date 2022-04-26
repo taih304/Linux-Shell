@@ -1,5 +1,7 @@
 ``bin`` : the directory ``bin`` store all the command line used in Linux
 
+``tmp``: In Unix and Linux, the global temporary directories are ``/tmp`` and ``/var/tmp`` where temporary files of the running program are stored here. However, files created by user in those locations are not temporary as they are still in there and can still keep the value after the OS is powered off.
+
 **Recover .bashrc and .profile to origin files**
 
 Origin ``.bashrc`` and ``.profile`` files are stored in ``/etc/skel``
