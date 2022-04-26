@@ -36,3 +36,9 @@ find $PWD -type f -name README.md
 ```
 
 * ``type``: type of file, ``f`` for file, ``d`` for directory
+
+### fzf
+
+``fzf`` is a command line fuzzy finder for performing fuzzy search. ``fzf`` is not supported in Ubuntu 16.04 while Ubuntu 20.04 well supported fzf.
+
+``sudo apt-get install fzf`` fails in Ubuntu 16.04.
