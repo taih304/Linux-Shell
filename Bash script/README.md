@@ -1,6 +1,10 @@
-Run a ``sh`` file: ``./test.sh``, ``. test.sh``, ``sh test.sh`` and ``source test.sh``.
+## Fundamental concepts
 
-A file with no ``sh`` extension but include Bash script file can be run normally.
+**Shell** is a command interpreter, which interprets the command which the user gives to the kernel. It can also be defined as an interface between a user and operating system. A separate compiler is not required to execute a shell program. The shell itself interprets the command in the shell program and executes them.
+
+Linux based operating system uses **Bash shell**, the shell environment used for several purposes like storing data, storing software configuration, locating terminal settings and changing shell environments.
+
+### Basic shell script
 
 The Shebang line is present at the top of the script, e.g:
 
@@ -8,7 +12,27 @@ The Shebang line is present at the top of the script, e.g:
 #!/bin/bash
 ```
 
-**When should shell programming/scripting not be used ?**
+```sh
+#!/bin/sh
+echo "hello world"
+```
+
+``#!/bin/sh``: will export which path of shell to compile, some compiler bypass this command.
+
+Can be both ``#!bin/sh`` and ``#!bin/bash``
+
+Run a ``sh`` file: ``./test.sh``, ``. test.sh``, ``sh test.sh`` and ``source test.sh``.
+
+A file with no ``sh`` extension but include Bash script file can be run normally.
+
+If the shell script file is unable to run due to permission, use ``chmod``:
+
+```cmd
+chmod 775 hello.sh
+./hello.sh
+```
+
+### When should shell programming/scripting not be used ?
 
 When the task is very much complex like writing the entire payroll processing system.
 
