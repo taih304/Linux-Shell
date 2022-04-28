@@ -1,4 +1,15 @@
+# Fundamental concepts
+
+* [Character devices]()
+* [Block devices]()
+
 List all character devices and block devices with major number: ``cat /proc/devices``
+
+A Memory Technology Device (MTD) is a type of device file in Linux for interacting with flash memory.
+
+**UBIFS** file-system stands for UBI File System. UBI stands for “Unsorted Block Images”. UBIFS is a flash file system, which means it is designed to work with flash devices. It is important to understand, that UBIFS is completely different to any traditional file-system in Linux, like Ext2, XFS, JFS, etc. UBIFS represents a separate class of file-systems which work with **MTD devices**, not block devices.
+
+# /dev
 
 ``/dev`` is the location of special or device files.
 
@@ -19,6 +30,8 @@ To view the kernel log realtime: ``cat /dev/kmsg``
 ``dmesg`` will print time like ``[43307.062926]``
 
 ``dmesg -T`` will print time like ``[Fri Aug  6 21:16:06 2021]``
+
+# Device files command
 
 ### stty
 
