@@ -9,3 +9,42 @@ Root folder ``/`` contains those folder:
 * ``dev``: Device files
 * ``etc``: Configuration files
 * ``opt``: Optional
+
+# etc
+
+``/etc`` (which stands for etcetera due to its history) is a folder where all configuration files are stored.
+
+### User setup
+
+All user information is stored in ``/etc/passwd``
+
+``sudo useradd user_name``: Add new user ``user_name`` (this require admin privilege)
+
+``sudo deluser user_name``: Delete ``user_name``
+
+``sudo -sH``: Run as root (enter ``/root`` directory)
+
+* ``passwd current_login_username``: Change password of current logged in username, e.g ``passwd username`` where ``username`` is the current logged in username.
+* ``who``: show how many user has logged in the system
+* ``hostname``
+
+**Issue**: ``User is not in the sudoers file. This incident will be reported.``
+
+```bash
+$ sudo nano /etc/sudoers
+```
+
+Go to ``#User privilege specification``, then add 
+
+```
+new_user_name ALL=(ALL:ALL) ALL
+```
+
+**Issue**: ``sudo: unable to resolve host user_name``
+
+This error might happen as the devicename is changed
+
+* ``sudo nano /etc/hosts``
+* Then add ``127.0.0.1	user_name`` below the existed hosts
+
+``sudo nano /etc/hosts`` will also help you change the hostname
