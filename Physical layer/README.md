@@ -6,41 +6,6 @@ username$hostname #One host name can include many user_name
 
 ``Ctrl+Alt+F7``: switch back to desktop and terminal ``tty``.
 
-### User setup
-
-All user information is stored in ``/etc/passwd``
-
-``sudo useradd user_name``: Add new user ``user_name`` (this require admin privilege)
-
-``sudo deluser user_name``: Delete ``user_name``
-
-``sudo -sH``: Run as root (enter ``/root`` directory)
-
-* ``passwd current_login_username``: Change password of current logged in username, e.g ``passwd username`` where ``username`` is the current logged in username.
-* ``who``: show how many user has logged in the system
-* ``hostname``
-
-**Issue**: ``User is not in the sudoers file. This incident will be reported.``
-
-```bash
-$ sudo nano /etc/sudoers
-```
-
-Go to ``#User privilege specification``, then add 
-
-```
-new_user_name ALL=(ALL:ALL) ALL
-```
-
-**Issue**: ``sudo: unable to resolve host user_name``
-
-This error might happen as the devicename is changed
-
-* ``sudo nano /etc/hosts``
-* Then add ``127.0.0.1	user_name`` below the existed hosts
-
-``sudo nano /etc/hosts`` will also help you change the hostname
-
 ## GUI setup
 
 ``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
