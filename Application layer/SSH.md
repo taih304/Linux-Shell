@@ -25,3 +25,11 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
 Then go to Github or Gitlab and add this key.
+
+### SCP
+
+SCP stands for Secure Copy. ``scp`` is a command for sending files over SSH
+
+Copy file ``main.c`` to folder ``Documents`` of Raspberry Pi: ``scp main.c pi@192.168.47.26:Documents/``
+
+**Note**: Can't copy file like this: ``scp test.c pi@192.168.47.26``
