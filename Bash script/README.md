@@ -39,3 +39,41 @@ When the task is very much complex like writing the entire payroll processing sy
 Where there is a high degree if productivity required.
 
 When it needs or involves different software tools.
+
+## Unix commands
+
+* [Operators](Operators.md)
+* [Shell builtins commands](Shell%20builtins.md)
+
+### Install new package
+
+**Install packages**: ``sudo apt install package_name1 package_name2``, ``sudo apt-get install package_name``
+
+**Check for availabe of package version**: ``sudo apt policy package_name``
+
+**Install an installed debian package**: ``sudo dpkg -i leaf_latest.deb``
+
+### --help
+
+```shell
+$ ls --help
+```
+
+```shell
+$ man ls
+```
+
+### Miscellaneous commands
+
+``Ctrl+D`` logs out of the interface (quite similar to Ctr+C to exit)
+
+``which``: locate where a command is stored. 
+
+**E.g**: ``which ls``: ``/bin/ls``
+
+**When working with space**
+
+To work with a file containing space, like ``"Folder 1"``:
+
+* Add ``" "`` in the command: E.g ``cd "Folder 1"``
+* Add ``\`` in the command: E.g ``cd Folder\ 1/"``
