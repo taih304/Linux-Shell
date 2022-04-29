@@ -85,12 +85,15 @@ The  default  signal  for kill is ``TERM`` (terminate).
 
 ``netstat -tulpn``: Find out which process is listening upon a port
 
-## Job
+## Jobs
 
-In computing, a **job** is a unit of work or unit of execution. A component of a job (as a unit of work) is called a task or a step (if sequential, as in a job stream). As a unit of execution, a job may be concretely identified with a single process.
+A job is a process that the shell manages. Each job is assigned a sequential job ID. Because a job is a process, each job has an associated PID. There are three types of job statuses:
 
-To run a job **in the background**, use [ampersand symbol (&)](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Unix%20commands/List%20of%20commands.md#-control-operator)
+1. **Foreground**: When you enter a command in a terminal window, the command occupies that terminal window until it completes. This is a foreground job.
+2. **Background**: When you enter use [ampersand symbol (&)](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Unix%20commands/List%20of%20commands.md#-control-operator) at the end of a command line, the command runs without occupying the terminal window.
+3. **Stopped**: If you press Control + Z for a foreground job, or enter the stop command for a background job, the job stops. 
 
+To run a job **in the background**, 
 ``jobs`` command will list the jobs that are currently running or suspended in the background.
 
 E.g:
