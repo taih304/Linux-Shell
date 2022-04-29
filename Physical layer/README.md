@@ -6,6 +6,17 @@ username$hostname #One host name can include many user_name
 
 ``Ctrl+Alt+F7``: switch back to desktop and terminal ``tty``.
 
+## Linux booting process
+
+Linux booting process will follow those steps:
+
+* BIOS: System startup/Hardware init
+* Bootloader stage 1: Master Boot Record (MSB) executes GRUB
+* Bootloader stage 2: GRUB executes Kernel
+* Kernel will executes process init located in ``/sbin/init``
+* Execute ``init`` process
+* Run level: Start userspace for command line
+
 ## GUI setup
 
 ``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
