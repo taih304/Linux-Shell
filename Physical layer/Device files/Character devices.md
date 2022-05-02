@@ -6,7 +6,7 @@
 
 As a convenience, the names ``/dev/stdin``, ``/dev/stdout``, and ``/dev/stderr`` are provided as symbolic links to, respectively, ``/proc/self/fd/0``, ``/proc/self/fd/1``, and ``/proc/self/fd/2``.
 
-By default, ``ls dev/fd`` will retun ``0 1 2 3``. If there is a running program with an opened fd is ``4``, run ``ls dev/fd`` won't return that value
+By default, ``ls dev/fd`` will return ``0 1 2 3``. If there is a running program with an opened fd is ``4``, run ``ls dev/fd`` won't return that value
 
 ## Terminal
 
