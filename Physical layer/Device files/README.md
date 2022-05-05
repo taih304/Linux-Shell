@@ -1,9 +1,25 @@
 # Fundamental concepts
 
-* [Character devices]()
-* [Block devices]()
+The **device model** involves terms like **device**, **driver**, and **bus**:
+* **device**: a physical or virtual object which attaches to a bus.
+* **driver**: a software entity which may probe for and be bound to devices, and which can perform certain management functions.
+* **bus**: a device which serves as an attachment point for other devices.
+
+Linux requires a mechanism to transfer data from the kernel to user space. This transfer of data is handled via device nodes, which are also known as virtual files.
+
+Each device has a unique driver that handles requests from user applications that are eventually passed to the core. Linux supports three types of devices: **character devices**, **block devices** and **network devices**.
+
+* **Character devices** is any device that can have streams of characters read from or written to it without buffering, for example, keyboards, monitors, printers, serial ports, terminals, etc
+
+Most of devices that are not block devices are represented by limnux kernel as character device.
+
+* **Block devices** is a device that composes of fixed-sized blocks, that can be read and write to store data. Block device can only be written to and read from in multiples of the block size, typically 512 or 1024 bytes. They may be randomly accessed i.e., any block can be read or written no matter where it is on the device. Block devices are hard disk, SD card,...
 
 List all character devices and block devices with major number: ``cat /proc/devices``
+
+**Network devices** are accessed via the BSD socket interface and the networking subsystems.
+
+### Other device files
 
 A Memory Technology Device (MTD) is a type of device file in Linux for interacting with flash memory.
 
