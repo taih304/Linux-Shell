@@ -1,6 +1,6 @@
 ### Command
 
-Specify specific branch to clone with ``-b``, this will help saving times with the repository is extremely large:
+Specify specific branch to clone with ``-b``, this will help saving times when cloning the extremely large repository.
 
 ```sh
 git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
