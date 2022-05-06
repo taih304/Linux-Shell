@@ -6,6 +6,8 @@ Specify specific branch to clone with ``-b``, this will help saving times when c
 git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 ```
 
+``git reset --hard``: Reset (i.e clear/delete) all changes have set
+
 ### Username login
 
 ``curl https://api.github.com/user -u user_name:password``
