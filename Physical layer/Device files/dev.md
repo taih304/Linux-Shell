@@ -14,7 +14,7 @@ By default, ``ls dev/fd`` will return ``0 1 2 3``. If there is a running program
 
 ``tty`` command will print out the file name of the terminal connected to standard input. E.g: ``tty`` returns ``/dev/pts/19``
 
-``/dev/pts`` stores all number of the current opening terminal. Choosing the right terminal number will output data to the right terminal.
+``/dev/pts`` (which belongs to [devpts file system](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/README.md#devpts)) stores all number of the current opening terminal, ``ls /dev/pts`` will print them out. Choosing the right terminal number will output data to the right terminal.
 
 E.g:
 
