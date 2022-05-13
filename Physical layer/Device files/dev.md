@@ -40,3 +40,21 @@ Then ``13`` is major number, ``64`` and ``65`` are minor numbers.
 ## Memory
 
 ``/dev/mem`` is a character device file that is an image of the main memory of the computer.  It may be used, for example, to examine (and even patch) the system. Byte addresses in ``/dev/mem`` are interpreted as physical memory addresses.
+
+## /dev/null
+
+``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
+
+E.g: ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
+
+## /dev/kmsg
+
+Kernel log is stored inside the kernel log buffer, which is a ring buffer, and is exported to userspace through ``/dev/kmsg``. The usual way to read it is using dmesg.
+
+To view the kernel log realtime: ``cat /dev/kmsg``
+
+``dmesg`` (diagnostic message) prints the message buffer of the kernel.
+
+``dmesg`` will print time like ``[43307.062926]``
+
+``dmesg -T`` will print time like ``[Fri Aug  6 21:16:06 2021]``
