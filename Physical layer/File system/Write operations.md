@@ -10,6 +10,18 @@ Copy a file to the current running terminal, i.e opening that file: ``cp test.c 
 
 Copy input from the current running terminal to a file, i.e writing to that file: ``cp /dev/tty test.c``
 
+### dd
+
+``dd`` is used to convert and copy files:
+
+Parameters:
+
+* ``if``: Input file
+* ``of``: Output file
+* ``bs``: Block size (bytes)
+
+Copy file ``test.c`` to ``test.md``: ``dd if=main.c of=test.md``. If ``test.md`` is not existed, it will be created.
+
 ### tee
 
 Write content to a file
