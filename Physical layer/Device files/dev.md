@@ -58,3 +58,13 @@ To view the kernel log realtime: ``cat /dev/kmsg``
 ``dmesg`` will print time like ``[43307.062926]``
 
 ``dmesg -T`` will print time like ``[Fri Aug  6 21:16:06 2021]``
+
+## /dev/zero
+
+``/dev/zero`` provides as many null characters (ASCII NUL, ``0x00``) as are read from it.
+
+Creating a 128 MB file, called ``test.md``, filled with ``null`` characters:
+
+```sh
+dd if=/dev/zero of=test.md bs=1M count=128
+```
