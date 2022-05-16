@@ -1,3 +1,5 @@
+Specify SSH port with ``-p``: ``ssh guest@10.3.112.253 -p 2022``
+
 ### OpenSSH
 
 ``OpenSSH`` is a suite of secure networking utilities based on the Secure Shell (SSH) protocol.
