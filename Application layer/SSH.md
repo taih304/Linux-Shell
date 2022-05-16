@@ -76,3 +76,5 @@ SCP stands for Secure Copy. ``scp`` is a command for sending files over SSH
 Copy file ``main.c`` to folder ``Documents`` of Raspberry Pi: ``scp main.c pi@192.168.47.26:Documents/``
 
 **Note**: Can't copy file like this: ``scp test.c pi@192.168.47.26``
+
+Specify port with ``-P`` (uppercase P): ``scp test.c root@10.3.112.253:~ -P 2022``
