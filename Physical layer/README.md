@@ -21,6 +21,8 @@ Linux booting process will follow those steps:
 
 In computing, a **shell** is a computer program which exposes an operating system's services to a human user or other programs. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer's role and particular operation. It is named a shell because it is the outermost layer around the operating system.
 
+Whenever we run any command in a Bash shell, a **subshell** is created by default, and a new child process is spawned (forked) to execute the command. 
+
 ## GUI setup
 
 ``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
