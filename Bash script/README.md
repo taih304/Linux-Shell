@@ -71,6 +71,8 @@ $ man ls
 
 **E.g**: ``which ls``: ``/bin/ls``
 
+``exit``: Exit the current running terminal 
+
 **When working with space**
 
 To work with a file containing space, like ``"Folder 1"``:
