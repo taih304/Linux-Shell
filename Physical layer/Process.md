@@ -109,6 +109,14 @@ That happens as no subshell is created in terminal 1, it now is replaced by comm
 
 With ``exec sleep 10``, after 10 seconds of sleep, the current shell will be closed as its execution has completed.
 
+If ``exec`` is inside ``test.sh`` like this:
+
+```sh
+exec ls
+```
+
+Then running ``test.sh`` won't exit the current running shell.
+
 ## Jobs
 
 A job is a process that the shell manages. Each job is assigned a sequential job ID. Because a job is a process, each job has an associated PID. There are three types of job statuses:
