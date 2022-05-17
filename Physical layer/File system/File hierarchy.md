@@ -48,3 +48,20 @@ This error might happen as the devicename is changed
 * Then add ``127.0.0.1	user_name`` below the existed hosts
 
 ``sudo nano /etc/hosts`` will also help you change the hostname
+
+### rcS
+
+``rcS`` stands for Run Control Scripts. It is located in ``/etc/init.d``. ``rcS`` allows you to run additional programs at boot time.
+
+Original content of ``rcS`` file in Ubuntu 16.04:
+
+```sh
+#! /bin/sh
+#
+# rcS
+#
+# Call all S??* scripts in /etc/rcS.d/ in numerical/alphabetical order
+#
+
+exec /etc/init.d/rc S
+```
