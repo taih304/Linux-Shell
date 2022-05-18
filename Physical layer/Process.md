@@ -115,7 +115,16 @@ If ``exec`` is inside ``test.sh`` like this:
 exec ls
 ```
 
-Then running ``test.sh`` won't exit the current running shell.
+Then running ``test.sh`` won't exit the current running shell. That happen as running ``test.sh`` will create a new shell in the current running terminal.
+
+To stop quitting the current terminal when running ``exec ls``, add ``bash`` before it:
+
+```sh
+$ bash
+$ exec ls
+```
+
+That happen as running ``bash``  will create a new shell in the current running terminal.
 
 ## Jobs
 
