@@ -122,7 +122,7 @@ To remove sudo file: ``sudo rm -rv filename``
 ### Redirect
 
 * ``>``: Redirect ouput to a file, this can be used to write data to a file, this will overwrite an existing file
-* ``<``: redirect input from a file
+* ``<``: Get data from a source (e.g files, folders,...) and redirect it as the argument of a command:
 * ``>>``: Append the output to the file or creates the file if it doesn't exist.
 * ``<<``: here document. The program will end when encountering the string value specified by the here document. Check [read -r](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Unix%20commands/File%20system/Read%20operations.md#read) for example
 * ``<<<``: here-string. Send a string to a program
@@ -146,6 +146,15 @@ Write content to a file
 ```
 grep "b" <<< "abcd"
 ```
+
+**Example 3**: ``<``
+
+``cat < README.md``: Get data from README.md and redirect it to ``cat``. This command will print out the content of file ``README.md`` like ``cat README.md``
+
+``ls < Documents``: Get all data inside folder Documents and redirect it to ``ls``. This command will be like ``cat README.md``
+
+The ouput from ``<`` can then be written to a file with ``>``: ``cat < README.md > test.md``
+
 ### File description
 
 * stdin: 0
