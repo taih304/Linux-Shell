@@ -20,7 +20,7 @@ Parameters:
 * ``of``: Output file
 * ``bs``: Block size (bytes)
 
-Copy file ``test.c`` to ``test.md``: ``dd if=main.c of=test.md``. If ``test.md`` is not existed, it will be created.
+Copy file ``test.c`` to ``test.md``: ``dd if=test.c of=test.md``. If ``test.md`` is not existed, it will be created.
 
 ### tee
 
