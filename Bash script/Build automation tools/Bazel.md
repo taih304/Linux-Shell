@@ -64,6 +64,8 @@ Build component ``main``: ``bazel build //main:test_bazel``
 
 Run component ``main``: ``bazel run //main:test_bazel``
 
+**Note**: Currently, in 20th May 2022, bazel is unable to build inside a path with space like ``~/Documents/Gitlab/Work in progress$`` 
+
 ### Build with header files/library files
 
 ```c
