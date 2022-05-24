@@ -22,6 +22,27 @@ Parameters:
 
 Copy file ``test.c`` to ``test.md``: ``dd if=test.c of=test.md``. If ``test.md`` is not existed, it will be created.
 
+### nano
+
+``nano filename``: edit the content of file ``filename`` or create a new one if not existed.
+
+ In some cases nano will try to dump the buffer into an emergency  file. This  will  happen  mainly if ``nano`` receives a ``SIGHUP`` or ``SIGTERM`` or runs out of memory.  It will write the buffer into a file named ``nano.save`` if the  buffer didn't have a name already, or will add a ``.save`` suffix to the current filename.
+ 
+E.g: This is a wrong operation of nano with ``<`` operator and will result in the `SIGHUP``
+
+```sh
+nano fake.md < README.md
+```
+**Result**
+
+```
+Received SIGHUP or SIGTERM
+
+Buffer written to nano.save
+```
+
+``README.md`` is then written to ``fake.md.save``
+       
 ### tee
 
 Write content to a file
