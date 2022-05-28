@@ -1,4 +1,13 @@
-Unix operating system provides ``expr`` and ``bc`` commands for doing arithmetic calculations.
+Unix operating system provides ``(( ))``, `expr`` and ``bc`` commands for doing arithmetic calculations.
+
+### (( ))
+
+**Variable assignments**
+
+```sh
+((a=1 + 2)) #((a=1+2)) is still fine as space has no effect
+echo $a #3
+```
 
 ### expr
 
