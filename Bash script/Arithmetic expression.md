@@ -8,7 +8,13 @@ Unix operating system provides ``(( ))``, `expr`` and ``bc`` commands for doing 
 ((a=1 + 2)) #((a=1+2)) is still fine as space has no effect
 echo $a #3
 ```
-
+**Test condition**
+```sh
+if ((3 < 4))
+then echo "smaller"
+else echo "greater"
+fi
+```
 ### expr
 
 ```sh
