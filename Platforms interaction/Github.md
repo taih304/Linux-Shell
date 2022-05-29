@@ -1,5 +1,7 @@
 ### Command
 
+To undo git add before a commit, run ``git reset <file>`` for a specific file or ``git reset .`` for all files.
+  
 Specify specific branch to clone with ``-b``, this will help saving times when cloning the extremely large repository.
 
 ```sh
