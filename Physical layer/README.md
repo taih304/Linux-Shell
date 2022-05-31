@@ -1,10 +1,14 @@
-# Linux overview
+# OS overview
 
 An OS in general does 3 main work:
 
 * Process management
 * Memory management
 * Scheduling
+
+**Scheduling**: The scheduler determines which task to execute. There are few mechanisms controlling access to CPU for tasks (timeslice, preemption, idle)
+
+# Linux overview
 
 ## Linux booting process
 
