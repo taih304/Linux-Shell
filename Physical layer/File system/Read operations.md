@@ -156,6 +156,23 @@ crw-------  1 root root      5,   1 Sep 14 11:54 console
 
 (From left to right): File type + permission, owner, group, major number, minor number, Creation date or last modified time, file name.
 
+### sort
+
+``sort`` arrange contents inside a file into alphabetical order (arrange from number, i.e 0, 1,... to a, b, c,...) and print out (content inside that file won't change).
+
+``sort test.c``
+
+**Result**
+
+```c
+
+    char *returned_string = (char*) malloc(str_len + 1);
+    char *returned_string = return_string("Displayed string", 5);
+    display_function("Hello, World !", 3);//Hel
+    free(returned_string);
+    //Other content follow the alphabetical order go here
+```
+
 ### type
 
 ``type command_name``: information of that command

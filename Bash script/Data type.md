@@ -11,3 +11,7 @@ echo $((16#a)) #10
 a=b
 echo $((16#$a)) #11
 ```
+
+``xxd``: Hex dump commandline tool
+
+``echo "00 12" | xxd -rp > message``: Create a 2-byte message payload of (LSB) 00 12 (MSB) and save it to a file ``message``.

@@ -1,10 +1,35 @@
-```bash
-username$hostname #One host name can include many user_name
-```
+# OS overview
 
-``Ctrl+Alt+F1`` to ``Ctrl+Alt+F6``: enter terminal from ``tty1`` to ``tty6``, which is also known as text terminal.
+An OS in general does 3 main work:
 
-``Ctrl+Alt+F7``: switch back to desktop and terminal ``tty``.
+* Process management
+* Memory management
+* Scheduling
+
+**Scheduling**: The scheduler determines which task to execute. There are few mechanisms controlling access to CPU for tasks (timeslice, preemption, idle)
+
+## RTOS
+
+RTOS is an OS for realtime application as well as it gives realtime response to its related events. That happens as scheduler inside the RTOS takes a very short time when switching between the tasks/context switching which makes us feel like the RTOS has realtime response to the events.
+
+The RTOS also has short latency when handling with interrupt, as well as having reliable and timebound when doing inter-task communication.
+
+**Schedule**
+
+RTOS uses pre-emptive scheduling. In pre-emptive scheduling, the higher priority task can interrupt a running process and the interrupted process will be resumed later.
+
+**Inter-task Communication**
+
+* Signal Events: Synchronize between tasks
+* Message queue: Exchange message between tasks, acting like FIFO
+* Mail queue: Exchange data between tasks, using queue
+
+**Resource Sharing**:
+
+* Semaphores: Accessing resource continuously from multiple tasks
+* Mutex: Synchronize resource accessing using Mutual Exclusion
+
+# Linux overview
 
 ## Linux booting process
 
@@ -17,7 +42,29 @@ Linux booting process will follow those steps:
 * Execute ``init`` process
 * Run level: Start userspace for command line
 
+## Shell
+
+In computing, a **shell** is a computer program which exposes an operating system's services to a human user or other programs. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer's role and particular operation. It is named a shell because it is the outermost layer around the operating system.
+
+Whenever we run any command in a Bash shell, a **subshell** is created by default, and a new child process is spawned (forked) to execute the command. 
+
 ## GUI setup
+
+```bash
+username$hostname #One host name can include many user_name
+```
+
+``Ctrl+Alt+F1`` to ``Ctrl+Alt+F6``: enter terminal from ``tty1`` to ``tty6``, which is also known as text terminal.
+
+``Ctrl+Alt+F7``: switch back to desktop and terminal ``tty``.
+
+### screen
+
+The ``screen`` package is pre-installed on most Linux distros nowadays. Install: ``sudo apt install screen``
+
+To end ``screen``: ``Ctr+A+D``.
+
+### Other commands
 
 ``xrandr --size 1366x768``: Change size of current screen to ``1366x768``
 
@@ -26,12 +73,6 @@ Linux booting process will follow those steps:
 ```sh
 printf '\033[8;64;240t' #must have ''
 ```
-
-### screen
-
-The ``screen`` package is pre-installed on most Linux distros nowadays. Install: ``sudo apt install screen``
-
-To end ``screen``: ``Ctr+A+D``.
 
 ## System handler
 

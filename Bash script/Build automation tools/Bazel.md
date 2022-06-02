@@ -1,6 +1,10 @@
 **Bazel** is an open-source build and test tool similar to Make, Maven, and Gradle. Bazel is multi-platform. It runs on Linux, macOS, and Windows. 
 
-For Linux, Bazel can be installed easily from Bazel official webpage. After installing, command ``bazel`` will be available.
+For Linux, Bazel can be installed easily from Bazel official webpage. After installing, bazel (e.g ``bazel-1.0.0``) will be located in ``usr/bin`` and command ``bazel`` will be available. If command ``bazel`` is not available, set up environment variable:
+
+```sh
+sudo ln -s /usr/bin/bazel-1.0.0 /usr/bin/bazel
+```
 
 ### Build the first program
 
@@ -59,6 +63,8 @@ This architecture will help a project to have multiple components, in this case 
 Build component ``main``: ``bazel build //main:test_bazel``
 
 Run component ``main``: ``bazel run //main:test_bazel``
+
+**Note**: Currently, in 20th May 2022, bazel is unable to build inside a path with space like ``~/Documents/Gitlab/Work in progress$`` 
 
 ### Build with header files/library files
 

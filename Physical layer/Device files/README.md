@@ -49,23 +49,7 @@ A Memory Technology Device (MTD) is a type of device file in Linux for interacti
 
 ``/dev`` is the location of special or device files.
 
-### /dev/null
-
-``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
-
-E.g: ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
-
-### /dev/kmsg
-
-Kernel log is stored inside the kernel log buffer, which is a ring buffer, and is exported to userspace through ``/dev/kmsg``. The usual way to read it is using dmesg.
-
-To view the kernel log realtime: ``cat /dev/kmsg``
-
-``dmesg`` (diagnostic message) prints the message buffer of the kernel.
-
-``dmesg`` will print time like ``[43307.062926]``
-
-``dmesg -T`` will print time like ``[Fri Aug  6 21:16:06 2021]``
+For specific document of ``/dev``, check [/dev](dev.md) document.
 
 # Device files command
 

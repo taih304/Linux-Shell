@@ -67,7 +67,9 @@ readonly name
 name="change name" #Error: ./test.sh: line 4: name: readonly variable
 ```
 
-### Represent pattern
+### Double quote vs single quote
+
+Using double quote (``""``) will replace the variable value with ``$``
 
 ```shell
 a=29
@@ -75,7 +77,7 @@ b="this is $a"
 echo $b #this is 29
 ```
 
-That doesn't work with ``''``:
+Using single quote (``''``) jsut simply print out ``$``:
 
 ```shell
 a=29

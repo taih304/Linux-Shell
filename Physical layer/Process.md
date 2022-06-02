@@ -85,6 +85,47 @@ The  default  signal  for kill is ``TERM`` (terminate).
 
 ``netstat -tulpn``: Find out which process is listening upon a port
 
+### exec
+
+Whenever we run any command in a Bash shell, a subshell is created by default, and a new child process is spawned (forked) to execute the command. When using ``exec``, however, the command following exec replaces the current shell. This means no subshell is created and the current process is replaced with this new command.
+
+E.g: When starting terminal 1, it will have a PID, e.g ``1234``. In terminal 2, that PID can be listed out with ``ps aux``
+
+```
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+tranphu+  9001  0.0  0.0  24288  5256 pts/18   Ss   21:36   0:00 bash
+```
+
+With any command we do in terminal 1, like ``sleep 10``, its command ``bash`` is still unchanged.
+
+However, if we use ``exec sleep 10`` in terminal 1, then in terminal 2 ``ps aux``, the result will be:
+
+```
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+tranphu+  9001  0.0  0.0  24288  5256 pts/18   Ss   21:36   0:00 sleep 10
+```
+
+That happens as no subshell is created in terminal 1, it now is replaced by command ``sleep`` instead ``bash``.
+
+With ``exec sleep 10``, after 10 seconds of sleep, the current shell will be closed as its execution has completed.
+
+If ``exec`` is inside ``test.sh`` like this:
+
+```sh
+exec ls
+```
+
+Then running ``test.sh`` won't exit the current running shell. That happen as running ``test.sh`` will create a new shell in the current running terminal.
+
+To stop quitting the current terminal when running ``exec ls``, add ``bash`` before it:
+
+```sh
+$ bash
+$ exec ls
+```
+
+That happen as running ``bash``  will create a new shell in the current running terminal.
+
 ## Jobs
 
 A job is a process that the shell manages. Each job is assigned a sequential job ID. Because a job is a process, each job has an associated PID. There are three types of job statuses:

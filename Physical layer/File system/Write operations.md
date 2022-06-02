@@ -10,6 +10,39 @@ Copy a file to the current running terminal, i.e opening that file: ``cp test.c 
 
 Copy input from the current running terminal to a file, i.e writing to that file: ``cp /dev/tty test.c``
 
+### dd
+
+``dd`` is used to convert and copy files:
+
+Parameters:
+
+* ``if``: Input file
+* ``of``: Output file
+* ``bs``: Block size (bytes)
+
+Copy file ``test.c`` to ``test.md``: ``dd if=test.c of=test.md``. If ``test.md`` is not existed, it will be created.
+
+### nano
+
+``nano filename``: edit the content of file ``filename`` or create a new one if not existed.
+
+ In some cases nano will try to dump the buffer into an emergency  file. This  will  happen  mainly if ``nano`` receives a ``SIGHUP`` or ``SIGTERM`` or runs out of memory.  It will write the buffer into a file named ``nano.save`` if the  buffer didn't have a name already, or will add a ``.save`` suffix to the current filename.
+ 
+E.g: This is a wrong operation of nano with ``<`` operator and will result in the `SIGHUP``
+
+```sh
+nano fake.md < README.md
+```
+**Result**
+
+```
+Received SIGHUP or SIGTERM
+
+Buffer written to nano.save
+```
+
+``README.md`` is then written to ``fake.md.save``
+       
 ### tee
 
 Write content to a file
@@ -83,6 +116,14 @@ E.g:
 
 ``mount /dev/sdb1 /mnt``: Mount the USB ``sdb1``
 
+Mount to loop device: ``mount`` allows mounting via a loop device
+
+E.g: ``mount -o loop=/dev/loop3 boot.img /mnt/tmp``
+
+If no explicit loop device is mentioned (but just an option '-o loop' is given), then mount will try to find some unused loop device and use that.
+
+E.g: ``mount -o loop boot.img /mnt/tmp``
+
 ### rm
 
 ``rm``: remove a file, not directory
@@ -102,7 +143,7 @@ To remove sudo file: ``sudo rm -rv filename``
 ### Redirect
 
 * ``>``: Redirect ouput to a file, this can be used to write data to a file, this will overwrite an existing file
-* ``<``: redirect input from a file
+* ``<``: Get data from a source (e.g files, folders,...) and redirect it as the argument of a command:
 * ``>>``: Append the output to the file or creates the file if it doesn't exist.
 * ``<<``: here document. The program will end when encountering the string value specified by the here document. Check [read -r](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Unix%20commands/File%20system/Read%20operations.md#read) for example
 * ``<<<``: here-string. Send a string to a program
@@ -126,6 +167,15 @@ Write content to a file
 ```
 grep "b" <<< "abcd"
 ```
+
+**Example 3**: ``<``
+
+``cat < README.md``: Get data from README.md and redirect it to ``cat``. This command will print out the content of file ``README.md`` like ``cat README.md``
+
+``ls < Documents``: Get all data inside folder Documents and redirect it to ``ls``. This command will be like ``cat README.md``
+
+The ouput from ``<`` can then be written to a file with ``>``: ``cat < README.md > test.md``
+
 ### File description
 
 * stdin: 0

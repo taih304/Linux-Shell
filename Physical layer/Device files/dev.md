@@ -14,7 +14,7 @@ By default, ``ls dev/fd`` will return ``0 1 2 3``. If there is a running program
 
 ``tty`` command will print out the file name of the terminal connected to standard input. E.g: ``tty`` returns ``/dev/pts/19``
 
-``/dev/pts`` stores all number of the current opening terminal. Choosing the right terminal number will output data to the right terminal.
+``/dev/pts`` (which belongs to [devpts file system](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/README.md#devpts)) stores all number of the current opening terminal, ``ls /dev/pts`` will print them out. Choosing the right terminal number will output data to the right terminal.
 
 E.g:
 
@@ -40,3 +40,31 @@ Then ``13`` is major number, ``64`` and ``65`` are minor numbers.
 ## Memory
 
 ``/dev/mem`` is a character device file that is an image of the main memory of the computer.  It may be used, for example, to examine (and even patch) the system. Byte addresses in ``/dev/mem`` are interpreted as physical memory addresses.
+
+## /dev/null
+
+``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
+
+E.g: ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
+
+## /dev/kmsg
+
+Kernel log is stored inside the kernel log buffer, which is a ring buffer, and is exported to userspace through ``/dev/kmsg``. The usual way to read it is using dmesg.
+
+To view the kernel log realtime: ``cat /dev/kmsg``
+
+``dmesg`` (diagnostic message) prints the message buffer of the kernel.
+
+``dmesg`` will print time like ``[43307.062926]``
+
+``dmesg -T`` will print time like ``[Fri Aug  6 21:16:06 2021]``
+
+## /dev/zero
+
+``/dev/zero`` provides as many null characters (ASCII NUL, ``0x00``) as are read from it.
+
+Creating a 128 MB file, called ``test.md``, filled with ``null`` characters:
+
+```sh
+dd if=/dev/zero of=test.md bs=1M count=128
+```

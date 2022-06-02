@@ -1,4 +1,7 @@
-Documents and examples for Linux OS, commands and shell script.
+Documents and examples for 
+
+* OS fundamental concepts
+* Linux OS, commands and shell script
 
 # Linux commands and Shell script
 
