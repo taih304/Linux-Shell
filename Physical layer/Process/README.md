@@ -66,20 +66,6 @@ View process tree of a specific proccess, like ``2029``:  ``pstree -p 2029``
 ### pgrep and  pkill 
 
 ``pgrep``, ``pkill``: look  up  or signal processes based on name and other attributes
-       
-### kill
-
-``kill``: send a signal to a process
-
-``kill [options] <pid> [...]``
-
-The  default  signal  for kill is ``TERM`` (terminate).
-
-``kill 17375``: terminate process with PID ``17375``
-
-``kill -12 12976`` or ``kill -USR2 12976``: Send USR2 signal to PID ``12976``
-
-``kill -l``: display all the available signals
 
 ### netstat
 
