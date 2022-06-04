@@ -1,5 +1,3 @@
-## Action: Alarm
-
 Create a rule chain to trigger and clear alarm when specific event happen, e.g: value reach threshold
 
 **Step 1**: Create **Script** (from **Filter**)

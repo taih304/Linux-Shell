@@ -95,4 +95,4 @@ Check [Widget document](Widget.md) for specific widgets implementations
 
 Root rule chain is the rule chain that define all operations of ThingsBoard and is chosen as root by default. Any rule chain chosen as root will have its rule deployed to ThingsBoard. If root rule chain is not chosen as root, operations like Telemetry can't be implemented.
 
-Check [rule chain document](https://github.com/TranPhucVinh/ESP8266-Arduino-framework/blob/master/Platforms%20interaction/ThingsBoard/Rule%20chain) for other rule chain implementation.
+Check [rule chain document](Rule%20chain) for other rule chain implementation.
