@@ -16,7 +16,13 @@ mosquitto_pub -h 172.16.8.58 -p 1884 -t "v1/devices/me/telemetry" -u "qdpLoC8hu4
 
 ## RPC
 
-MQTT RPC is not yet implemented. Check [the corresponded example in ESP-IDF](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Platforms%20interaction/ThingsBoard/MQTT/rpc_gpio_control.c) for its implementation or [the corresponded example in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#rpc) for easier implementation with JSON.
+Print out the MQTT response message when changing state in Switch control widget:
+
+```sh
+mosquitto_sub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/rpc/request/+" -u "TTf3zmVacJI4dUQsYQwh"
+```
+
+MQTT RPC with **Basic GPIO panel** is not yet implemented. Check [the corresponded example in ESP-IDF](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Platforms%20interaction/ThingsBoard/MQTT/rpc_gpio_control.c) for its implementation or [the corresponded example in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#rpc) for easier implementation with JSON.
 
 ## MQTT device profile
 
