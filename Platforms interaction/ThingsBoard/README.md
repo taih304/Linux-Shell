@@ -96,3 +96,9 @@ Check [Widget document](Widget.md) for specific widgets implementations
 Root rule chain is the rule chain that define all operations of ThingsBoard and is chosen as root by default. Any rule chain chosen as root will have its rule deployed to ThingsBoard. If root rule chain is not chosen as root, operations like Telemetry can't be implemented.
 
 Check [rule chain document](Rule%20chain) for other rule chain implementation.
+
+# Device profile
+
+Device profile ``default`` is applied to all devices by default with all protocol supported by ThingsBoard. Device profile ``default`` can't be deleted.
+
+A new device profile can be created and supported edit. User can add this newly created device profile to a device.
