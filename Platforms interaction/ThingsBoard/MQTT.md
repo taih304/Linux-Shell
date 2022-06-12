@@ -35,3 +35,9 @@ MQTT RPC with **Basic GPIO panel** is not yet implemented. Check [the correspond
 ```
 mosquitto_pub -d -h "thingsboard.sysats.tech" -t "mqtt_device_profile" -u "TTf3zmVacJI4dUQsYQwh" -m "{'number': 12}"
 ```
+
+### Change MQTT Attributes topic filter of a MQTT device profile
+
+**Step 1**:  Edit the **Attributes topic filter** to any value, e.g ``device_test_attributes``.
+
+**Step 2**: In any implementation with attributes topic, like Basic GPIO panel, change the attribute topic to that newly changed value, e.g ``device_test_attributes``. All left operations then work as usual. 
