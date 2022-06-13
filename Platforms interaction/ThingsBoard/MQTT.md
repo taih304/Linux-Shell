@@ -36,6 +36,14 @@ MQTT RPC with **Basic GPIO panel** is not yet implemented. Check [the correspond
 mosquitto_pub -d -h "thingsboard.sysats.tech" -t "mqtt_device_profile" -u "TTf3zmVacJI4dUQsYQwh" -m "{'number': 12}"
 ```
 
+Wildcard topic with ``+`` can be used, e.g ``v1/devices/+/telemetry``
+
+```sh
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/abc/telemetry" -u "TTf3zmVacJI4dUQsYQwh" -m "{'number': 'abv'}"
+```
+
+However ``-t "v1/devices/+/telemetry"`` is not supported.
+
 ### Change MQTT Attributes topic filter of a MQTT device profile
 
 **Step 1**:  Edit the **Attributes topic filter** to any value, e.g ``device_test_attributes``.
