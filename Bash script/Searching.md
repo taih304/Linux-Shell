@@ -1,8 +1,20 @@
 ### wildcard
 
+Wildcards are special characters that can stand in for unknown characters in a text value and are handy for locating multiple items with similar, but not identical data. Another common use of wildcard characters is to create regular expressions.
+
+Wildcards has specific character definition/features on each fields, e.g Unix, Microsoft, other IoT platforms like ThingsBoard
+
+Unix defines 3 wildcards ``*``, ``?`` and ``[]``.
+
 ``*`` : search for a particular character(s) for zero or more times.
 
+E.g: ``wh*`` finds what, white, and why, but not awhile or watch.
+
 ``?`` : search for a fixed number of characters as every "?" stand for one character
+
+E.g: ``b?ll`` finds ball, bell, and bill.
+
+``ls`` support wildcard
 
 ### grep
 
