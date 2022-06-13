@@ -102,3 +102,5 @@ Check [rule chain document](Rule%20chain) for other rule chain implementation.
 Device profile ``default`` is applied to all devices by default with all protocol supported by ThingsBoard. Device profile ``default`` can't be deleted.
 
 A new device profile can be created and supported edit. User can add this newly created device profile to a device.
+
+Device profile defines 2 wildcard ``+`` and ``#``. ``+`` corresponds to ``*`` in Unix.
