@@ -1,9 +1,3 @@
-### wildcard
-
-``*`` : alias
-
-``?`` : every "?" stand for one character
-
 ### wc
 
 ``wc``: word count, used to count words in a file

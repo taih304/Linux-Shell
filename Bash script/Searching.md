@@ -1,3 +1,9 @@
+### wildcard
+
+``*`` : search for a particular character(s) for zero or more times.
+
+``?`` : search for a fixed number of characters as every "?" stand for one character
+
 ### grep
 
 ``grep`` searches for PATTERN in each FILE.
@@ -27,6 +33,8 @@ Note: Must not use ``grep $space_value README.md`` (without "" is totally wrong)
 ``dmesg | grep tty``: list the current connected devices
 
 ``du -h|grep 'G'``: list all files in GB size: 
+
+**Note**: ``grep`` doesn't work properly with wildcard
 
 ### find
 
