@@ -8,6 +8,18 @@ grep [OPTIONS] PATTERN [FILE...]
 
 ``grep "i" test.sh``: find all character ``i`` in ``test.sh``
 
+**Example**: Find a pattern include space in a file
+
+```sh
+grep "space value" README.md
+```
+
+```sh
+space_value="space value"
+grep "$space_value" README.md
+```
+Note: Must not use ``grep $space_value README.md`` (without "" is totally wrong).
+
 ``echo "test" | grep 't'``: print out where character ``t`` existed in ``test``.
 
 ``ls | grep "t"``: display all folder has "t" in its name
@@ -15,17 +27,6 @@ grep [OPTIONS] PATTERN [FILE...]
 ``dmesg | grep tty``: list the current connected devices
 
 ``du -h|grep 'G'``: list all files in GB size: 
-
-**Example**: Find a pattern include space in a file
-
-```sh
-grep  "No smartcard" README.md
-```
-
-```sh
-error_no_card_inserted="No smartcard"
-grep  "$error_no_card_inserted" README.md
-```
 
 ### find
 
