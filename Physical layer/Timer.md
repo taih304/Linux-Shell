@@ -1,6 +1,9 @@
 ### Commands
 
-* ``date``: show current date
+* ``date``: show current date in human readable format
+
+``date "+%s"``: Show current date in Unix timestamps (in seconds)
+
 * ``cal``: print a calendar
 
 ### Environment variable
