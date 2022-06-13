@@ -4,6 +4,8 @@
 
 ``date "+%s"``: Show current date in Unix timestamps (in seconds)
 
+Get Unix timestamps in miliseconds: ``echo $(($(date +%s%N)/1000000))``
+
 * ``cal``: print a calendar
 
 ### Environment variable
