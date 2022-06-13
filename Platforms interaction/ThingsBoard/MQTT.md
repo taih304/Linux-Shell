@@ -14,6 +14,18 @@ On local server with specific port:
 mosquitto_pub -h 172.16.8.58 -p 1884 -t "v1/devices/me/telemetry" -u "qdpLoC8hu4Y6CgsXhaY9" -m "{\"mqtt-number\": 0}" -d
 ```
 
+Set specific timestamp for a telemetry data, notice that the timestamp must be Unix timstamp in miliseconds:
+
+```sh
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/telemetry" -u "rg6k7jyrX31SB36fgH9i" -m "{'ts':1451649600512, "values":{'number':1234}}"
+```
+
+Get timestamp by command and send:
+
+```sh
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/telemetry" -u "rg6k7jyrX31SB36fgH9i" -m "{'ts':$(($(date +%s%N)/1000000)), 'values':{'value':'Hello, World !'}}"
+```
+
 ## RPC
 
 Print out the MQTT response message when changing state in Switch control widget:
