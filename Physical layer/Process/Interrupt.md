@@ -1,4 +1,4 @@
-Interrupt is a response by the processor to an event that needs attention from the software. That event can be GPIO voltage level rising or falling, timer overflow,...
+Interrupt is a response by the processor to an event that needs attention from the software. That event can be GPIO voltage level rising or falling, timer overflow,... Interrupts can be triggered internally – from a timer, for example – or externally, from peripherals.
 
 An interrupt condition alerts the processor and serves as a request for the processor to interrupt the currently executing code when permitted, so that the event can be processed in a timely manner.
 
