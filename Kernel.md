@@ -8,7 +8,10 @@ Origin ``.bashrc`` and ``.profile`` files are stored in ``/etc/skel``
 
 ### Linux kernel-related software
 
-``lsmod``: show which loadable kernel modules are currently loaded
+* ``lsmod``: show which loadable kernel modules are currently loaded
+* ``insmod``:  insert loadable kernel module
+* ``rmmod``: remove loadable kernel module
+* ``modinfo``: view loadable kernel module information
 
 ## Build the Linux Kernel by the cross compile method on Ubuntu 16.04
 
