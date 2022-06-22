@@ -126,6 +126,12 @@ E.g: ``mount -o loop boot.img /mnt/tmp``
 
 Notice that if the mount file is ``img``, as an image file of an OS (like ``rootfs.img``, the whole files from ``~``), after mounting it with ``mount`` to the ``target_folder``. The ``target_folder`` will then then have all files of that directory like ``boot``, ``bin``, ``home``,...
 
+### umount
+
+``umount`` will detache/unmount a file system.
+
+E.g: ``umount /mnt/tmp``
+
 ### rm
 
 ``rm``: remove a file, not directory
