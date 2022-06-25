@@ -9,7 +9,7 @@ Linux supports three types of devices: **character devices**, **block devices** 
 
 * **Character devices** is any device that can have streams of characters read from or written to it without buffering, for example, keyboards, monitors, printers, serial ports, terminals, etc
 
-Most of devices that are not block devices are represented by limnux kernel as character device.
+Most of devices that are not block devices are represented by linux kernel as character device.
 
 * **Block devices** is a device that composes of fixed-sized blocks, that can be read and write to store data. Block device can only be written to and read from in multiples of the block size, typically 512 or 1024 bytes. They may be randomly accessed i.e., any block can be read or written no matter where it is on the device. Block devices are hard disk, SD card,...
 
