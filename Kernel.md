@@ -30,3 +30,14 @@ When cloning branch ``rpi-5.10.y`` or ``rpi-4.9.y``, there will be error: ``rfki
 Then Raspberry can't connect to WiFi.
 
 **Reference**: For all steps to build the Linux kernel, check ``Building the Linux Kernel`` on page 51 of book ``Linux Driver Development for Embedded Processors, 2nd Edition``.
+
+## Linux embedded
+
+Main components of a Linux embedded system: 
+
+* **Bootloader**
+* **Kernel**
+* **System call interface**
+* **C-Runtime library**
+* **System shared libraries** 
+* **Root filesystem**
