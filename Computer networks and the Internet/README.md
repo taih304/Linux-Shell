@@ -43,6 +43,12 @@ End systems attached to the Internet provide an **Application Programming Interf
 
 This Internet API is a set of rules that the sending program must follow so that the Internet can deliver the data to the destination program.
 
+### Addressing process
+
+In the Internet, the host is identified by its **IP address**. An IP address is a 32-bit quantity that we can think of as uniquely identifying the host.
+
+In addition to knowing the address of the host to which a message is destined, the sending process must also identify the **receiving process** (more specifically, the **receiving socket**) running in the host. This information is needed because in general a host could be running many network applications. **A destination port number** serves this purpose. Popular applications have been assigned **specific port numbers**. For example, a Web server is identified by **port number 80**. A mail server process (using the SMTP protocol) is identified by port number 25.
+
 # IoT protocol stack
 
 **Infrastructure**: IPv6 IPv4, 6LowPAN
