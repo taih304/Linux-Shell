@@ -49,6 +49,26 @@ In the Internet, the host is identified by its **IP address**. An IP address is 
 
 In addition to knowing the address of the host to which a message is destined, the sending process must also identify the **receiving process** (more specifically, the **receiving socket**) running in the host. This information is needed because in general a host could be running many network applications. **A destination port number** serves this purpose. Popular applications have been assigned **specific port numbers**. For example, a Web server is identified by **port number 80**. A mail server process (using the SMTP protocol) is identified by port number 25.
 
+## Protocol Layers and Their Service Models
+
+A protocol layer can be implemented in **software**, in **hardware**, or in a combination of the two. **Application-layer protocols**—such as **HTTP** and **SMTP**—are almost always implemented in **software** in the **end systems**; so are **transport-layer protocols**.
+
+Because the **physical layer** and **data link layers** are responsible for handling communication over a specific link, they are typically implemented in a **network interface card** (for example, Ethernet or WiFi interface cards) associated with a given link. The **network layer** is often a **mixed** implementation of **hardware** and **software**.
+
+### Transport Layer
+
+The Internet’s transport layer transports application-layer messages between application endpoints. In the Internet **there are two transport protocols**, **TCP and UDP**, either of which can transport application-layer messages.
+
+**TCP** provides a **connection-oriented service** to its applications. This service includes guaranteed delivery of application-layer messages to the destination and flow control (that is, sender/receiver speed matching). **TCP** also breaks long messages into shorter segments and provides a congestion-control mechanism, so that a source throttles its transmission rate when the network is congested.
+
+The **UDP** protocol provides a **connectionless service** to its applications. This is a no-frills service that provides no reliability, no flow control, and no congestion control. In this book, we’ll refer to a transport-layer packet as a **segment**.
+
+### Network Layer
+
+The Internet’s network layer is responsible for moving network-layer packets known as datagrams from one host to another. The Internet transport-layer protocol (TCP or UDP) in a source host passes a transport-layer segment and a destination address to the network layer, just as you would give the postal service a letter with a destination address. The network layer then provides the service of delivering the segment to the transport layer in the destination host.
+
+The Internet’s network layer includes the celebrated IP Protocol, which defines the fields in the datagram as well as how the end systems and routers act on these fields. There is only one IP protocol, and all Internet components that have a network layer must run the IP protocol. The Internet’s network layer also contains **routing protocols** that determine the routes that datagrams take between sources and destinations. The Internet has many routing protocols. As we saw in Section 1.3, the Internet is a network of networks, and within a network, **the network administrator** can run any routing protocol desired. Although the network layer contains both the IP protocol and numerous routing protocols, it is often simply referred to as the IP layer, reflecting the fact that IP is the glue that binds the Internet together.
+
 # IoT protocol stack
 
 **Infrastructure**: IPv6 IPv4, 6LowPAN
