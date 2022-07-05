@@ -30,6 +30,19 @@ The **IETF** standards documents are called **requests for comments (RFCs)**. RF
 
 Other bodies also specify standards for network components, most notably for network links. The **IEEE 802 LAN/MAN Standards Committee** [IEEE 802 2012], for example, specifies the Ethernet and wireless WiFi standards.
 
+### A services description
+
+We can also describe the Internet from an entirely different angle—namely, as an infrastructure that provides services to applications. These applications include **electronic mail**, **Web surfing**, **social networks**, **instant messaging**, **Voice-over-IP (VoIP)**, **video streaming**, **distributed games**, **peer-to-peer (P2P) file sharing**, **television over the Internet**, **remote login**, and much, much more.
+
+Importantly, **Internet applications run on end systems—they do not run in the packet switches in the network core**.
+Although packet switches facilitate the exchange of data among end systems, they are not concerned with the application that is the source or sink of data.
+
+**And here we get to a central issue—one that leads to the alternative way of describing the Internet as a platform for applications. How does one program running on one end system instruct the Internet to deliver data to another program running on another end system ?**
+
+End systems attached to the Internet provide an **Application Programming Interface (API)** that specifies how a program running on one end system asks the Internet infrastructure to deliver data to a specific destination program running on another end system.
+
+This Internet API is a set of rules that the sending program must follow so that the Internet can deliver the data to the destination program.
+
 # IoT protocol stack
 
 **Infrastructure**: IPv6 IPv4, 6LowPAN
