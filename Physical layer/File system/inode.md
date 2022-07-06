@@ -1,3 +1,9 @@
+## Fundamental concepts
+
+inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory. Each inode stores the attributes and disk block locations of the object's data.
+
+## Commands
+
 ``ln``: make links between files
 
 ``ln source_file.txt target_file.txt``: ``target_file.txt`` now is the hard link of ``source_file.txt``, i.e a copied of ``source_file.txt``, has the same inode with ``source_file.txt``. Removing ``source_file.txt`` gives no effect to ``target_file.txt``
