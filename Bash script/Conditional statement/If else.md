@@ -1,6 +1,4 @@
-### If else
-
-With ``==`` operator
+### == operator
 
 ```sh
 a=10 
@@ -63,7 +61,7 @@ else
 fi
 ```
 
-**NOT operator**
+### ! operator
 
 ```sh
 a=0
@@ -86,7 +84,7 @@ then
 fi 
 ```
 
-**String compare**
+### String compare
 
 ```sh
 string1="hello world"
@@ -115,7 +113,9 @@ This happens because ``$string`` is a string containing spaces or other special 
 if [ '$string1' == '$string2' ] #Wrong
 ```
 
-### Flags
+## Flags
+
+### -d
 
 ``-d``: Check if directory existed
 
@@ -126,4 +126,41 @@ then
 else     
     echo "Directory not exist"
 fi 
+```
+
+### -n
+
+``-n``: Return true if value is not empty
+
+```sh
+if [ -n "" ]
+then 
+    echo "Value is not empty"
+else     
+    echo "Value is empty"
+fi 
+
+a=0
+
+if [ -n $a ]
+then 
+    echo "a is not empty"
+else     
+    echo "a is empty"
+fi 
+
+b=1
+
+if [ -n $b ]
+then 
+    echo  "b is not empty"
+else     
+    echo "b is empty"
+fi 
+```
+
+```
+Value is empty
+a is not empty
+b is not empty
 ```
