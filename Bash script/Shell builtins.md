@@ -36,6 +36,20 @@ Then add, for example an alias name ``get_idf``:
 alias get_idf='. /esp/esp-idf/export.sh'
 ```
 
+Notice that ``alias`` must be used for command and must not use for system wide environment variables.
+
+E.g:
+
+Add this wrong line in ``bashrc``
+
+```eg
+alias PATH='/home/user/'
+```
+
+Then run ``echo $PATH`` will return empty
+
+To set system wide environment variables value, use ``export``.
+
 ### test
 
 ``test`` is used for testing conditions. ``1`` for false and ``0`` for true
