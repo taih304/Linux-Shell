@@ -72,6 +72,15 @@ shell:
 	@echo $(shell ls -l)
 ```
 
+Send argument to Makefile while running ``make``
+
+```sh
+target1:
+	@echo $(target_1)
+```
+
+Run ``make``: ``make target_1="Hello 1"``
+
 ### Variable
 
 Saving variable value inside a makefile target is not available
