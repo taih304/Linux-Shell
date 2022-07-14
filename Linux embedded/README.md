@@ -1,3 +1,5 @@
+Embedded Linux is the usage of the Linux kernel and various open-source components in embedded systems.
+
 Main components of a Linux embedded system: 
 
 * **Bootloader**
