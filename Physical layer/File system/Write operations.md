@@ -4,8 +4,10 @@
 
 ``cp test test_copy``: copy the file ``test`` to file/folder ``test_copy``. It will overwrite the content of file ``test_copy`` if existed or create ``test_copy`` if not exit. If folder ``test_copy`` exists, ``test`` will be copied inside.
 
-Copy to folder can also end with ``/``: ``cp test test_copy/``
+Copy file to folder can also end with ``/``: ``cp test test_copy/``
 
+Copy folder to folder with ``-R``: ``cp -R folder_1/ folder_2/``
+ 
 Copy a file to the current running terminal, i.e opening that file: ``cp test.c /dev/tty``
 
 Copy input from the current running terminal to a file, i.e writing to that file: ``cp /dev/tty test.c``
