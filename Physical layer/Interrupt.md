@@ -21,3 +21,5 @@ For implementation of ISR, check the corresponding document in C and other MCU r
 Linux interrupts is not architecture dependent. 
 
 The number of available interrupts varies from as few as 15 on the SPARC to as many as 256 on the IA-64 and a few other systems. It’s interesting to note that the number of interrupts defined on the x86 is currently 224, as explained in ``include/asm-i386/irq.h``, depends on Linux using the architectural limit instead of an implementation-specific limit
+
+All Linux interrupts can be listed in ``/proc/interrupts``: ``cat /proc/interrupts``. Based on the interrupt numbers listed in this file, a small IRQ number value means higher priority.
