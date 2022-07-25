@@ -51,7 +51,7 @@ The ``Extract here`` for ``rar`` files will be available, extracted folder will 
 
 **Options**:
 
-* r: create
+* r: Insert several file members into the zipped file
 
 ``ar r testFile.zip test1.c test2.c``: Zip two files ``test1.c``, ``test2.c`` into ``testFile.zip``
 
