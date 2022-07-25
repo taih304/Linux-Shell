@@ -45,6 +45,8 @@ The ``Extract here`` for ``rar`` files will be available, extracted folder will 
 
 ### ar
 
+``ar`` - create, modify, and extract from archives
+
 ``ar [OPTIONS] archive_name member_files``
 
 **Options**:
