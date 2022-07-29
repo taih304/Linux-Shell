@@ -53,3 +53,17 @@ PIW:          0          0          0          0          0          0          
 ```
 
 You can see from the IRQs that are missing that the file shows only interrupts corresponding to installed handlers. For example, the first serial port (which uses interrupt number 4) is not shown, indicating that the modem isn’t being used. In fact, even if the modem had been used earlier but wasn’t in use at the time of the snapshot, it would not show up in the file; the serial ports are well behaved and release their interrupt handlers when the device is closed.
+
+### i8042
+
+The 8042 device, which has the IRQ name ``i8042``, implements the functionality of the 8042 keyboard controller together with a 104/105 key Windows 95 type keyboard, and a two button mouse.
+
+For example, in a Ubuntu 16.04 laptop with a built-in keyboard and a built-in touchpad, ``i8042`` interrupt are:
+
+```
+            CPU0       CPU1       CPU2       CPU3       
+   1:          0          0          0        136  IR-IO-APIC    1-edge      i8042,
+  12:          0          0    1407260          0  IR-IO-APIC   12-edge      i8042
+```
+
+In that computer, IRQ 1 is used for the built-in keyboard interrupt while IRQ 12 is used for the touchpad interrupt. With the touchpad interrupt IRQ 12, every move on the keypad will then trigger it.
