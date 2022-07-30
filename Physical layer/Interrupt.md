@@ -62,6 +62,10 @@ PIW:          0          0          0          0          0          0          
 
 You can see from the IRQs that are missing that the file shows only interrupts corresponding to installed handlers. For example, the first serial port (which uses interrupt number 4) is not shown, indicating that the modem isn’t being used. In fact, even if the modem had been used earlier but wasn’t in use at the time of the snapshot, it would not show up in the file; the serial ports are well behaved and release their interrupt handlers when the device is closed.
 
+### Timer interrupt
+
+Timer interrupt with IRQ 0, is used for system timer. This is the reserved interrupt for the internal system timer. It is used exclusively for internal operations and is never available to peripherals or user devices. Kernel module function like ``request_irq()`` will return fail when trying to request it.
+
 ### i8042
 
 The 8042 device, which has the IRQ name ``i8042``, implements the functionality of the 8042 keyboard controller together with a 104/105 key Windows 95 type keyboard, and a two button mouse.
