@@ -22,11 +22,19 @@ Linux interrupts is not architecture dependent.
 
 The number of available interrupts varies from as few as 15 on the SPARC to as many as 256 on the IA-64 and a few other systems. It’s interesting to note that the number of interrupts defined on the x86 is currently 224, as explained in ``include/asm-i386/irq.h``, depends on Linux using the architectural limit instead of an implementation-specific limit
 
+Here is a list of the IRQs and their common purposes in the x86 system:
+
+| IRQ | Usage |
+| ------- |:------:|
+| 0  | System timer (cannot be changed)|
+| 1  | Keyboard controller (cannot be changed|
+| 12 | PS/2 mouse|
+
 All Linux interrupts can be listed in ``/proc/interrupts``: ``cat /proc/interrupts``. Based on the interrupt numbers listed in this file, a small IRQ number value means higher priority. 
 
 The ``/proc/interrupts`` display shows how many interrupts have been delivered to each CPU on the system.
 
-Those are interrupts in a Ubuntu 20.04 WSL
+Those are interrupts in an Ubuntu 20.04 WSL
 
 ```
 vinh@DESKTOP-F7VA05V:~$ cat /proc/interrupts
