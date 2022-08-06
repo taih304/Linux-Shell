@@ -6,6 +6,16 @@
 /dev/i2c-0  /dev/i2c-1  /dev/i2c-2  /dev/i2c-3  /dev/i2c-4
 ```
 
+## libi2c-dev
+
+``libi2c-dev`` package includes I2C commands like ``i2cdetect``, ``i2cset`` and i2cget`` and ``i2c/smbus.h`` C library.
+
+Install
+
+```sh
+sudo apt-get install libi2c-dev
+```
+
 **i2cdetect**
 
 Detect I2C device in port ``1``:
