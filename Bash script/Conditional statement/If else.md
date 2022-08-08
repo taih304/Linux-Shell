@@ -164,3 +164,30 @@ Value is empty
 a is not empty
 b is not empty
 ```
+
+### -z
+
+``-z`` returns ``true`` if the string is empty. It only works for string, not number
+
+```sh
+if [ -z "" ]
+then 
+    echo "String is empty"
+else     
+    echo "String is not empty"
+fi 
+
+a=0
+
+if [ -z $a ]
+then 
+    echo "a is empty"
+else     
+    echo "a is not empty"
+fi 
+```
+
+```
+String is empty
+a is not empty
+```
