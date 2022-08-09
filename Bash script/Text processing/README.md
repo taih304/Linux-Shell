@@ -36,3 +36,25 @@ Output the last part of files
 ``tail -n`` with ``n`` is the specific number of last lines that wish to read
 
 ``tail -2 text.txt``: Read the last 2 lines of file ``text.txt``
+
+### tac
+
+``tac`` read a file from its last line to its first line
+
+E.g: ``test.txt`` has content
+
+```
+1
+2
+3
+4
+```
+
+Then ``tac test.txt`` will be:
+
+```
+4
+3
+2
+1
+```
