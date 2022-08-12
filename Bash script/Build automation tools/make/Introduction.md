@@ -126,7 +126,7 @@ main:
 
 ### Up to date error
 
-If there is a file name ``test`` (E.g ``test.c``, ``test.txt``) in the folder, running ``make test`` will result in error as
+If there is a file name ``test`` in the folder, running ``make test`` will result in error as
 
 ``make: 'test' is up to date.``
 
@@ -135,7 +135,7 @@ To avoid this problem you can explicitly declare the target to be phony by makin
 ```Makefile
 .PHONY: test
 test:
-        rm *.o temp
+        @echo "Hello"
 ```	
 ### Operator
 
