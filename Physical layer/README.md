@@ -1,6 +1,6 @@
 # OS overview
 
-A 32 bit computer is the computer with totally 2^32 registers. 32-bit register doesn't mean it must have 32-bit register.
+A 32-bit computer is the computer with totally 2^32 registers. 32-bit computer doesn't mean all of its registers are 32-bit.
 
 An OS in general does 3 main work:
 
