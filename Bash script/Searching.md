@@ -36,6 +36,16 @@ grep "space value" README.md
 space_value="space value"
 grep "$space_value" README.md
 ```
+
+To print the heading and trailing lines after the match:
+
+* ``-A num``: print ``num`` lines of trailing context after each match.
+* ``-B num``: print ``num`` lines of leading context before each match
+
+```sh
+grep "space value" README.md -A 10 -B 10
+```
+
 Note: Must not use ``grep $space_value README.md`` (without "" is totally wrong).
 
 ``echo "test" | grep 't'``: print out where character ``t`` existed in ``test``.

@@ -61,7 +61,7 @@ In the **Advanced tab** of **Basic GPIO Control** item, we have the setting sect
 
 ![](../../Environment/Images/gpio_status_request.png)
 
-When dashboard initializes, this item publishs a mqtt message to topic **v1/devices/me/rpc/request/+** with an ID, its content is a json object include 2 keys that you see in the above setting. Below is an example for that case
+When dashboard initializes, this item publishs a MQTT message to topic **v1/devices/me/rpc/request/+** with an ID, its content is a JSON object include 2 keys that you see in the above settings. Below is an example for that case
 
 ```js
 topic:  v1/devices/me/rpc/request/1680

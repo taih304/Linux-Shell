@@ -23,6 +23,23 @@ Or ``sudo usermod -aG tty ${USER}``
 
 After this, logout your account to see the effect (Press Log out button in Settings)
 
+### Access USB from terminal
+
+``lsblk`` to list out the partitions in the USB for later mount.
+
+E.g of a ``lsblk``:
+
+```sh
+NAME         MAJ:MIN    RM   SIZE RO TYPE MOUNTPOINT
+mmcblk0         179:0    0   7.4G  0 disk 
+├─mmcblk0p1     179:1    0   256M  0 part /boot
+├─mmcblk0p2     179:2    0   7.1G  0 part 
+```
+
+Mount a partition, like ``mmcblk0p2`` to a directory: ``sudo mount /dev/mmcblk0p2 /media/usb``
+
+After finish using, unmount to save memory: ``sudo umount /media/usb``
+
 ## Examples
 
 ### Example 1

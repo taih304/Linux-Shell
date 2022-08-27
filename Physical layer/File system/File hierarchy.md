@@ -65,3 +65,7 @@ Original content of ``rcS`` file in Ubuntu 16.04:
 
 exec /etc/init.d/rc S
 ```
+
+# ~/.local
+
+Trash folder are located under ``~/.local/share/Trash``

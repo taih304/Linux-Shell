@@ -66,6 +66,15 @@ You can see from the IRQs that are missing that the file shows only interrupts c
 
 Timer interrupt with IRQ 0, is used for system timer. This is the reserved interrupt for the internal system timer. It is used exclusively for internal operations and is never available to peripherals or user devices. Kernel module function like ``request_irq()`` will return fail when trying to request it.
 
+```c
+#define IRQ_0         0		
+if (request_irq(IRQ_0, (irq_handler_t) irq_0_handler, IRQF_TIMER|IRQF_SHARED, DEV_NAME, DEV_ID) != 0){
+        printk("Can't request interrupt number %d\n", IRQ_0);
+    } else printk("Request interrupt number %d successfully\n", IRQ_0);
+```
+
+This fails to register IRQ 0 (in ``dmesg``): ``Can't request interrupt number 0``
+
 ### i8042
 
 The 8042 device, which has the IRQ name ``i8042``, implements the functionality of the 8042 keyboard controller together with a 104/105 key Windows 95 type keyboard, and a two button mouse.
