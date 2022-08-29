@@ -1,3 +1,5 @@
+User space applications are not allowed to access peripheral registers, storage media or even RAM memory directly. Instead, the hardware is accessed via  kernel drivers, and RAM memory is managed by the memory management unit (MMU), with user space applications operating on virtual addresses.
+
 # Virtual memory
 
 ## Fundamental concepts
