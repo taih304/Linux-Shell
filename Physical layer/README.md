@@ -10,6 +10,8 @@ An OS in general does 3 main work:
 
 **Scheduling**: The scheduler determines which task to execute. There are few mechanisms controlling access to CPU for tasks (timeslice, preemption, idle)
 
+In computing, a **system image** is a serialized copy of the entire state of a computer system stored in some non-volatile form such as a file. This can be an OS image, disk image and process image.
+
 ## RTOS
 
 RTOS is an OS for realtime application as well as it gives realtime response to its related events. That happens as scheduler inside the RTOS takes a very short time when switching between the tasks/context switching which makes us feel like the RTOS has realtime response to the events.
