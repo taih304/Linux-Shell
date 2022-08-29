@@ -1,3 +1,9 @@
+# Fundamental concepts
+
+The Linux kernel is the lowest level of software running on a Linux system. It is charged with managing the hardware, running user programs, and maintaining the overall security and integrity of the whole system.
+
+# Implementations
+
 ``bin`` : the directory ``bin`` store all the command line used in Linux
 
 ``tmp``: In Unix and Linux, the global temporary directories are ``/tmp`` and ``/var/tmp`` where temporary files of the running program are stored here. However, files created by user in those locations are not temporary as they are still in there and can still keep the value after the OS is powered off.
