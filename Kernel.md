@@ -5,10 +5,11 @@ The Linux kernel is the lowest level of software running on a Linux system. It i
 ### Linux bootloader
 
 Linux bootloader is a small amount of machine specific code to initialize the system. Its duty is to:
-• Configuration of the memory system.
-• Loading of the kernel image and the device tree at the correct addresses.
-• Optional loading of an initial RAM disk at the correct memory address.
-• Setting of the kernel command-line and other parameters (e.g, device tree, machine type)
+
+* Configuration of the memory system.
+* Loading of the kernel image and the device tree at the correct addresses.
+* Optional loading of an initial RAM disk at the correct memory address.
+* Setting of the kernel command-line and other parameters (e.g, device tree, machine type)
 
 **U-Boot** is the standard bootloader for ARM Linux.
 
