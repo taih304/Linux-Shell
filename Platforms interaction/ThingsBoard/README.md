@@ -104,3 +104,5 @@ Device profile ``default`` is applied to all devices by default with all protoco
 A new device profile can be created and supported edit. User can add this newly created device profile to a device.
 
 Device profile defines 2 wildcard ``+`` and ``#``. ``+`` corresponds to ``*`` in Unix.
+
+For **MQTT device profile**, check [MQTT device profile document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#mqtt-device-profile).
