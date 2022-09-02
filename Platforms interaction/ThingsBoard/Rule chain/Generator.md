@@ -18,7 +18,7 @@ As this newly created rule chain is now connected to **Root rule chain**, it mus
 
 ### Result
 
-With the set up in step 3, with JavaScript code:
+With the set up in **step 2**, with JavaScript code:
 
 ```js
 var msg = { temp: 42, humidity: 77 };
@@ -29,6 +29,10 @@ return { msg: msg, metadata: metadata, msgType: msgType };
 ```
 
 Then ``temp = 42`` and ``humidity=77`` will be send to device ``Node device 1`` for 1000 times in every 1 second. Go to device ``Node device 1`` to check the data.
+
+``msgType`` ``POST_TELEMETRY_REQUEST`` will be treated by ``Message Type Switch`` in ``Root rule chain``.
+
+``medatadata`` will then be send from **Send dummy data** generator block to block **Root rule chain**. To view those value, enable Debug mode in **Root rule chain**. Then in  **Root rule chain** block with tab ``Events``, choose Event types ``Debug`` to view.
 
 To send random number from ``0`` to ``1`` to a device, take this script:
 
