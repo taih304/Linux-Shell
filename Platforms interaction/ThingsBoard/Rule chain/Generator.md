@@ -32,7 +32,11 @@ Then ``temp = 42`` and ``humidity=77`` will be send to device ``Node device 1`` 
 
 ``msgType`` ``POST_TELEMETRY_REQUEST`` will be treated by ``Message Type Switch`` in ``Root rule chain``.
 
-``medatadata`` will then be send from **Send dummy data** generator block to block **Root rule chain**. To view those value, enable Debug mode in **Root rule chain**. Then in  **Root rule chain** block with tab ``Events``, choose Event types ``Debug`` to view.
+``metadata`` will then be send from **Send dummy data** generator block to block **Root rule chain**. To view those value, enable Debug mode in **Root rule chain**. Then in  **Root rule chain** block with tab ``Events``, choose Event types ``Debug`` to view. ``metadata`` expects the type to be JSON. If using other invalid type like string, **Send dummy data** generator block will fail. 
+
+Event types ``Debug`` allow user to view both Data (``{ temp: 42, humidity: 77}``) and Metadata (``{ data: 40 }``):
+
+![](../../../Environment/Images/debug_mode.png)
 
 To send random number from ``0`` to ``1`` to a device, take this script:
 
