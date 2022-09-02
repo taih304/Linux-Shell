@@ -93,7 +93,7 @@ Check [Widget document](Widget.md) for specific widgets implementations
 
 # Rule chain
 
-Root rule chain is the rule chain that define all operations of ThingsBoard and is chosen as root by default. Any rule chain chosen as root will have its rule deployed to ThingsBoard. If root rule chain is not chosen as root, operations like Telemetry can't be implemented.
+**Root rule chain** is the rule chain that define all operations of ThingsBoard and is chosen as root by default. Any rule chain chosen as root will have its rule deployed to ThingsBoard. If **root rule chain** is not chosen as root, operations like Telemetry can't be implemented.
 
 Check [rule chain document](Rule%20chain) for other rule chain implementation.
 
