@@ -2,21 +2,19 @@ Create a rule chain to generate dummy data and send those data to a device
 
 ### Instructions
 
-**Step 1**: Create a new rule chain. After creating, **don't need to set Root priviledge**
+**Step 1**: Create a new rule chain. Then click on the newly created rule chain and open it. In **Action** tab, choose **generator**.
 
-**Step 2**: Click on the newly created rule chain and open it. In **Action** tab, choose **generator**.
-
-**Step 3**: An example to set up for a **generator** action. To send data to a specific device, e.g ``Node device 1``, in ``Originator Type``, choose ``Device``, then in ``Device``, choose ``Node device 1``
+**Step 2**: An example to set up for a **generator** action. To send data to a specific device, e.g ``Node device 1``, in ``Originator Type``, choose ``Device``, then in ``Device``, choose ``Node device 1``
 
 ![](../../../Environment/Images/rule_chain_action_generator_setup.png)
 
-**Step 4**: Link the newly created **generator** block rule chain to the **Root rule chain**. Choose link label **Success**. 
-
-Choose **Root rule chain** from **Flow** -> **rule chain**.
+**Step 3**: Link the newly created **generator** block rule chain to the **Root rule chain** (choose **Root rule chain** from **Flow** -> **rule chain**). Choose link label **Success**. This will make link to the **POST_TELEMETRY_REQUEST** in **Message Type Switch** in Root rule chain.
 
 ![](../../../Environment/Images/rule_chain_action_generator.png)
 
 Then press tick to enable the new rule chain.
+
+As this newly created rule chain is now connected to **Root rule chain**, it mustn't be chosen **Root priviledge** (chosen as **Root rule chain**) as the rule in **Root rule chain** must still be enable for **POST_TELEMETRY_REQUEST** communication.
 
 ### Result
 
