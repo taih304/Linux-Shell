@@ -5,3 +5,7 @@ An application-layer protocol is distributed over multiple end systems, with the
 ## Software package
 
 ``Wget`` is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS.
+
+## Desktop applications
+
+Check [Desktop applications document](Desktop%20applications.md)
