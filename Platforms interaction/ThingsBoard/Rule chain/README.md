@@ -22,15 +22,17 @@ Please notes that the return of ``function Filter()`` must be a conditional stat
 
 Be not to confuse **Script filter** to **Script transformation**.
 
+**Example**: Check [alarm document](Alarm.md) as script filter is a part of its implementation.
+
 # Action
 
-## Action alarm
+## Alarm
 
 Check [alarm document](Alarm.md) for implementation with **Create alarm** and **Clear alarm**.
 
-## Action generator
+## Generator
 
-* [Action generator](Generator.md)
+Check [generator document](Generator.md) for implementation with **Generator** block.
 
 # Examples
 
