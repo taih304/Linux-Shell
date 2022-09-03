@@ -24,7 +24,7 @@ function Transform(msg, metadata, msgType){
 * Topic pattern: ``mqtt_test_node_thingsboard`` (Give any name to this MQTT topic)
 * Host: broker.emqx.io
 * Port: 1883
-* Credential: If choose Anonymous, give no username. If choose Basic, provide username
+* Credential: If choose Anonymous, give no username as there is no authentication. If choose Basic, provide username
 
 Rule chain
 
@@ -32,14 +32,14 @@ Rule chain
 
 Then add it to root rule chain
 
-![](mqtt_external_root_rule_chain.png)
+![](../../../Environment/Images/mqtt_external_root_rule_chain.png)
 
 **Step 4**:
 
 **Publisher**:
 
 ```sh
-mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/telemetry" -u "lWMLHJCyb9zPNMMpXQkI" -m "{'data': 'Hello, World !'}"
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/telemetry" -u "lWMLHJCyb9zPNMMpXQkI" -m "{'data': 'Hello, World'}"
 ```
 
 With ``lWMLHJCyb9zPNMMpXQkI`` is the access token/MQTT username of a device to trigger the Post telemetry message type
@@ -48,4 +48,18 @@ With ``lWMLHJCyb9zPNMMpXQkI`` is the access token/MQTT username of a device to t
 
 ```sh
 mosquitto_sub -h "broker.emqx.io" -t "mqtt_test_node_thingsboard"
+```
+
+With the ``script transformation`` setup like above, subscriber will receive ``{'data': 'Hello, World'}``.
+
+To send a specific string to MQTT external node every time Post telemetry message type is triggered, change the ``script transformation`` like this:
+
+```js
+function Transform(msg, metadata, msgType){
+    var data = {
+        "field_1": "Field 1",
+        "field_2": "Field 2"
+    };
+    return {msg: data, metadata: metadata, msgType: msgType};
+}
 ```
