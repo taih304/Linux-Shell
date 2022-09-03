@@ -34,6 +34,12 @@ Check [alarm document](Alarm.md) for implementation with **Create alarm** and **
 
 Check [generator document](Generator.md) for implementation with **Generator** block.
 
+# External
+
+## MQTT
+
+Check [MQTT document](MQTT.md) for implementation with **MQTT** block.
+
 # Examples
 
 * [Threshold setup for alarm](Alarm%20and%20threshold.md)
