@@ -46,6 +46,8 @@ With ``lWMLHJCyb9zPNMMpXQkI`` is the access token/MQTT username of a device to t
 
 **Subscriber**:
 
+When setting credential to Anonymous:
+
 ```sh
 mosquitto_sub -h "broker.emqx.io" -t "mqtt_test_node_thingsboard"
 ```
