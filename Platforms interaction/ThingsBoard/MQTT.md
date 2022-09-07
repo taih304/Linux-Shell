@@ -1,3 +1,7 @@
+## Authentication
+
+ThingsBoard MQTT broker only allow MQTT client to subsribe to its allowed topic. Subscribing to its disallowed topic like this ``mosquitto_sub -h "thingsboard.sysats.tech" -t "disallowed_topic"`` will result in error: ``Connection error: Connection Refused: not authorised``
+
 ## Telemetry
 
 ```sh
