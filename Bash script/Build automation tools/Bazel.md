@@ -179,6 +179,12 @@ Build external library like ``pthread`` (``gcc main.c -lpthread``):
 cc_binary(
     name = "main",
     srcs = ["main.c"],
-    linkopts = ["-pthread"],
+    linkopts = ["-lpthread"],
 )
+```
+
+For multiple external library, e.g ``-li2c``:
+
+```
+linkopts = ["-lpthread", "-li2c"],
 ```
