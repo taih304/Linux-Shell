@@ -94,7 +94,7 @@ cc_binary(
 )
 ```
 
-``main.c``, ``head.c`` and ``head.h`` are all defined in [GCC compiler: Build source file](https://github.com/TranPhucVinh/C/blob/master/Introduction/Environment/GCC%20compiler.md#build-source-file)
+``main.c``, ``head.c`` and ``head.h`` are all defined in [GCC compiler: Build source file](https://github.com/TranPhucVinh/C/blob/master/Environment/GCC%20compiler.md#build-source-file)
 
 To build: ``bazel build test_bazel``
 
