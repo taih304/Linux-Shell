@@ -170,3 +170,15 @@ To read ``test.json`` inside folder ``file``, the source code now need to change
 ```c
 printf("%s\n", read_file("file/test.json"));
 ```
+
+### Build external library
+
+Build external library like ``pthread`` (``gcc main.c -lpthread``):
+
+```c
+cc_binary(
+    name = "main",
+    srcs = ["main.c"],
+    linkopts = ["-pthread"],
+)
+```
