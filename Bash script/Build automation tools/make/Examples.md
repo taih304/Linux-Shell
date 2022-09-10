@@ -1,4 +1,6 @@
-**Example 1**: Run a makefile to echo a string and compile ``C`` source code.
+# Compile C source code
+
+**Run a makefile to echo a string and compile C source code**
 
 ```Makefile
 test:
@@ -15,7 +17,7 @@ main: a.out
 
 ``make main``: Result of ``a.out``
 
-**Example 2**: Compile a C program and list all files
+**Compile a C program and list all files**
 
 ```Makefile
 GCC = gcc
@@ -28,3 +30,23 @@ compile:
 list:
 	$(LS)
 ```
+
+**Working with header files**
+
+Compile source code ``main.c`` with header files ``header.h`` and source ``head.c`` to executable file ``main``
+
+```c
+GCC = gcc
+main = main.c
+head = head.c 
+
+.PHONY: main
+
+main:
+	@($(GCC) $(main) $(head) -o main)
+
+clean:
+	@(rm main)
+```
+
+Target ``main`` will compile ``main.c``. Target ``clean`` will remove ``main`` (executable file)

@@ -56,7 +56,7 @@ Build component ``main``: ``bazel build //main:test_bazel``
 
 Run component ``main``: ``bazel run //main:test_bazel``
 
-**Note**: Currently, in 20th May 2022, bazel is unable to build inside a path with space like ``~/Documents/Gitlab/Work in progress$`` 
+**Note**: Currently, in 9th September 2022, bazel is unable to build if it is inside a path with space like ``~/Documents/Gitlab/Work in progress$`` 
 
 ### Build with header files/library files
 
@@ -86,7 +86,7 @@ cc_binary(
 )
 ```
 
-``main.c``, ``head.c`` and ``head.h`` are all defined in [GCC compiler: Build source file](https://github.com/TranPhucVinh/C/blob/master/Introduction/Environment/GCC%20compiler.md#build-source-file)
+``main.c``, ``head.c`` and ``head.h`` are all defined in [GCC compiler: Build source file](https://github.com/TranPhucVinh/C/blob/master/Environment/GCC%20compiler.md#build-source-file)
 
 To build: ``bazel build test_bazel``
 
@@ -162,3 +162,32 @@ To read ``test.json`` inside folder ``file``, the source code now need to change
 ```c
 printf("%s\n", read_file("file/test.json"));
 ```
+
+### Build external library
+
+Build external library like ``pthread`` (``gcc main.c -lpthread``):
+
+```c
+cc_binary(
+    name = "main",
+    srcs = ["main.c"],
+    linkopts = ["-lpthread"],
+)
+```
+
+For multiple external library, e.g ``-li2c``:
+
+```
+linkopts = ["-lpthread", "-li2c"],
+```
+
+### Build CPP file
+
+```
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+)
+```
+
+Then ``build`` and ``run`` normally.
