@@ -188,3 +188,14 @@ For multiple external library, e.g ``-li2c``:
 ```
 linkopts = ["-lpthread", "-li2c"],
 ```
+
+### Build CPP file
+
+```
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+)
+```
+
+Then ``build`` and ``run`` normally.
