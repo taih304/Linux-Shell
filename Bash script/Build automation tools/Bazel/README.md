@@ -11,3 +11,12 @@ sudo ln -s /usr/bin/bazel-1.0.0 /usr/bin/bazel
 Check [C source files document](C%20source%20files.md)
 
 # CPP source files
+
+```
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+)
+```
+
+Then ``build`` and ``run`` normally like with C source files.
