@@ -196,3 +196,32 @@ For multiple external library, e.g ``-li2c``:
 ```
 linkopts = ["-lpthread", "-li2c"],
 ```
+
+### Static library
+
+Include an existed static library ``.a`` to ``BUILD``:
+
+```c
+cc_library(
+    name = "library_name",
+    srcs = ["head.a"],
+    hdrs = ["head.h"],
+)
+
+cc_binary(
+    name = "test_bazel",
+    srcs = ["main.c"],
+    deps = [
+        ":library_name",        
+    ],
+)
+```
+
+``main.c``
+```c
+#include "head.h"
+
+int main(){
+	display_string();//Function from head.a
+}
+```
