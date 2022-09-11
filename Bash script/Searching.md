@@ -10,6 +10,8 @@ Unix defines 3 wildcards ``*``, ``?`` and ``[]``.
 
 E.g: ``wh*`` finds what, white, and why, but not awhile or watch.
 
+E.g: ``ls /etc/*release*`` will result in ``/etc/lsb-release``  and ``/etc/os-release``
+
 ``?`` : search for a fixed number of characters as every "?" stand for one character
 
 E.g: ``b?ll`` finds ball, bell, and bill.
