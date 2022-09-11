@@ -1,3 +1,11 @@
+## Fundamental concepts
+
+Docker is not meant to virtualize and run different OS and kernels on the same hardware. The main purpose of docker is to package and containerize applications to ship them.
+
+An **image** is a package or a template, just like a VM template that work within the virtualization workd, used to create one or more containers.
+
+**Container** is a running instance of images that is isolated and has their own environment and set of processes.
+
 ## Install
 
 **Issue**
