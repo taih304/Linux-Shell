@@ -8,10 +8,6 @@ List USB devices: ``lsusb``
 
 This error happen as your user account is not added to ``dialout`` or ``tty`` group.
 
-To view the available group in your account, use command: ``groups``
-
-To see all available groups type: ``compgen -g``
-
 Add your account to ``dialout`` or ``tty`` groups:
 
 ```sh

@@ -75,6 +75,10 @@ Whenever we run any command in a Bash shell, a **subshell** is created by defaul
 username$hostname #One host name can include many user_name
 ```
 
+To view the available group in your account, use command: ``groups``
+
+To see all available groups type: ``compgen -g``
+
 ## System handler
 
 ``less /proc/cpuinfo``: View CPU info
