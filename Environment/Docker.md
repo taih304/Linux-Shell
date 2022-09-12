@@ -4,7 +4,7 @@ Docker is not meant to virtualize and run different OS and kernels on the same h
 
 An **image** is a package or a template, just like a VM template that work within the virtualization workd, used to create one or more containers.
 
-**Container** is a running instance of images that is isolated and has their own environment and set of processes.
+**Container** is a running instance of images that is isolated and has their own environment and set of processes. Unlike a virtual machine, containers are meant to host an OS. Containers meant to run a specific task or process, e.g run a webserver, database,... Once the task is completed, the container exits. A container only lives as long as the process inside it is alive.
 
 ## Install
 
