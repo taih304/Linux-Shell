@@ -16,10 +16,6 @@ pio device monitor --port /dev/ttyUSB0 --baud 38400 --echo --encoding hexlify
 
 ``--encoding``: Set the encoding for the serial port (e.g. hexlify, Latin1, UTF-8), default UTF-8.
 
-## Docker 
-
-Check [Docker document](Docker.md)
-
 # Github project environment
 
 [Images used in that projects](Images)
