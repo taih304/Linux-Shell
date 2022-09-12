@@ -67,3 +67,21 @@ See: https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce
 ```
 
 To solve that problem: ``sudo usermod -aG docker ${USER}``
+
+## Command
+
+``sudo service docker start``: Start docker service
+
+``sudo docker run hello-world``: Run docker image ``hello-world``. If running it for the first time after installed, it will be pulled from the docker hub
+
+Its log message while pulling:
+
+```
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete
+Digest: sha256:7d246653d0511db2a6b2e0436cfd0e52ac8c066000264b3ce63331ac66dca625
+Status: Downloaded newer image for hello-world:latest
+```
+
+(Then the log message will print out the content of ``hello-world`` image)
