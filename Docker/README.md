@@ -66,7 +66,7 @@ Ensure you have the latest version of `docker-ce` installed
 See: https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce
 ```
 
-To solve that problem: ``sudo usermod -aG docker ${USER}``
+To solve that problem: ``sudo usermod -aG docker ${USER}``. If setting successfully, ``docker`` will be listed out by ``groups`` command as it has been added to user.
 
 ## Command
 
