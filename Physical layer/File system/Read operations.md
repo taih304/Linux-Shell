@@ -30,7 +30,7 @@ After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
 
 Read a line from the standard input and split it into fields.
 
-Read the entered string into variable
+Read the entered string into variable ``var_1`` and ``var_2``:
 
 ```sh
 username$hostname: read var_1 var_2
