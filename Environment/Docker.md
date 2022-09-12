@@ -85,3 +85,19 @@ Status: Downloaded newer image for hello-world:latest
 ```
 
 (Then the log message will print out the content of ``hello-world`` image)
+
+``sudo docker pull hello-world``: Only pull ``hello-world`` and not run it after successfully pulling
+
+``sudo docker images``: List all avaialbe images and their information
+
+E.g
+
+```
+username$hostname:~$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
+```
+
+``sudo docker ps``: List all running container
+
+``sudo docker ps -a``: List all running or exited containers
