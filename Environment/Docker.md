@@ -8,7 +8,54 @@ An **image** is a package or a template, just like a VM template that work withi
 
 ## Install
 
-**Issue**
+### Set up the repository
+
+1. Update the ``apt`` package index and install packages to allow ``apt`` to use a repository over HTTPS:
+
+```sh
+$ sudo apt-get update
+$ sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+```
+
+2. Add Docker’s official GPG key:
+
+```sh
+$ sudo mkdir -p /etc/apt/keyrings
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+3. Use the following command to set up the repository:
+
+```sh
+$ echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+### Install Docker Engine
+
+1. Update the ``apt`` package index, and install the latest version of Docker Engine, containerd, and Docker Compose, or go to the next step to install a specific version:
+
+```sh
+$ sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+In Ubuntu 16.04, there is error when performing this step
+
+```
+E: Unable to locate package docker-compose-plugin
+```
+
+While those steps run smoothly on Ubuntu 20.04.
+
+Once successfully installed, command ``docker`` is available.
+
+### Issue
 
 If your account are not added to ``docker`` group, running the program that related to docker will cause the issue like:
 
