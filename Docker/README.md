@@ -45,13 +45,15 @@ $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
-In Ubuntu 16.04, there is error when performing this step
+In Ubuntu 16.04, there is error when performing this step:
 
 ```
 E: Unable to locate package docker-compose-plugin
 ```
 
 While those steps run smoothly on Ubuntu 20.04.
+
+However, this error doesn't effect the docker operation in Ubuntu 16.04.
 
 Once successfully installed, command ``docker`` is available.
 
