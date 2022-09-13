@@ -82,6 +82,10 @@ Build and run ``simple_ubuntu_docker`` with argument: ``sudo docker run simple_u
 
 Result: ``Hello, World !``
 
+When using ``ENTRYPOINT`` with ``echo`` like this, user are no longer able to execute command when running ``run``.
+
+E.g: ``sudo docker run simple_ubuntu_docker ls`` will print out ``ls`` instead of executing ``ls`` command.
+
 ## Build a docker with included files and installed library
 
 **Add files to directory in the built docker**:
