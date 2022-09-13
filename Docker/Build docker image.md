@@ -44,6 +44,8 @@ Along with supporting all ubuntu docker features, running ``simple_ubuntu_docker
 
 ### CMD and ENTRYPOINT
 
+Use ``CMD`` and ``ENTRYPOINT`` as the startup command, as the commands specified by them will print out when the docker started.
+
 **CMD**
 
 ``CMD command param``, e.g ``CMD echo "Hello, World !"``
