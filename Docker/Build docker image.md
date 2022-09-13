@@ -40,11 +40,7 @@ FROM ubuntu
 CMD echo "Hello, World !"
 ```
 
-Run ``simple_ubuntu_docker``: ``sudo docker run simple_ubuntu_docker``
-
-Result: ``Hello, World !``
-
-**Note**: Image ``simple_ubuntu_docker`` now just only print out ``Hello, World !`` string and doesn't support any other command like ``ls``, ``cd``,...
+Along with supporting all ubuntu docker features, running ``simple_ubuntu_docker`` (``sudo docker run simple_ubuntu_docker``) will result in ``Hello, World !``.
 
 ### CMD and ENTRYPOINT
 
