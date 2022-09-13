@@ -105,6 +105,20 @@ sudo docker run -v /home/hostname/docker_dir:/home -i ubuntu #then perform opera
 
 When ``ubuntu`` docker container is turned off, **all of its data while the container working is lost**. However, as previously performed mapping, all those data in its ``home`` directory is stored in ``/home/hostname/docker_dir``
 
+**Map a volume/directory controlled by docker**
+
+Create a new directory controlled by docker for mapping: ``sudo docker volume create docker_dir``
+
+``docker_dir`` is then created in ``/var/lib/docker/volumes/`` (in the OS hosting docker). ``docker_dir`` will have 1 folder named ``_data``.
+
+Then perform the mapping:
+
+```sh
+sudo docker run -v docker_dir:/home -i ubuntu #then perform operation with interactive mode
+```
+
+After succesfully mapping, all file operations inside the ``home`` folder of ubuntu cointainer will be mapped to ``_data`` of ``docker_dir``.
+
 ### Act as a bridge
 
 Map ``existed_dir``, an existed directory with existed data to ``home`` of docker container
