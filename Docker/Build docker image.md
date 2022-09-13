@@ -9,7 +9,7 @@ Create ``build_docker``, a folder to include file ``Dockerfile``, the script fil
 
 ``Dockerfile``
 
-```sh
+```dockerfile
 FROM ubuntu
 ```
 
