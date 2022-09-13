@@ -48,6 +48,19 @@ CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAME
 
 To exit terminal mode easily, use ``-it`` flag which include ``-i`` for interactive mode.
 
+### Network
+
+In the hosting OS, after installing docker, there will be ``docker0`` with IP ``172.17.0.1``.
+
+Install ``net-tools`` package for ``ifconfig`` inside a ``ubuntu`` container
+
+```sh
+apt update #Must have apt update before to get net-tools later
+apt-get -y install net-tools
+```
+
+Checking its IP with ``ifconfig`` will return ``172.17.0.2``
+
 ## Handle input
 
 Error with input command like ``read``:
