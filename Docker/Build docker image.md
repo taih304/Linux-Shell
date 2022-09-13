@@ -79,3 +79,28 @@ Result: ``Default string``
 Build and run ``simple_ubuntu_docker`` with argument: ``sudo docker run simple_ubuntu_docker "Hello, World !"``
 
 Result: ``Hello, World !``
+
+## Build a docker with included files and installed library
+
+**Add files to directory in the built docker**:
+
+```dockerfile
+FROM ubuntu
+
+#Copy file test.sh in build_docker to / in simple_ubuntu_docker
+COPY test.sh .
+```
+
+After successfully built, ``sudo docker run simple_ubuntu_docker ls`` will print out ``test.sh`` along with files in the ``/`` directory.
+
+**Add specific package to the built docker**:
+
+```dockerfile
+FROM ubuntu
+
+RUN apt-get update
+
+RUN apt-get install net-tools
+```
+
+``ifconfig`` from ``net-tools`` now is supported: ``sudo docker run simple_ubuntu_docker ifconfig``
