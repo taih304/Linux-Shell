@@ -16,7 +16,7 @@ Get to the download page
 
 In **Download libi2c-dev**, **Architecture** choose [amd64](https://packages.debian.org/sid/amd64/libi2c-dev/download). This will then redirect you to the FTP download link webpage.
 
-![](../Environment/Images/ftp_download_link) -> In North America ftp.us.debian.org/debian, right click and choose copy link, the link copied is http://ftp.us.debian.org/debian/pool/main/i/i2c-tools/libi2c-dev_4.3-2+b1_amd64.deb
+![](../Environment/Images/ftp_download_link.png) -> In North America ftp.us.debian.org/debian, right click and choose copy link, the link copied is http://ftp.us.debian.org/debian/pool/main/i/i2c-tools/libi2c-dev_4.3-2+b1_amd64.deb
 
 Download the Debian package from this link with ``curl`` and export it as ``libi2c-dev.deb``:
 
