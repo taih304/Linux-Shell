@@ -48,6 +48,19 @@ CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAME
 
 To exit terminal mode easily, use ``-it`` flag which include ``-i`` for interactive mode.
 
+### Network
+
+In the hosting OS, after installing docker, there will be ``docker0`` with IP ``172.17.0.1``.
+
+Install ``net-tools`` package for ``ifconfig`` inside a ``ubuntu`` container
+
+```sh
+apt update #Must have apt update before to get net-tools later
+apt-get -y install net-tools
+```
+
+Checking its IP with ``ifconfig`` will return ``172.17.0.2``
+
 ## Handle input
 
 Error with input command like ``read``:
@@ -91,6 +104,20 @@ sudo docker run -v /home/hostname/docker_dir:/home -i ubuntu #then perform opera
 ```
 
 When ``ubuntu`` docker container is turned off, **all of its data while the container working is lost**. However, as previously performed mapping, all those data in its ``home`` directory is stored in ``/home/hostname/docker_dir``
+
+**Map a volume/directory controlled by docker**
+
+Create a new directory controlled by docker for mapping: ``sudo docker volume create docker_dir``
+
+``docker_dir`` is then created in ``/var/lib/docker/volumes/`` (in the OS hosting docker). ``docker_dir`` will have 1 folder named ``_data``.
+
+Then perform the mapping:
+
+```sh
+sudo docker run -v docker_dir:/home -i ubuntu #then perform operation with interactive mode
+```
+
+After succesfully mapping, all file operations inside the ``home`` folder of ubuntu cointainer will be mapped to ``_data`` of ``docker_dir``.
 
 ### Act as a bridge
 
