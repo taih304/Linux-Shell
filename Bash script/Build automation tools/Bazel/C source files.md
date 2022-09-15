@@ -199,7 +199,7 @@ linkopts = ["-lpthread", "-li2c"],
 
 ### Static library
 
-Include an existed static library ``.a`` to ``BUILD``:
+**Example 1**: Include an existed static library ``.a`` to ``BUILD``
 
 ```c
 cc_library(
@@ -225,3 +225,40 @@ int main(){
 	display_string();//Function from head.a
 }
 ```
+**Example 2**: Include ``libi2c-dev`` to source code
+
+Include ``libi2c-dev`` to source code with ``i2c/smbus.h`` as header file and ``libi2c.a`` as source code.
+
+```sh
+├── include
+│   └── i2c
+│       └── smbus.h
+├── libi2c.a
+|--main.c
+```
+
+``BUILD``
+
+```sh
+cc_library(
+    name = "library_name",
+    srcs = ["libi2c.a"],
+    hdrs = ["include/i2c/smbus.h"],
+    includes = ["include"],
+)
+
+cc_binary(
+    name = "test_bazel",
+    srcs = ["main.c"],
+    deps = [
+        ":library_name",
+    ],
+)
+```
+With source code like [i2c_stub_write.c](https://github.com/TranPhucVinh/C/blob/master/Kernel/I2C/i2c_stub_write.c) and [i2c_stub_read.c](https://github.com/TranPhucVinh/C/blob/master/Kernel/I2C/i2c_stub_read.c), ``i2c/smbus.h`` will be included as:
+
+```c
+#include "i2c/smbus.h"
+```
+
+(All left part of the source codes left unchanged)
