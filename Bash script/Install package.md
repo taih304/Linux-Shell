@@ -31,3 +31,25 @@ dpkg -x libi2c-dev.deb .
 ```
 
 ``.`` will extract the file to ``usr`` folder.
+
+``usr`` folder will include:
+
+```sh
+├── include
+│   └── i2c
+│       └── smbus.h
+├── lib
+│   └── x86_64-linux-gnu
+│       ├── libi2c.a
+│       └── libi2c.so -> libi2c.so.0
+└── share
+    └── doc
+        └── libi2c-dev
+            ├── changelog.Debian.amd64.gz
+            ├── changelog.Debian.gz
+            ├── changelog.gz
+            ├── copyright
+            └── dev-interface.gz
+```
+
+``i2c/smbus.h`` can be used as the header file for other source code while ``libi2c.a`` is the static library source code. Check [libi2c-dev static library in Bazel for this implementation](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Build%20automation%20tools/Bazel/C%20source%20files.md#static-library).
