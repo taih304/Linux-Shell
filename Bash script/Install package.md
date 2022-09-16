@@ -6,7 +6,7 @@
 
 **Install an installed debian package**: ``sudo dpkg -i leaf_latest.deb``
 
-### Download a Debian package from link
+### Download a Debian package from link and get its file source
 
 Take this example to download [libi2c-dev](https://packages.debian.org/sid/libi2c-dev) package.
 
