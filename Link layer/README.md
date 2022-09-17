@@ -1,8 +1,6 @@
 # Fundamental concepts
 
-There are two fundamentally different types of **link-layer channels**. The **first type** are **broadcast channels**, which connect **multiple hosts** in **wireless LANs**, **satellite networks**, and **hybrid fiber-coaxial cable (HFC) access networks**. The **second type** of link-layer channel is the **point-to-point** communication link, such as that often found between **two routers connected by a long-distance link**, or between **a user’s office computer** and **the nearby Ethernet switch** to which it is connected.
-
-We’ll find it convenient in this chapter to refer to any device that runs a link-layer (i.e., layer 2) protocol as a **node**. Nodes include
+Consider that any device that runs a link-layer (i.e., layer 2) protocol as a **node**. Nodes include
 hosts, routers, switches, and WiFi access points. We will also refer to the communication channels that connect adjacent nodes along the communication path as **links**.
 
 ![](../Environment/Images/link_layer.png)
@@ -18,6 +16,14 @@ Is **a host’s link layer** implemented in **hardware** or **software**? Is it 
 For the most part, the link layer is implemented in a **network adapter**, also sometimes known as a **network interface card** (NIC). At the heart of the **network adapter** is the **link-layer controller**, usually a **single, special-purpose chip** that implements many of the link-layer services (**framing, link access, error detection, and so on**). **Thus, much of a link-layer controller’s functionality is implemented in hardware**.
 
 While most of the **link layer** is implemented in **hardware**, **part of the link layer** is implemented in **software** that runs on the host’s CPU. The **software** components of the link layer implement **higher-level link-layer** functionality such as **assembling link-layer addressing information** and **activating the controller hardware**. On the receiving side, **link-layer software** responds to **controller interrupts** (e.g., due to the receipt of one or more frames), **handling error conditions** and **passing a datagram up to the network layer**. Thus, **the link layer is a combination of hardware and software—the place in the protocol stack where software meets hardware**.
+
+## Types of link layer channels
+
+There are two fundamentally different types of link-layer channels: **broadcast** and **point to point**.
+
+**Broadcast channels** connect **multiple hosts** in **wireless LANs**, **satellite networks**, and **hybrid fiber-coaxial cable (HFC) access networks**.
+
+**Point-to-point** communication link is often found between **two routers connected by a long-distance link**, or between **a user’s office computer** and **the nearby Ethernet switch** to which it is connected.
 
 # Protocols
 
