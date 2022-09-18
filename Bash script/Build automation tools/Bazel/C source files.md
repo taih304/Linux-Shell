@@ -199,25 +199,24 @@ linkopts = ["-lpthread", "-li2c"],
 
 ### Static library
 
-**Example 1**: Include an existed static library ``.a`` to ``BUILD``
+**Example 1**: Include an existed static library ``.a`` to ``BUILD`` with ``cc_import()``
 
 ```c
-cc_library(
-    name = "library_name",
-    srcs = ["head.a"],
-    hdrs = ["head.h"],
+cc_import(
+	name = "library_name",
+	hdrs = ["head.h"],
+	static_library = "head.a",
 )
 
 cc_binary(
     name = "test_bazel",
     srcs = ["main.c"],
-    deps = [
-        ":library_name",        
-    ],
+    deps = [":library_name"],
 )
 ```
 
 ``main.c``
+
 ```c
 #include "head.h"
 
@@ -225,6 +224,7 @@ int main(){
 	display_string();//Function from head.a
 }
 ```
+
 **Example 2**: Include ``libi2c-dev`` to source code
 
 Include ``libi2c-dev`` to source code with ``i2c/smbus.h`` as header file and ``libi2c.a`` as source code.
