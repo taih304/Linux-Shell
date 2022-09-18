@@ -199,7 +199,7 @@ linkopts = ["-lpthread", "-li2c"],
 
 ### Static library
 
-**Example 1**: Include an existed static library ``.a`` to ``BUILD`` with ``cc_import()``
+Include an existed static library ``.a`` to ``BUILD`` with ``cc_import()``
 
 ```c
 cc_import(
