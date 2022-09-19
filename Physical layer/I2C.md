@@ -8,7 +8,7 @@
 
 ## libi2c-dev
 
-``libi2c-dev`` package includes I2C commands like ``i2cdetect``, ``i2cset`` and i2cget`` and ``i2c/smbus.h`` C library.
+``libi2c-dev`` package includes I2C commands like ``i2cdetect``, ``i2cset`` and ``i2cget`` and ``i2c/smbus.h`` C library.
 
 Install
 
