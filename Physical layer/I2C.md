@@ -6,15 +6,11 @@
 /dev/i2c-0  /dev/i2c-1  /dev/i2c-2  /dev/i2c-3  /dev/i2c-4
 ```
 
-## libi2c-dev
+## i2c-tools
 
-``libi2c-dev`` package includes I2C commands like ``i2cdetect``, ``i2cset`` and ``i2cget`` and ``i2c/smbus.h`` C library.
+``i2c-tools`` package includes I2C commands like ``i2cdetect``, ``i2cset`` and ``i2cget``. 
 
-Install
-
-```sh
-sudo apt-get install libi2c-dev
-```
+Remove: ``sudo apt-get remove --auto-remove i2c-tools``
 
 **i2cdetect**
 
@@ -47,4 +43,13 @@ Read value at register address ``0x11`` at I2C slave ``0x03``
 
 ```sh
 sudo i2cget -y 10 0x03 0x11
+```
+## libi2c-dev
+
+``libi2c-dev`` package includes  ``i2c/smbus.h`` C library.
+
+Install
+
+```sh
+sudo apt-get install libi2c-dev
 ```
