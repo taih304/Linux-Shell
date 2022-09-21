@@ -111,7 +111,7 @@ function_test 1
 echo $? #21
 ```
 
-## Value type and reference type.md
+## Value type and reference type
 
 **Change value in normal way**
 
@@ -122,6 +122,7 @@ function_test(){
     a="hello"
 }
 
+echo $a #0
 function_test
 echo $a #hello
 ```
@@ -133,11 +134,13 @@ function_test(){
     $1="hello" #this is totally wrong
 }
 
+echo $a
 function_test $a
 echo $a
 ```
 **Result**
 ```
+0
 ./test.sh: line 4: 0=hello: command not found
 0
 ```
@@ -153,9 +156,9 @@ function_test(){
     ref_var=0
 }
 
-echo $a
-function_test a #Must be function_test a, notfunction_test $a
-echo $a
+echo $a #123
+function_test a #Must be function_test a, not function_test $a
+echo $a #0
 ```
 Change value of a string variable by function
 ```sh
