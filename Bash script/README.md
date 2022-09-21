@@ -32,6 +32,18 @@ chmod 775 hello.sh
 ./hello.sh
 ```
 
+**Error**
+
+Error when running ``test.sh``:
+
+```
+syntax error near unexpected token `$'{\r''
+```
+
+That error happen as there are mismatch when using new line
+
+Fix: ``sed -i 's/\r//' test.sh``
+
 ### When should shell programming/scripting not be used ?
 
 When the task is very much complex like writing the entire payroll processing system.
