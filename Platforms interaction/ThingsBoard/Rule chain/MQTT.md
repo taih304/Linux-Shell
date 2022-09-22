@@ -1,4 +1,4 @@
-## Features
+# Post telemetry message type
 
 Publisher: Publish a MQTT message to any device on telemetry topic ``v1/devices/me/telemetry`` to trigger Post telemetry message type.
 
@@ -65,3 +65,21 @@ function Transform(msg, metadata, msgType){
     return {msg: data, metadata: metadata, msgType: msgType};
 }
 ```
+
+# Other message type
+
+If setting MQTT externel node like this for **Other message type**
+
+![](../../../Environment/Images/mqtt_external_other_message_type_rule_chain.png)
+
+![](../../../Environment/Images/mqtt_external_other_message_type_root_rule_chain.png)
+
+Then subscribe and publish:
+
+```sh
+mosquitto_sub -h "broker.emqx.io" -t "mqtt_test_node_thingsboard"
+
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "any_topic" -u "lWMLHJCyb9zPNMMpXQkI" -m "{'data': 'Hello, World'}"
+```
+
+Then the subscriber won't receive any message as ThingsBoard by default doesn't support publishing message to random topic.
