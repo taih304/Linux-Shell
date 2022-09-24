@@ -53,6 +53,8 @@ This error might happen as the devicename is changed
 
 ``rcS`` stands for Run Control Scripts. It is located in ``/etc/init.d``. ``rcS`` allows you to run additional programs at boot time.
 
+File ``rcS`` is availale in Ubuntu OS, and is not available in Raspbian and ubuntu docker.
+
 Original content of ``rcS`` file in Ubuntu 16.04:
 
 ```sh
