@@ -100,7 +100,7 @@ REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
 ```
 
-``sudo docker inspect ubuntu``: Provide docker information in JSON format
+``sudo docker inspect ubuntu``: Provide docker named ``ubuntu``'s information in JSON format
 
 ``sudo docker ps``: List all running container
 
