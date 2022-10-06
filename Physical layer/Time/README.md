@@ -16,7 +16,7 @@ Get Unix timestamps in miliseconds: ``echo $(($(date +%s%N)/1000000))``
 
 * ``cal``: print a calendar
 
-* ``timedatectl``: display the current time, both, the system clock and the hardware clock
+* ``timedatectl``: display the current time, both, the system clock and the hardware clock. This command belongs to the ``Systemd``.
 
 ### Environment variable
 
