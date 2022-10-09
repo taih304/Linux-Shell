@@ -55,3 +55,11 @@ Result:
 Oct 08 16:17:43 tranphucvinh systemd[1]: Started My service.
 Oct 08 16:17:43 tranphucvinh test.sh[11598]: Hello, World !
 ```
+
+Specify ``test.sh`` in other directory (e.g: ``/home/username/Documents/``) with ``WorkingDirectory``:
+
+```sh
+[Service]
+ExecStart=/bin/bash test.sh
+WorkingDirectory=/home/username/Documents/
+```
