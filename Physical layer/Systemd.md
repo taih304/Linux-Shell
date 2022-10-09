@@ -1,5 +1,11 @@
 ## Fundamental concepts
 
+systemd unit file locations:
+* ``/lib/systemd/system``: Standard systemd unit files
+* ``/usr/lib/systemd/system``: Locally installed packages (e.g via ``apt-get``)
+* ``/run/systemd/system``: transient unit files
+* ``/etc/systemd/system``: Custom unit files
+
 For system not supporting ``systemd`` like WSL, if typing its command like ``systemctl``, there will be error:
 
 ```
