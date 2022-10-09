@@ -63,3 +63,5 @@ Specify ``test.sh`` in other directory (e.g: ``/home/username/Documents/``) with
 ExecStart=/bin/bash test.sh
 WorkingDirectory=/home/username/Documents/
 ```
+
+In ``ExecStart``, ``test.sh`` can only be run by ``/bin/bash``. ``sh test.sh``, ``./test.sh``, ``. test.sh`` and ``source test.sh`` won't work.
