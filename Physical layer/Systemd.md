@@ -71,3 +71,28 @@ WorkingDirectory=/home/username/Documents/
 ```
 
 In ``ExecStart``, ``test.sh`` can only be run by ``/bin/bash``. ``sh test.sh``, ``./test.sh``, ``. test.sh`` and ``source test.sh`` won't work.
+
+**StandardOutput**: ``StandardOutput`` will display the log in ``systemctl status`` by default
+
+To output ``StandardOutput`` log to a file, use ``file``
+
+```
+[Unit]
+Description=My service
+After=network.target
+
+[Service]
+ExecStart=/home/dekvn/VinhTran/work-in-progress/test.sh
+StandardOutput=file:/home/dekvn/VinhTran/work-in-progress/log.txt
+
+[Install]
+WantedBy=multi-user.target
+```
+
+With that setting, ``StandardOutput`` log will not display in ``systemctl status``.
+
+To append ``StandardOutput`` log to a file, use ``append``
+
+```
+StandardOutput=append:/home/dekvn/VinhTran/work-in-progress/log.txt
+```
