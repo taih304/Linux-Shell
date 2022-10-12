@@ -54,18 +54,3 @@ To handle MQTT response after pressing the GPIO button on GPIO widget:
 # Examples
 
 Check implementation examples in [HTTP](HTTP.md) and [MQTT](MQTT.md)
-
-## GPIO control save previous setup status
-
-In the **Advanced tab** of **Basic GPIO Control** item, we have the setting section called **GPIO status request**
-
-![](../../Environment/Images/gpio_status_request.png)
-
-When dashboard initializes, this item publishs a MQTT message to topic **v1/devices/me/rpc/request/+** with an ID, its content is a JSON object include 2 keys that you see in the above settings. Below is an example for that case
-
-```js
-topic:  v1/devices/me/rpc/request/1680
-message:  {"method":"getGpioStatus","params":"1"}
-```
-
-By response to back to the topic **v1/devices/me/rpc/response/1680** with the status of gpio state, we can change its status on the dashboard, thus save previous setup status with the status on the physical device. Noted that this content should also be published to **device attribute** topic for sync up the value that the dashboard takes for reference
