@@ -43,6 +43,8 @@ In the **Advanced tab** of **Basic GPIO Control** item, we have the setting sect
 
 ![](../../Environment/Images/gpio_status_request.png)
 
+We can setup any value to it, like string ``dummy`` to return this value to the MQTT subscriber.
+
 When dashboard initializes, this item publishs a MQTT message to topic **v1/devices/me/rpc/request/+** with an ID, its content is a JSON object include 2 keys that you see in the above settings. Below is an example for that case
 
 ```js
