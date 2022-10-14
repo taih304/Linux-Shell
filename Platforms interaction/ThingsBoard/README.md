@@ -12,6 +12,8 @@ Server-side API is available as REST API:
 * Python REST Client
 * Dart API Client
 
+ThingsBoard support Swagger, a webpage to test its API. To access the Swagger webpage, add ``/swagger-ui`` after the ThingsBoard host. E.g ``demo.thingsboard.io/swagger-ui/``
+
 ## Server-side API
 
 ### JWT Tokens
