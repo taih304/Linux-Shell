@@ -96,3 +96,36 @@ To append ``StandardOutput`` log to a file, use ``append``
 ```
 StandardOutput=append:/home/dekvn/VinhTran/work-in-progress/log.txt
 ```
+### Run a.out file
+
+For ``a.out`` file (C process), it can be run with the whole path:
+
+```
+[Service]
+ExecStart=/home/tranphucvinh/Documents/Gitlab/work-in-progress/a.out
+```
+
+``a.out`` can't be run with ``workingdirectory`` like this:
+
+```
+[Unit]
+Description=My service
+
+[Service]
+ExecStart=a.out
+WorkingDirectory=/home/dekvn/VinhTran/work-in-progress/
+
+[Install]
+WantedBy=multi-user.target
+```
+
+To run ``a.out`` without path in ``ExecStart``, it must be embedded in ``test.sh`` 
+
+``test.sh``:
+
+```sh
+#!/bin/bash
+/home/username/Documents/
+```
+
+Then run ``test.sh`` with ``WorkingDirectory`` as usual.
