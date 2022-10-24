@@ -60,4 +60,4 @@ Update attribute widgets allow updating attributes to entity like devices.
 
 Update attribute widgets have been covered so far are ``Update shared double attribute`` and ``Update shared integer attribute``.
 
-Check **Example: Create a double share attribute of a device then connect it to the Update shared double attribute widget in dashboard** in (Device attributes)[https://github.com/TranPhucVinh/Linux-Shell/tree/master/Platforms%20interaction/ThingsBoard#device-attributes] for implementation of this.
+Check **Example: Create a double share attribute of a device then connect it to the Update shared double attribute widget in dashboard** in [Device attributes](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Platforms%20interaction/ThingsBoard#device-attributes) for implementation of this.
