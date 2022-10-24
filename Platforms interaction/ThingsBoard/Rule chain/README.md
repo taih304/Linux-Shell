@@ -1,12 +1,15 @@
 # Filter
 
-## Message type switch
+* [message type switch](#message-type-switch)
+* [script](#script)
+
+## message type switch
 
 Message type switch will switch the message type for implementation in the next nodes.
 
 Message type switch basic implementation can be found in the **Root Rule Chain**, where it switchs the types like **Post attributes**, **Post telemetry**, etc to the corresponding blocks.
 
-## Script filter
+## script
 
 Script filter returns a condition statement (with ``true``/``false`` value).
 
