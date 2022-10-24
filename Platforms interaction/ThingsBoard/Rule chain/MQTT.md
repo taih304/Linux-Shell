@@ -28,11 +28,11 @@ function Transform(msg, metadata, msgType){
 
 Rule chain
 
-![](../../../Environment/Images/mqtt_external_rule_chain.png)
+![](../../../Environment/Images/external_mqtt_rule_chain.png)
 
 Then add it to root rule chain
 
-![](../../../Environment/Images/mqtt_external_root_rule_chain.png)
+![](../../../Environment/Images/external_mqtt_root_rule_chain.png)
 
 **Step 4**:
 
@@ -70,9 +70,9 @@ function Transform(msg, metadata, msgType){
 
 If setting MQTT externel node like this for **Other message type**
 
-![](../../../Environment/Images/mqtt_external_other_message_type_rule_chain.png)
+![](../../../Environment/Images/external_mqtt_other_message_type_rule_chain.png)
 
-![](../../../Environment/Images/mqtt_external_other_message_type_root_rule_chain.png)
+![](../../../Environment/Images/external_mqtt_other_message_type_root_rule_chain.png)
 
 Then subscribe and publish:
 
