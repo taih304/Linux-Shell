@@ -23,7 +23,7 @@ function Filter (msg, metadata, msgType){
 
 Please notes that the return of ``function Filter()`` must be a conditional statement and must not be any raw value like a single string or JSON object. If return the invalid value, there will be error when implement the nodes behind the script filter.
 
-Be not to confuse **Script filter** to **Script transformation**.
+Be not to confuse script **in filter** with script **in transformation**.
 
 **Example**: Check [alarm document](Alarm.md) as script filter is a part of its implementation.
 
