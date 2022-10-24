@@ -31,7 +31,7 @@ After creating the new Entity aliases, choose then **entity timeseries** to visu
 
 **Step 2**: Choose the timeseries from that device with valid longitude and latitude to be displayed as the longitude and latitude on the map.
 
-**Implementation**: Not yet implemented on ESP8266 Arduino framework, check [the corresponding implementation in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#map-widget).
+**Implementation**: Not yet implemented in Linux Bash Shell framework, check [the corresponding implementation in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#map-widget).
 
 ## GPIO widget
 
