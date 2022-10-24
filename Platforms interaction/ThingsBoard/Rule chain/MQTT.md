@@ -83,3 +83,23 @@ mosquitto_pub -d -h "thingsboard.sysats.tech" -t "any_topic" -u "lWMLHJCyb9zPNMM
 ```
 
 Then the subscriber won't receive any message as ThingsBoard by default doesn't support publishing message to random topic.
+
+# Self publish to local broker
+
+Use external MQTT rule chain to publish the received message to another device inside the local broker when broker receives a post telemetry message to a device.
+
+Set up this external MQTT rule chain with that detail
+
+![](../../../Environment/Images/external_mqtt_local_publish_details.png)
+
+With that detail setup, the received MQTT message will be published to a device with token ``Bk7ZZIGDy2c3EnB2WFO3``.
+
+![](../../../Environment/Images/external_mqtt_local_publish.png)
+
+With that root rule chain setup, trigger **Post telemetry** by publishing to any device: 
+
+```sh
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/telemetry" -u "lWMLHJCyb9zPNMMpXQkI" -m "{'data': 'Hello, World'}"
+```
+
+Now both device with token ``Bk7ZZIGDy2c3EnB2WFO3`` and ``lWMLHJCyb9zPNMMpXQkI`` will receive the same message ``{'data': 'Hello, World'}``.
