@@ -1,4 +1,4 @@
-## Connect existed device to dashboard
+## Connect existed device to widget on dashboard
 
 Create button widget to control device
 
@@ -53,3 +53,11 @@ message:  {"method":"getGpioStatus","params":"1"}
 ```
 
 By response to back to the topic **v1/devices/me/rpc/response/1680** with the status of gpio state, we can change its status on the dashboard, thus save previous setup status with the status on the physical device. Noted that this content should also be published to **device attribute** topic for sync up the value that the dashboard takes for reference
+
+## Input widgets
+
+Update attribute widgets allow updating attributes to entity like devices.
+
+Update attribute widgets have been covered so far are ``Update shared double attribute`` and ``Update shared integer attribute``.
+
+Check **Example: Create a double share attribute of a device then connect it to the Update shared double attribute widget in dashboard** in (Device attributes)[https://github.com/TranPhucVinh/Linux-Shell/tree/master/Platforms%20interaction/ThingsBoard#device-attributes] for implementation of this.
