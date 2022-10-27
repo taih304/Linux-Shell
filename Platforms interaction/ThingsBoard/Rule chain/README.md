@@ -27,6 +27,12 @@ Be not to confuse script **in filter** with script **in transformation**.
 
 **Example**: Check [alarm document](Alarm.md) as script filter is a part of its implementation.
 
+# Transformation
+
+## Script
+
+Check [MQTT external](MQTT.md) for implementation with Script transformation.
+
 # Action
 
 ## Alarm
