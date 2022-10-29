@@ -27,6 +27,10 @@ Be not to confuse script **in filter** with script **in transformation**.
 
 **Example**: Check [alarm document](Alarm.md) as script filter is a part of its implementation.
 
+# Enrichment
+
+* [Originator attributes](Originator%20attributes.md)
+
 # Transformation
 
 ## Script
