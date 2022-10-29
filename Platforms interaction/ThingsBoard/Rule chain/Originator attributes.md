@@ -3,8 +3,9 @@ Originator attributes is used to add Message originator attributes (client\share
 Attributes are added into metadata with scope prefix:
 
 * client attribute -> ``cs_``
+* shared attribute ->  ``shared_``
 
-## Example
+## Client attribute example
 
 Create a message metatdata include a client attribute of a node when a MQTT message is published to that node
 
@@ -31,3 +32,7 @@ Device with token ``lWMLHJCyb9zPNMMpXQkI`` is the device that already has client
 ![](../../../Environment/Images/enrichment_originator_attributes_client_metadata.png)
 
 In this case, ``cs`` is for client attributes and ``1`` is that client attribute's name.
+
+## Shared attribute example
+
+Check [Alarm and threshold example](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/ThingsBoard/Rule%20chain/Alarm%20and%20threshold.md) for implementation with shared attribute.
