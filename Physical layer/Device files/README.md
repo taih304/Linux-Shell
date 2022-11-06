@@ -41,7 +41,7 @@ For instance, the i.MX7D has several hardware UART ports. The same driver can be
 
 ## Other device files
 
-A Memory Technology Device (MTD) is a type of device file in Linux for interacting with flash memory.
+**MTD**: A Memory Technology Device (MTD) is a type of device file in Linux for interacting with flash memory.
 
 **UBIFS** file-system stands for UBI File System. UBI stands for “Unsorted Block Images”. UBIFS is a flash file system, which means it is designed to work with flash devices. It is important to understand, that UBIFS is completely different to any traditional file-system in Linux, like Ext2, XFS, JFS, etc. UBIFS represents a separate class of file-systems which work with **MTD devices**, not block devices.
 
