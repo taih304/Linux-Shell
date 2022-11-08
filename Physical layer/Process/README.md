@@ -73,6 +73,8 @@ View process tree of a specific proccess, like ``2029``:  ``pstree -p 2029``
 
 ### exec
 
+``exec`` command executes a command from the bash itself. 
+
 Whenever we run any command in a Bash shell, a subshell is created by default, and a new child process is spawned (forked) to execute the command. When using ``exec``, however, the command following exec replaces the current shell. This means no subshell is created and the current process is replaced with this new command.
 
 E.g: When starting terminal 1, it will have a PID, e.g ``1234``. In terminal 2, that PID can be listed out with ``ps aux``
