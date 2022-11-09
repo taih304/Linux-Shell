@@ -22,6 +22,15 @@ To view virtual GPIO debug information: ``cat /sys/kernel/debug/gpio``
 
 ``procfs`` is pseudo filesystem (``/proc``) containing information about the system resources, including currently running processes, kernel, hardware. 
 
+For ``/proc`` to monitor process, check [process document folder](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/Process)
+
+For ``/proc`` to monitor device file, ``cat /proc/devices`` will list all character devices and block devices with major number. For file descriptors, check [Device files - file descriptors](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Device%20files/dev.md#file-descriptors).
+
+For ``/proc`` to monitor kernel and hardware:
+
+* ``less /proc/cpuinfo``: View CPU info
+* ``cat /proc/interrupts``: List all available interrupts on current running Unix OS
+
 ### devpts
 
 ``devpts`` is a virtual filesystem contains solely devices files used to implement terminal emulators. It is normally mounted at ``/dev/pts`` and represent slaves to the multiplexing master located at ``/dev/ptmx``.
