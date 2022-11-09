@@ -1,5 +1,9 @@
 ## Fundamental concepts
 
+systemd is a software suite that provides an array of system components for Linux operating systems. It provides a system and service manager that runs as PID 1 and starts the rest of the system. Other parts include a logging daemon, utilities to control basic system configuration like the hostname, date, locale, maintain a list of logged-in users and running containers and virtual machines, system accounts, runtime directories and settings, and daemons to manage simple network configuration, network time synchronization, log forwarding, and name resolution.
+
+The service setup by systemd will run automatically when the OS is booted/powered on.
+
 systemd unit file locations:
 * ``/lib/systemd/system``: Standard systemd unit files
 * ``/usr/lib/systemd/system``: Locally installed packages (e.g via ``apt-get``)
