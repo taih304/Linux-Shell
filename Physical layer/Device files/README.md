@@ -45,6 +45,8 @@ For instance, the i.MX7D has several hardware UART ports. The same driver can be
 
 **UBIFS** file-system stands for UBI File System. UBI stands for “Unsorted Block Images”. UBIFS is a flash file system, which means it is designed to work with flash devices. It is important to understand, that UBIFS is completely different to any traditional file-system in Linux, like Ext2, XFS, JFS, etc. UBIFS represents a separate class of file-systems which work with **MTD devices**, not block devices.
 
+For PC not supported flash memory (i.e UBIFS not existed), device file ``mtd`` like ``/dev/mtd4``  will not existed. Raspberry Pi 3B+ and Orange Pi Zero board doesn't have those device file/filesystems, too.
+
 # /dev
 
 ``/dev`` is the location of special or device files.
