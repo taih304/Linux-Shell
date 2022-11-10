@@ -1,4 +1,4 @@
-## Connect existed device to widget on dashboard
+# Connect existed device to widget on dashboard
 
 Create button widget to control device
 
@@ -25,7 +25,7 @@ If there is no filter condition, leave **Filter** empty.
 
 After creating the new Entity aliases, choose then **entity timeseries** to visualize data.
 
-## Map widget
+# Map widget
 
 **Step 1**: Create a map form map widget, then connect the device to that widget
 
@@ -33,9 +33,11 @@ After creating the new Entity aliases, choose then **entity timeseries** to visu
 
 **Implementation**: Not yet implemented in Linux Bash Shell framework, check [the corresponding implementation in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#map-widget).
 
-## GPIO widget
+# GPIO widget
 
-For GPIO controlling with RPC, check [RPC document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/ThingsBoard/Device%20API.md#rpc).
+## GPIO control widget
+
+For RPC controlling procedure for GPIO control widget, check [RPC document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/ThingsBoard/Device%20API.md#rpc).
 
 ### GPIO control save previous setup status
 
@@ -54,7 +56,9 @@ message:  {"method":"getGpioStatus","params":"1"}
 
 By response to back to the topic **v1/devices/me/rpc/response/1680** with the status of gpio state, we can change its status on the dashboard, thus save previous setup status with the status on the physical device. Noted that this content should also be published to **device attribute** topic for sync up the value that the dashboard takes for reference
 
-## Input widgets
+## GPIO panel widget
+
+# Input widgets
 
 Update attribute widgets allow updating attributes to entity like devices.
 
