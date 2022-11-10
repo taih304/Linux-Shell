@@ -1,12 +1,16 @@
-Create a rule chain to trigger and clear alarm when specific event happen, e.g: value reach threshold
+## Create rule chain to trigger and clear alarm when specific event happen
 
-**Step 1**: Create **Script** (from **Filter**)
+Create rule chain **Alarm rule chain** to trigger and clear alarm when specific event happen, e.g: value reach threshold
+
+**Step 1**: Create an empty rule chain and name it **Alarm rule chain**
+
+**Step 2**: In **Alarm rule chain**, create **Script** (from **Filter**)
 
 ```js
 return msg.temperature > 20;
 ```
 
-**Step 2**: Create **create alarm** (from **Action**)
+Then create **create alarm** (from **Action**)
 
 ```js
 var details = {};
@@ -24,19 +28,21 @@ Let other value default, like the image below:
 
 ![](../../../Environment/Images/create_alarm_default_setup.png)
 
+Then **Alarm rule chain** now will be:
+
 ![](../../../Environment/Images/create_alarm.png)
 
-**Step 3**: In Root rule chain, connect the previously created alarm rulechain to root rule chain
+**Step 3**: In Root rule chain, connect the **Alarm rule chain** rulechain to root rule chain
 
 ![](../../../Environment/Images/root_rule_chain_for_alarm.png)
 
-**Step 4**: Send value that reaches threshold value to check alarm
+**Step 4**: Send value that reaches threshold value to any ThingsBoard device to trigger that alarm
 
 ```sh
 curl -v -X POST -d "{\"temperature\": 25}" http://thingsboard.sysats.tech/api/v1/RbeNuZuf86rJ4zlY369i/telemetry --header "Content-Type:application/json"
 ```
 
-Then in device with that specific token, in **Alarms**, a new alarm will be triggered as its **Status** is **Active Unacknowledged**
+Then in the device with that specific token, in **Alarms**, a new alarm will be triggered as its **Status** is **Active Unacknowledged**
 
 **Notice**: With all the setup like above (with no **clear alarm**), if another POST telemetry then happens that reaches threshold, the alarm won't be triggered as the alarm with type name (as setup above in **Step 2**) has already been triggered.
 
@@ -46,7 +52,7 @@ To test, send the value that doesn't reach threshold value. Then in device with 
 
 ![](../../../Environment/Images/create_and_clear_alarm.png)
 
-### Send detail message
+## Send detail message
 
 In create or clear alarm, to send a detail message:
 
