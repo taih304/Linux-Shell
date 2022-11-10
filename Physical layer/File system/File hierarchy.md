@@ -9,10 +9,17 @@ Root folder ``/`` contains those folder:
 * ``dev``: Device files
 * ``etc``: Configuration files
 * ``opt``: Optional
+* ``tmp`` 
+
+# bin
+
+Directory ``bin`` stores all the command line used in Linux
 
 # etc
 
 ``/etc`` (which stands for etcetera due to its history) is a folder where all configuration files are stored.
+
+**Recover .bashrc and .profile to origin files**: Origin ``.bashrc`` and ``.profile`` files are stored in ``/etc/skel``
 
 ### User setup
 
@@ -67,6 +74,10 @@ Original content of ``rcS`` file in Ubuntu 16.04:
 
 exec /etc/init.d/rc S
 ```
+
+# tmp
+
+In Unix and Linux, the global temporary directories are ``/tmp`` and ``/var/tmp`` where temporary files of the running program are stored here. However, files created by user in those locations are not temporary as they are still in there and can still keep the value after the OS is powered off.
 
 # ~/.local
 
