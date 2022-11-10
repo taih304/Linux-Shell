@@ -29,7 +29,7 @@ Device with token ``lWMLHJCyb9zPNMMpXQkI`` is the device that already has client
 
 **Step 3**: Check Metadata in Events of the originiator attributes. ``cs_1`` will existed.
 
-![](../../../Environment/Images/enrichment_originator_attributes_client_metadata.png)
+![](../../../Environment/Images/enrichment_originator_attributes_metadata.png)
 
 In this case, ``cs`` is for client attributes and ``1`` is that client attribute's name.
 
