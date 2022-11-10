@@ -34,14 +34,16 @@ return msg.humidity > metadata.shared_humi_th;
 
 For the last two node, get the **create alarm** and **clear alarm** from **Action**. All the configuration in these node are default
 
-**STEP 2**: Link all the components follow this order
+**Step 2**: Link all the components follow this order
 
 ![](../../../Environment/Images/setup_threshold.png)
 
-**STEP 3**: Link the design rule chain to root rule chain
+**Step 3**: Link the design rule chain to root rule chain
 
 ![](../../../Environment/Images/root_rule_chain_for_threshold_setup.png)
 
 We link it with the **Post telemetry** message type because we're checking the value from the post telemetry event
+
+**Step 4**: Setup threshold on dashboard
 
 For threshold setup, user can set it on the shared attributes of the device and use the ``Update shared double attribute`` widget in dashboard.
