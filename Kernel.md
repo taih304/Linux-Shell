@@ -23,9 +23,49 @@ Linux bootloader is a small amount of machine specific code to initialize the sy
 
 Origin ``.bashrc`` and ``.profile`` files are stored in ``/etc/skel``
 
-### Linux kernel-related software
+# Linux kernel module
+
+## Commands
 
 * ``lsmod``: show which loadable kernel modules are currently loaded
 * ``insmod``:  insert loadable kernel module
 * ``rmmod``: remove loadable kernel module
 * ``modinfo``: view loadable kernel module information
+
+### depmod
+
+``depmod`` will generate ``modules.dep`` and map files for system kernel modules.
+
+``-a``: Probe all modules. This option is enabled by default if no file names are given in the command-line. Any changes (create or remove) with kernel modules in ``/lib/modules/$(uname -r)`` needs running ``sudo depmod -a`` again for latest update in ``modules.dep``.
+
+### modprobe
+
+To load/unload (remove) a module with modprobe
+
+**Precondition**: ``ubuntu_kernel_module.ko`` located in directory ``~/username/module``:
+
+**Step 1**: Copy ``ubuntu_kernel_module.ko`` to ``/lib/modules/$(uname -r)``
+
+```sh
+username$hostname:~/username/module$ sudo cp ubuntu_kernel_module.ko /lib/modules/$(uname -r)
+```
+
+**Step 2**: Run ``depmod -a`` to update ``modules.dep`` file
+
+```sh
+username$hostname:~/username/module$ depmod -a
+```
+
+**Step 3**: 
+
+Load/insmod that module
+
+```sh
+username$hostname:~/username/module$ sudo modprobe ubuntu_kernel_module
+```
+
+Unload/rmmod that module:
+
+```sh
+username$hostname:~/username/module$ sudo modprobe -r ubuntu_kernel_module
+```
