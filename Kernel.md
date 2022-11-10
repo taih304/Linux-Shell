@@ -15,6 +15,12 @@ Linux bootloader is a small amount of machine specific code to initialize the sy
 
 # Linux kernel module
 
+## Fundamental concepts
+
+For kernel driver/device driver definition, check [Device drivers document](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/Device%20files#device-drivers).
+
+Kernel driver is implemented by C source code. Check [loadable kernel module document in C for kernel driver implementation](https://github.com/TranPhucVinh/C/tree/master/Kernel).
+
 ## Commands
 
 * ``lsmod``: show which loadable kernel modules are currently loaded
