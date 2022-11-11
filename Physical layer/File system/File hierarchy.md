@@ -15,6 +15,8 @@ Root folder ``/`` contains those folder:
 
 Directory ``bin`` stores all the command line used in Linux
 
+Example: [Set up command from a C process by using the /bin directory](https://github.com/TranPhucVinh/C/blob/master/Environment/README.md#linux-environment).
+
 # etc
 
 ``/etc`` (which stands for etcetera due to its history) is a folder where all configuration files are stored.
@@ -74,6 +76,10 @@ Original content of ``rcS`` file in Ubuntu 16.04:
 
 exec /etc/init.d/rc S
 ```
+
+# usr
+
+[Set up command from a C process by using the /usr/local/bin directory](https://github.com/TranPhucVinh/C/blob/master/Environment/README.md#linux-environment).
 
 # tmp
 
