@@ -71,13 +71,13 @@ Get all attributes of an existed device: ``/api/v1/{deviceToken}/attributes{?cli
 
 ## Device attributes
 
-**Server attributes** allow user to edit and update on the admin webpage but those attributes are not allowed to be edited or get by API on 
+**Server attributes** allow user to update on the admin webpage but those attributes are not allowed to be edited or get by API on 
 Device API Controller
 
 **Client attributes** are not allowed user to create and edit on the admin webpage but those operation can be performed by API on 
 Device API Controller
 
-**Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,...
+**Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,... It allows user to update on the admin webpage.
 
 **Example**: Create a double share attribute of a device then connect it to the ``Update shared double attribute`` widget in dashboard
 
