@@ -30,6 +30,8 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 
 ## Examples
 
+**Precondition**: All examples below are performed on Swagger webpage (``/swagger-ui``).
+
 ### Get all devices of a customer
 
 **Step 1**: Login with customer account, then get customerID by ``/api/auth/user``
