@@ -75,10 +75,10 @@ ThingsBoard has attributes value for all of its entity like device, customer, as
 
 **Server attributes** allow CRUD operation on admin webpage and by API.
 
-**Client attributes** are not allowed user to create and edit on the admin webpage but those operation can be performed by API on 
+**Client attributes** is only available on device. Clien attributes are not allowed user to CRUD on the admin webpage but those operation can be performed by API on 
 Device API Controller
 
-**Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,... It allows user to update on the admin webpage.
+**Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,... It allows user to CRUD on the admin webpage and by API.
 
 **Example**: Create a double share attribute of a device then connect it to the ``Update shared double attribute`` widget in dashboard
 
