@@ -76,7 +76,7 @@ Get all attributes of an existed device: ``/api/v1/{deviceToken}/attributes{?cli
 * ``deviceToken``: access token of a device
 * ``clientKeys``: Client key that wished to query, e.g ``test_field``
 * ``sharedKeys``: Give it any random value if there is no shared key, e.g ``0``
-* 
+
 **Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,... It allows user to CRUD on the admin webpage and by API.
 
 **Example**: Create a double share attribute of a device then connect it to the ``Update shared double attribute`` widget in dashboard
