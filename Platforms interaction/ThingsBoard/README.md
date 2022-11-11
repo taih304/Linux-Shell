@@ -81,7 +81,7 @@ Get all attributes of an existed device: ``/api/v1/{deviceToken}/attributes{?cli
 * ``clientKeys``: Client key that wished to query, e.g ``test_field``
 * ``sharedKeys``: Give it any random value if there is no shared key, e.g ``0``
 
-**Example 2**: Client attribute can be created and update by MQTT API ``v1/devices/me/attributes``
+**Example 2**: Client attribute can be created and update by [MQTT API](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#attributes) ``v1/devices/me/attributes``.
 
 ```sh
 mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes" -u "TTf3zmVacJI4dUQsYQwh" -m "{\"1\":\"123\"}"
