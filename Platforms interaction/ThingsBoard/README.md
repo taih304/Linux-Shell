@@ -52,12 +52,16 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 
 ThingsBoard has attributes value for all of its entity like device, customer, assets,...
 
+### Server attributes
+
 **Server attributes** allow CRUD operation on admin webpage and by API.
+
+### Client attributes
 
 **Client attributes** is only available on device. Client attributes are not allowed user to CRUD on the admin webpage but those operation can be performed by API on 
 Device API Controller
 
-**Example**: Work with device attributes (client attributes)
+**Example 1**: Work with device attributes (client attributes)
 
 Create a new client attributes or update value for an existed attribute ``/api/v1/{deviceToken}/attributes`` with POST method (Perform on Swagger UI)
 
@@ -76,6 +80,14 @@ Get all attributes of an existed device: ``/api/v1/{deviceToken}/attributes{?cli
 * ``deviceToken``: access token of a device
 * ``clientKeys``: Client key that wished to query, e.g ``test_field``
 * ``sharedKeys``: Give it any random value if there is no shared key, e.g ``0``
+
+**Example 2**: Client attribute can be created and update by MQTT API ``v1/devices/me/attributes``
+
+```sh
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes" -u "TTf3zmVacJI4dUQsYQwh" -m "{\"1\":\"123\"}"
+```
+
+### Share attributes
 
 **Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,... It allows user to CRUD on the admin webpage and by API.
 
