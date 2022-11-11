@@ -71,10 +71,9 @@ Get all attributes of an existed device: ``/api/v1/{deviceToken}/attributes{?cli
 
 # Attributres
 
-## Device attributes
+ThingsBoard has attributes value for all of its entity like device, customer, assets,...
 
-**Server attributes** allow user to update on the admin webpage but those attributes are not allowed to be edited or get by API on 
-Device API Controller
+**Server attributes** allow CRUD operation on admin webpage and by API.
 
 **Client attributes** are not allowed user to create and edit on the admin webpage but those operation can be performed by API on 
 Device API Controller
