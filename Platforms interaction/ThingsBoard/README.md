@@ -48,11 +48,20 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 
 **Step 2**: Use ``deviceID`` to get access token from API ``/api/device/{deviceId}/credentials`` (Get Device Credentials: ``getDeviceCredentialsByDeviceId``)
 
-### Work with device attributes
+# Attributres
 
-Create a new client attributes or update value for an existed attribute: ``/api/v1/{deviceToken}/attributes`` with POST method
+ThingsBoard has attributes value for all of its entity like device, customer, assets,...
 
-E.g of a request body:
+**Server attributes** allow CRUD operation on admin webpage and by API.
+
+**Client attributes** is only available on device. Client attributes are not allowed user to CRUD on the admin webpage but those operation can be performed by API on 
+Device API Controller
+
+**Example**: Work with device attributes (client attributes)
+
+Create a new client attributes or update value for an existed attribute ``/api/v1/{deviceToken}/attributes`` with POST method (Perform on Swagger UI)
+
+Request body:
 
 ```json
 {
@@ -67,17 +76,7 @@ Get all attributes of an existed device: ``/api/v1/{deviceToken}/attributes{?cli
 * ``deviceToken``: access token of a device
 * ``clientKeys``: Client key that wished to query, e.g ``test_field``
 * ``sharedKeys``: Give it any random value if there is no shared key, e.g ``0``
-
-
-# Attributres
-
-ThingsBoard has attributes value for all of its entity like device, customer, assets,...
-
-**Server attributes** allow CRUD operation on admin webpage and by API.
-
-**Client attributes** is only available on device. Client attributes are not allowed user to CRUD on the admin webpage but those operation can be performed by API on 
-Device API Controller
-
+* 
 **Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,... It allows user to CRUD on the admin webpage and by API.
 
 **Example**: Create a double share attribute of a device then connect it to the ``Update shared double attribute`` widget in dashboard
