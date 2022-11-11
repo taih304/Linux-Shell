@@ -40,6 +40,10 @@ mosquitto_sub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/rpc/request/+" -
 
 MQTT RPC with **Basic GPIO panel** is not yet implemented. Check [the corresponded example in ESP-IDF](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Platforms%20interaction/ThingsBoard/MQTT/rpc_gpio_control.c) for its implementation or [the corresponded example in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#rpc) for easier implementation with JSON.
 
+## Attributes
+
+API ``v1/devices/me/attributes`` allows creating and updating client attribute by MQTT publish message.
+
 ## MQTT device profile
 
 ### Change MQTT Telemetry topic filter of a MQTT device profile
