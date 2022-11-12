@@ -34,6 +34,8 @@ Kernel driver is implemented by C source code. Check [loadable kernel module doc
 
 ``-a``: Probe all modules. This option is enabled by default if no file names are given in the command-line. Any changes (create or remove) with kernel modules in ``/lib/modules/$(uname -r)`` needs running ``sudo depmod -a`` again for latest update in ``modules.dep``.
 
+``depmod`` is used to setup for ``modprobe`` (to ``insmod``/``rmmod`` kernel modules) and to setup modules for running it for the first time when system is booted.
+
 ### modprobe
 
 To load/unload (remove) a module with modprobe
@@ -65,3 +67,5 @@ Unload/rmmod that module:
 ```sh
 username$hostname:~/username/module$ sudo modprobe -r ubuntu_kernel_module
 ```
+
+To revert the system kernel modules setup back to the original, remove ``ubuntu_kernel_module.ko`` in ``/lib/modules/$(uname -r)``, then run ``depmod -a`` again.
