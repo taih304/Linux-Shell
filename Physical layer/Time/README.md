@@ -2,7 +2,7 @@
 
 There are 2 clocks inside Linux, **hardware clock** and **system clock**. The **hardware clock**, also known as RTC, CMOS or BIOS clock, is the battery-backed clock that keeps time even when the system is shut down. The **system clock/tick** or **kernel clock** is maintained by the operating system. At boot time, the hardware clock is read and used to set the system clock. From that point onward, the system clock is used to track time.
 
-System clock is used to implement C functions [gettimeofday() and time()]((https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/Time/README.md#systime)).
+System clock is used to implement C functions [gettimeofday() and time()](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/Time/README.md#systime).
 
 RTCs can be read and written with ``hwclock()`` command, or directly with the ``ioctl()`` system call.
 
