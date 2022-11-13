@@ -2,11 +2,23 @@ A **filesystem** is the methods and data structures that an operating system use
 
 For file hierarchy inside a Linux system, check [file hierarchy document](File%20hierarchy.md)
 
-## Types
+# Types
 
-### sysfs
+## sysfs
 
 ``sysfs`` is a pseudo file system (``/sys``) provided by the Linux kernel that exports information about various kernel subsystems, hardware devices, and associated device drivers from the kernel's device model to user space through virtual files.
+
+### Kernel
+
+The ``/sys/class/`` directory offers a view of the device drivers grouped by classes.
+
+``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
+
+``sys/dev`` stores all block (``block`` directory) and character (``char``) devices.
+
+``sys/dev/char`` has structure: ``major_number:minor_number``. Eg: ``10:1``.
+
+### GPIO
 
 On PC with an OS, as ``ls`` on ``/sys/class/gpio`` only return ``export`` and ``unexport`` (GPIO chip like ``gpiochip0``, ``gpiochip100``, ``gpiochip504``,... are not included) so the virtual GPIO files sytem can't be created.
 
@@ -14,11 +26,7 @@ On PC with an OS, as ``ls`` on ``/sys/class/gpio`` only return ``export`` and ``
 
 To view virtual GPIO debug information: ``cat /sys/kernel/debug/gpio``
 
-``sys/dev`` stores all block (``block`` directory) and character (``char``) devices.
-
-``sys/dev/char`` has structure: ``major_number:minor_number``. Eg: ``10:1``.
-
-### procfs
+## procfs
 
 ``procfs`` is pseudo filesystem (``/proc``) containing information about the system resources, including currently running processes, kernel, hardware. 
 

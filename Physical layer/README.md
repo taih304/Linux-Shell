@@ -81,12 +81,9 @@ To see all available groups type: ``compgen -g``
 
 ## System handler
 
-``less /proc/cpuinfo``: View CPU info
+[sysfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#sysfs) and [procfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#procfs) are filesystems which allow user to monitor system resources.
 
-The ``/sys/class/`` directory offers a view of the device drivers grouped by classes.
-
-``cat /sys/class/thermal/thermal_zone0/temp``: read temperature on Linux
-
+Other commands:
 
 * ``shutdown``
 * ``reboot``
@@ -96,7 +93,6 @@ Name of OS:
 
 * ``uname``: Name of OS
 * ``uname -v``: Name of Kernel version. E.g: ``#82-Ubuntu SMP Fri Sep 4 12:23:10 UTC 2020``
-
 * ``sudo lshw``: list system hardware information
 
 ### Program run at specific time
