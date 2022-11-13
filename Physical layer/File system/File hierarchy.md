@@ -58,6 +58,29 @@ This error might happen as the devicename is changed
 
 ``sudo nano /etc/hosts`` will also help you change the hostname
 
+### modules
+
+``/etc/modules`` file is used for kernel modules to load at boot time.
+
+To load kernel module at boot time:
+
+**Step 1**: Add the kernel module, e.g ``ubuntu_kernel_module.ko``, to ``/lib/modules/$(uname -r)``, then run ``depmod -a``
+
+**Step 2**: Update file ``/etc/modules`` with that kernel modules:
+
+```sh
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file contains the names of kernel modules that should be loaded
+# at boot time, one per line. Lines beginning with "#" are ignored.
+#
+ubuntu_kernel_module
+```
+
+From now, kernel module ``ubuntu_kernel_module`` will load at boot time.
+
+``/etc/modules-load.d/modules.conf`` file is the symbolic link of ``/etc/modules``. Performing the same setup on ``/etc/modules-load.d/modules.conf`` with ``/etc/modules`` will allow a kernel module to load at boot time.
+
 ### rcS
 
 ``rcS`` stands for Run Control Scripts. It is located in ``/etc/init.d``. ``rcS`` allows you to run additional programs at boot time.

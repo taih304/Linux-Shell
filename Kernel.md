@@ -34,7 +34,7 @@ Kernel driver is implemented by C source code. Check [loadable kernel module doc
 
 ``-a``: Probe all modules. This option is enabled by default if no file names are given in the command-line. Any changes (create or remove) with kernel modules in ``/lib/modules/$(uname -r)`` needs running ``sudo depmod -a`` again for latest update in ``modules.dep``.
 
-``depmod`` is used to setup for ``modprobe`` (to ``insmod``/``rmmod`` kernel modules) and to setup modules for running it for the first time when system is booted.
+``depmod`` is used to setup for [modprobe](#modprobe) (to ``insmod``/``rmmod`` kernel modules) and to load a module at boot time (with [/etc/modules](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/File%20hierarchy.md#modules) or ``/etc/modules-load.d/modules.conf``).
 
 ### modprobe
 
