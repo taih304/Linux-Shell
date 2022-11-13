@@ -4,7 +4,7 @@ There are 2 clocks inside Linux, **hardware clock** and **system clock**. The **
 
 System clock is used to implement C functions [gettimeofday() and time()](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/Time/README.md#systime).
 
-RTCs can be read and written with ``hwclock()`` command, or directly with the ``ioctl()`` system call.
+RTCs can be read and written with ``hwclock()`` command, or [directly with the ioctl() system call](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/Time/Examples.md#example-3).
 
 # Commands
 
