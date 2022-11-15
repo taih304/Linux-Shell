@@ -79,3 +79,9 @@ Then send value that reaches threshold value to check alarm. Go to the device wi
 ![](../../../Environment/Images/alarm_details.png)
 
 The same Alarm details with details ``Relay: Alarm has been cleared`` will happen when the alarm is cleared.
+
+## Setup and clear alarm base on telemetry and threshold value
+
+Check [the document of the same name](Alarm%20and%20threshold.md) for rule chain to trigger and clear alarm when aquired value reaches a specific threshold define as a shared attribute of a device
+
+This method is only available for 1 device to map to 1 alarm. For 1 alarm to handle multiple devices, check [alarm and threshold for multiple devices(Alarm%20and%20threshold%for%multiple%devices.md) 
