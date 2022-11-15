@@ -21,6 +21,8 @@ For kernel driver/device driver definition, check [Device drivers document](http
 
 Kernel driver is implemented by C source code. Check [loadable kernel module document in C for kernel driver implementation](https://github.com/TranPhucVinh/C/tree/master/Kernel).
 
+The ``/dev/kmsg`` character device node provides userspace access to the kernel's ``printk`` buffer.
+
 ## Commands
 
 * ``lsmod``: show which loadable kernel modules are currently loaded
