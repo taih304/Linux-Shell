@@ -14,3 +14,8 @@ The rule chain implemented with the flow chart is pretty straigh forward
 ![](../../../Environment/Images/rule_chain_alarm_2_nodes.png)
 
 2 external MQTT block in this rule chain has the access token of 2 node devices for MQTT message publishing.
+
+**Attachments**:
+
+* [Flowchart file](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Attachments/flowchart_alarm_for_2_nodes.xml)
+* [Rule chain file](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Attachments/rule_chain_alarm_2_nodes.json)
