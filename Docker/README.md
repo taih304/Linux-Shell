@@ -70,6 +70,8 @@ See: https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce
 
 To solve that problem: ``sudo usermod -aG docker ${USER}``. If setting successfully, ``docker`` will be listed out by ``groups`` command as it has been added to user.
 
+# Implementations
+
 ## Command
 
 ``sudo service docker start``: Start docker service
@@ -105,8 +107,6 @@ hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
 ``sudo docker ps``: List all running container
 
 ``sudo docker ps -a``: List all running or exited containers
-
-# Implementations
 
 ## ubuntu docker
 
