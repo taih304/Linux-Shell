@@ -66,6 +66,8 @@ Oct 08 16:17:43 tranphucvinh systemd[1]: Started My service.
 Oct 08 16:17:43 tranphucvinh test.sh[11598]: Hello, World !
 ```
 
+``echo`` log from ``test.sh`` will also be printed out on syslog (``/var/log/syslog``) and is marked with ``test.sh`` prefix.
+
 Specify ``test.sh`` in other directory (e.g: ``/home/username/Documents/``) with ``WorkingDirectory``:
 
 ```sh
