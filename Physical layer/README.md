@@ -103,15 +103,6 @@ Name of OS:
 
 Command: ``sudo crontab -e``
 
-Then the control script will be:
-
-```shell
-		#                    m     h     dom    mon     dow     command
-(every 5 minutes)       */5					                      /bin/bash  /home/....(path to shell program)									
-(every 10 minutes)      */10
-run when start up	       @reboot
-```
-
 **Example**
 
 Make program ``blink.sh`` run when computer reboot
