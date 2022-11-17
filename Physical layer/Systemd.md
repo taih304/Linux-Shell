@@ -88,8 +88,8 @@ Description=My service
 After=network.target
 
 [Service]
-ExecStart=/home/dekvn/VinhTran/work-in-progress/test.sh
-StandardOutput=file:/home/dekvn/VinhTran/work-in-progress/log.txt
+ExecStart=/home/username/VinhTran/work-in-progress/test.sh
+StandardOutput=file:/home/username/VinhTran/work-in-progress/log.txt
 
 [Install]
 WantedBy=multi-user.target
@@ -100,7 +100,7 @@ With that setting, ``StandardOutput`` log will not display in ``systemctl status
 To append ``StandardOutput`` log to a file, use ``append``
 
 ```
-StandardOutput=append:/home/dekvn/VinhTran/work-in-progress/log.txt
+StandardOutput=append:/home/username/VinhTran/work-in-progress/log.txt
 ```
 ### Run a.out file
 
