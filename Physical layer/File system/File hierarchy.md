@@ -5,7 +5,7 @@ Root folder ``/`` contains those folder:
 * ``sbin``: System file
 * [bin](#bin):  Commands and programs
 * [usr](#usr): Application files
-* ``var``: Variable files
+* [var](#var): Variable files
 * ``dev``: Device files
 * [etc](#etc): Configuration files
 * ``opt``: Optional
@@ -16,6 +16,10 @@ Root folder ``/`` contains those folder:
 Directory ``bin`` stores all the command line used in Linux
 
 Example: [Set up command from a C process by using the /bin directory](https://github.com/TranPhucVinh/C/blob/master/Environment/README.md#linux-environment).
+
+# var
+
+``sudo cat /var/log/syslog``: View all system log, like ``crontab``, ``systemctl``
 
 # etc
 
