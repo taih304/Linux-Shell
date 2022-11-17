@@ -95,11 +95,13 @@ Name of OS:
 * ``uname -v``: Name of Kernel version. E.g: ``#82-Ubuntu SMP Fri Sep 4 12:23:10 UTC 2020``
 * ``sudo lshw``: list system hardware information
 
-### Program run at specific time
+### crontab
 
-To let a program run in a specific time or when just start up: ``sudo crontab -e``
+``crontab`` command is used to setup a program to run in a specific time or when just start up.
 
-**Example**
+Command: ``sudo crontab -e``
+
+Then the control script will be:
 
 ```shell
 		#                    m     h     dom    mon     dow     command
