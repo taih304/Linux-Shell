@@ -105,7 +105,7 @@ Command: ``sudo crontab -e``
 
 **Example**
 
-Make program ``blink.sh`` run when computer reboot
+Make program ``test.sh`` run when computer reboot
 
 ```
 # For example, you can run a backup of all your user accounts
@@ -115,7 +115,7 @@ Make program ``blink.sh`` run when computer reboot
 # For more information see the manual pages of crontab(5) and cron(8)
 #
 # m h  dom mon dow   command
-@reboot /bin/bash /home/pi/test/blink.sh  #1 space after /bin/bash
+@reboot /bin/bash /home/username/test/test.sh  #1 space after /bin/bash
 ```
 
 ``/bin/bash`` is for bash shell
@@ -124,6 +124,32 @@ Make program ``blink.sh`` run when computer reboot
 * ``h``: hour
 * ``dom``: day of month
 * ``dow``: day of week
+
+To make ``test.sh`` to run every 1 minute
+
+```sh
+* * * * * /bin/bash /home/username/work-in-progress/test.sh
+```
+
+Check the example in [Raspberry-Pi-Bash to run a.out which blink LED every 1 second by direct memory access to run every 1 minute](https://github.com/TranPhucVinh/Raspberry-Pi-Bash/blob/main/Physical%20layer/README.md#crontab).
+
+**Note**: If ``test.sh`` includes ``echo`` like this
+
+```sh
+#!/bin/bash
+echo "Hello, World !"
+```
+
+And ``/var/mail`` is empty, then there will be error:
+
+```
+CRON[3134]: (CRON) info (No MTA installed, discarding output)
+CRON[3139]: (root) CMD (/bin/bash /home/username/work-in-progress/test.sh
+```
+
+By default, the output of each cron job is collected by cron and sent via email when the job is complete. If there is no output, no mail is sent. That error mean that there is output from your cron job but your server does not have a **Message Transfer Agent** (MTA) installed (located in ``/var/mail``) to process the output into an email.
+
+The same issue happen if running the ``a.out`` file from crontab which includes ``printf()``.
 
 ## Error IUSE 100% in CentOS
 
