@@ -27,7 +27,7 @@ Example: [Set up command from a C process by using the /bin directory](https://g
 
 **Recover .bashrc and .profile to origin files**: Origin ``.bashrc`` and ``.profile`` files are stored in ``/etc/skel``
 
-### User setup
+## User setup
 
 All user information is stored in ``/etc/passwd``
 
@@ -62,7 +62,7 @@ This error might happen as the devicename is changed
 
 ``sudo nano /etc/hosts`` will also help you change the hostname
 
-### modules
+## modules
 
 ``/etc/modules`` file is used for kernel modules to load at boot time.
 
@@ -85,7 +85,38 @@ From now, kernel module ``ubuntu_kernel_module`` will load at boot time.
 
 ``/etc/modules-load.d/modules.conf`` file is the symbolic link of ``/etc/modules``. Performing the same setup on ``/etc/modules-load.d/modules.conf`` with ``/etc/modules`` will allow a kernel module to load at boot time.
 
-### rcS
+## rc.local
+
+File ``/etc/rc.local`` runs when system is booted. It exists in Ubuntu 16.04 and doesn't exist in Ubuntu 20.04 
+
+0rigin file ``/etc/rc.local`` in Ubuntu 16.04
+
+```sh
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+exit 0
+```
+
+Adding a script to that file to run that script from boot time, e.g:
+
+```sh
+echo "Hello, World ! from /etc/rc.local"
+
+exit 0
+```
+
+## rcS
 
 ``rcS`` stands for Run Control Scripts. It is located in ``/etc/init.d``. ``rcS`` allows you to run additional programs at boot time.
 
