@@ -58,6 +58,20 @@ By response to back to the topic **v1/devices/me/rpc/response/1680** with the st
 
 ## GPIO panel widget
 
+GPIO panel widget is used to display online/offline status of its pins based on the attributes of the device mapping to it.
+
+Attributes used for setting up the status is the client attributes of the device.
+
+In tab ``Data``, choose **Entity** with the entity alias of the device for online/offline status displayed. Then choose the client attribute of it. In label, set the label to the pin number, i.e set label to ``1`` for pin number ``1``.
+
+JSON field value of the pin number must have boolean type, i.e ``true`` (for online) and ``false``.
+
+E.g: Set online status for pin number ``1``
+
+```sh
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes" -u "TTf3zmVacJI4dUQsYQwh" -m "{\"1\":true}"
+```
+
 # Input widgets
 
 Update attribute widgets allow updating attributes to entity like devices.
