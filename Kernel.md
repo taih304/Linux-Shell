@@ -2,7 +2,7 @@
 
 The Linux kernel is the lowest level of software running on a Linux system. It is charged with managing the hardware, running user programs, and maintaining the overall security and integrity of the whole system.
 
-### Linux bootloader
+## Linux bootloader
 
 Linux bootloader is a small amount of machine specific code to initialize the system. Its duty is to:
 
@@ -12,6 +12,19 @@ Linux bootloader is a small amount of machine specific code to initialize the sy
 * Setting of the kernel command-line and other parameters (e.g, device tree, machine type)
 
 **U-Boot** is the standard bootloader for ARM Linux.
+
+## Linux booting process
+
+Linux booting process will follow those steps:
+
+* BIOS: System startup/Hardware init
+* Bootloader stage 1: Master Boot Record (MSB) executes GRUB
+* Bootloader stage 2: GRUB executes Kernel
+* Kernel will executes process init located in ``/sbin/init``
+* Execute ``init`` process
+* Run level: Start userspace for command line
+
+``sudo init 6``: Reboot the OS
 
 # Linux kernel module
 
