@@ -99,7 +99,7 @@ Name of OS:
 
 ### crontab
 
-``crontab`` command is used to setup a program to run in a specific time or when just start up.
+``crontab`` command is used to setup a program to run in a specific time or when just start up. ``crontab`` is not available in default [ubuntu docker](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Docker/ubuntu%20docker.md).
 
 Command: ``sudo crontab -e``
 
@@ -151,7 +151,14 @@ By default, the output of each cron job is collected by cron and sent via email 
 
 The same issue happen if running the ``a.out`` file from crontab which includes ``printf()``.
 
-``crontab`` is not available in default [ubuntu docker](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Docker/ubuntu%20docker.md).
+To avoid that MTD issue, output log to a file with absolute path:
+
+```sh
+#!/bin/bash
+echo "Hello, World !" > /home/username/work-in-progress/log.txt
+```
+
+Absolute path must be used as cron jobs run in their own shell so without absolute path, they don't know where to log the ``echo`` output to.
 
 ## Error IUSE 100% in CentOS
 
