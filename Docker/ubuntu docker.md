@@ -46,7 +46,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAME
 
 **Step 2**: (Still in that terminal) Stop ``ubuntu`` container: ``sudo docker stop 80c``
 
-To exit terminal mode easily, use ``-it`` flag which include ``-i`` for interactive mode.
+To exit terminal mode easily, use ``-it`` flag which include ``-i`` for interactive mode: ``sudo docker run -it ubuntu``
 
 ### Network
 
