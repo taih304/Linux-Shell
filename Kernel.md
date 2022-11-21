@@ -34,6 +34,8 @@ Linux booting process will follow those steps:
 
 State machine for those 5 steps
 
+![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/booting_process.png)
+
 Summarized steps:
 * BIOS: System startup/Hardware init
 * Bootloader stage 1: Master Boot Record (MSB) executes GRUB
