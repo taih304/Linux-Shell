@@ -17,6 +17,24 @@ Linux bootloader is a small amount of machine specific code to initialize the sy
 
 Linux booting process will follow those steps:
 
+1. The boot process begins at POR (Power On Reset) where the hardware reset logic forces the ARM core to begin execution starting from the on-chip boot ROM. The boot ROM can support several devices (e.g, NOR flash, NAND Flash, SD/eMMC). 
+
+2. The U-Boot loads both the kernel image and the compiled device tree binary into RAM (like DDR3 RAM) and passes the memory address of the device tree binary into the kernel as part of the launch.
+
+3. The U-Boot jumps to the kernel code.
+
+4. Kernel runs low level kernel initialization, enabling MMU and creating the initial table of memory pages, and setting up caches. This is done in ``arch/arm/kernel/head.S``. The file ``head.S`` contains CPU architecture specific but platform independent initialization code. Then the system switches to the non architecture specific kernel startup function ``start_kernel()``.
+
+5. Kernel runs ``start_kernel()`` located in ``init/main.c`` that:
+
+* Initializes the kernel core (e.g., memory, scheduling, interrupts,...). 
+* Initializes statically compiled drivers.
+* Mounts the root filesystem based on bootargs passed to the kernel from U-Boot.
+* Executes the first user process, init. The three init programs that you usually find in Linux embedded devices are BusyBox init, System V init, and systemd.
+
+State machine for those 5 steps
+
+Summarized steps:
 * BIOS: System startup/Hardware init
 * Bootloader stage 1: Master Boot Record (MSB) executes GRUB
 * Bootloader stage 2: GRUB executes Kernel
