@@ -45,7 +45,7 @@ OS source file are stored in the storage media (SD card, NAND flash,...) and is 
 * [BIOS](#BIOS): System startup/Hardware init
 * Bootloader stage 1: [Master Boot Record (MBR)](#MBR) executes GRUB
 * Bootloader stage 2: [GRUB](#GRUB) executes Kernel
-* Kernel will executes process init located in ``/sbin/init``
+* [Kernel](#Kernel) will executes process init located in ``/sbin/init``
 * Execute ``init`` process
 * Run level: Start userspace for command line
 
@@ -66,7 +66,12 @@ MBR is located in the 1st sector of the bootable disk, typically in ``/dev/sda``
 * GRUB stands for Grand Unified Bootloader. If you have multiple kernel images installed on your system, you can choose which one to be executed.
 * GRUB displays a splash screen, waits for few seconds, if you don’t enter anything, it loads the default kernel image as specified in the grub configuration file.
 * GRUB has the knowledge of the filesystem.
-* GRUB configuration file is ``/boot/grub/grub.conf``.
+* GRUB configuration file is ``/boot/grub/grub.cfg``. In Ubuntu 20.04 ``grub.cfg`` file, it contains ``initrd`` (Initial RAM Disk) image (checked by searching ``initrd`` in that file). ``initrd`` is used by kernel as temporary root file system until kernel is booted and the real root file system is mounted. It also contains necessary drivers compiled inside, which helps it to access the hard drive partitions, and other hardware.
+
+### Kernel
+
+* Kernel mount the root file system as specified in ``grub.cfg``.
+* Kernel executes the ``/sbin/init`` program. Since init was the 1st program to be executed by Linux Kernel, it has the process id (PID) of 1. 
 
 **Command**
 
