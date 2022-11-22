@@ -40,15 +40,37 @@ State machine for those 5 steps
 
 OS source file are stored in the storage media (SD card, NAND flash,...) and is loaded into RAM when running.
 
-Summarized steps:
-* BIOS: System startup/Hardware init
-* Bootloader stage 1: Master Boot Record (MSB) executes GRUB
-* Bootloader stage 2: GRUB executes Kernel
+6 steps detail:
+
+* [BIOS](#BIOS): System startup/Hardware init
+* Bootloader stage 1: [Master Boot Record (MBR)](#MBR) executes GRUB
+* Bootloader stage 2: [GRUB](#GRUB) executes Kernel
 * Kernel will executes process init located in ``/sbin/init``
 * Execute ``init`` process
 * Run level: Start userspace for command line
 
-``sudo init 6``: Reboot the OS
+### BIOS
+
+BIOS (Basic Input/Output System) will perform some system integrity checks, then search, load, and executes the boot loader program.
+
+When setting up the PC, you can press a key (typically F12 of F2, but it depends on your system) during the BIOS startup to change the boot sequence.
+
+Once the boot loader program is detected and loaded into the memory, BIOS gives the control to it.
+
+### MBR
+
+MBR is located in the 1st sector of the bootable disk, typically in ``/dev/sda``. MBR contains information about GRUB 
+
+### GRUB
+
+* GRUB stands for Grand Unified Bootloader. If you have multiple kernel images installed on your system, you can choose which one to be executed.
+* GRUB displays a splash screen, waits for few seconds, if you don’t enter anything, it loads the default kernel image as specified in the grub configuration file.
+* GRUB has the knowledge of the filesystem.
+* GRUB configuration file is ``/boot/grub/grub.conf``.
+
+**Command**
+
+* ``sudo init 6``: Reboot the OS
 
 # Linux kernel module
 
