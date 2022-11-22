@@ -38,6 +38,8 @@ State machine for those 5 steps
 
 ![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/booting_process.png)
 
+OS source file are stored in the storage media (SD card, NAND flash,...) and is loaded into RAM when running.
+
 Summarized steps:
 * BIOS: System startup/Hardware init
 * Bootloader stage 1: Master Boot Record (MSB) executes GRUB
