@@ -11,6 +11,8 @@ Linux bootloader is a small amount of machine specific code to initialize the sy
 * Optional loading of an initial RAM disk at the correct memory address.
 * Setting of the kernel command-line and other parameters (e.g, device tree, machine type)
 
+**U-Boot** (fullname Das U-Boot) is the boot loader used in embedded devices to package the instructions to boot the device's operating system kernel. It is available for various computer architectures, like ARM, RISC-V, x86,...
+
 **U-Boot** is the standard bootloader for ARM Linux.
 
 ## Linux booting process
