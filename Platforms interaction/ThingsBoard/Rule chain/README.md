@@ -47,6 +47,14 @@ Check [alarm document](Alarm.md) for implementation with **Create alarm** and **
 
 Check [generator document](Generator.md) for implementation with **Generator** block.
 
+## Save attributes
+
+Save attributes rule chain is used to save the attributes of a device (by 3 type Client attributes, Server attributes and Shared attributes).
+
+Thanks to save attributes widget in root rule chain, client attributes of each device is updated by POST attributes, by default.
+
+For any POST attribute from client (e.g MQTT client) to be server attributes instead of client attributes (as default), simple change **Entity attribute scope** from **client attributes** to **server attributes**.
+
 # External
 
 ## MQTT
