@@ -7,7 +7,7 @@
 
 Message type switch will switch the message type for implementation in the next nodes.
 
-Message type switch basic implementation can be found in the **Root Rule Chain**, where it switchs the types like **Post attributes**, **Post telemetry**, etc to the corresponding blocks.
+Message type switch basic implementation can be found in the **Root Rule Chain**, where it switches the types like **Post attributes**, **Post telemetry**, etc to the corresponding blocks.
 
 ## script
 
