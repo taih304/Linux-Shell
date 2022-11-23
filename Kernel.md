@@ -46,7 +46,7 @@ OS source file are stored in the storage media (SD card, NAND flash,...) and is 
 * Bootloader stage 1: [Master Boot Record (MBR)](#MBR) executes GRUB
 * Bootloader stage 2: [GRUB](#GRUB) executes Kernel
 * [Kernel](#Kernel) will executes process init located in ``/sbin/init``
-* Execute ``init`` process
+* Execute [init](#init) process
 * Run level: Start userspace for command line
 
 ### BIOS
@@ -72,6 +72,14 @@ MBR is located in the 1st sector of the bootable disk, typically in ``/dev/sda``
 
 * Kernel mount the root file system as specified in ``grub.cfg``.
 * Kernel executes the ``/sbin/init`` program. Since init was the 1st program to be executed by Linux Kernel, it has the process id (PID) of 1. 
+
+### init
+
+init process will decide the run level. Ubuntu 20.04 supports [systemd](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Systemd.md) to setup run level.
+
+Command ``runlevel`` will print out the current runlevel number.
+
+Run command ``man runlevel`` for ``runlevel`` manual, and to also check the meaning of the level number.
 
 **Command**
 
