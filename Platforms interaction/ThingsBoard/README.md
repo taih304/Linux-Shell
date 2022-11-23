@@ -87,6 +87,8 @@ Get all attributes of an existed device: ``/api/v1/{deviceToken}/attributes{?cli
 mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes" -u "TTf3zmVacJI4dUQsYQwh" -m "{\"1\":\"123\"}"
 ```
 
+**Note**: By default setup of [Save attributes widget](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/ThingsBoard/Rule%20chain/README.md#save-attributes) in root rule chain, this MQTT publish message will be updated to client attributes. Update the Save attributes widget in root rule chain for Server attributes or Shared attributes updated.
+
 ### Share attributes
 
 **Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,... It allows user to CRUD on the admin webpage and by API.
