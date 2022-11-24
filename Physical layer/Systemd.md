@@ -85,7 +85,6 @@ To output ``StandardOutput`` log to a file, use ``file``
 ```
 [Unit]
 Description=My service
-After=network.target
 
 [Service]
 ExecStart=/home/username/VinhTran/work-in-progress/test.sh
