@@ -80,6 +80,8 @@ In ``ExecStart``, ``test.sh`` can only be run by ``/bin/bash``. ``sh test.sh``, 
 
 **StandardOutput**: ``StandardOutput`` will display the log in ``systemctl status`` by default
 
+``StandardOutput`` by default is set to ``journal``.
+
 To output ``StandardOutput`` log to a file, use ``file``
 
 ```
