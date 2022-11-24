@@ -120,7 +120,7 @@ exit 0
 
 ``rcS`` stands for Run Control Scripts. It is located in ``/etc/init.d``. ``rcS`` allows you to run additional programs at boot time.
 
-File ``rcS`` is availale in Ubuntu OS 16.04 and Armbian 3.4.113-sun8i, and is not available in Ubuntu 20.04, Raspbian and ubuntu docker.
+File ``rcS`` is availale in Ubuntu OS 16.04 and [Armbian 3.4.113-sun8i Orange Pi](https://github.com/TranPhucVinh/Orange-Pi), and is not available in Ubuntu 20.04, Raspbian and ubuntu docker.
 
 Original content of ``rcS`` file in Ubuntu 16.04:
 
