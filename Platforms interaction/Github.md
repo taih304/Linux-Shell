@@ -16,7 +16,9 @@ git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 
 Example: ``curl https://api.github.com/user -u tranphucvinh:password``
 
-**Output**: This will list out all the relate API URL belong to the user.
+**Output**: This will list out all user information.
+
+**Note**: If not setting up **Personal access token**, use the login password for the ``password`` parameter. If setting up **Personal access token** (for later used with [.netrc file](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/.netrc.md), use that **Personal access token** for the ``password`` parameter.
 
 ### .netrc for Github
 
