@@ -17,3 +17,7 @@ git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 Example: ``curl https://api.github.com/user -u tranphucvinh:password``
 
 **Output**: This will list out all the relate API URL belong to the user.
+
+### .netrc for Github
+
+Authentication step can be setup by .netrc file, check [.netrc document with the example for Github](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/.netrc.md#setup-netrc-for-github).
