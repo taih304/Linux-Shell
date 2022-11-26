@@ -139,6 +139,13 @@ Original content of ``rcS`` file in Ubuntu 16.04:
 exec /etc/init.d/rc S
 ```
 
+Adding echo log like this won't print out on ``/var/log/syslog``.
+
+```c
+echo "Hello, World !"
+exec /etc/init.d/rc S
+```
+
 # usr
 
 [Set up command from a C process by using the /usr/local/bin directory](https://github.com/TranPhucVinh/C/blob/master/Environment/README.md#linux-environment).
