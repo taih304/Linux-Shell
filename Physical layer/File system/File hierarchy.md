@@ -116,6 +116,10 @@ echo "Hello, World ! from /etc/rc.local"
 exit 0
 ```
 
+To make that script executable after rebooting, change its mode to ``777``: ``sudo chmod 777 /etc/rc.local``
+
+After rebooting the OS, view the log of ``/etc/rc.local`` in ``/var/log/syslog``.
+
 ## rcS
 
 ``rcS`` stands for Run Control Scripts. It is located in ``/etc/init.d``. ``rcS`` allows you to run additional programs at boot time.
