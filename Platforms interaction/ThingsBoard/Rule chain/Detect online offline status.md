@@ -9,6 +9,8 @@ Inactive timeout for a device is set by default to 600 seconds (10 minutes). A u
 
 In this example, we will set ``inactivityTimeout`` to 6000 for 6 seconds as if there is no TCP client sending telemetry data in 6 seconds, the device will be offline.
 
+This is the root rulechain for those features
+
 ![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/detect_online_offline_status.png)
 
 [Script filer](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Platforms%20interaction/ThingsBoard/Rule%20chain#script) **check device name** will filter the inactivity device to be the device that we wish to detect the online/offline status
