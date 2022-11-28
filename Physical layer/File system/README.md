@@ -38,6 +38,7 @@ For ``/proc`` to monitor kernel and hardware:
 
 * ``less /proc/cpuinfo``: View CPU info
 * ``cat /proc/interrupts``: List all available interrupts on current running Unix OS
+* ``sudo cat /proc/ioports``: Check address of all ports. Must run with ``sudo``. Without ``sudo``, all returned address from this command will be ``0``. ``sudo cat /proc/ioports`` in both [Raspbian](https://github.com/TranPhucVinh/Raspberry-Pi-Bash) and [Armbian](https://github.com/TranPhucVinh/Orange-Pi) will return NULL as they all are empty file.
 
 ### devpts
 
