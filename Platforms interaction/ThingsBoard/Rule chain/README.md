@@ -63,4 +63,6 @@ Check [MQTT document](MQTT.md) for implementation with **MQTT** block.
 
 # Examples
 
-* [Threshold setup for alarm](Alarm%20and%20threshold.md)
+* [Threshold setup for alarm of 1 device](Alarm%20and%20threshold.md)
+* [Threshold setup for alarm of multiple devices](Alarm%20and%20threshold%20for%20multiple%20devices.md)
+* [Detect online/offline status]()
