@@ -10,6 +10,8 @@
 
 ``i2c-tools`` package includes I2C commands like ``i2cdetect``, ``i2cset`` and ``i2cget``. 
 
+Install: ``sudo apt-get install -y i2c-tools``
+
 Remove: ``sudo apt-get remove --auto-remove i2c-tools``
 
 **i2cdetect**
