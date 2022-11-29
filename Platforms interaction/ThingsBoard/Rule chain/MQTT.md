@@ -103,3 +103,7 @@ mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/telemetry" -u "l
 ```
 
 Now both device with token ``Bk7ZZIGDy2c3EnB2WFO3`` and ``lWMLHJCyb9zPNMMpXQkI`` will receive the same message ``{'data': 'Hello, World'}``.
+
+# Can't update client attributes
+
+Can't update client attribute of a device by MQTT external rule chain as [it is a ThingsBoard bug](https://github.com/thingsboard/thingsboard/issues/7697).
