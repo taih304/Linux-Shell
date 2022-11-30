@@ -40,6 +40,20 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 
 **Step 2**: Use ``deviceID`` to get access token from API ``/api/device/{deviceId}/credentials`` (Get Device Credentials: ``getDeviceCredentialsByDeviceId``)
 
+# Application layer protocols
+
+* HTTP
+* MQTT
+* [FOTA operations implmented by HTTP and MQTT](#FOTA)
+
+## FOTA
+
+**OTA update** tab in ThingsBoard allow user to upload a ``.bin`` firmware from PC to it for the later OTA process.
+
+That OTA firmware (``.bin`` file) will later have an URL assigned to it if it is assigned to a device.
+
+For example, the ``.bin`` file is uploaded and then named as ``test_device_firmware_v1`` with ``version=0.1.0``, it will then have the URL: ``http://thingsboard.sysats.tech/api/v1/TTf3zmVacJI4dUQsYQwh/firmware?title=test_device_firmware_v1&version=0.1.0``. Pasting this link on web browser will then download that firmware to PC.
+
 # Attributres
 
 ThingsBoard has attributes value for all of its entity like device, customer, assets,...
