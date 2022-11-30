@@ -25,13 +25,27 @@ If there is no filter condition, leave **Filter** empty.
 
 After creating the new Entity aliases, choose then **entity timeseries** to visualize data.
 
-# Map widget
+# Control widget
 
-**Step 1**: Create a map form map widget, then connect the device to that widget
+### RPC button
 
-**Step 2**: Choose the timeseries from that device with valid longitude and latitude to be displayed as the longitude and latitude on the map.
+When pressing the RPC button widget, a message is broadcasted to any subscribe MQTT client:
 
-**Implementation**: Not yet implemented in Linux Bash Shell framework, check [the corresponding implementation in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#map-widget).
+Subscribe to topic ``v1/devices/me/rpc/request/+`` to listen to the broadcasted message
+
+```sh
+mosquitto_sub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/rpc/request/+" -u "TTf3zmVacJI4dUQsYQwh"
+```
+
+For customized responsed message, in Advanced tab, update the message in ``rpcCommand`` to any valid JSON value
+
+```json
+{"message": "Hello, World"}
+```
+
+### Knob control
+
+Knob control is not yet implemented in Linux Shell, check [the corresponding RPC examples in ESP-IDF for its implementation](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Platforms%20interaction/ThingsBoard/MQTT/README.md#rpc)
 
 # GPIO widget
 
@@ -79,3 +93,11 @@ Update attribute widgets allow updating attributes to entity like devices.
 Update attribute widgets have been covered so far are ``Update shared double attribute`` and ``Update shared integer attribute``.
 
 Check **Example: Create a double share attribute of a device then connect it to the Update shared double attribute widget in dashboard** in [Device attributes](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Platforms%20interaction/ThingsBoard#device-attributes) for implementation of this.
+
+# Map
+
+**Step 1**: Create a map form map widget, then connect the device to that widget
+
+**Step 2**: Choose the timeseries from that device with valid longitude and latitude to be displayed as the longitude and latitude on the map.
+
+**Implementation**: Not yet implemented in Linux Bash Shell framework, check [the corresponding implementation in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#map-widget).
