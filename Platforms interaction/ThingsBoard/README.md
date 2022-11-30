@@ -2,15 +2,7 @@
 
 ThingsBoard API consists of two main parts: [device API](https://github.com/TranPhucVinh/ESP8266-Arduino-framework/blob/master/Platforms%20interaction/ThingsBoard/Device%20API.md) and server-side API.
 
-Server-side API is available as REST API:
-
-* Administration REST API - The server-side core APIs.
-* Attributes query API - The server-side APIs provided by Telemetry Service.
-* Timeseries query API - The server-side APIs provided by Telemetry Service.
-* RPC API - The server-side APIs provided by RPC Service.
-* REST Client
-* Python REST Client
-* Dart API Client
+Server-side API is available as REST API.
 
 ThingsBoard support Swagger, a webpage to test its API. To access the Swagger webpage, add ``/swagger-ui`` after the ThingsBoard host. E.g ``demo.thingsboard.io/swagger-ui/``
 
