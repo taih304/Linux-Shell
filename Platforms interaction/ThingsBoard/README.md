@@ -109,6 +109,30 @@ mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes" -u "
 
 **Step 2**: In dashboard, from ``Input widgets`` choose ``Update shared double attribute``. In that widget, choose the share attribute key setup in step 1, e.g ``node_1_share_attributes`` in this case.
 
+### Get client and shared attributes
+
+In order to request client-side or shared device attributes to ThingsBoard server node, send ``PUBLISH`` message to the following topic:
+
+```sh
+v1/devices/me/attributes/request/$request_id
+```
+
+where ``$request_id`` is your integer request identifier. Before sending ``PUBLISH`` message with the request, client need to subscribe to
+
+```sh
+v1/devices/me/attributes/response/+
+```
+
+Pure command-line implementation for this are not available because subscribe and publish need to happen in the same mqtt session. So this script will never work:
+
+```sh
+#This script won't work
+mosquitto_sub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes/response/+" -u "TTf3zmVacJI4dUQsYQwh"
+mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes/request/1" -u "TTf3zmVacJI4dUQsYQwh" -m "{'clientKeys':'1,2', 'sharedKeys':'fw_title,fw_version'}"
+```
+
+For Node.js MQTT implementation to get client attributes ``1`` and ``2`` and shared attributes ``fw_title`` and ``fw_version`` of a device, check [the corresponding source code in Node.js](https://github.com/TranPhucVinh/Node.js/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#get-client-and-shared-attributes).
+
 # Widget
 
 Check [Widget document](Widget.md) for specific widgets implementations
