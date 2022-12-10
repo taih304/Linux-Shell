@@ -50,7 +50,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 
 **OTA update** tab in ThingsBoard allow user to upload a ``.bin`` firmware from PC to it for the later OTA process.
 
-That OTA firmware (``.bin`` file) will later have an URL assigned to it if it is assigned to a device.
+After assigning the OTA firmware (``.bin`` file) to a device, that OTA firmware will later have an URL assigned to it.
 
 For example, the ``.bin`` file is uploaded and then named as ``test_device_firmware_v1`` with ``version=0.1.0``, it will then have the URL: ``http://thingsboard.sysats.tech/api/v1/TTf3zmVacJI4dUQsYQwh/firmware?title=test_device_firmware_v1&version=0.1.0``. Pasting this link on web browser will then download that firmware to PC.
 
