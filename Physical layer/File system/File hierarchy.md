@@ -85,6 +85,10 @@ From now, kernel module ``ubuntu_kernel_module`` will load at boot time.
 
 ``/etc/modules-load.d/modules.conf`` file is the symbolic link of ``/etc/modules``. Performing the same setup on ``/etc/modules-load.d/modules.conf`` with ``/etc/modules`` will allow a kernel module to load at boot time.
 
+## systemd
+
+For systemd implementation in /etc/systemd, check [systemd document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Systemd.md).
+
 ## rc.local
 
 File ``/etc/rc.local`` runs when system is booted. It exists in Ubuntu 16.04 and doesn't exist in Ubuntu 20.04 
