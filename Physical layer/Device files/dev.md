@@ -24,10 +24,6 @@ If the current opening terminal has ``pts`` number is ``4`` then ``echo Hello, W
 
 ``/dev/input`` lists all built-in hardware devices of the computer like touch pad, Power Button, Video bus,... All those devices has ``id`` like ``event1``, ``event12``, ``event15``,... All are character special.
 
-To view the corressponding ID of the those devices: ``xinput``
-
-``id=2`` corrresponds to ``event2``.
-
 To view all major and minor number of input: ``ls -l /dev/input``
 
 ```
