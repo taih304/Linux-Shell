@@ -37,4 +37,4 @@ key        semid      owner      perms      nsems
 
 # ipcrm
 
-``ipcrm -q id``: Delete an existed message queue with ``id``, check [message queue example for that implementation](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/Process/Message%20queue/Implementations.md#sending-and-receiving-a-single-message-in-a-message-queue)
+``ipcrm -q id``: Delete an existed message queue with ``id``, check [message queue example for that implementation](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/Process/Message%20queue/Implementations.md#remove-a-message-queue)
