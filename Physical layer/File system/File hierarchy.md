@@ -152,7 +152,8 @@ exec /etc/init.d/rc S
 
 # usr
 
-[Set up command from a C process by using the /usr/local/bin directory](https://github.com/TranPhucVinh/C/blob/master/Environment/README.md#linux-environment).
+* ``/usr/local/bin``: [Set up command from a C process by using the /usr/local/bin directory](https://github.com/TranPhucVinh/C/blob/master/Environment/README.md#linux-environment).
+* ``/usr/lib``: Store program libraries. Example: [Shared library (.so file)](https://github.com/TranPhucVinh/C/blob/master/Environment/Shared%20library.md)
 
 # tmp
 
