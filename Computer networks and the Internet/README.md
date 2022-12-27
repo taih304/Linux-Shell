@@ -55,6 +55,18 @@ A protocol layer can be implemented in **software**, in **hardware**, or in a co
 
 Because the **physical layer** and **data link layers** are responsible for handling communication over a specific link, they are typically implemented in a **network interface card** (for example, Ethernet or WiFi interface cards) associated with a given link. The **network layer** is often a **mixed** implementation of **hardware** and **software**.
 
+OSI model defines 7 layers with their protocol unit:
+
+* Application layer: APDU (Application protocol data unit)
+* Presentation layer: PPDU (Presentation protocol data unit)
+* Session layer: SPDU (Session protocol data unit)
+* Transport layer: Segment
+* Network layer: Packet
+* Data-link layer: Frame
+* Physical layer: Bits
+
+However, those protocol unit name sometimes can be used interchangeably, like Modbus, which is an application layer protocol, called its APDU as Modbus frame.
+
 ### Transport Layer
 
 The Internet’s transport layer transports application-layer messages between application endpoints. In the Internet **there are two transport protocols**, **TCP and UDP**, either of which can transport application-layer messages.
