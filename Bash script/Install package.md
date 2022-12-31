@@ -4,7 +4,9 @@
 
 **Check for availabe of package version**: ``sudo apt policy package_name``
 
-**Install an installed debian package**: ``sudo dpkg -i leaf_latest.deb``
+**Install a downloaded Debian package**: ``sudo dpkg -i package_name.deb``
+
+**Remove an installed Debian package**: ``sudo dpkg --remove package_name``
 
 ### Download a Debian package from link and get its file source
 
