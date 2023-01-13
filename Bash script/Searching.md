@@ -39,6 +39,10 @@ space_value="space value"
 grep "$space_value" README.md
 ```
 
+**Note**: Must not use ``grep $space_value README.md`` (without ``""`` is totally wrong).
+
+## -A and -B
+
 To print the heading and trailing lines after the match:
 
 * ``-A num``: print ``num`` lines of trailing context after each match.
@@ -48,7 +52,13 @@ To print the heading and trailing lines after the match:
 grep "space value" README.md -A 10 -B 10
 ```
 
-Note: Must not use ``grep $space_value README.md`` (without "" is totally wrong).
+## -e and --regexp
+
+``-e, --regexp=PATTERN``: use PATTERN for matching
+
+E.g: ``grep -e "PATTERN" README.md``
+
+## Examples with grep
 
 ``echo "test" | grep 't'``: print out where character ``t`` existed in ``test``.
 
@@ -56,9 +66,7 @@ Note: Must not use ``grep $space_value README.md`` (without "" is totally wrong)
 
 ``dmesg | grep tty``: list the current connected devices
 
-``du -h|grep 'G'``: list all files in GB size: 
-
-**Note**: ``grep`` doesn't work properly with wildcard
+``du -h|grep 'G'``: list all files in GB size
 
 # find
 
