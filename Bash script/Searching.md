@@ -1,4 +1,4 @@
-### wildcard
+# wildcard
 
 Wildcards are special characters that can stand in for unknown characters in a text value and are handy for locating multiple items with similar, but not identical data. Another common use of wildcard characters is to create regular expressions.
 
@@ -18,9 +18,9 @@ E.g: ``b?ll`` finds ball, bell, and bill.
 
 ``ls`` support wildcard
 
-### grep
+# grep
 
-``grep`` searches for PATTERN in each FILE.
+``grep`` searches for ``PATTERN`` in each ``FILE``:
 
 ```sh
 grep [OPTIONS] PATTERN [FILE...]
@@ -60,7 +60,7 @@ Note: Must not use ``grep $space_value README.md`` (without "" is totally wrong)
 
 **Note**: ``grep`` doesn't work properly with wildcard
 
-### find
+# find
 
 Find file ``README.md`` in the current directory
 
@@ -70,7 +70,7 @@ find $PWD -type f -name README.md
 
 * ``type``: type of file, ``f`` for file, ``d`` for directory
 
-### fzf
+# fzf
 
 ``fzf`` is a command line fuzzy finder for performing fuzzy search. ``fzf`` is not supported in Ubuntu 16.04 while Ubuntu 20.04 well supported fzf.
 
