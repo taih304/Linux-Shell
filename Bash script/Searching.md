@@ -54,15 +54,15 @@ grep "space value" README.md -A 10 -B 10
 
 ## -e and --regexp
 
-``-e, --regexp=PATTERN``: use PATTERN for matching
+``-e, --regexp=PATTERN``: use ``PATTERN`` for matching
 
-E.g: ``grep -e "PATTERN" README.md``
+E.g: ``grep -e "PATTERN" README.md`` will search for any string which include ``PATTERN`` in ``README.md``
 
 ## -i and --ignore-case
 
 ``-i, --ignore-case``: ignore case distinctions
 
-E.g: ``grep -i "os" README.md`` will search for all ``os``, ``oS``, ``Os`` and ``OS`` in ``README.md``
+E.g: ``grep -i "os" README.md`` will search for any string which include ``os``, ``oS``, ``Os`` and ``OS`` in ``README.md``
 
 ## Examples with grep
 
