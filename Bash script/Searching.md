@@ -58,6 +58,12 @@ grep "space value" README.md -A 10 -B 10
 
 E.g: ``grep -e "PATTERN" README.md``
 
+## -i and --ignore-case
+
+``-i, --ignore-case``: ignore case distinctions
+
+E.g: ``grep -i "os" README.md`` will search for all ``os``, ``oS``, ``Os`` and ``OS`` in ``README.md``
+
 ## Examples with grep
 
 ``echo "test" | grep 't'``: print out where character ``t`` existed in ``test``.
