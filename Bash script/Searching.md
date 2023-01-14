@@ -64,6 +64,10 @@ E.g: ``grep -e "PATTERN" README.md`` will search for any string which include ``
 
 E.g: ``grep -i "os" README.md`` will search for any string which include ``os``, ``oS``, ``Os`` and ``OS`` in ``README.md``
 
+## -v and --invert-match
+
+``grep -v "PATTERN" README.md``: Find all lines in file ``README.md`` that doesn't include ``PATTERN``.
+
 ## Examples with grep
 
 ``echo "test" | grep 't'``: print out where character ``t`` existed in ``test``.
