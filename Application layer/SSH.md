@@ -80,3 +80,7 @@ Copy file ``main.c`` to folder ``Documents`` of Raspberry Pi: ``scp main.c pi@19
 Copy folder ``main``: ``scp -r main pi@192.168.47.26:Documents/``
 
 Specify port with ``-P`` (uppercase P): ``scp -P 2022 test.c root@10.3.112.253:~``
+
+Setup password for SCP with ``sshpass``: ``sshpass -p 'your_password' scp link_to_scp_file username@host:/path``
+
+E.g: ``sshpass -p 'Hello@123atVPN' scp /home/usr/Documents/main.c root@192.168.1.1:/root``
