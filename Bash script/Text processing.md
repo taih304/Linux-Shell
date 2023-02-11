@@ -1,12 +1,72 @@
+# wc
+
+``wc``: word count, used to count words in a file
+
+```shell
+$ wc -w filename #print total word in filename
+```
+
+**Result**: ``10 filename``
+
+(``filename`` has 10 words)
+
+```shell
+$ wc -w test.sh
+```
+**Result**: ``10``
+
+* ``wc -l``: print newline count
+
+# head
+
+Output the first part of files
+
+``head text.txt``: Read the first 10 lines of file ``text.txt``
+
+``head -n`` with ``n`` is the specific number of first lines that wish to read
+
+``head -2 text.txt``: Read the last 2 lines of file ``text.txt``
+
+# tail
+
+Output the last part of files
+
+``tail text.txt``: Read the last 10 lines of file ``text.txt``
+
+``tail -n`` with ``n`` is the specific number of last lines that wish to read
+
+``tail -2 text.txt``: Read the last 2 lines of file ``text.txt``
+
+# tac
+
+``tac`` read a file from its last line to its first line
+
+E.g: ``test.txt`` has content
+
+```
+1
+2
+3
+4
+```
+
+Then ``tac test.txt`` will be:
+
+```
+4
+3
+2
+1
+```
+# AWK
+
 ``Gawk``  is  the GNU Project's implementation of the ``AWK`` programming language, and is implemented with command ``awk``.
 
 ``awk -f filename.txt``: Read content of file ``filename.txt``
 
 ## Examples
 
-### Example 1
-
-Print every line in the file
+### Print every line in the file
 
 ```sh
 awk '{print}' filename
@@ -34,9 +94,7 @@ Store the result of ``awk`` as a variable:
 string=$(awk '/field1/ {print $2}' data.md)
 echo "string is $string"
 ``` 
-### Example 2
-
-Working with CSV data
+### Working with CSV data
 
 ``-F,``: ``,`` as seperator
 
