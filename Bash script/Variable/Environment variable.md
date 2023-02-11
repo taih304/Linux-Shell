@@ -4,13 +4,62 @@ These environment variables last only till the current session.
 
 ## export command
 
-To add or modify a local environment variable, use ``export``
+``export`` command is used to export variable value from the parent shell to the subshell.
+
+### Export variable from parent shell to subshell
 
 ```sh
-export a=4
+username@hostname:~/$ a=12 #Define variable a in parent shell
+username@hostname:~/$ echo $a 
+12
+username@hostname:~/$ bash #Enter subshell
+username@hostname:~/$ echo $a #Variable a inside subshell now has NULL value
+
+username@hostname:~/$ exit #Exit the subshell to get back to parent shell
+username@hostname:~/$ export a=34 #Export variable a to subshell
+username@hostname:~/$ echo $a #Print variable a inside parent shell
+34
+username@hostname:~/$ bash #Enter subshell again
+username@hostname:~/$ echo $a #Variable a now has value exported from parent shell
+34
+username@hostname:~/$ a=13 #Update variable a
+username@hostname:~/$ echo $a
+13
+username@hostname:~/$ exit #Exit subshell to get back to parent shell
+exit
+username@hostname:~/$ echo $a #Variable a still has its old value, changing it inside the subshell won't take effect
+34
+```
+**Note**: From the example, we can see that for the variable exported from parent shell into subshell, changing it inside the subshell won't have the effect on parent shell
+
+### Export variable from parent shell to a test script
+
+A running test script inside a terminal will have a subshell created by that terminal parent shell. So ``export`` can be used to export the variable to that test script
+
+``test.sh``
+
+```sh
+function_test(){
+    echo $a
+}
+
+function_test
 ```
 
-Check this environment variable: ``echo $a``
+```sh
+username@hostname:~/$ a=12 #Define variable a in parent shell
+username@hostname:~/$ echo $a 
+12
+username@hostname:~/$ bash #Enter subshell
+```
+
+```sh
+username@hostname:~/$ ./test.sh #This return NULL as $a is undefined
+
+username@hostname:~/$ export a=10 #Export a from parent shell to the subshell
+username@hostname:~/$ ./test.sh
+10
+```
 
 ## set command
 

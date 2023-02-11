@@ -85,22 +85,22 @@ $ man ls
 
 ## bash command
 
-``bash`` command will create a new shell in the current running terminal.
+``bash`` command will create a new shell, as the **subshell**, in the current running terminal.
 
-Before running ``bash`` command, current terminal is already inside a shell, named it ``shell 1``. After running ``bash``, a new shell, named it ``shell 2``, will be created. The terminal now will enter ``shell 2``. Calling ``exit`` command will exit the current terminal from ``shell 2`` and get back to ``shell 1``. 
+Before running ``bash`` command, current terminal is already inside a shell, as the **parent shell**. After running ``bash``, a new subshell is created. The terminal now will enter that subshell. Calling ``exit`` command will exit the current terminal from that subshell and get back to the parent shell.
 
 Variable scope with ``bash`` and shell:
 
 ```sh
 username@hostname:~/$ a=4
-username@hostname:~/$ echo $a #Variable a is in shell 1
+username@hostname:~/$ echo $a #Variable a is in parent shell
 4
 username@hostname:~/$ bash
-username@hostname:~/$ echo $a #Variable a is in shell 2 and has NULL value
+username@hostname:~/$ echo $a #Variable a is in subshell and has NULL value
 
-username@hostname:~/$ exit #exit shell 2
+username@hostname:~/$ exit #exit subshell
 exit
-username@hostname:~/$ echo $a #Back to shell 1, and variable a has its old value
+username@hostname:~/$ echo $a #Back to parent shell, and variable a has its old value
 4
 ```
 
