@@ -2,9 +2,13 @@
 
 These environment variables last only till the current session.
 
+## export command
+
 To add or modify a local environment variable, use ``export``
 
-``export a=4``
+```sh
+export a=4
+```
 
 Check this environment variable: ``echo $a``
 
