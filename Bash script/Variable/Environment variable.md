@@ -1,6 +1,4 @@
-# Environment Variable
-
-## Local Environment Variable
+# Local Environment Variable
 
 These environment variables last only till the current session.
 
@@ -10,7 +8,7 @@ To add or modify a local environment variable, use ``export``
 
 Check this environment variable: ``echo $a``
 
-### set command
+## set command
 
 ``set`` command is a built-in shell command that allows you to display or set both shell and environment variables.
 
@@ -24,11 +22,11 @@ username@hostname:echo $1 $2 $3
 a b c
 ```
 
-### PATH
+## PATH
 
 ``PATH`` is an environmental variable in Linux and other Unix-like operating systems that tells the shell which directories to search for executable files (i.e., ready-to-run programs) in response to commands issued by a user. Multiple values for an environment variable are seperated by a ``:``
 
-## User Environment Variable
+# User Environment Variable
 
 These are the variables which are defined for a particular user and are loaded every time a user logs in using a local terminal session. These variables are typically set in and loaded from following configuration files: ``.bashrc``, ``.bash_profile``, ``.bash_login``, ``.profile`` files which are present in user’s home directory.
 
@@ -38,7 +36,7 @@ These are the variables which are defined for a particular user and are loaded e
 
 ``.bash_profile``: This file is user specific remote login file. Environment variables listed in this file are invoked every time the user is logged in remotely i.e. using ssh session. 
 
-## System wide Environment Variables
+# System wide Environment Variables
 
 These are the environment variables which are available system-wide, i.e. for all the users present on that system. These variables are present in system-wide configuration files present in following directories and files: ``/etc/environment``, ``/etc/profile``, ``/etc/profile.d/``, ``/etc/bash.bashrc``. These variables are loaded every time system is powered on.
 
