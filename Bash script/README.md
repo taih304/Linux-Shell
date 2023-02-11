@@ -4,6 +4,8 @@
 
 Linux based operating system uses **Bash shell**, the shell environment used for several purposes like storing data, storing software configuration, locating terminal settings and changing shell environments.
 
+**Subshell**: A child process created by a shell, check [exec command](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/README.md#exec) to clarify this operation.
+
 ## Basic shell script
 
 The Shebang line is present at the top of the script, e.g:
