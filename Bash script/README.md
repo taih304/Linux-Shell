@@ -83,6 +83,27 @@ $ ls --help
 $ man ls
 ```
 
+## bash command
+
+``bash`` command will create a new shell in the current running terminal.
+
+Before running ``bash`` command, current terminal is already inside a shell, named it ``shell 1``. After running ``bash``, a new shell, named it ``shell 2``, will be created. The terminal now will enter ``shell 2``. Calling ``exit`` command will exit the current terminal from ``shell 2`` and get back to ``shell 1``. 
+
+Variable scope with ``bash`` and shell:
+
+```sh
+username@hostname:~/$ a=4
+username@hostname:~/$ echo $a #Variable a is in shell 1
+4
+username@hostname:~/$ bash
+username@hostname:~/$ echo $a #Variable a is in shell 2 and has NULL value
+
+username@hostname:~/$ exit #exit shell 2
+exit
+username@hostname:~/$ echo $a #Back to shell 1, and variable a has its old value
+4
+```
+
 ## Miscellaneous commands
 
 ``Ctrl+D`` logs out of the interface (quite similar to Ctr+C to exit)
