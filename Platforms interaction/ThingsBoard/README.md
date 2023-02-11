@@ -123,7 +123,7 @@ where ``$request_id`` is your integer request identifier. Before sending ``PUBLI
 v1/devices/me/attributes/response/+
 ```
 
-Pure command-line implementation for this are not available because subscribe and publish need to happen in the same mqtt session. So this script will never work:
+Pure command-line implementation for this are not available because subscribe and publish need to happen in the same MQTT session. So this script will never work:
 
 ```sh
 #This script won't work
