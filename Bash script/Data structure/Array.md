@@ -1,4 +1,4 @@
-### Create
+# Create
 
 ```sh
 #Declare array value first
@@ -9,7 +9,8 @@ echo ${array[0]} #hello
 echo ${array[1]} #0
 ```
 
-**Example 1**: Set value for all member inside array with index
+## Set value for all member inside array with index
+
 ```sh
 arraySize=10
 for index in $(seq 0 `expr $arraySize - 1`)
@@ -29,7 +30,7 @@ dec_array=($((24)) $((0x00)) $((11)) $((255)))
 hex_array=($((0x24)) $((0x00)) $((0x1A)) $((0x10)))
 ```
 
-**Example 2**: Ask user to enter value of array
+## Ask user to enter value of array
 ```sh
 arraySize=3
 for index in $(seq 0 `expr $arraySize - 1`)
@@ -44,7 +45,7 @@ do
     echo $value
 done
 ```
-### Read
+# Read
 
 Read value of an existed array by index
 
@@ -80,7 +81,7 @@ World
 2
 3
 ```
-### Update
+# Update
 
 Simple change:
 
@@ -92,7 +93,7 @@ array[1]=2
 
 * ``updateArrayWithIndex.sh``: Change value of a member isnide an array by the entered index.
 
-### Remove
+# Remove
 
 ```sh
 array=("Hello, World !" 1 2 3)
