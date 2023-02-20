@@ -56,6 +56,9 @@ username@hostname:~/$ bash #Enter subshell
 ```sh
 username@hostname:~/$ ./test.sh #This return NULL as $a is undefined
 
+username@hostname:~/$ a=10 #Set value to a inside the parent shell
+username@hostname:~/$ ./test.sh #This return NULL as $a is undefined inside the subshell
+
 username@hostname:~/$ export a=10 #Export a from parent shell to the subshell
 username@hostname:~/$ ./test.sh
 10
