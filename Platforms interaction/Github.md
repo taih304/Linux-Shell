@@ -1,14 +1,19 @@
 # Command
 
+## git reset
+
 To undo git add before a commit, run ``git reset <file>`` for a specific file or ``git reset .`` for all files.
   
+``git reset --hard``: Reset (i.e clear/delete) all changes have set
+
+## git clone
+
 Specify specific branch to clone with ``-b``, this will help saving times when cloning the extremely large repository.
 
 ```sh
 git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 ```
-
-``git reset --hard``: Reset (i.e clear/delete) all changes have set
+## Set up specific version for local project when using a public repository
 
 To set up a local project in PC which use a public repository, to use a specific version of that repository, check [the ESP-IDF implementation for this as this example set up the local project on PC to use a specific repository version of the ESP-IDF official Github](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Environment/README.md#set-up-project-to-use-a-specific-repository-version-of-esp-idf-official-github).
 
