@@ -13,6 +13,11 @@ Specify specific branch to clone with ``-b``, this will help saving times when c
 ```sh
 git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 ```
+
+## git remote
+
+``git remote show origin``: Show origins of the cloned repository, like the Git repo URL.
+
 ## Set up specific version for local project when using a public repository
 
 To set up a local project in PC which use a public repository, to use a specific version of that repository, check [the ESP-IDF implementation for this as this example set up the local project on PC to use a specific repository version of the ESP-IDF official Github](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Environment/README.md#set-up-project-to-use-a-specific-repository-version-of-esp-idf-official-github).
