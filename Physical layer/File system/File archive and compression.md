@@ -88,3 +88,16 @@ You can't archive or unarchive other types of file like ``.zip``, ``rar`` with `
 ## Searching the compressed file
 
 [zgrep](../../Bash%20script/Searching.md#zgrep) and [zipgrep](../../Bash%20script/Searching.md#zipgrep) are used for searching inside the compressed files, check their implementation in [Bash search]().
+
+## zcat
+
+``zcat`` is used view the content inside a compressed file.
+
+```sh
+zcat test.zip
+```
+If you run ``zcat`` to view the compressed file that contains the multiple files, it will only show one file ignoring the rest of the files, and also displays this notice:
+
+```
+gzip: test.zip has more than one entry--rest ignored
+```
