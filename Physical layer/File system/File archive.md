@@ -2,19 +2,19 @@
 
 **Compression** will reduce the file size.
 
-**Archive** just simply packing all the files into an archive object luke tar, zip. The newly archived file will have its size less than the total size of all packed file by just a few memory.
+**Archive** just simply packing all the files into an archive object like ``tar``, ``zip``. The newly archived file will have its size less than the total size of all packed file by just a few memory.
 
 # Commands
 
-### zip
+## zip
 
 Zip several files: ``zip test.zip README.md document.md``
 
-### unzip
+## unzip
 
 Command ``unzip`` for ``unzipping`` files
 
-### unrar
+## unrar
 
 **Error**``unrar`` or ``Extract here`` give empty folder
 
@@ -43,7 +43,7 @@ ii  unrar                                       1:5.3.2-1+deb9u1build0.16.04.1  
 
 The ``Extract here`` for ``rar`` files will be available, extracted folder will not be empty. 
 
-### ar
+## ar
 
 ``ar`` - create, modify, and extract from archives
 
@@ -59,8 +59,7 @@ The ``Extract here`` for ``rar`` files will be available, extracted folder will 
 
 ``ar x archive_test``
 
-
-### tar
+## tar
 
 ``tar``: saves many files together into a single tape or disk archive. ``tar`` is also a file extension.
 
