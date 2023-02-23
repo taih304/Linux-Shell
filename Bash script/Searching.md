@@ -84,6 +84,19 @@ The ``zgrep`` command is used to search out expressions from a given a file even
 
 ``zgrep "Hello, World" test.zip``: Search for ``Hello, World`` inside ``test.zip``
 
+Using ``zgrep`` to searching a zip file has two disadvantages:
+
+1. It can only search the first file within the zip file.
+2. It doesn’t list the file name.
+
+E.g: ``zip test.zip main.c main.cpp``, then using ``zgrep`` can only search in ``main.c`` and can't search in ``main.cpp``
+
+# zipgrep
+
+``zipgrep`` works like ``zgrep``, except it can search in all files inside the compressed file and print out the named of the file where the search pattern is found.
+
+``zipgrep "Hello, World" test.zip``: Search for ``Hello, World`` inside all compressed file of ``test.zip``
+
 # find
 
 Find file ``README.md`` in the current directory
