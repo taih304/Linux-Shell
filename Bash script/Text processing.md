@@ -64,9 +64,7 @@ Then ``tac test.txt`` will be:
 
 ``awk -f filename.txt``: Read content of file ``filename.txt``
 
-## Examples
-
-### Print every line in the file
+## Print every line in the file
 
 ```sh
 awk '{print}' filename
@@ -94,7 +92,7 @@ Store the result of ``awk`` as a variable:
 string=$(awk '/field1/ {print $2}' data.md)
 echo "string is $string"
 ``` 
-### Working with CSV data
+## Working with CSV data
 
 ``-F,``: ``,`` as seperator
 
