@@ -84,3 +84,7 @@ You can't archive or unarchive other types of file like ``.zip``, ``rar`` with `
 ``gzip`` will compress the files "in place", i.e, the original file will be replaced by the compressed file.
 
 ``gzip main.c main.cpp`` will result in ``main.c.gz`` and ``main.cpp.gz``.
+
+## Searching the compressed file
+
+[zgrep](../../Bash%20script/Searching.md#zgrep) and [zipgrep](../../Bash%20script/Searching.md#zipgrep) are used for searching inside the compressed files, check their implementation in [Bash search]().
