@@ -4,6 +4,8 @@
 
 **Archive** just simply packing all the files into an archive object like ``tar``, ``zip``. The newly archived file will have its size less than the total size of all packed file by just a few memory.
 
+A GZ file (``.gz``) is an archive file compressed by the standard GNU zip (``gzip``) compression algorithm. ``gzip`` is primarily used on Unix operating systems for file compression.
+
 # Commands
 
 ## zip
