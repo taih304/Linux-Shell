@@ -4,7 +4,7 @@
 
 **Archive** just simply packing all the files into an archive object like ``tar``, ``zip``. The newly archived file will have its size less than the total size of all packed file by just a few memory.
 
-A GZ file (``.gz``) is an archive file compressed by the standard GNU zip (``gzip``) compression algorithm. ``gzip`` is primarily used on Unix operating systems for file compression.
+A GZ file (``.gz``) is an archive file compressed by the standard GNU zip (``gzip`` command) compression algorithm. ``gzip`` is primarily used on Unix operating systems for file compression.
 
 # Commands
 
@@ -78,3 +78,9 @@ Extract files from a ``.tar`` file: ``tar -xf test.tar``
 For ``.gz`` file: ``tar -xzvf fovio_client.tar.gz``. If not using ``-xzvf``, ``.gz`` file can't be extracted.
 
 You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just archive to ``.tar`` file.
+
+## gzip
+
+``gzip`` will compress the files "in place", i.e, the original file will be replaced by the compressed file.
+
+``gzip main.c main.cpp`` will result in ``main.c.gz`` and ``main.cpp.gz``.
