@@ -78,6 +78,12 @@ E.g: ``grep -i "os" README.md`` will search for any string which include ``os``,
 
 ``du -h|grep 'G'``: list all files in GB size
 
+# zgrep
+
+The ``zgrep`` command is used to search out expressions from a given a file even if it is compressed.
+
+``zgrep "Hello, World" test.zip``: Search for ``Hello, World`` inside ``test.zip``
+
 # find
 
 Find file ``README.md`` in the current directory
