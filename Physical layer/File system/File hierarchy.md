@@ -6,7 +6,7 @@ Root folder ``/`` contains those folder:
 * [bin](#bin):  Commands and programs
 * [usr](#usr): Application files
 * [var](#var): Variable files
-* ``dev``: Device files
+* [dev](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Device%20files/dev.md): [Device files](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/Device%20files)
 * [etc](#etc): Configuration files
 * ``opt``: Optional
 * [tmp](#tmp)
