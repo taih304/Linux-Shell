@@ -8,11 +8,13 @@ To undo git add before a commit, run ``git reset <file>`` for a specific file or
 
 ## git clone
 
-Specify specific branch to clone with ``-b``, this will help saving times when cloning the extremely large repository.
+For an extremely large repository like [raspberrypi/linux](https://github.com/raspberrypi/linux), this cloning method will help saving memory space:
 
 ```sh
 git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 ```
+
+``--depth=1`` will clone that Git repo with the latest commit.
 
 ## git remote
 
