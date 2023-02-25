@@ -75,15 +75,17 @@ Extract files from a ``.tar`` file: ``tar -xf test.tar``
 
 ``tar`` can be used to extract ``tgz`` file: E.g: ``tar -xf p4v.tgz``
 
-For ``.gz`` file: ``tar -xzvf fovio_client.tar.gz``. If not using ``-xzvf``, ``.gz`` file can't be extracted.
+For ``.gz`` file: ``tar -xzvf gz_file.tar.gz``. If not using ``-xzvf``, ``.gz`` file can't be extracted.
 
 You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just archive to ``.tar`` file.
 
-## gzip
+## gzip and gunzip
 
 ``gzip`` will compress the files "in place", i.e, the original file will be replaced by the compressed file.
 
 ``gzip main.c main.cpp`` will result in ``main.c.gz`` and ``main.cpp.gz``.
+
+``gunzip``: ``gunzip main.cpp.gz`` will result in ``main.cpp``
 
 ## Searching the compressed file
 
