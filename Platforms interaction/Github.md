@@ -18,9 +18,24 @@ git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 
 ``git remote show origin``: Show origins of the cloned repository, like the Git repo URL.
 
+# Examples
+
 ## Set up specific version for local project when using a public repository
 
 To set up a local project in PC which use a public repository, to use a specific version of that repository, check [the ESP-IDF implementation for this as this example set up the local project on PC to use a specific repository version of the ESP-IDF official Github](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Environment/README.md#set-up-project-to-use-a-specific-repository-version-of-esp-idf-official-github).
+
+## Switch from branch rpi-4.9.y to rpi-5.15.y of [raspberrypi/linux](https://github.com/raspberrypi/linux)
+
+```sh
+# In repo raspberrypi/linux branch rpi-4.9.y
+tranphucvinh@tranphucvinh:~/Documents/Gitlab/linux$ git fetch --depth=1 origin rpi-5.15.y #Fetch branch rpi-5.15.y with the latest commit
+tranphucvinh@tranphucvinh:~/Documents/Gitlab/linux$ git checkout FETCH_HEAD # Check out to the branch has fetched
+tranphucvinh@tranphucvinh:~/Documents/Gitlab/linux$ git branch #List all existed branch
+* (HEAD detached at FETCH_HEAD)
+  rpi-4.9.y
+tranphucvinh@tranphucvinh:~/Documents/Gitlab/linux$ git checkout -b rpi-5.15.y
+Switched to a new branch 'rpi-5.15.y'
+```
 
 # Username login
 
