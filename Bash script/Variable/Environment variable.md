@@ -73,9 +73,9 @@ Without any arguments, the ``set`` command lists all the shell variables, includ
 With argument:
 
 ```sh
-username@hostname:set a b c
-username@hostname:echo $1 $2 $3
-a b c
+username@hostname:~/ set a "Hello, World !" 123
+username@hostname:~/ echo $1 $2 $3
+a Hello, World ! 123
 ```
 
 ## PATH
