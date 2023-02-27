@@ -8,7 +8,9 @@ echo a #result a
 
 Note: if you type ``a = 9``, or you leave space between the ``=``, this will be an error.
 
+```
 error: command not found
+```
 
 Set value to variable by other variable
 
@@ -101,34 +103,6 @@ name="User name"
 readonly name
 name="change name" #Error: ./test.sh: line 4: name: readonly variable
 ```
-
-# Exit status
-
-``$?``: Return the exit status of the latest executed command
-
-* ``0``: Run successfully
-* ``1``: Miscellaneous errors: file not existed, divide by zero, impermissible operations,...
-* ``25``:	Inappropriate ioctl for device
-* ``127``: command not found
-* ``255\*``: Exit status out of range
-
-```sh
-ls
-echo $? #0
-```
-
-**Example**: Check if the script has successfully executed
-
-```sh
-script_result=$?
-if [ !$script_result ] 
-then
-    echo "Script executes successfully"
-else
-    echo "Script doesn't execute successfully"
-fi
-```
-
 # let
 
 ```sh

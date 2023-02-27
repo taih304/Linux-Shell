@@ -46,7 +46,7 @@ That error happen as there are mismatch when using new line
 
 Fix: ``sed -i 's/\r//' test.sh``
 
-# Positional parameters
+## Positional parameters
 
 Positional parameters is the way to handle with command line argument when running a bash script
 
@@ -112,7 +112,7 @@ When it needs or involves different software tools.
 ## Bash script programming
 
 * [Variable](Variable)
-* [Function]()
+* [Function](Function.md)
 * [Conditional statement](Conditional%20statement)
 * [Operators](Operators.md)
 * [Arithmetic expression]()
@@ -176,7 +176,18 @@ To work with a file containing space, like ``"Folder 1"``:
 
 ### $?
 
-``$?`` is used to find the return value of the last executed command. 
+``$?``, known as **exit status**, returns the exit status of the latest executed command
+
+* ``0``: Run successfully
+* ``1``: Miscellaneous errors: file not existed, divide by zero, impermissible operations,...
+* ``25``:	Inappropriate ioctl for device
+* ``127``: command not found
+* ``255\*``: Exit status out of range
+
+```sh
+ls
+echo $? #0
+```
 
 ```sh
 ls filename
@@ -184,6 +195,18 @@ echo $?
 ```
 
 If filename exists (regardless whether it is a file or directory), you will get the return value thrown by the ls command, which should be 0 (default "success" return value).
+
+**Check if the script has successfully executed**
+
+```sh
+script_result=$?
+if [ !$script_result ] 
+then
+    echo "Script executes successfully"
+else
+    echo "Script doesn't execute successfully"
+fi
+```
 
 # Examples
 
