@@ -67,7 +67,7 @@ To send more than 2 bytes to MCU:
 * ``echo -e "\x12\x34" > /dev/ttyUSB0``
 * ``printf "\x12\x34" > /dev/ttyACM0``
 
-# Read data from USB port
+## Read data from USB port
 
 **Using cat**: 
 
