@@ -78,6 +78,15 @@ username@hostname:~/ echo $1 $2 $3
 a Hello, World ! 123
 ```
 
+``-e``: Instructs a shell to exit if a command fails, i.e., if it outputs a non-zero exit status.
+
+```sh
+username@hostname:~/ set -e
+username@hostname:~/ wrong_command
+```
+
+Then the shell will exit, as command ``wrong_command`` is wrong and will return non-zero.
+
 ## PATH
 
 ``PATH`` is an environmental variable in Linux and other Unix-like operating systems that tells the shell which directories to search for executable files (i.e., ready-to-run programs) in response to commands issued by a user. Multiple values for an environment variable are seperated by a ``:``
