@@ -1,10 +1,10 @@
-### Commands
+# Commands
 
 Detecting USB Drive: ``sudo fdisk -l``
 
 List USB devices: ``lsusb``
 
-### Cannot open /dev/ttyUSB0: Permission denied
+# Cannot open /dev/ttyUSB0: Permission denied
 
 This error happen as your user account is not added to ``dialout`` or ``tty`` group.
 
@@ -19,7 +19,7 @@ Or ``sudo usermod -aG tty ${USER}``
 
 After this, logout your account to see the effect (Press Log out button in Settings)
 
-### Access USB from terminal
+# Access USB from terminal
 
 ``lsblk`` to list out the partitions in the USB for later mount.
 
@@ -36,9 +36,9 @@ Mount a partition, like ``mmcblk0p2`` to a directory: ``sudo mount /dev/mmcblk0p
 
 After finish using, unmount to save memory: ``sudo umount /media/usb``
 
-## Examples
+# Examples
 
-### Example 1
+## Send characters from PC to MCU to control its GPIO
 
 Sending ``H`` and ``L`` from USB port of computer to the connected MCU like ATmega328P to turn on, off its GPIO.
 
@@ -67,9 +67,7 @@ To send more than 2 bytes to MCU:
 * ``echo -e "\x12\x34" > /dev/ttyUSB0``
 * ``printf "\x12\x34" > /dev/ttyACM0``
 
-### Example 2
-
-Read data from USB port
+# Read data from USB port
 
 **Using cat**: 
 
@@ -93,7 +91,7 @@ do
 done 
 ```
 
-## Example 3
+## Two way communication
 
 Two way communication
 
