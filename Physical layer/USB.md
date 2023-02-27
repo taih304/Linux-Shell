@@ -48,7 +48,7 @@ Enter screen ``screen /dev/ttyUSB0``, then starts sending value.
 
 **Using echo**
 
-Arduino boards have auto-reset circuit to reset the board if new connection is initiated on USB. It is good for convenient upload or to reset for debugging at Serial Monitor open. But it causes troubles if you want to communicate with MCU from computer over USB from command line tools, scripts, python, C++, C#, Java.
+Arduino boards have auto-reset circuit to reset the board if new connection is initiated on USB. It is good for convenient upload or to reset for debugging at Serial Monitor open. But it causes troubles if you want to communicate with MCU from computer over USB from command line tools, scripts, python, C++,...
 
 To disable this feature: ``stty -F /dev/ttyACM0 -hupcl``
 
