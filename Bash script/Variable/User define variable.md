@@ -48,7 +48,7 @@ echo -e '\x61' #For number 0x61
 
 Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the terminal
 
-**Application**: Using ``-e`` will help sending a number to USB port instead of string.
+**Application**: [Using ``-e`` will help sending a number to USB port instead of string](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/USB.md#send-characters-from-pc-to-mcu-to-control-its-gpio)
 
 ## Double quote vs single quote
 
