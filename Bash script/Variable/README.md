@@ -2,6 +2,16 @@ There are 2 types of shell variables:
 * [User defined variable](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Variable/User%20define%20variable.md)
 * [Environment variable or system variable](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Variable/Environment%20variable.md)
 
+# Environment variable
+
+Environment variable include:
+
+* [Local environment variable](Environment%20variable.md#local-environment-variable)
+* [User environment variable](Environment%20variable.md#local-environment-variable)
+* [System wide environment variable](Environment%20variable.md#system-wide-environment-variables)
+
+Local environment variable can be implemented by [export](Environment%20variable.md#export-command), [set](Environment%20variable.md#set-command) and [PATH](Environment%20variable.md#path).
+
 # Variable types
 
 Bash doesn't have variable types, types of variable are handled by ``declare`` command.
