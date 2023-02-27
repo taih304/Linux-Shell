@@ -6,7 +6,7 @@ Linux based operating system uses **Bash shell**, the shell environment used for
 
 **Subshell**: A child process created by a shell, check [exec command](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/README.md#exec) to clarify this operation.
 
-## Basic shell script
+# Shell script overview
 
 The Shebang line is present at the top of the script, e.g:
 
@@ -45,6 +45,59 @@ syntax error near unexpected token `$'{\r''
 That error happen as there are mismatch when using new line
 
 Fix: ``sed -i 's/\r//' test.sh``
+
+# Positional parameters
+
+Positional parameters is the way to handle with command line argument when running a bash script
+
+```sh
+echo "First argument $0"
+echo "Second argument $1"
+echo "Third argument $2"
+echo "All argument $@"
+echo "total number of parameter: $#"
+```
+
+**Run**: ``./test.sh 2nd 3rd all``
+
+**Result**
+
+```sh
+First argument ./test.sh
+Second argument 2nd
+Third argument 3rd
+All argument 2nd 3rd all //An array: {"2nd", "3rd", "all"}
+total number of parameter: 3 //argument ./test.sh is not count
+```
+
+* ``$*``: Stores all the arguments that were entered on the command line (``$1``, ``$2``,...).
+* ``$@``: Stores all the arguments that were entered on the command line, individually quoted ("$1" "$2" ...) as an array.
+
+## Import file
+
+``file.sh``
+
+```sh
+string="Hello, World!"
+```
+
+To import file ``file.sh``, use: ``. file.sh`` or ``source file.sh``
+
+```sh
+# . file.sh
+source file.sh
+echo $string #Hello, World!
+```
+
+## Export file
+
+```sh
+echo "$(<jsonData.json)"
+```
+
+```sh
+echo "$(cat jsonData.json)"
+```
 
 ## When should shell programming/scripting not be used ?
 

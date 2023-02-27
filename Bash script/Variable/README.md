@@ -1,3 +1,31 @@
 There are 2 types of shell variables:
 * [User defined variable](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Variable/User%20define%20variable.md)
 * [Environment variable or system variable](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Variable/Environment%20variable.md)
+
+# Variable types
+
+Bash doesn't have variable types, types of variable are handled by ``declare`` command.
+
+``declare`` will declare variables and give them attributes
+
+E.g: ``declare variable_name``
+
+If no variable names are given, ``declare`` will display the attributes and values of all variables.
+
+* ``-i``: Set integer attributes for variable
+* ``-p``: Display the attributes and value the variable
+
+E.g:
+
+```sh
+declare -i num
+num=42
+```
+
+Or ``declare -i num=42``. Then run ``declare``, we will see ``num=190`` along with other variables inside the system.
+
+Then ``declare -p num`` will give: ``declare -i num="42"``
+
+If ``num="Hello, World !"`` (string), then ``declare -p num`` will give: ``declare -i num="0"``
+
+[check_type.sh](check_type.sh): Check type of the entered string, whether it is integer or string.

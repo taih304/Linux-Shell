@@ -129,59 +129,6 @@ else
 fi
 ```
 
-# Positional parameters
-
-Positional parameters is the way to handle with command line argument when running a bash script
-
-```sh
-echo "First argument $0"
-echo "Second argument $1"
-echo "Third argument $2"
-echo "All argument $@"
-echo "total number of parameter: $#"
-```
-
-**Run**: ``./test.sh 2nd 3rd all``
-
-**Result**
-
-```sh
-First argument ./test.sh
-Second argument 2nd
-Third argument 3rd
-All argument 2nd 3rd all //An array: {"2nd", "3rd", "all"}
-total number of parameter: 3 //argument ./test.sh is not count
-```
-
-* ``$*``: Stores all the arguments that were entered on the command line (``$1``, ``$2``,...).
-* ``$@``: Stores all the arguments that were entered on the command line, individually quoted ("$1" "$2" ...) as an array.
-
-# Import file
-
-``file.sh``
-
-```sh
-string="Hello, World!"
-```
-
-To import file ``file.sh``, use: ``. file.sh`` or ``source file.sh``
-
-```sh
-# . file.sh
-source file.sh
-echo $string #Hello, World!
-```
-
-# Export file
-
-```sh
-echo "$(<jsonData.json)"
-```
-
-```sh
-echo "$(cat jsonData.json)"
-```
-
 # let
 
 ```sh
@@ -195,31 +142,3 @@ For hex number:
 let "a = 0x10"
 echo $a
 ```
-
-# Variable types
-
-Bash doesn't have variable types, types of variable are handled by ``declare`` command.
-
-``declare`` will declare variables and give them attributes
-
-E.g: ``declare variable_name``
-
-If no variable names are given, ``declare`` will display the attributes and values of all variables.
-
-* ``-i``: Set integer attributes for variable
-* ``-p``: Display the attributes and value the variable
-
-E.g:
-
-```sh
-declare -i num
-num=42
-```
-
-Or ``declare -i num=42``. Then run ``declare``, we will see ``num=190`` along with other variables inside the system.
-
-Then ``declare -p num`` will give: ``declare -i num="42"``
-
-If ``num="Hello, World !"`` (string), then ``declare -p num`` will give: ``declare -i num="0"``
-
-[check_type.sh](check_type.sh): Check type of the entered string, whether it is integer or string.
