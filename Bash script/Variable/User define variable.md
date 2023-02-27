@@ -1,3 +1,5 @@
+# echo
+
 ```shell
 echo a #result a
 ```
@@ -22,7 +24,7 @@ E.g: ``echo -n 123``
 
 Shell variables are stored as string variables. With ``a=10``, the ``10`` stored in ‘a’ is not treated as a number, but as a string of characters ``1`` and ``0``.
 
-### ``-e``
+## -e
 
 ``echo -e``: enable interpretation of backslash escapes:
 
@@ -46,28 +48,7 @@ Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the
 
 **Application**: Using ``-e`` will help sending a number to USB port instead of string.
 
-### Variable define
-
-``unset`` variable
-
-```sh
-a=10
-echo $a #result: 9
-unset a #unset value of a
-echo $a #print out nothing
-a="string"
-echo $a #string
-```
-
-``readonly`` variable make the variable become the constant.
-
-```sh
-name="User name"
-readonly name
-name="change name" #Error: ./test.sh: line 4: name: readonly variable
-```
-
-### Double quote vs single quote
+## Double quote vs single quote
 
 Using double quote (``""``) will replace the variable value with ``$``
 
@@ -85,7 +66,7 @@ b='this is $a'
 echo $b #this is $a
 ```
 
-### Command as variable
+## Command as variable
 
 ```sh
 echo $(ls) #List out all file in current folder
@@ -98,7 +79,30 @@ a=$(ls)
 echo $a
 ```
 
-### Exit status
+# unset
+
+``unset`` is used to unset the value of a variable
+
+```sh
+a=10
+echo $a #result: 9
+unset a #unset value of a
+echo $a #print out nothing
+a="string"
+echo $a #string
+```
+
+# readonly
+
+``readonly`` variable make the variable become the constant.
+
+```sh
+name="User name"
+readonly name
+name="change name" #Error: ./test.sh: line 4: name: readonly variable
+```
+
+# Exit status
 
 ``$?``: Return the exit status of the latest executed command
 
@@ -125,7 +129,7 @@ else
 fi
 ```
 
-### Positional parameters
+# Positional parameters
 
 Positional parameters is the way to handle with command line argument when running a bash script
 
@@ -152,7 +156,7 @@ total number of parameter: 3 //argument ./test.sh is not count
 * ``$*``: Stores all the arguments that were entered on the command line (``$1``, ``$2``,...).
 * ``$@``: Stores all the arguments that were entered on the command line, individually quoted ("$1" "$2" ...) as an array.
 
-### Import file
+# Import file
 
 ``file.sh``
 
@@ -168,7 +172,7 @@ source file.sh
 echo $string #Hello, World!
 ```
 
-### Export file
+# Export file
 
 ```sh
 echo "$(<jsonData.json)"
@@ -178,7 +182,7 @@ echo "$(<jsonData.json)"
 echo "$(cat jsonData.json)"
 ```
 
-## let
+# let
 
 ```sh
 let "a = 10"
@@ -192,7 +196,7 @@ let "a = 0x10"
 echo $a
 ```
 
-### Variable types
+# Variable types
 
 Bash doesn't have variable types, types of variable are handled by ``declare`` command.
 
