@@ -7,3 +7,7 @@ Documents and examples for
 # Linux commands and Shell script
 
 Important or controversial document goes with link reference.
+
+# Working environment
+
+Document and source code in this project are implemented mainly in Ubuntu 16.04. Some specific steps are implmented in Ubuntu 20.04
