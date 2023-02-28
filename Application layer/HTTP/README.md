@@ -40,6 +40,13 @@ Download content from a URL to a file: ``wget -O test.md github.com``
 
 Download an image from a URL that purely returns that image to a file: ``wget -O test.png https://vignette.wikia.nocookie.net/testwikia/images/4/44/png_image.png/revision/latest?cb=20200927143723``
 
+``wget`` as a variable and store the downloaded file to a file: 
+
+```sh
+WGET=$(wget github.com -O -)
+echo $WGET > test.md
+```
+
 ## netcat
 
 ``-p``: Source port
