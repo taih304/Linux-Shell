@@ -1,4 +1,4 @@
-### Get the valid certificate
+# Get the valid certificate
 
 A valid digital certificate last for more than one year (the expiry date can be checked easily)
 
@@ -17,7 +17,7 @@ The valid certificate can also be get manually from Google Chrome:
 
 Go to ``HTTPS URL`` -> ``Details`` -> ``Builtin Object Token_DST Root CA X3`` -> Export
 
-### Can't get the valid certificate
+# Can't get the valid certificate
 
 ``openssl`` sometimes can't get the valid certificate due to the proxy of the network, and its return certificate is invalid.
 
@@ -36,6 +36,6 @@ openssl s_client -connect jsonplaceholder.typicode.com:443 -servername jsonplace
 
 If using: ``openssl s_client -connect jsonplaceholder.typicode.com:443 -showcerts``, there will be error: ``CONNECTED(00000003) 140035169920664:error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure:s23_clnt.c:769:``
 
-### Wireshark
+# Wireshark
 
 Filter HTTPS request: ``tcp.port == 443``
