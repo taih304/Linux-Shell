@@ -21,4 +21,7 @@ test:
 
 To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main`` and ``make -f test.mk main``
 
-For detail fundamental concepts, check [fundamental concepts document](Fundamental%20concepts.md)
+[Fundamental concepts document](Fundamental%20concepts.md):
+* [Architecture of a Makefile]()
+
+
