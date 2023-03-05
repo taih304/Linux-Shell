@@ -142,6 +142,18 @@ crw-------  1 root root      5,   1 Sep 14 11:54 console
 
 (From left to right): File type + permission, owner, group, major number, minor number, Creation date or last modified time, file name.
 
+# tree
+
+``tree`` command is used to display the tree of all files inside a directory
+
+tree command install
+
+```sh
+sudo apt install tree
+```
+
+``tree directory_name``: Display the the tree of all files inside ``directory_name``
+
 # sort
 
 ``sort`` arrange contents inside a file into alphabetical order (arrange from number, i.e 0, 1,... to a, b, c,...) and print out (content inside that file won't change).
