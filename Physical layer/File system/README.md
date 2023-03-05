@@ -40,11 +40,11 @@ For ``/proc`` to monitor kernel and hardware:
 * ``cat /proc/interrupts``: List all available interrupts on current running Unix OS
 * ``sudo cat /proc/ioports``: Check address of all ports. Must run with ``sudo``. Without ``sudo``, all returned address from this command will be ``0``. ``sudo cat /proc/ioports`` in both [Raspbian](https://github.com/TranPhucVinh/Raspberry-Pi-Bash) and [Armbian](https://github.com/TranPhucVinh/Orange-Pi) will return NULL as they all are empty file.
 
-### devpts
+## devpts
 
 ``devpts`` is a virtual filesystem contains solely devices files used to implement terminal emulators. It is normally mounted at ``/dev/pts`` and represent slaves to the multiplexing master located at ``/dev/ptmx``.
 
-## File permission
+# File permission
 
 ``r``,``w``: stand for read, write
 
@@ -80,7 +80,7 @@ First character acceptance value
 ``mode = 4+2+1 = 7``: file can be read, write, execute
 
 ``4+2``: can be read and write
-
+ 
 ``chmod``: change mode of folder or file
 
 E.g ``chmod 775 name.sh``
@@ -89,7 +89,7 @@ E.g ``chmod 775 name.sh``
 
 The typical file permission is: ``trwxrwxrwx``
 
-**Example**: Cannot open /dev/ttyUSB0: Permission denied
+## Example: Cannot open /dev/ttyUSB0: Permission denied
 
 ```bash
 $ sudo chmod -R 777 /dev/ttyUSB0
@@ -98,3 +98,21 @@ $ sudo chmod -R 777 /dev/ttyUSB0
 File type + file permission can be view by ``stat`` command. File type + file permission are displayed under octal numeral system.
 
 E.g: ``stat test.c`` gives ``Access: (0664/-rw-rw-r--)``
+
+# File operations
+
+## [Create](Create%20operations.md)
+
+* ``touch filename.txt``: Create new file ``filename.txt``
+* ``mkdir foldername``: make a directory (a folder)
+* [File archive and compression](File%20archive%20and%20compression.md)
+
+## [Read](Read%20operations.md)
+
+* [cat]()
+* [read]()
+* [source and .]()
+* [printenv]()
+* [Other commands]()
+
+## [Write](Write%20operations.md)
