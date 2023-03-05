@@ -1,19 +1,3 @@
-``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
-
-``file file_name``: determine file type of ``file_name``
-
-``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
-
-``readlink``: Get path of a file. User have to be inside the folder where that file is in then type ``readlink -f file.txt``
-
-``pwd``: print working directory
-
-``dir``: print out all files and folders in current directory
-
-``realpath filename``: print out path of a file
-
-``sudo nautilus``: Open the folder with root permission
-
 # cat
 
 ``cat [option] [file]``: display content of a file on terminal
@@ -167,12 +151,11 @@ crw-------  1 root root      5,   1 Sep 14 11:54 console
 **Result**
 
 ```c
-
-    char *returned_string = (char*) malloc(str_len + 1);
-    char *returned_string = return_string("Displayed string", 5);
-    display_function("Hello, World !", 3);//Hel
-    free(returned_string);
-    //Other content follow the alphabetical order go here
+char *returned_string = (char*) malloc(str_len + 1);
+char *returned_string = return_string("Displayed string", 5);
+display_function("Hello, World !", 3);//Hel
+free(returned_string);
+//Other content follow the alphabetical order go here
 ```
 
 # type
@@ -200,3 +183,19 @@ crw-------  1 root root      5,   1 Sep 14 11:54 console
 ``gnome-open filename``: gnome to open a file
 
 ``libreoffice --writer file.odt``or ``libreoffice --writer file.doc``: Open libreoffice doc
+
+``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
+
+``file file_name``: determine file type of ``file_name``
+
+``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
+
+``readlink``: Get path of a file. User have to be inside the folder where that file is in then type ``readlink -f file.txt``
+
+``pwd``: print working directory
+
+``dir``: print out all files and folders in current directory
+
+``realpath filename``: print out path of a file
+
+``sudo nautilus``: Open the folder with ``root`` permission
