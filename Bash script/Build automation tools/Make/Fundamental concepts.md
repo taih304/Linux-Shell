@@ -26,6 +26,8 @@ echo "target 1"
 Hello
 ```
 
+# Avoid echoing
+
 To avoid echoing (print out only ``Hello``) 
 
 ```Makefile
@@ -40,7 +42,7 @@ main:
 	@./test.sh
 ```
 
-Work with command:
+# Work with command
 
 ```Makefile
 shell:
@@ -70,7 +72,7 @@ shell:
 	@echo $(shell ls -l)
 ```
 
-Send argument to Makefile while running ``make``
+# Send argument to Makefile
 
 ```sh
 target1:
@@ -79,7 +81,7 @@ target1:
 
 Run ``make``: ``make target_1="Hello 1"``
 
-### Variable
+# Variable
 
 Saving variable value inside a makefile target is not available
 
@@ -111,7 +113,7 @@ main:
 	@echo $a 
 ```    
 
-A variable in Makefile can store 2 value
+A variable in ``Makefile`` can store 2 value
 
 ```Makefile
 a = 100 200
@@ -122,7 +124,7 @@ main:
 
 **Output** ``100 200``
 
-### Up to date error
+# Up to date error
 
 If there is a file name ``test`` in the folder, running ``make test`` will result in error as
 
@@ -135,7 +137,7 @@ To avoid this problem you can explicitly declare the target to be phony by makin
 test:
         @echo "Hello"
 ```	
-### Operator
+# Operator
 
 ``?=``: This is called a conditional variable assignment operator, because it only has an effect if the variable is not yet defined
 
