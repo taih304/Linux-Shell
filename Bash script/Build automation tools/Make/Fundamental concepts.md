@@ -36,7 +36,7 @@ target1:
 Run a shell script and avoid echoing:
 
 ```Makefile
-main: test
+main:
 	@./test.sh
 ```
 
