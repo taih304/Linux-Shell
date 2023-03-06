@@ -124,7 +124,7 @@ main:
 
 **Output** ``100 200``
 
-# Up to date error
+# Up to date error with ``.PHONY``
 
 If there is a file name ``test`` in the folder, running ``make test`` will result in error as
 
