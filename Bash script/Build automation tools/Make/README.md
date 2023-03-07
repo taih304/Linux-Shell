@@ -23,7 +23,7 @@ To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main
 
 [Fundamental concepts document](Fundamental%20concepts.md):
 * [Architecture of a Makefile](Fundamental%20concepts.md#architecture)
-* [Run the very first makefile]()
+* [Run the very first makefile](Fundamental%20concepts.md#run-the-very-first-makefile)
 * [Avoid echoing]()
 * [Work with command]()
 * [Send argument to Makefile]()
