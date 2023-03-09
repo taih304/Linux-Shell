@@ -174,7 +174,7 @@ To work with a file containing space, like ``"Folder 1"``:
 * Add ``" "`` in the command: E.g ``cd "Folder 1"``
 * Add ``\`` in the command: E.g ``cd Folder\ 1/"``
 
-### $?
+### Exit status $?
 
 ``$?``, known as **exit status**, returns the exit status of the latest executed command
 
