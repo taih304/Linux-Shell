@@ -83,7 +83,7 @@ That happen as running ``bash``  will create a new shell in the current running 
 
 ``$!`` returns the PID of the latest program run in the background
 
-```
+```sh
 username@hostname:~$ ls&
 [1] 466
 username@hostname:~$ file_1.txt file_2.txt
