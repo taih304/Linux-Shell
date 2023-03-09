@@ -31,11 +31,14 @@ View status of process ``16965``: ``cat /proc/16965/status``
 
 ``echo $PPID`` or ``ps -e | grep $PPID``: Print out the parent process of the current running shell
 
-# [Process command]()
+# [Process command](Process%20command.md)
 
-* ps
+* [ps]()
 * pstree
 * pgrep and pkill 
+* netstat
+* exec
+* [$! for PID of background process](Process%20command.md#-for-pid-of-background-process)
 
 # Jobs
 
