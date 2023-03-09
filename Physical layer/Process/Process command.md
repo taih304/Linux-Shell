@@ -78,3 +78,17 @@ $ exec ls
 ```
 
 That happen as running ``bash``  will create a new shell in the current running terminal.
+
+# $! for PID of background process
+
+``$!`` returns the PID of the latest program run in the background
+
+```
+username@hostname:~$ ls&
+[1] 466
+username@hostname:~$ file_1.txt file_2.txt
+^C
+[1]+  Done                    ls --color=auto
+username@hostname:~$ echo $!
+466
+```
