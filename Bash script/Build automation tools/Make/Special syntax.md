@@ -30,3 +30,13 @@ target:
 ```
 
 ``dir MAKEFILE_LIST`` will return the relative path of the directory of the ``$(MAKEFILE_LIST)``. If it is in the same folder location, the path will be ``./``
+# abspath
+
+``abspath`` returns the absolute path of the file passed to it
+
+```Makefile
+target:
+	@echo $(abspath MAKEFILE_LIST)
+```
+
+``abspath MAKEFILE_LIST`` will return the absolute path of ``Makefile``.
