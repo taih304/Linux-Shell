@@ -16,5 +16,6 @@ test:
 
 ```Makefile
 main:
-	@(echo $(lastword Hello, World !))
+	@(echo $(lastword Hello, World!))
 ```
+**Result**: ``World!``
