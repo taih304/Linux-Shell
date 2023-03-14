@@ -19,3 +19,14 @@ main:
 	@(echo $(lastword Hello, World!))
 ```
 **Result**: ``World!``
+
+# dir
+
+``dir`` returns the relative path of the directory of the file passed to it
+
+```Makefile
+target:
+	@echo $(dir MAKEFILE_LIST)
+```
+
+``dir MAKEFILE_LIST`` will return the relative path of the directory of the ``$(MAKEFILE_LIST)``. If it is in the same folder location, the path will be ``./``
