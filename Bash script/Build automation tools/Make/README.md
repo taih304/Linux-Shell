@@ -28,5 +28,8 @@ To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main
 * [Work with command]()
 * [Send argument to Makefile]()
 * [Variable]()
-* [Up to date error with .PHONY]()
 * [Operator]()
+
+# [Special syntax](Special%20syntax.md)
+* [Up to date error with .PHONY]()
+* [lastword]()
