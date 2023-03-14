@@ -21,6 +21,36 @@ test:
 
 To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main`` and ``make -f test.mk main``
 
+# Work with multiple Makefile
+
+Use ``include`` to include multiple Makefile
+
+``test.mak``
+
+```Makefile
+target_1:
+	@echo "target_1"
+
+target_2:
+	@echo "target_2"
+```
+
+``Makefile``
+
+```Makefile
+include test.mak
+
+target_3:
+	@echo "target_3aaa"
+
+target_4:
+	@echo $(MAKEFILE_LIST)
+```
+
+``$(MAKEFILE_LIST)`` will return all names of the Makefile called in the current ``Makefile``
+
+``make target_4``: ``Makefile test.mak``
+
 [Fundamental concepts document](Fundamental%20concepts.md):
 * [Architecture of a Makefile](Fundamental%20concepts.md#architecture)
 * [Run the very first makefile](Fundamental%20concepts.md#run-the-very-first-makefile)
