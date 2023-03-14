@@ -11,3 +11,10 @@ To avoid this problem you can explicitly declare the target to be phony by makin
 test:
         @echo "Hello"
 ```	
+# lastword
+``$(lastword name)``:  With ``name`` is a string separated by whitespace, ``lastword`` will return its lastword.
+
+```Makefile
+main:
+	@(echo $(lastword Hello, World !))
+```
