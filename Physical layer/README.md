@@ -16,20 +16,13 @@ To see all available groups type: ``compgen -g``
 
 [sysfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#sysfs) and [procfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#procfs) are filesystems which allow user to monitor system resources.
 
-Other commands:
+## Script running when system booted
 
-* ``shutdown``
-* ``reboot``
-* ``cat /etc/os-release``: View OS information
+### [Systemd](Systemd.md)
 
-Name of OS:
+### [rc.local](File%20system/File%20hierarchy.md#rclocal) and [rcS](File%20system/File%20hierarchy.md#rcs)
 
-* ``uname``: Name of OS
-* ``uname -v``: Name of Kernel version. E.g: ``#82-Ubuntu SMP Fri Sep 4 12:23:10 UTC 2020``
-* ``sudo lshw``: list system hardware information
-* ``xinput``: list all available input devices
-
-## crontab
+### crontab
 
 ``crontab`` command is used to setup a program to run in a specific time or when just start up. ``crontab`` is not available in default [ubuntu docker](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Docker/ubuntu%20docker.md).
 
@@ -91,6 +84,21 @@ echo "Hello, World !" > /home/username/work-in-progress/log.txt
 ```
 
 Absolute path must be used as cron jobs run in their own shell so without absolute path, they don't know where to log the ``echo`` output to.
+
+## Miscellaneous system handler commands
+
+Other commands:
+
+* ``shutdown``
+* ``reboot``
+* ``cat /etc/os-release``: View OS information
+
+Name of OS:
+
+* ``uname``: Name of OS
+* ``uname -v``: Name of Kernel version. E.g: ``#82-Ubuntu SMP Fri Sep 4 12:23:10 UTC 2020``
+* ``sudo lshw``: list system hardware information
+* ``xinput``: list all available input devices
 
 # Error IUSE 100% in CentOS
 
