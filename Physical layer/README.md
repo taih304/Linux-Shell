@@ -1,6 +1,4 @@
-# Linux overview
-
-## Shell
+# Shell
 
 In computing, a **shell** is a computer program which exposes an operating system's services to a human user or other programs. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer's role and particular operation. It is named a shell because it is the outermost layer around the operating system.
 
@@ -14,7 +12,7 @@ To view the available group in your account, use command: ``groups``
 
 To see all available groups type: ``compgen -g``
 
-## System handler
+# System handler
 
 [sysfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#sysfs) and [procfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#procfs) are filesystems which allow user to monitor system resources.
 
@@ -31,7 +29,7 @@ Name of OS:
 * ``sudo lshw``: list system hardware information
 * ``xinput``: list all available input devices
 
-### crontab
+## crontab
 
 ``crontab`` command is used to setup a program to run in a specific time or when just start up. ``crontab`` is not available in default [ubuntu docker](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Docker/ubuntu%20docker.md).
 
@@ -94,7 +92,7 @@ echo "Hello, World !" > /home/username/work-in-progress/log.txt
 
 Absolute path must be used as cron jobs run in their own shell so without absolute path, they don't know where to log the ``echo`` output to.
 
-## Error IUSE 100% in CentOS
+# Error IUSE 100% in CentOS
 
 If error happen, CentOS will not allow user to ``yum install`` more file.
 
