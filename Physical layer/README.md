@@ -22,6 +22,8 @@ To see all available groups type: ``compgen -g``
 
 ### [rc.local](File%20system/File%20hierarchy.md#rclocal) and [rcS](File%20system/File%20hierarchy.md#rcs)
 
+### [.netrc.md](.netrc.md)
+
 ### crontab
 
 ``crontab`` command is used to setup a program to run in a specific time or when just start up. ``crontab`` is not available in default [ubuntu docker](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Docker/ubuntu%20docker.md).
