@@ -20,6 +20,16 @@ git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 
 ``git remote show origin``: Show origins of the cloned repository, like the Git repo URL.
 
+## git show
+
+View date of git commit ``cd329de``:
+
+```sh
+git show -s --format=%ci cd329de
+```
+
+Result: ``2023-04-08 13:16:44 +0700``
+
 # Examples
 
 ## Set up specific version for local project when using a public repository
