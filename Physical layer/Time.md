@@ -18,10 +18,46 @@ Get Unix timestamps in miliseconds: ``echo $(($(date +%s%N)/1000000))``
 
 * ``timedatectl``: display the current time, both, the system clock and the hardware clock. This command belongs to the ``Systemd``.
 
-### hwclock
+## hwclock
 
 ``sudo hwclock -r``: Read current time (as display the RTC time)
 
-### Environment variable
+## Environment variable
 
-* ``SECONDS``: Return the total seconds that the current terminal has been running.
+### $SECONDS
+
+``SECONDS``: Return the total seconds that the current terminal has been running.
+
+**Delay for a number of seconds using $SECONDS**
+
+```sh
+DELAY_FOR_SECONDS(){
+   delay_time=$1 
+   previous_time=$SECONDS
+   current_time=0 
+    while [ $current_time -lt $delay_time ]
+    do
+        current_time=$((SECONDS-previous_time))
+    done 
+}
+
+while [ true ]
+do
+    echo "Hello, World !"
+    DELAY_FOR_SECONDS 2
+done    
+```
+
+# Examples
+
+## Using sleep
+
+Print out ``Hello, World!`` after every 1 second with ``sleep``
+
+```sh
+while [ true ]
+do
+	echo "Hello, World!"
+	sleep 1
+done
+```
