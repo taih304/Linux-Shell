@@ -13,9 +13,47 @@ Environment variable include:
 * [Local environment variable](Environment%20variable.md#local-environment-variable)
 * [User environment variable](Environment%20variable.md#local-environment-variable)
 * [System wide environment variable](Environment%20variable.md#system-wide-environment-variables)
+* [Status value](#status-value): [$?](), [$!]()
 
 Local environment variable can be implemented by [export](Environment%20variable.md#export-command), [set](Environment%20variable.md#set-command) and [PATH](Environment%20variable.md#path).
 
+## Status value
+
+### Exit status $?
+
+``$?``, known as **exit status**, returns the exit status of the latest executed command
+
+* ``0``: Run successfully
+* ``1``: Miscellaneous errors: file not existed, divide by zero, impermissible operations,...
+* ``25``:	Inappropriate ioctl for device
+* ``127``: command not found
+* ``255\*``: Exit status out of range
+
+```sh
+ls
+echo $? #0
+```
+
+```sh
+ls filename
+echo $?
+```
+
+If filename exists (regardless whether it is a file or directory), you will get the return value thrown by the ls command, which should be 0 (default "success" return value).
+
+**Check if the script has successfully executed**
+
+```sh
+script_result=$?
+if [ !$script_result ] 
+then
+    echo "Script executes successfully"
+else
+    echo "Script doesn't execute successfully"
+fi
+```
+### [$! for PID of background process](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/Process%20command.md)
+``$!`` returns the PID of the latest program run in the background.
 # Variable types
 
 Bash doesn't have variable types, types of variable are handled by ``declare`` command.
