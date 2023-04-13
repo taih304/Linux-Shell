@@ -173,41 +173,6 @@ To work with a file containing space, like ``"Folder 1"``:
 
 * Add ``" "`` in the command: E.g ``cd "Folder 1"``
 * Add ``\`` in the command: E.g ``cd Folder\ 1/"``
-
-### Exit status $?
-
-``$?``, known as **exit status**, returns the exit status of the latest executed command
-
-* ``0``: Run successfully
-* ``1``: Miscellaneous errors: file not existed, divide by zero, impermissible operations,...
-* ``25``:	Inappropriate ioctl for device
-* ``127``: command not found
-* ``255\*``: Exit status out of range
-
-```sh
-ls
-echo $? #0
-```
-
-```sh
-ls filename
-echo $?
-```
-
-If filename exists (regardless whether it is a file or directory), you will get the return value thrown by the ls command, which should be 0 (default "success" return value).
-
-**Check if the script has successfully executed**
-
-```sh
-script_result=$?
-if [ !$script_result ] 
-then
-    echo "Script executes successfully"
-else
-    echo "Script doesn't execute successfully"
-fi
-```
-
 # Examples
 
 ## Read value you enter and print out
