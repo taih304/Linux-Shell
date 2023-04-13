@@ -13,7 +13,7 @@ Environment variable include:
 * [Local environment variable](Environment%20variable.md#local-environment-variable)
 * [User environment variable](Environment%20variable.md#local-environment-variable)
 * [System wide environment variable](Environment%20variable.md#system-wide-environment-variables)
-* [Status value](#status-value): [$?](), [$!]()
+* [Status value](#status-value): [$?](#exit-status-), [$!](#-for-pid-of-background-process)
 
 Local environment variable can be implemented by [export](Environment%20variable.md#export-command), [set](Environment%20variable.md#set-command) and [PATH](Environment%20variable.md#path).
 
@@ -52,7 +52,7 @@ else
     echo "Script doesn't execute successfully"
 fi
 ```
-### [$! for PID of background process](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/Process%20command.md)
+### [$! for PID of background process](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/Process%20command.md#-for-pid-of-background-process)
 ``$!`` returns the PID of the latest program run in the background.
 # Variable types
 
