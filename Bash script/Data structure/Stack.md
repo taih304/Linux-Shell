@@ -1,4 +1,4 @@
-# pushd anbd popd
+# pushd and popd
 
 Linux and [Windows](https://github.com/TranPhucVinh/Windows-Batch) support a stack to store the directories implemented with ``cd`` command.
 
