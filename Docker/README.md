@@ -8,7 +8,7 @@ An **image** is a package or a template, just like a VM template that work withi
 
 # Install
 
-### Set up the repository
+## Set up the repository
 
 1. Update the ``apt`` package index and install packages to allow ``apt`` to use a repository over HTTPS:
 
@@ -36,7 +36,7 @@ $ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-### Install Docker Engine
+## Install Docker Engine
 
 1. Update the ``apt`` package index, and install the latest version of Docker Engine, containerd, and Docker Compose, or go to the next step to install a specific version:
 
@@ -57,7 +57,7 @@ However, this error doesn't effect the docker operation in Ubuntu 16.04.
 
 Once successfully installed, command ``docker`` is available.
 
-### Issue
+## Issue
 
 If your account are not added to ``docker`` group, running the program that related to docker will cause the issue like:
 
@@ -89,6 +89,8 @@ Status: Downloaded newer image for hello-world:latest
 ```
 
 (Then the log message will print out the content of ``hello-world`` image)
+
+``docker run --rm``: With ``--rm`` flag, Docker also removes the anonymous volumes associated with the container when the container is removed.
 
 ``sudo docker pull hello-world``: Only pull ``hello-world`` and not run it after successfully pulling
 
