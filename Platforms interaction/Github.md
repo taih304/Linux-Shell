@@ -16,6 +16,8 @@ git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux
 
 ``--depth=1`` will clone that Git repo with the latest commit.
 
+``git clone --progress``: Progress status is reported on the standard error stream by default when it is attached to a terminal, unless ``--quiet`` is specified. This flag forces progress status even if the standard error stream is not directed to a terminal.
+
 ## git remote
 
 ``git remote show origin``: Show origins of the cloned repository, like the Git repo URL.
