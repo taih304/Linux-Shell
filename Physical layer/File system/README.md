@@ -99,20 +99,8 @@ File type + file permission can be view by ``stat`` command. File type + file pe
 
 E.g: ``stat test.c`` gives ``Access: (0664/-rw-rw-r--)``
 
-# File operations
+# [File operations]()
 
-## [Create](Create%20operations.md)
-
-* ``touch filename.txt``: Create new file ``filename.txt``
-* ``mkdir foldername``: make a directory (a folder)
-* [File archive and compression](File%20archive%20and%20compression.md)
-
-## [Read](Read%20operations.md)
-
-* [cat]()
-* [read]()
-* [source and .]()
-* [printenv]()
-* [Other commands]()
-
-## [Write](Write%20operations.md)
+* [Create](Create%20operations.md)
+* [Read](Read%20operations.md)
+* [Write](Write%20operations.md)
