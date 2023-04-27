@@ -1,4 +1,4 @@
-## Basic operations
+# Basic operations
 
 Install ``ubuntu`` docker: ``sudo docker pull ubuntu``
 
@@ -10,7 +10,7 @@ Run any command like ``echo``:
 sudo docker run ubuntu echo "Hello, World !"
 ```
 
-## Working mode
+# Working mode
 
 ``-i``: Enter interactive mode
 
@@ -48,7 +48,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAME
 
 To exit terminal mode easily, use ``-it`` flag which include ``-i`` for interactive mode: ``sudo docker run -it ubuntu``
 
-### Network
+## Network
 
 In the hosting OS, after installing docker, there will be ``docker0`` with IP ``172.17.0.1``.
 
@@ -61,7 +61,7 @@ apt-get -y install net-tools
 
 Checking its IP with ``ifconfig`` will return ``172.17.0.2``
 
-## Handle input
+# Handle input
 
 Error with input command like ``read``:
 
@@ -84,14 +84,14 @@ World
 exit
 ```
 
-## Volume mapping
+# Volume mapping
 
 Volume mapping is a technique to map a folder in the OS hosting the docker container and the folder in that docker container. Its application is to:
 
 1. Maintain data persistent in the mapped container folder
 2. Act as a bridge to share data between the existed mapped folder in the hosting OS and the docker container folder
 
-### Maintain data persistent in the mapped container folder
+## Maintain data persistent in the mapped container folder
 
 **Non-persistent feature**: Base on the definition of docker container, the data created while running the container will be losted when the container ends its life.
 
@@ -119,7 +119,7 @@ sudo docker run -v docker_dir:/home -i ubuntu #then perform operation with inter
 
 After succesfully mapping, all file operations inside the ``home`` folder of ubuntu cointainer will be mapped to ``_data`` of ``docker_dir``.
 
-### Act as a bridge
+## Act as a bridge
 
 Map ``existed_dir``, an existed directory with existed data to ``home`` of docker container
 
@@ -129,9 +129,9 @@ sudo docker run -v /home/hostname/existed_dir:/home -i ubuntu #then perform oper
 
 Then all file operation inside ``home`` directory in the ``ubuntu`` docker container will be mapped to ``/home/hostname/existed_dir`` to the hosting OS, and also in reverse, as all operation in ``/home/hostname/existed_dir`` will effect ``home`` of ``ubuntu`` docker container.
 
-## Run a specific process on docker
+# Run a specific process on docker
 
-### Run a simple process
+## Run a simple process
 
 Run a process ``test.sh`` inside folder ``docker_dir`` in the hosting OS (as this directory is mapped to the container):
 
@@ -148,7 +148,7 @@ echo "Hello for docker"
 
 **Note**: Must have the Shebang line ``#!/bin/bash`` so that the docker container knows the bash shell is chosen to compile.
 
-### Set environment variable
+## Set environment variable
 
 ``test.sh``
 
