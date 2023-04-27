@@ -1,0 +1,116 @@
+# [Create](Create%20operations.md)
+
+* ``touch filename.txt``: Create new file ``filename.txt``
+* ``mkdir foldername``: make a directory (a folder)
+* [File archive and compression](File%20archive%20and%20compression.md)
+
+# [Read](Read%20operations.md)
+
+* [cat]()
+* [read]()
+* [source and .]()
+* [printenv]()
+* [Other commands]()
+
+# [Write](Write%20operations.md)
+
+## cp
+
+``cp``: Copy ``SOURCE`` to ``DEST``, or multiple ``SOURCE(s)`` to ``DIRECTORY``.
+
+``cp test test_copy``: copy the file ``test`` to file/folder ``test_copy``. It will overwrite the content of file ``test_copy`` if existed or create ``test_copy`` if not exit. If folder ``test_copy`` exists, ``test`` will be copied inside.
+
+Copy file to folder can also end with ``/``: ``cp test test_copy/``
+
+Copy folder to folder with ``-R``: ``cp -R folder_1/ folder_2/``
+ 
+Copy a file to the current running terminal, i.e opening that file: ``cp test.c /dev/tty``
+
+Copy input from the current running terminal to a file, i.e writing to that file: ``cp /dev/tty test.c``
+## nano
+
+``nano filename``: edit the content of file ``filename`` or create a new one if not existed.
+
+ In some cases nano will try to dump the buffer into an emergency  file. This  will  happen  mainly if ``nano`` receives a ``SIGHUP`` or ``SIGTERM`` or runs out of memory.  It will write the buffer into a file named ``nano.save`` if the  buffer didn't have a name already, or will add a ``.save`` suffix to the current filename.
+ 
+E.g: This is a wrong operation of nano with ``<`` operator and will result in the `SIGHUP``
+
+```sh
+nano fake.md < README.md
+```
+**Result**
+
+```
+Received SIGHUP or SIGTERM
+
+Buffer written to nano.save
+```
+
+``README.md`` is then written to ``fake.md.save``
+## printf
+
+``printf hello`` and ``printf "hello"`` will printf to a stream.
+
+``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
+
+``printf`` ends when encountering the space
+
+```sh
+string="Hello, World !"
+printf $string #Hello,
+```
+
+Store value of ``printf`` to a variable:
+
+```sh
+text=$(printf "hello")
+echo $text
+```
+
+String format:
+
+```sh
+printf "%lf" 1.2 #1.200000
+printf "%.2f" 1.2 #1.20
+printf "%d" 12 #12
+printf "%04d" 12 #0012
+printf "%x" 10
+```
+
+```sh
+text=$(printf "hello %d" $1)
+echo $text
+```
+
+Run ``./test.sh 123``: ``hello 123``
+
+Notice that all implementation above print out the string, not number. To print out a number, use escape sequence ``\x`` for hex
+
+```sh
+printf "\x61" #For number 0x61
+```
+
+Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the terminal
+
+**Application**: Using ``\x`` will help sending a number to USB port instead of string.
+## mv
+
+``mv``: move a file from a directory to other
+
+``$ mv name_want_to_change name_wish_to_change``: rename
+# Delete
+## rm
+
+``rm``: remove a file, not directory
+
+``rm filename``
+
+``rm *`` : to remove everything on the directory
+
+``rmdir``: remove directory, You can only use this command to remove an empty directory
+
+``rm -r``: remove a non-empty directory
+
+``rm -rv`` (or ``rm -r -v``): remove a non-empty directory with detailed information like: remove ``filename``
+
+To remove sudo file: ``sudo rm -rv filename``
