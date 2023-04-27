@@ -82,7 +82,7 @@ grep "b" <<< "abcd"
 
 The ouput from ``<`` can then be written to a file with ``>``: ``cat < README.md > test.md``
 
-# File description
+## Redirect to file description
 
 * stdin: 0
 * stdout: 1
