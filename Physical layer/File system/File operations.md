@@ -14,6 +14,12 @@
 
 # [Write](Write%20operations.md)
 
+* [cp](), [mv]()
+* [nano](), [sed]()
+* [printf](), [pipe]()
+* dd, tee, mount, unmount
+* [Redirect](Write%20operations.md#redirect): >, <, >>, <<, <<<
+
 ## cp
 
 ``cp``: Copy ``SOURCE`` to ``DEST``, or multiple ``SOURCE(s)`` to ``DIRECTORY``.
