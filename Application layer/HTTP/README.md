@@ -75,6 +75,8 @@ For example: httrack for ``https://smarthome-thesis-bku.herokuapp.com/`` will on
 
 # HTTP server
 
+**HTTPd**, which stands for HTTP daemon, is a background process to be a HTTP server.
+
 ## HTTP server with netcat
 
 Start a HTTP server:
@@ -104,7 +106,7 @@ To return environment variable: ``echo -e " HTTP/1.1 200\r\n\r\n$(date)" | nc 12
 
 To return a HTML webpage: ``echo -e " HTTP/1.1 200\r\n\r\n$(cat index.html)" | nc 127.0.0.1 -kl 8000``
 
-## Examples: Print out the name of the routing perform by a HTTP client
+## HTTP server to print out the name of the routing perform by a HTTP client
 
 ```sh
 while true;
