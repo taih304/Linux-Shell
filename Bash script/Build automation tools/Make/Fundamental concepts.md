@@ -49,7 +49,7 @@ shell:
 	@ls #list all file
 	@cat main.c #open a file
 ```
-
+## cd command
 ``cd`` command is performed in a sub-process shell, and affects neither ``make`` nor the shell you're working from. This Makefile gives no effect and the folder doesn't change
 
 ```Makefile
@@ -71,7 +71,7 @@ To get the result of a shell command, add ``shell`` keyword:
 shell:
 	@echo $(shell ls -l)
 ```
-
+This cd Makefile implementation is applied in out-out-tree kernel module as [using a single Makefile to build multiple kernel modules into specific folder]().
 # Send argument to Makefile
 
 ```sh
