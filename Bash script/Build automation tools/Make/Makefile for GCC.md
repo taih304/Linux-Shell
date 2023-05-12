@@ -1,4 +1,12 @@
-# Compile C source code
+# Makefile with $(CC)
+
+Makefile supports $(CC), which by default is ``gcc`` command:
+```Makefile
+build_gcc:
+	@($(CC) main.c)
+```
+Target ``build_gcc`` will run ``gcc main.c``.
+# Makefile without $(CC)
 
 **Run a makefile to echo a string and compile C source code**
 
@@ -35,7 +43,7 @@ list:
 
 Compile source code ``main.c`` with header files ``header.h`` and source ``head.c`` to executable file ``main``
 
-```c
+```Makefile
 GCC = gcc
 main = main.c
 head = head.c 
