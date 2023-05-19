@@ -1,16 +1,16 @@
-### == operator
+# == operator
 
 ```sh
 a=10 
 b=20 
   
-#Check whether they are equal 
+# Check whether they are equal 
 if [ $a == $b ] 
 then 
     echo "a is equal to b"
 fi 
   
-#Check whether they are not equal 
+# Check whether they are not equal 
 if [ $a != $b ] 
 then 
     echo "a is not equal to b"
@@ -61,7 +61,7 @@ else
 fi
 ```
 
-### ! operator
+# ! operator
 
 ```sh
 a=0
@@ -84,7 +84,7 @@ then
 fi 
 ```
 
-### String compare
+# String compare
 
 ```sh
 string1="hello world"
@@ -113,9 +113,9 @@ This happens because ``$string`` is a string containing spaces or other special 
 if [ '$string1' == '$string2' ] #Wrong
 ```
 
-## Flags
+# Flags
 
-### -d
+## -d
 
 ``-d``: Check if directory existed
 
@@ -128,7 +128,7 @@ else
 fi 
 ```
 
-### -n
+## -n
 
 ``-n``: Return true if value is not empty
 
@@ -165,7 +165,7 @@ a is not empty
 b is not empty
 ```
 
-### -z
+## -z
 
 ``-z`` returns ``true`` if the string is empty. It only works for string, not number
 
