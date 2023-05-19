@@ -27,7 +27,7 @@ then echo "a is equal to b"
 fi 
 ```
 **Note**: There must be space in ``if [ $a == $b ]``
-## if short form
+# if short form
 
 ```sh
 a=10 
@@ -36,7 +36,7 @@ b=20
 [ $a == $b ] && echo "$a is equal to $b" || echo "$a is not equal to $b"
 ```
 
-With ``-gt``
+# -gt operator and else
 
 ```sh
 a=9
@@ -53,7 +53,7 @@ fi
 A is less than B
 ```
 
-``elif``:
+# elif
 
 ```sh
 if TEST-COMMAND1
