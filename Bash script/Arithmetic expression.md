@@ -1,4 +1,4 @@
-Unix operating system provides ``(( ))``, `expr`` and ``bc`` commands for doing arithmetic calculations.
+Unix operating system provides ``(( ))``, ``expr`` and ``bc`` commands for doing arithmetic calculations.
 
 ### (( ))
 
