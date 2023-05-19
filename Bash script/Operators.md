@@ -1,5 +1,3 @@
-``seq 1 10``: Print out from 1 to 10
-
 # + operator
 
 ```shell
@@ -30,7 +28,13 @@ b=$((a^=1))
 echo $b #0
 echo $a #0
 ```
-
+# AND operator (&)
+```sh
+a=8
+b=9
+c=$(($a&$b))
+echo $c #8
+```
 # &&
 
 ```sh
@@ -102,3 +106,5 @@ username@hostname: folder_1 folder_2
 A list is a sequence of one or more pipelines separated by one of the operators ``;``, ``&``, ``&&``, or ``||``, and optionally terminated by one of ``;``, ``&``, or a newline.
 
 Of these list operators, ``&&`` and ``||`` have equal precedence, followed by ``;`` and ``&``, which have equal precedence.
+# seq
+``seq 1 10``: Print out from 1 to 10
