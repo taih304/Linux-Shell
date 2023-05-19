@@ -1,5 +1,12 @@
 # == operator
+```sh
+a=123
 
+if [ $a == 123 ] 
+then echo "a=123" 
+fi
+```
+**Result**: ``a=123``
 ```sh
 a=10 
 b=20 
@@ -16,10 +23,7 @@ then
     echo "a is not equal to b"
 fi 
 ```
-
-```
-a is not equal to b
-```
+**Result**:``a is not equal to b``
 **Or**
 ```sh
 if [ $a == $b ] 
