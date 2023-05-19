@@ -20,8 +20,14 @@ fi
 ```
 a is not equal to b
 ```
-
-Short form
+**Or**
+```sh
+if [ $a == $b ] 
+then echo "a is equal to b"
+fi 
+```
+**Note**: There must be space in ``if [ $a == $b ]``
+## if short form
 
 ```sh
 a=10 
