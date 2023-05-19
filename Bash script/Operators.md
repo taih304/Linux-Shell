@@ -21,7 +21,7 @@ echo $a #hello world
 ```sh
 hexVal0=$((0xb)) #  0b1011
 hexVal1=4 # 0b0100
-hexResult=$((hexVal0^hexVal1))
+hexResult=$((hexVal0^hexVal1)) # Or: hexResult=$(($hexVal0^$hexVal1)) 
 echo $hexResult # 15 as //0b1111
 ```
 ```sh
