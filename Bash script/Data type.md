@@ -37,3 +37,8 @@ Result ``xxd messaage``:
 ```
 00000000: 0048                                     .H
 ```
+# binary: Define a variable with binary is not supported in Bash
+```sh
+# This is not supported in Bash
+a=0b1 # Wrong, give compilation error
+```
