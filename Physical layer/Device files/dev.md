@@ -1,4 +1,4 @@
-## File descriptors
+# File descriptors /dev/fd
 
 ``/dev/fd``: for each process, the kernel provides the special virtual directory ``/dev/fd``. This directory contains filenames of the form ``/dev/fd/n``, where ``n`` is a number corresponding to one of the open file descriptors for the process. ``/dev/fd`` is actually a symbolic link to the Linux-specific ``/proc/self/fd`` directory.
 
@@ -8,7 +8,7 @@ As a convenience, the names ``/dev/stdin``, ``/dev/stdout``, and ``/dev/stderr``
 
 By default, ``ls dev/fd`` will return ``0 1 2 3``. If there is a running program with an opened fd is ``4``, run ``ls dev/fd`` won't return that value
 
-## Terminal
+# Terminal /dev/tty
 
 ``/dev/tty`` is the current running terminal, which is character special.
 
@@ -20,7 +20,7 @@ E.g:
 
 If the current opening terminal has ``pts`` number is ``4`` then ``echo Hello, World ! > /dev/pts/4`` will print out ``Hello, World !`` to this terminal.
 
-## Input
+# Input /dev/input
 
 ``/dev/input`` lists all built-in hardware devices of the computer like touch pad, Power Button, Video bus,... All those devices has ``id`` like ``event1``, ``event12``, ``event15``,... All are character special.
 
@@ -35,17 +35,17 @@ Then ``13`` is major number, ``64`` and ``65`` are minor numbers.
 
 For input device like mouse (be not to confused between pluggable mouse and hardware built-in touchpad in laptop) with input device event file like this ``/dev/input/event18``, its input device event file will only appear when the mouse hardware device is plugged in and will disappeared when mouse is unplugged. Check [Read coordinate of a mouse cursor C source code example](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/File%20IO/System%20call/Device%20file%20operations.md#read-coordinate-of-a-mouse-cursor) as an  implementation of an input device event file.
 
-## Memory
+# Memory /dev/mem
 
 ``/dev/mem`` is a character device file that is an image of the main memory of the computer.  It may be used, for example, to examine (and even patch) the system. Byte addresses in ``/dev/mem`` are interpreted as physical memory addresses.
 
-## /dev/null
+# /dev/null
 
 ``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
 
 E.g: ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
 
-## /dev/kmsg
+# /dev/kmsg
 
 Kernel log is stored inside the kernel log buffer, which is a ring buffer, and is exported to userspace through ``/dev/kmsg``. The usual way to read it is using dmesg.
 
@@ -57,7 +57,7 @@ To view the kernel log realtime: ``cat /dev/kmsg``
 
 ``dmesg -T`` will print time like ``[Fri Aug  6 21:16:06 2021]``
 
-## /dev/zero
+# /dev/zero
 
 ``/dev/zero`` provides as many null characters (ASCII NUL, ``0x00``) as are read from it.
 
