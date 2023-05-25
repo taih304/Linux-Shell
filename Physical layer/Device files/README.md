@@ -55,7 +55,7 @@ For specific document of ``/dev``, check [/dev](dev.md) document.
 
 # Device files command
 
-### stty
+## stty
 
 ``stty`` displays or changes the characteristics of the terminal.
 

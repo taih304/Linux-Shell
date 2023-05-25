@@ -33,7 +33,7 @@ crw-rw---- 1 root input 13, 65 Feb  5 10:15 event1
 
 Then ``13`` is major number, ``64`` and ``65`` are minor numbers.
 
-For input device like mouse (be not to confused between pluggable mouse and hardware built-in touchpad in laptop) with input device event file like this ``/dev/input/event18``, its input device event file will only appear when the mouse hardware device is plugged in and will disappeared when mouse is unplugged. Check [Read coordinate of a mouse cursor C source code example](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/File%20IO/System%20call/Device%20file%20operations.md#read-coordinate-of-a-mouse-cursor) as an  implementation of an input device event file.
+For input device like mouse (be not to confused between **pluggable mouse** and **hardware built-in touchpad** in laptop) with input device event file like this ``/dev/input/event18``, its input device event file will only appear when the mouse hardware device is plugged in and will disappeared when mouse is unplugged. Check [Read coordinate of a mouse cursor C source code example](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/File%20IO/System%20call/Device%20file%20operations.md#read-coordinate-of-a-mouse-cursor) as an implementation of an input device event file.
 
 # Memory /dev/mem
 
