@@ -4,11 +4,11 @@
 
 ``cat filename1.md filename2.md``: display the content of 2 files
 
-``cat`` is implemented by 3 system calls/C functions: ``open()``, ``read()`` and ``close()``.
+**cat** is implemented by 3 [system calls/C functions](https://github.com/TranPhucVinh/C/tree/master/Physical%20layer/File%20IO/System%20call#fundamental-concepts): [open()](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/File%20IO/System%20call/fcntl.md#open), [read()](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/File%20IO/System%20call/unistd.md#read) and [close()](https://github.com/TranPhucVinh/C/blob/master/Physical%20layer/File%20IO/System%20call/unistd.md#close).
 
-Using ``cat`` to create a new file then enter the value for it: ``cat > filename1.md``.
+Using **cat** to create a new file then enter the value for it: ``cat > filename1.md``.
 
-After finishing, type ``Ctrl+D`` or ``Ctrl+C``.
+After finishing, type **Ctrl+D** or **Ctrl+C**.
 
 # read
 
