@@ -96,7 +96,7 @@ World
 Read a file then store into an array then display it:
 
 ```sh
-str_arr=($(cat text.md))
+str_arr=$(cat text.md)
 for value in ${str_arr[@]}
 do
     echo $value
