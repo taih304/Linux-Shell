@@ -46,7 +46,19 @@ do
 done
 ```
 # Read
-
+Read value of a string as an array:
+```sh
+str_arr="Hello, World !"
+for value in ${str_arr[@]}
+do
+    echo $value
+done
+```
+```
+Hello,
+World
+!
+```
 Read value of an existed array by index
 
 ```sh
@@ -80,6 +92,15 @@ World
 1
 2
 3
+```
+Read a file then store into an array then display it:
+
+```sh
+str_arr=($(cat text.md))
+for value in ${str_arr[@]}
+do
+    echo $value
+done
 ```
 # Update
 
