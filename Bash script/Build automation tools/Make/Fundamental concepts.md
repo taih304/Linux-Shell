@@ -63,13 +63,14 @@ shell:
 	@(cd ..)
 ```
 
-To work with other directory with ``cd``, take this example
+To work with other directory with ``cd``, e.g to build ``a.out`` file from ``main.c`` like this example:
 
 ```Makefile
 all:
         cd Linux-Shell; echo "Linux Shell folder"; \
-          gcc test test.c
+          gcc main.c
 ```
+Then ``a.out`` is compiled successfully inside ``Linux-Shell``.
 
 This cd Makefile implementation is applied in out-out-tree kernel module as [using a single Makefile to build multiple kernel modules into specific folder](https://github.com/TranPhucVinh/C/blob/master/Kernel/Loadable%20kernel%20module/Build%20multiple%20kernel%20modules%20by%20a%20single%20Makefile.md#build-kernel-modules-into-source-files-folder-by-using-cd-in-makefile).
 # Send argument to Makefile
