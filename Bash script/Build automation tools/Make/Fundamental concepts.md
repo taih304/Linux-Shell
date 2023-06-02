@@ -73,6 +73,8 @@ all:
 Then ``a.out`` is compiled successfully inside ``Linux-Shell``.
 
 This cd Makefile implementation is applied in out-out-tree kernel module as [using a single Makefile to build multiple kernel modules into specific folder](https://github.com/TranPhucVinh/C/blob/master/Kernel/Loadable%20kernel%20module/Build%20multiple%20kernel%20modules%20by%20a%20single%20Makefile.md#build-kernel-modules-into-source-files-folder-by-using-cd-in-makefile).
+
+**make** also supports [-C option](Syntax.md#c-option) to change to a specific directory before doing anything.
 # Send argument to Makefile
 
 ```sh
