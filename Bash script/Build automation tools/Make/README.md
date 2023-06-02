@@ -1,4 +1,4 @@
-# Fundamental concepts
+# [Fundamental concepts](Fundamental%20concepts.md)
 
 ``Make`` is a build automation tool which only runs on Unix-alike OS. Its file format can be ``Makefile`` or ``makefile``.
 
@@ -20,6 +20,15 @@ test:
 ```
 
 To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main`` and ``make -f test.mk main``
+
+[Fundamental concepts document](Fundamental%20concepts.md) also include:
+* [Architecture of a Makefile](Fundamental%20concepts.md#architecture)
+* [Run the very first makefile](Fundamental%20concepts.md#run-the-very-first-makefile)
+* [Avoid echoing]()
+* [Work with command]()
+* [Send argument to Makefile]()
+* [Variable]()
+* [Operator]()
 
 # Work with multiple Makefile
 
@@ -50,15 +59,6 @@ target_4:
 ``$(MAKEFILE_LIST)`` will return all names of the Makefile called in the current ``Makefile``
 
 ``make target_4``: ``Makefile test.mak``
-
-[Fundamental concepts document](Fundamental%20concepts.md):
-* [Architecture of a Makefile](Fundamental%20concepts.md#architecture)
-* [Run the very first makefile](Fundamental%20concepts.md#run-the-very-first-makefile)
-* [Avoid echoing]()
-* [Work with command]()
-* [Send argument to Makefile]()
-* [Variable]()
-* [Operator]()
 
 # [Special syntax](Special%20syntax.md)
 * [Up to date error with .PHONY]()
