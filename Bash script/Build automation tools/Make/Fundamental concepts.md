@@ -49,6 +49,12 @@ shell:
 	@ls #list all file
 	@cat main.c #open a file
 ```
+To get the result of a shell command, add ``shell`` keyword:
+
+```Makefile
+shell:
+	@echo $(shell ls -l)
+```
 ## cd command
 ``cd`` command is performed in a sub-process shell, and affects neither ``make`` nor the shell you're working from. This Makefile gives no effect and the folder doesn't change
 
@@ -65,13 +71,7 @@ all:
           gcc test test.c
 ```
 
-To get the result of a shell command, add ``shell`` keyword:
-
-```Makefile
-shell:
-	@echo $(shell ls -l)
-```
-This cd Makefile implementation is applied in out-out-tree kernel module as [using a single Makefile to build multiple kernel modules into specific folder]().
+This cd Makefile implementation is applied in out-out-tree kernel module as [using a single Makefile to build multiple kernel modules into specific folder](https://github.com/TranPhucVinh/C/blob/master/Kernel/Loadable%20kernel%20module/Build%20multiple%20kernel%20modules%20by%20a%20single%20Makefile.md#build-kernel-modules-into-source-files-folder-by-using-cd-in-makefile).
 # Send argument to Makefile
 
 ```sh
