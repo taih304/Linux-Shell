@@ -28,7 +28,7 @@ To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main
 * [Work with command]()
 * [Send argument to Makefile]()
 * [Variable]()
-* [Operator]()
+
 
 # Work with multiple Makefile
 
@@ -60,7 +60,9 @@ target_4:
 
 ``make target_4``: ``Makefile test.mak``
 
-# [Special syntax](Special%20syntax.md)
+# [Syntax](Syntax.md)
+* [Operator]()
+* [-C option]()
 * [Up to date error with .PHONY]()
 * [lastword]()
 * [MAKEFILE_LIST](#work-with-multiple-makefile)

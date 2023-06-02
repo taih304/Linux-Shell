@@ -1,3 +1,39 @@
+# Operator
+
+``?=``: This is called a conditional variable assignment operator, because it only has an effect if the variable is not yet defined
+
+``:=``: Assignment operator like ``=``.
+
+```Makefile
+a:=10
+
+main:
+	@echo $a #10
+```
+# -C option
+
+``-C DIRECTORY`` will change to DIRECTORY before doing anything.
+```
+work_directory
+	|── Linux-Shell
+		├── Makefile
+		└── main.c
+```
+There is only **Makefile** inside **Linux-Shell** folder: 
+```Makefile
+all:
+	gcc main.c
+```
+``-C DIRECTORY`` will allow running ``make`` command inside **work_directory** where there is no **Makefile**:
+
+```sh
+username@hostname:~/work_directory$ make -C "Linux-Shell"
+make: Entering directory '/home/vinhtran/sm_git/sm-work-in-progress/Linux-Shell'
+gcc main.c
+make: Leaving directory '/home/vinhtran/sm_git/sm-work-in-progress/Linux-Shell'
+```
+Then ``a.out`` will be outputed inside **Linux-Shell**.
+
 # Up to date error with ``.PHONY``
 
 If there is a file name ``test`` in the folder, running ``make test`` will result in error as
