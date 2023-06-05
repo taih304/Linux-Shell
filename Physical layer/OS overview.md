@@ -33,7 +33,7 @@ RTOS uses pre-emptive scheduling. In pre-emptive scheduling, the higher priority
 * Semaphores: Accessing resource continuously from multiple tasks
 * Mutex: Synchronize resource accessing using Mutual Exclusion
 
-## Embedded Linux
+# Embedded Linux
 
 Embedded Linux is the usage of the Linux kernel and various open-source components in embedded systems.
 
@@ -51,3 +51,29 @@ EMAC OE linux is an Embedded Linux. EMAC OE is EMAC's standard Linux distributio
 * **C-Runtime library**
 * **System shared libraries** 
 * **Root filesystem**
+
+# Automotive embedded system
+
+## OSEK
+
+OSEK (English: "Open Systems and their Interfaces for the Electronics in Motor Vehicles") is a standards body that has produced specifications for an **embedded operating system**, a communications stack, and a network management protocol for **automotive embedded systems**. **OSEK** is an open standard, published by a consortium founded by the automobile industry. Some parts of OSEK are standardized in **ISO 17356**.
+
+## Architecture
+
+Layer -> Subsystem -> Component
+
+Layer examples: Application layer, HardwareAbstraction layer
+
+Subsystem examples: SteeringFunctions, Sensors, MicrocontrollerAbstraction
+
+Component examples: SteeringControl, AnalogSensors, MemoryMonitor
+
+AUTOSAR is layered architecture. Layers of AUTOSAR are **ASW**, **RTE** and **BSW**.
+
+**AAL Layer**: The AAL-Layer provides the possibility to integrate AUTOSAR SWCs into the EPSDriveSW-Architecture.
+
+## Abbreviations
+
+* **ECU**: An electronic control unit (ECU) is an **embedded system** in automotive electronics that controls one or more of the electrical systems or subsystems in a vehicle.
+* **VRTE**: Vehicle Runtime Environment
+
