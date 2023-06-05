@@ -25,6 +25,8 @@ Example: [Set up command from a C process by using the /bin directory](https://g
 
 ``/etc`` (which stands for etcetera due to its history) is a folder where all configuration files are stored.
 
+Scripts run when the device is boot are stored in ``/etc/init``
+
 **Recover .bashrc and .profile to origin files**: Origin ``.bashrc`` and ``.profile`` files are stored in ``/etc/skel``
 
 ## User setup
