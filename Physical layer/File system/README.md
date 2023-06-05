@@ -1,5 +1,24 @@
-A **filesystem** is the methods and data structures that an operating system uses to keep track of files on a disk or partition; that is, the way the files are organized on the disk. The word is also used to refer to a partition or disk that is used to store the files or the type of the filesystem. Thus, one might say ``I have two filesystems'' meaning one has two partitions on which one stores files, or that one is using the ``extended filesystem'', meaning the type of the filesystem.
+# Fundamental concepts
 
+A **filesystem** is the methods and data structures that an operating system uses to keep track of files, control how data is stored and retrieved on a disk or partition; that is, the way the files are organized on the disk. The word is also used to refer to a partition or disk that is used to store the files or the type of the filesystem. Thus, one might say **I have two filesystems** meaning one has two partitions on which one stores files, or that one is using the **extended filesystem**, meaning the type of the filesystem.
+
+Without a file system, data placed in a storage medium would be one large body of data with no way to tell where one piece of data stops and the next begins.
+
+File systems can be used on numerous different types of storage devices that use different kinds of media. For example, the **ISO 9660** file system is designed specifically for **optical discs**. In some cases, such as with [tmpfs](File%20hierarchy.md#tmp), the computer's main memory (random-access memory, RAM) is used to create a temporary file system for short-term use.
+
+# Filesystem architecture
+
+A file system consists of two or three layers. Sometimes the layers are explicitly separated, and sometimes the functions are combined.
+
+The **logical file system** is responsible for interaction with the user application. It provides the application program interface (API) for file operations — OPEN, CLOSE, READ, etc., and passes the requested operation to the layer below it for processing. The logical file system manage open file table entries and per-process file descriptors". This layer provides "file access, directory operations, security and protection".
+
+The second optional layer is the **virtual file system**. "This interface allows support for multiple concurrent instances of physical file systems, each of which is called a file system implementation".
+
+The third layer is the **physical file system**. This layer is concerned with the physical operation of the storage device (e.g. disk). It processes physical blocks being read or written. It handles buffering and memory management and is responsible for the physical placement of blocks in specific locations on the storage medium. The physical file system interacts with the device drivers or with the channel to drive the storage device.
+
+**Metadata** is "data that provides information about other data". In other words, it is "data about data."
+
+# [File hierarchy](File%20hierarchy.md)
 For file hierarchy inside a Linux system, check [file hierarchy document](File%20hierarchy.md)
 
 # Types
@@ -43,6 +62,14 @@ For ``/proc`` to monitor kernel and hardware:
 ## devpts
 
 ``devpts`` is a virtual filesystem contains solely devices files used to implement terminal emulators. It is normally mounted at ``/dev/pts`` and represent slaves to the multiplexing master located at ``/dev/ptmx``.
+
+## FAT and FatFs
+
+A FAT file system is a specific type of computer file system architecture and a family of industry-standard file systems utilizing it.
+
+**FatFs** is a generic FAT/exFAT filesystem module for small embedded systems. The FatFs module is written in compliance with ANSI C (C89) and completely separated from the disk I/O layer. Therefore it is independent of the platform. It can be incorporated into small microcontrollers with limited resource, such as 8051, PIC, AVR, ARM, Z80, RX and etc.
+
+![](../../Environment/Images/FatFs.png)
 
 # File permission
 
