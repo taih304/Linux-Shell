@@ -2,9 +2,9 @@
 
 A process is an instance of a program in execution. We called this an ‘instance of a program’, because if the same program is run lets say 10 times then there will be 10 corresponding processes. A process execution includes one or many threads. It contains the program code and its activity. Depending on the operating system (OS), a process may be made up of multiple threads of execution that execute instructions concurrently.
 
-A C compile program (``a.out``) program will run as a process and can be listed in ``ps`` and has the ``PPID`` (parent process ID) of that terminal.
+A C compile program (**a.out**) program will run as a process and can be listed in ``ps`` and has the ``PPID`` (parent process ID) of that terminal.
 
-Each process has a parent - the process that created it. The parent of each process has its own parent, and so on, going all the way back to process 1, ``init``, the ancestor of all processes. This “family tree” can be viewed using the ``pstree()`` command.
+Each process has a parent - the process that created it. The parent of each process has its own parent, and so on, going all the way back to **the process with PID 1**, named **init**, the ancestor of all processes. This “family tree” can be viewed using the ``pstree()`` command. Process **init** primarily responsible for starting and shutting down the system, as it's the first process invoked by the kernel.
 
 ## Process ID
 
