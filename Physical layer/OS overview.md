@@ -46,11 +46,23 @@ EMAC OE linux is an Embedded Linux. EMAC OE is EMAC's standard Linux distributio
 **Main components of a Linux embedded system**
 
 * **Bootloader**
-* **Kernel**
+* [Kernel](#kernel)
 * **System call interface**
 * **C-Runtime library**
 * **System shared libraries** 
 * **Root filesystem**
+
+## Kernel
+
+Tasks performed by the kernel:
+
+* Process scheduling
+* Memory management
+* Provision of a file system
+* Creation and termination of processes
+* Access to devices
+* Networking
+* Provision of a system call application programming interface (API)
 
 # Automotive embedded system
 
