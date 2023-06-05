@@ -19,6 +19,7 @@
 * [printf](), [pipe]()
 * dd, tee, mount, unmount
 * [Redirect](Write%20operations.md#redirect): >, <, >>, <<, <<<
+* [ln, soft link/symbolic link vs hard link](Write%20operations.md#ln)
 
 ## cp
 
