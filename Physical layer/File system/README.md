@@ -18,7 +18,14 @@ The second optional layer is the **virtual file system**. "This interface allows
 
 The third layer is the **physical file system**. This layer is concerned with the physical operation of the storage device (e.g. disk). It processes physical blocks being read or written. It handles buffering and memory management and is responsible for the physical placement of blocks in specific locations on the storage medium. The physical file system interacts with the device drivers or with the channel to drive the storage device.
 
-**Metadata** is "data that provides information about other data". In other words, it is "data about data."
+**Metadata** is **data that provides information about other data**. In other words, it is **data about data**.
+
+Each file system has a table of [inode](inode.md) for all files residing in the file system. 
+
+The **inode** for each file includes the following information:
+* file type (e.g., regular file, socket, or FIFO) and permissions;
+* a pointer to a list of locks held on this file
+* Various properties of the file: owner information, size, time stamp (creation and modification), data block (pointers to the actual data),...
 
 # [File hierarchy](File%20hierarchy.md)
 For file hierarchy inside a Linux system, check [file hierarchy document](File%20hierarchy.md)
