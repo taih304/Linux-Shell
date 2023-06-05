@@ -1,4 +1,4 @@
-### Proxy
+# Proxy
 
 Error when installing other package on Linux or Linux Docker
 
@@ -18,3 +18,7 @@ export http_proxy=http://10.10.10.10:8080
 ```
 
 To unset proxy: ``unset http_proxy`` (follow the command above)
+
+# XCP
+
+XCP (or) "Universal Measurement and Calibration Protocol" is a network protocol originating from **ASAM** (Association for Standardisation of Automation and Measuring Systems) for connecting calibration systems to electronic control units, ECUs. It enables read and write access to variables and memory contents of microcontroller systems at runtime. Entire datasets can be acquired or stimulated synchronous to events triggered by timers or operating conditions. In addition, XCP also supports programming of flash memory.
