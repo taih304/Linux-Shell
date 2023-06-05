@@ -18,6 +18,17 @@ The second optional layer is the **virtual file system**. "This interface allows
 
 The third layer is the **physical file system**. This layer is concerned with the physical operation of the storage device (e.g. disk). It processes physical blocks being read or written. It handles buffering and memory management and is responsible for the physical placement of blocks in specific locations on the storage medium. The physical file system interacts with the device drivers or with the channel to drive the storage device.
 
+Take hard drive as a local storage devices file system, its architecture will be like this:
+
+```
+|--------|--------|----------------------|
+^        ^        ^               
+Super    Inode    Data  
+block    table    block   
+```
+
+**Super block**: Super block contain information about the type of file system, its size and some information about the status of the file system.
+
 ## inode
 
 Each file system has a table of **inode**, which is a **data structure**, for all files residing in the file system. The **inode** can be considered as the metadata of the file system (**Metadata** is **data that provides information about other data**. In other words, it is **data about data**).
