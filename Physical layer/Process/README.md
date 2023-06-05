@@ -31,6 +31,12 @@ View status of process ``16965``: ``cat /proc/16965/status``
 
 ``echo $PPID`` or ``ps -e | grep $PPID``: Print out the parent process of the current running shell
 
+## Background process
+
+A background process is a computer process that runs behind the scenes (i.e., in the background) and without user intervention. Typical tasks for these processes include logging, system monitoring, scheduling, and user notification. The background process usually is a [child process](https://github.com/TranPhucVinh/C/tree/master/Physical%20layer/Process/Process%20cloning) created by a control process for processing a computing task. 
+
+**Daemon**: A daemon is a computer program that runs as a background process, rather than being under the direct control of an interactive user.
+
 # [Process command](Process%20command.md)
 
 * [ps]()
