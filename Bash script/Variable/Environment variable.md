@@ -95,6 +95,10 @@ Then the shell will exit, as command ``wrong_command`` is wrong and will return 
 
 These are the variables which are defined for a particular user and are loaded every time a user logs in using a local terminal session. These variables are typically set in and loaded from following configuration files: ``.bashrc``, ``.bash_profile``, ``.bash_login``, ``.profile`` files which are present in user’s home directory.
 
+A **Profile file** (e.g ``.profile`` in **Bourne**, ``.bash_profile`` in **Bash**,...) file is a start-up file of an UNIX user. When a UNIX user tries to login to his account, the operating system executes a lot of system files to set up the user account before returning the prompt to the user.
+
+``.profile`` is a hidden file, placed in ``$HOME`` directory.
+
 **Configuration files**
 
 ``.bashrc``:  This file is user specific file that gets loaded each time user creates a new local session i.e. opens a new terminal. All environment variables created in this file would take effect every time a new local session is started. To activate the change after setting up the environment variable, reboot the system or run ``source ~/.bashrc``.

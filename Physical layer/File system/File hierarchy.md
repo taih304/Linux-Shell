@@ -23,7 +23,7 @@ Example: [Set up command from a C process by using the /bin directory](https://g
 
 # etc
 
-``/etc`` (which stands for etcetera due to its history) is a folder where all configuration files are stored.
+``/etc`` (which stands for **etcetera** due to its history) is a folder where all configuration files are stored.
 
 Scripts run when the device is boot are stored in ``/etc/init``
 
