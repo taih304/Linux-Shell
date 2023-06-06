@@ -17,6 +17,8 @@ For example, [GUI display on WSL require X11 install](https://github.com/TranPhu
 
 The display server communications protocols of X11 is **X Window System core protocol**. The **X Window System**/**X11** is based on a client–server model: a single server controls the input/output hardware, such as the screen, the keyboard, and the mouse; all application programs act as clients, interacting with the user and with the other clients via the server. This interaction is regulated by the **X Window System core protocol**. 
 
+``xeyes``, ``xlock``,... are software of X11.
+
 # Commands
 
 ## GUI setup
