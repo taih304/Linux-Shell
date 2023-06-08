@@ -32,6 +32,9 @@ RTOS uses pre-emptive scheduling. In pre-emptive scheduling, the higher priority
 
 * Semaphores: Accessing resource continuously from multiple tasks
 * Mutex: Synchronize resource accessing using Mutual Exclusion
+# Linux distribution
+
+A Linux distribution has a preselected kernel version and a root filesystem with a preselected set of libraries, utilities and applications.
 
 # Embedded Linux
 
