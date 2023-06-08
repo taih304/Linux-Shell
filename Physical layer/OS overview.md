@@ -32,17 +32,13 @@ RTOS uses pre-emptive scheduling. In pre-emptive scheduling, the higher priority
 
 * Semaphores: Accessing resource continuously from multiple tasks
 * Mutex: Synchronize resource accessing using Mutual Exclusion
-# Linux distribution
-
-A Linux distribution has a preselected kernel version and a root filesystem with a preselected set of libraries, utilities and applications.
-
 # Embedded Linux
 
 Embedded Linux is the usage of the Linux kernel and various open-source components in embedded systems.
 
 **Embedded Linux vs Desktop Linux**
 
-Desktop Linux are Ubuntu, Gentoo, Debian,... But these Dekstop Linux are not well suited for embedded system.
+Desktop Linux, which are also **Linux distribution**, are Ubuntu, Gentoo, Debian,... But these Dekstop Linux are not well suited for embedded system and hard to customize. Those Linux distribution have a preselected kernel version and a root filesystem with a preselected set of libraries, utilities and applications.
 
 EMAC OE linux is an Embedded Linux. EMAC OE is EMAC's standard Linux distribution, based on the OpenEmbedded build framework for embedded Linux systems.
 
@@ -54,19 +50,22 @@ EMAC OE linux is an Embedded Linux. EMAC OE is EMAC's standard Linux distributio
 * **C-Runtime library**
 * **System shared libraries** 
 * **Root filesystem**
+# Building a Linux Embedded System
+Building an embedded Linux system requires:
+1. A cross toolchain.
+2. Select the different packages that will run on the target (Bootloader, Kernel and Root filesystem).
+3. Configure and build these packages
+4. Deploy them on the device.
 
-## Kernel
+There are 2 ways to build an embedded linux system:
 
-Tasks performed by the kernel:
-
-* Process scheduling
-* Memory management
-* Provision of a file system
-* Creation and termination of processes
-* Access to devices
-* Networking
-* Provision of a system call application programming interface (API)
-
+1. **Manually (creating your own scripts)**: It requires a good understanding of the software component installation process. For example, create a root filesystem from the ground up by yourself means:
+  * Download the source code of all software components (libraries, utilities, or applications).
+  *	Solve all dependencies and version conflicts and apply patches.
+  *	Configure each software component.
+  *	Cross-compile each software component.
+  *	Install each software component.
+2. **Using Build frameworks (e.g., Buildroot, Yocto)**: This option allows you to customize and reproduce builds easily. This is becoming the most popular option in the Linux embedded space. A Build framework typically consists of scripts and configuration meta-data that control the build process. The Build framework typically downloads, configures, compiles and installs all required components of the system taking version conflicts and dependencies into account. It allows for example to create a customized root filesystem. **The Build framework output is a complete image including toolchain, bootloader, kernel and root filesystem**.
 # Automotive embedded system
 
 ## OSEK
