@@ -34,7 +34,21 @@ In order to ensure that the broadcast channel performs useful work when multiple
 **Point-to-point** communication link is often found between **two routers connected by a long-distance link**, or between **a user’s office computer** and **the nearby Ethernet switch** to which it is connected.
 
 A point-to-point link consists of **a single sender** at one end of the link and **a single receiver** at the other end of the link. Many **link-layer protocols** have been designed for **point-to-point links**; the **point-to-point protocol (PPP)** and **high-level data link control (HDLC)** are two such protocols.
+### Multiple Access Protocols
 
+We can classify the multiple access protocols into **three categories**:
+
+* **channel partitioning protocols**
+* **random access protocols**
+* **taking-turns protocols**
+
+**Channel partitioning protocols** include algorithm working with TDM and FDM
+
+**Random access protocols**:
+
+In a **random access protocol**, a transmitting node always transmits at **the full rate of the channel**, namely, R bps. When there is a collision, each node involved in the collision **repeatedly retransmits its frame** (that is, packet) until its frame gets through without a collision. But when a node experiences a collision, it **doesn’t necessarily retransmit the frame right away**. Instead **it waits a random delay before retransmitting the frame**. Each node involved in a collision **chooses independent random delays**. Because the random delays are independently chosen, **it is possible** that one of the nodes will pick a delay that is **sufficiently less than the delays of the other colliding nodes** and will therefore be able to sneak its frame into the channel without a collision.
+
+**There are dozens if not hundreds of random access protocols described in the literature**. In this section we’ll describe a few of the most commonly used **random access protocols**—**the ALOHA protocols** and **the carrier sense multiple access (CSMA) protocols**. **Ethernet** is a popular and widely deployed **CSMA protocol**.
 # Protocols
 
 ## ARP
