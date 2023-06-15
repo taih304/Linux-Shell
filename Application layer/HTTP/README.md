@@ -5,7 +5,7 @@
 * [HTTP Message Format]()
 * [Cookie]()
 * [Web cache]()
-
+* [REST](Fundamental%20concepts.md#rest)
 # HTTP client
 
 ## cURL
