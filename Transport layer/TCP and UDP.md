@@ -1,8 +1,6 @@
 ``nc``: arbitrary TCP and UDP connections and listens
 
-### Example 1 
-
-Receives data from TCP trasmitters.
+# Receives data from TCP trasmitters
 
 ``nc -l 8000``: Start listening on port 8000. This will listen for only one connection on port 8000. After receiving and finishing its first connection, the command will stop.
 
@@ -24,9 +22,7 @@ Send a string to TCP receiver: ``echo Hello, World ! | nc 192.168.107.219 8000``
 
 * Web browser: Type ``localhost:8000`` on web browser, then ``nc -l 8000`` will print out the response.
 
-### Example 2
-
-Sending data to another TCP client.
+# Sending data to another TCP client
 
 ``nc -l 8000 < data.csv``: TCP server sends ``data.csv`` to every TCP client which listens to it.
 
