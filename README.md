@@ -83,9 +83,7 @@ A **protocol** defines the format and the order of messages exchanged between tw
 
 **All activity in the Internet that involves two or more communicating remote entities is governed by a protocol**. For example, **hardware-implemented protocols** in two physically connected computers control the flow of bits on the “wire” between the two network interface cards; **congestion-control protocols** in end systems control the rate at which packets are transmitted between sender and receiver; **protocols** in routers determine a packet’s path from source to destination.
 
-## Protocol layer
-
-A protocol layer can be implemented in **software**, in **hardware**, or in a combination of the two. **Application-layer protocols**—such as **HTTP** and **SMTP**—are almost always implemented in **software** in the **end systems**; so are **transport-layer protocols**.
+A **protocol layer** can be implemented in **software**, in **hardware**, or in a combination of the two. **Application-layer protocols**—such as **HTTP** and **SMTP**—are almost always implemented in **software** in the **end systems**; so are **transport-layer protocols**.
 
 Because the **physical layer** and **data link layers** are responsible for handling communication over a specific link, they are typically implemented in a **network interface card** (for example, Ethernet or WiFi interface cards) associated with a given link. The **network layer** is often a **mixed** implementation of **hardware** and **software**.
 
