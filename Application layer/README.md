@@ -6,9 +6,6 @@ Let’s look at an example. **The Web** is a client-server application that allo
 
 **Port**: 16-bit port means computer can open up to 65536 port.
 
-# Wget
-
-``Wget`` is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS.
 # DNS
 
 ## Hostname
@@ -45,7 +42,12 @@ DNS works great for normal sites on the Internet, but most local networks don't 
 Fortunately, there's another way: multicast DNS, or mDNS.
 
 **mDNS** uses domain names with the ``.local`` suffix, for example ``http://esp8266.local``. If your computer needs to send a request to a domain name that ends in ``.local``, it will send a multicast query to all other devices on the LAN that support mDNS, asking the device with that specific domain name to identify itself. The device with the right name will then respond with another multicast and send its IP address. Now that your computer knows the IP address of the device, it can send normal requests.
+# [Mail protocols](Mail%20protocols.md)
+* [FTP]()
+* [SMTP]() and [web-based e-mail]()
+# Wget
 
+``Wget`` is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS.
 # Text editor
 
 By default, Linux support 2 terminal text editors, ``vim`` (with command ``vi``) and nano (with command ``nano``).
