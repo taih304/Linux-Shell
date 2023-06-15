@@ -28,6 +28,18 @@ to the amount of time between their receipt at the destination (or that this spa
 
 • **Security services**. Using a **secret session** key known only by a source and destination host, the network layer in the source host could **encrypt** the payloads of all datagrams being sent to the destination host. The network layer in the destination host would then be responsible for decrypting the payloads. With such a service, confidentiality would be provided to all transport-layer segments (TCP and UDP) between the source and destination hosts. In addition to confidentiality, the network layer could provide data integrity and source authentication services.
 
+# Forwarding and routing in network layer
+Distinction between the **forwarding** and **routing** functions of the network layer:
+
+* **Forwarding** involves the transfer of a packet from an incoming link to an outgoing link within a single router. 
+* **Routing** involves all of a network’s routers, whose collective interactions via routing protocols determine the paths that packets take on their trips from source to destination node.
+
+We’ll see that the job of a **routing algorithm** is to determine good paths (equivalently, routes) from senders to receivers.
+
+Every router has a **forwarding table**. A router forwards a packet by examining the value of a field in the arriving packet’s header, and then using this header value to index into the router’s forwarding table. The value stored in the forwarding table entry for that header indicates the router’s outgoing link interface to which that packet is to be forwarded. Depending on the network-layer protocol, the header value could be the destination address of the packet or an indication of the connection to which the packet belongs.
+
+Some packet switches, called **link-layer switches**, base their forwarding decision on values in the fields of the link-layer frame; **switches** are thus referred to as **link-layer (layer 2) devices**. Other packet switches, called **routers**, base their forwarding decision on the value in the network-layer field. **Routers** are thus **network-layer (layer 3)** devices, but must **also implement layer 2 protocols** as well, since layer 3 devices require the services of layer 2 to implement their (layer 3) functionality.
+
 # ICMP
 
 **ICMP**, specified in [RFC 792], is used by hosts and routers to communicate network-layer information to each other. The most typical use of ICMP is for **error reporting**. For example, when running a Telnet, FTP, or HTTP session, you may have encountered an **error message** such as “Destination network unreachable.” This message had its origins in **ICMP**.
