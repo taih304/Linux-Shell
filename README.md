@@ -44,7 +44,7 @@ The **IETF** standards documents are called **requests for comments (RFCs)**. RF
 
 Other bodies also specify standards for network components, most notably for network links. The **IEEE 802 LAN/MAN Standards Committee** [IEEE 802 2012], for example, specifies the Ethernet and wireless WiFi standards.
 
-### A services description
+## A services description
 
 We can also describe the Internet from an entirely different angle—namely, as an infrastructure that provides services to applications. These applications include **electronic mail**, **Web surfing**, **social networks**, **instant messaging**, **Voice-over-IP (VoIP)**, **video streaming**, **distributed games**, **peer-to-peer (P2P) file sharing**, **television over the Internet**, **remote login**, and much, much more.
 
@@ -57,13 +57,33 @@ End systems attached to the Internet provide an **Application Programming Interf
 
 This Internet API is a set of rules that the sending program must follow so that the Internet can deliver the data to the destination program.
 
-### Addressing process
+## Addressing process
 
 In the Internet, the host is identified by its **IP address**. An IP address is a 32-bit quantity that we can think of as uniquely identifying the host.
 
 In addition to knowing the address of the host to which a message is destined, the sending process must also identify the **receiving process** (more specifically, the **receiving socket**) running in the host. This information is needed because in general a host could be running many network applications. **A destination port number** serves this purpose. Popular applications have been assigned **specific port numbers**. For example, a Web server is identified by **port number 80**. A mail server process (using the SMTP protocol) is identified by port number 25.
 
-## Protocol Layers and Their Service Models
+# Protocol Layers and Their Service Models
+
+## A human analogy to computer network protocol
+
+Consider what you do when you want to ask someone for the time of day.
+
+One person offer a greeting (the first “Hi” in Figure 1.2) to initiate communication with someone else. The typical response to a “Hi” is a returned “Hi” message.
+
+Implicitly, one then takes a **cordial** “Hi” response as an indication that one can proceed and ask for the time of day. A different response to the initial “Hi” (such as “Don’t bother me!” or “I don’t speak English,” or some unprintable reply) might indicate an unwillingness or inability to communicate.
+
+In this case, the **human protocol** would be not to ask for the time of day. **Sometimes one gets no response at all to a question, in which case one typically gives up asking that person for the time**. Note that **in our human protocol**, there are **specific messages** we send, and **specific actions** we take in response to the received reply messages or other events (**such as no reply within some given amount of time**).
+
+If people **run different protocols** (for example, if one person has manners but the other does not, or if one understands the concept of time and the other does not) the protocols do not interoperate and **no useful work can be accomplished**. The same is true in networking, it takes two (or more) communicating entities running the same protocol in order to accomplish a task.
+
+## Commmunication protocol in computer network
+
+A **protocol** defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.
+
+**All activity in the Internet that involves two or more communicating remote entities is governed by a protocol**. For example, **hardware-implemented protocols** in two physically connected computers control the flow of bits on the “wire” between the two network interface cards; **congestion-control protocols** in end systems control the rate at which packets are transmitted between sender and receiver; **protocols** in routers determine a packet’s path from source to destination.
+
+## Protocol layer
 
 A protocol layer can be implemented in **software**, in **hardware**, or in a combination of the two. **Application-layer protocols**—such as **HTTP** and **SMTP**—are almost always implemented in **software** in the **end systems**; so are **transport-layer protocols**.
 
