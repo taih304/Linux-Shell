@@ -53,10 +53,29 @@ In a **random access protocol**, a transmitting node always transmits at **the f
 
 ## ARP
 
-**ARP: Address Resolution Protocol**
+**ARP**, **Address Resolution Protocol**, is a communication protocol used for discovering the link layer address, such as a MAC address, associated with a given internet layer address, typically an IPv4 address.
 
-The Address Resolution Protocol is a communication protocol used for discovering the link layer address, such as a MAC address, associated with a given internet layer address, typically an IPv4 address.
+Because there are both **network-layer addresses** (for example, **Internet IP addresses**) and **link-layer addresses (that is, MAC addresses)**, there is a need to translate between them. For the Internet, this is the job of the **Address Resolution Protocol (ARP)**.
+
+**ARP** resolves an **IP address** to a **MAC address**. In many ways it is analogous to DNS, which resolves **host names** to **IP addresses**. However, one important difference between the two resolvers is that **DNS resolves host names for hosts anywhere in the Internet**, whereas **ARP resolves IP addresses only for hosts and router interfaces on the same subnet**.
+
+### How ARP works
+
+Each **host** and **router** has an **ARP table** in its memory, which contains mappings of **IP addresses** to **MAC addresses**.
+
+In particular, suppose ``222.222.222.220`` wants to send a datagram to ``222.222.222.222``. In this case, the sender uses the **ARP protocol** to resolve the address. First, the sender constructs a special packet called an **ARP packet**. An ARP packet has several fields, including the sending and receiving IP and MAC addresses.
+
+Students often wonder if **ARP is a link-layer protocol or a network-layer protocol**. As we’ve seen, an ARP packet is **encapsulated** within a **link-layer frame** and thus **lies architecturally above the link layer**. However, **an ARP packet** has fields containing **link-layer addresses** and thus is arguably a **link-layer protocol**, but it also contains **network-layer addresses** and thus is also arguably a network-layer protocol. In the end, **ARP is probably best considered a protocol that straddles the boundary between the link and network layers**—not fitting neatly into the simple layered protocol stack. Such are the complexities of real-world protocols!
+
+### Implementations
 
 Install: ``sudo apt-get install arp-scan``
 
 Scan all existed IP inside the network along with the MAC address: ``sudo arp-scan -l``
+
+# Ethernet
+
+A **hub** is a physical-layer device that **acts on individual bits** rather than **frames**. When a bit, representing a zero or a one, arrives from one interface, **the hub simply re-creates the bit**, **boosts its energy strength**, and **transmits the bit onto all the other interfaces**. Thus, Ethernet with a hub-based star topology is also a broadcast LAN—**whenever a hub receives a bit from one of its interfaces**, **it sends a copy out on all of its other interfaces**. In particular, **if a hub receives frames from two different interfaces at the same time**, **a collision occurs and the nodes that created the frames must retransmit**.
+
+Historically, an Ethernet was initially conceived of as a segment of coaxial cable. **The early 10BASE-2 and 10BASE-5 standards specify 10 Mbps Ethernet
+over two types of coaxial cable, each limited in length to 500 meters**. Longer runs could be obtained by using **a repeater**—**a physical-layer device that receives a signal on the input side, and regenerates the signal on the output side**.
