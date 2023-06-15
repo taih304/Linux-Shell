@@ -18,9 +18,15 @@ Extending host-to-host delivery to process-to-process delivery is called **trans
 
 TCP, on the other hand, offers several additional services to applications. First and foremost, it provides **reliable data transfer**. TCP also provides **congestion control**.
 
-**TCP** provides a **connection-oriented service** to its applications. This service includes guaranteed delivery of application-layer messages to the destination and flow control (that is, sender/receiver speed matching). **TCP** also breaks long messages into shorter segments and provides a congestion-control mechanism, so that a source throttles its transmission rate when the network is congested.
+The TCP service model includes a **connection-oriented service** and a **reliable data transfer service**.
 
-The **UDP** protocol provides a **connectionless service** to its applications. This is a no-frills service that provides no reliability, no flow control, and no congestion control. In this book, we’ll refer to a transport-layer packet as a **segment**.
+**Connection-oriented service**: TCP has the **client and server** exchange transport layer control information with each other **before** the application-level messages begin to flow. This so-called **handshaking procedure** alerts the client and server, allowing them to prepare for an onslaught of packets. **After the handshaking phase, a TCP connection is said to exist between the sockets of the two processes**. The connection is a full-duplex connection in that the two processes can send messages to each other over the connection at the same time. When the application finishes sending messages, it must tear down the connection.
+
+**Reliable data transfer service**: The communicating processes can rely on TCP to **deliver all data sent without error** and **in the proper order**. When one side of the application passes a stream of bytes into a socket, it can count on TCP to deliver the same stream of bytes to the receiving socket, with no missing or duplicate bytes.
+
+**TCP** also includes a **congestion-control mechanism**, a service for the general welfare of the Internet rather than for the direct benefit of the communicating processes. The TCP congestion-control mechanism throttles a sending process (client or server) when the network is congested between sender and receiver. **TCP congestion control** also attempts to limit each TCP connection to its fair share of network bandwidth.
+
+**UDP** is a no-frills, lightweight transport protocol, providing minimal services. UDP is **connectionless**, so there is **no handshaking** before the two processes start to communicate. UDP **provides an unreliable data transfer service**—that is, when a process sends a message into a UDP socket, UDP provides **no guarantee** that the message will ever reach the receiving process. Furthermore, messages that do arrive at the receiving process may arrive out of order.
 
 # Multiplexing vs demultiplexing
 
@@ -90,3 +96,23 @@ We’ve seen that a server process **waits patiently** on an open port for conta
 Base on what we learn above, **a Web server that spawns a new process for each connection**. Each of these processes has its own connection socket through which HTTP requests arrive and HTTP responses are sent. We mention, however, that **there is not always a one-to-one correspondence between connection sockets and processes**. In fact, today’s high-performing Web servers often **use only one process**, and **create a new thread with a new connection socket for each new client connection**. (**A thread can be viewed as a lightweight subprocess**.). **For such a server, at any given time there may be many connection sockets (with different identifiers) attached to the same process**.
 
 **If the client and server are using persistent HTTP**, then throughout the duration of the persistent connection the client and server exchange HTTP messages via the same server socket. However, **if the client and server use non-persistent HTTP**, then **a new TCP connection is created and closed for every request/response**, and hence a new socket is created and later closed for every request/response. **This frequent creating and closing of sockets can severely impact the performance of a busy Web server** (although a number of operating system tricks can be used to mitigate the problem).
+
+### Securing TCP and UDP
+
+Neither **TCP nor UDP** provide any encryption—the data that the sending process passes into its socket is the same data that travels over the network to the destination process. So, for example, if the sending process sends a password in cleartext (i.e., unencrypted) into its socket, the cleartext password will travel over all the links between sender and receiver, potentially getting sniffed and discovered at any of the intervening links.
+
+Because privacy and other security issues have become critical for many applications, the Internet community has developed an enhancement for TCP, called **Secure Sockets Layer (SSL)**. TCP-enhanced-with-SSL not only does everything that traditional TCP does but also provides critical process-to-process security services, including encryption, data integrity, and end-point authentication.
+
+We emphasize that **SSL is not a third Internet transport protocol**, on the same level as TCP and UDP, but instead is an enhancement of TCP, with the enhancements being implemented in the application layer. In particular, if an application wants to use the services of SSL, it needs to include SSL code (existing, highly optimized libraries and classes) in both the client and server sides of the application. SSL has its own socket API that is similar to the traditional TCP socket API.
+
+When an application uses SSL, the sending process passes cleartext data to the SSL socket; SSL in the sending host then encrypts the data and passes the encrypted data to the TCP socket. The encrypted data travels over the Internet to the TCP socket in the receiving process. The receiving socket passes the encrypted data to SSL, which decrypts the data. Finally, SSL passes the cleartext data through its SSL socket to the receiving process.
+
+**Transport Layer Security (TLS)**, and its now-deprecated predecessor, **Secure Sockets Layer (SSL)**, are cryptographic protocols designed to provide communications security over a computer network. Both **TLS and SSL lies in the Application layer**.
+
+## SSL/TLS encryption process
+
+* **Step 1**: Client requests a SSL connection
+* **Step 2**: Server responses with the SSL certificate (with includes the public key)
+* **Step 3**: Client validates the certificate/public key
+* **Step 4**: Client generates a symmetric key (session key) and transmit it to the server
+* **Step 5**: SSL session is established
