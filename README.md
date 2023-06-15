@@ -98,3 +98,26 @@ OSI model defines 7 layers with their protocol unit:
 * Physical layer: Bits
 
 However, those protocol unit name sometimes can be used interchangeably, like Modbus, which is an application layer protocol, called its APDU as Modbus frame.
+
+# Internet accessing
+## Broadband residential access
+Today, the two most prevalent types of **broadband residential access** are **digital subscriber line** (**DSL**) and **cable**.
+
+A residence typically obtains **DSL Internet** access from the same local telephone company (telco) that provides its wired local phone access.
+
+Thus, when **DSL** is used, a customer’s telephone company (telco) is also its ISP. Each customer’s DSL modem uses the existing telephone line to exchange data with a **digital subscriber line access multiplexer (DSLAM)** located in the telco’s local central office (CO). The home’s DSL modem takes digital data and translates it to high frequency tones for transmission over telephone wires to the CO; the analog signals from many such houses are translated back into digital format at the DSLAM.
+
+While DSL makes use of the telco’s existing local telephone infrastructure, **cable Internet access** makes use of the cable television company’s existing cable television infrastructure. A residence obtains cable Internet access from the same company that provides its cable television.
+## Internet access in enterprise and home by Ethernet and WiFi
+
+**A typical home network**
+
+![](Environment/Images/typical_network.png)
+
+On corporate and university campuses, and increasingly in home settings, a **local area network (LAN)** is used to connect an end system to the edge router.
+
+In a **wireless LAN** setting, wireless users transmit/receive packets to/from an access point that is connected into the enterprise’s network (most likely including wired Ethernet), which in turn is connected to the **wired Internet**. A **wireless LAN** user must typically be within **a few tens of meters** of the access point.
+
+## Wide-area wireless access by cellular network
+
+Devices, which employ the same wireless infrastructure used for **cellular telephony**, are able to access the Internet through a base station that is operated by the cellular network provider. Unlike WiFi, devies need only be within **a few tens of kilometers** (as opposed to a few tens of meters) of the base station to be able to access to that Internet services.
