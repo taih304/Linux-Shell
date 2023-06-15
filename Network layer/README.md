@@ -39,7 +39,45 @@ We’ll see that the job of a **routing algorithm** is to determine good paths (
 Every router has a **forwarding table**. A router forwards a packet by examining the value of a field in the arriving packet’s header, and then using this header value to index into the router’s forwarding table. The value stored in the forwarding table entry for that header indicates the router’s outgoing link interface to which that packet is to be forwarded. Depending on the network-layer protocol, the header value could be the destination address of the packet or an indication of the connection to which the packet belongs.
 
 Some packet switches, called **link-layer switches**, base their forwarding decision on values in the fields of the link-layer frame; **switches** are thus referred to as **link-layer (layer 2) devices**. Other packet switches, called **routers**, base their forwarding decision on the value in the network-layer field. **Routers** are thus **network-layer (layer 3)** devices, but must **also implement layer 2 protocols** as well, since layer 3 devices require the services of layer 2 to implement their (layer 3) functionality.
+# Virtual Circuit and Datagram Networks
 
+Transport layer can offer applications connectionless service (**UDP**) or connection-oriented service (**TCP**) between two processes. In a similar manner, a network layer can provide **connectionless service** or **connection service** between **two hosts**.
+
+For example, a network-layer connection service **begins with handshaking** between the source and destination hosts; and a network-layer connectionless service **does not have** any handshaking preliminaries.
+
+Computer networks that provide only a **connection service** at the network layer are called **virtual-circuit (VC) networks**; computer networks that provide only a **connectionless service** at the network layer are called **datagram networks**.
+
+**Virtual-circuit** and **datagram networks** are two fundamental classes of computer networks.
+
+## Virtual-Circuit Networks
+
+A virtucal-circuit (VC) consists of 
+
+* (1) a path (that is, a series of links and routers) between the source and destination hosts.
+* (2) VC numbers, one number for each link along the path
+* (3) entries in the forwarding table in each router along the path.
+
+**A packet** belonging to a **virtual circuit** will carry a **VC number** in its header. Because a virtual circuit may have a **different VC number on each link**, each intervening router must **replace the VC number** of **each traversing packet with a new VC number**. The **new VC number is obtained from the forwarding table**.
+
+## Datagram Networks
+
+In a datagram network, each time an end system wants to send a packet, it **stamps** the packet with the **address of the destination end system** and then pops the packet into the network.
+
+As a packet is transmitted from **source to destination**, it passes through a series of routers. Each of these routers uses the packet’s destination address to forward the packet. Specifically, **each router** has a **forwarding table** that maps destination addresses to **link interfaces**; when a packet arrives at the router, the router uses the packet’s destination address to **look up the appropriate output link interface** in the **forwarding table**.
+
+In a **datagram network** the **forwarding tables** are modified by the **routing algorithms**, which typically update a forwarding table **every one-to-five minutes or so**. In a **VC network**, a **forwarding table** in a router is modified whenever **a new connection is set up through the router** or **whenever an existing connection through the router is torn down**.
+
+The virtual circuit evolve from the telephony world. The Internet as **a datagram network**, on the other hand, grew out of the need to connect computers together. Given more **sophisticated end-system devices**, the Internet architects chose to make the network-layer service model as simple as possible.
+
+Since the resulting Internet network-layer service model makes **minimal (no!) service guarantees**, it imposes minimal requirements on the network layer. This **makes it easier** to interconnect networks that use very different link-layer technologies (for example, satellite, Ethernet, fiber, or radio) that have very different transmission rates and loss characteristics.
+
+In **firewalls** (covered in Chapter 8)—devices that filter out selected incoming packets—an incoming packet whose header matches a given criteria (e.g., a combination of source/destination IP addresses and transport-layer port numbers) may be prevented from being forwarded (action).
+
+In a **network address translator (NAT)**, an incoming packet whose transport-layer port number matches a given value will have its port number rewritten before forwarding (action).
+
+NAT is a method. The **NAT-enabled router** does not look like a router to the outside world. Instead the **NAT router** behaves to the outside world as a single device with a single **IP address**.
+
+NAT traversal is increasingly provided by **Universal Plug and Play (UPnP)**, which is a protocol that allows a host to discover and configure a nearby **NAT**.
 # ICMP
 
 **ICMP**, specified in [RFC 792], is used by hosts and routers to communicate network-layer information to each other. The most typical use of ICMP is for **error reporting**. For example, when running a Telnet, FTP, or HTTP session, you may have encountered an **error message** such as “Destination network unreachable.” This message had its origins in **ICMP**.

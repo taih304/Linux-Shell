@@ -41,14 +41,6 @@ Once an organization has obtained a block of addresses, **it can assign individu
 * Class B: 172.16.x.x -> 172.31.x.x
 * Class C: 192.168.x.x
 
-## NAT
-
-NAT is a method.
-
-The **NAT-enabled router** does not look like a router to the outside world. Instead the **NAT router** behaves to the outside world as a single device with a single **IP address**.
-
-NAT traversal is increasingly provided by **Universal Plug and Play (UPnP)**, which is a protocol that allows a host to discover and configure a nearby **NAT**.
-
 # IP commands
 
 ## Check IP of current Linux device
