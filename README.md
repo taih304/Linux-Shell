@@ -24,7 +24,13 @@ There are many types of **communication links**, which are made up of different 
 
 Different links can transmit data at different rates, with the transmission rate of a link measured in **bits/second**.
 
-Packet switches come in many shapes and flavors, but the two most prominent types in today’s Internet are **routers** and **link-layer switches**.
+**Packet switches** come in many shapes and flavors, but the two most prominent types in today’s Internet are **routers** and **link-layer switches**. Generally, a packet switch will store then forward the packet it received.
+
+The **circuit-switched networks** is another example of the **packet switches**. In circuit-switched networks, the resources needed along a path (buffers, link transmission rate) to provide for communication between the end systems are reserved for the duration of the communication session between the end systems. 
+
+**Traditional telephone networks** are examples of circuit-switched networks. Consider what happens when one person wants to send information (voice or facsimile) to another over a telephone network. Before the sender can send the information, the network must establish a connection between the sender and the receiver. This is a bona fide connection for which the switches on the path between the sender and receiver maintain connection state for that connection. In the jargon of telephony, this connection is called **a circuit**. When the network establishes the circuit, it also reserves a constant transmission rate in the network’s links (representing a fraction of each link’s transmission capacity) for the duration of the connection. Since a given transmission rate has been reserved for this sender-to-receiver connection, the sender can transfer the data to the receiver at the guaranteed constant rate.
+
+A circuit in a circuit-switched network is implemented with either **frequency-division multiplexing (FDM)** or **time division multiplexing (TDM)**.
 
 End systems access the Internet through **Internet Service Providers (ISPs)**, including residential ISPs such as local cable or telephone companies; corporate ISPs; university ISPs; and ISPs that provide WiFi access in airports, hotels, coffee shops, and other public places.
 
@@ -100,6 +106,7 @@ OSI model defines 7 layers with their protocol unit:
 However, those protocol unit name sometimes can be used interchangeably, like Modbus, which is an application layer protocol, called its APDU as Modbus frame.
 
 # Internet accessing
+The ISP can provide either wired or wireless connectivity for internet acccess, using an array of access technologies including DSL, cable, FTTH, Wi-Fi, and cellular.
 ## Broadband residential access
 Today, the two most prevalent types of **broadband residential access** are **digital subscriber line** (**DSL**) and **cable**.
 
