@@ -4,7 +4,11 @@ An application-layer protocol is distributed over multiple end systems, with the
 
 Let’s look at an example. **The Web** is a client-server application that allows users to obtain documents from Web servers on demand. The Web application consists of many components, including a standard for document formats (that is, HTML), Web browsers (for example, Firefox and Microsoft Internet Explorer), **Web servers** (for example, Apache and Microsoft servers), and an application-layer protocol.
 
-**Port**: 16-bit port means computer can open up to 65536 port.
+The communication of applications/programs in multiple PCs or inside a single one, based on **their processes**. A **process** sends or receives messages through a software interface called a **socket**.
+
+In addition to knowing the address of the host to which a message is destined, **the sending process must also identify the receiving process (more specifically, the receiving socket) running in the host**. This information is needed because in general a host could be running many network applications. **A destination port number** serves this purpose. Popular applications have been assigned specific port numbers. For example, a **Web server** is identified by port number 80. A mail server process (using the **SMTP** protocol) is identified by port number 25.
+
+A 16-bit computer means this computer can open up to 65536 port.
 
 # DNS
 
