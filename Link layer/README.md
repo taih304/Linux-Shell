@@ -49,7 +49,16 @@ We can classify the multiple access protocols into **three categories**:
 In a **random access protocol**, a transmitting node always transmits at **the full rate of the channel**, namely, R bps. When there is a collision, each node involved in the collision **repeatedly retransmits its frame** (that is, packet) until its frame gets through without a collision. But when a node experiences a collision, it **doesn’t necessarily retransmit the frame right away**. Instead **it waits a random delay before retransmitting the frame**. Each node involved in a collision **chooses independent random delays**. Because the random delays are independently chosen, **it is possible** that one of the nodes will pick a delay that is **sufficiently less than the delays of the other colliding nodes** and will therefore be able to sneak its frame into the channel without a collision.
 
 **There are dozens if not hundreds of random access protocols described in the literature**. In this section we’ll describe a few of the most commonly used **random access protocols**—**the ALOHA protocols** and **the carrier sense multiple access (CSMA) protocols**. **Ethernet** is a popular and widely deployed **CSMA protocol**.
-# Protocols
+
+# MAC address and ARP
+
+**Hosts** and **routers** have **link-layer addresses**, as well as having **network-layer addresses** (in network layer).
+
+## MAC Addresses
+
+In truth, it is not hosts and routers that have link-layer addresses but rather **their adapters (that is, network interfaces)** that have **link-layer addresses**. A link-layer address is variously called a **LAN address**, a **physical address**, or a **MAC address**.
+
+**One interesting property of MAC addresses is that no two adapters have the same address**. This might seem surprising given that adapters are manufactured in many countries by many companies. **How does a company manufacturing adapters in Taiwan make sure that it is using different addresses from a company manufacturing adapters in Belgium?** The answer is that **the IEEE manages the MAC address space**. In particular, **when a company wants to manufacture adapters**, **it purchases a chunk of the address space consisting of 2^24 addresses for a nominal fee**. **IEEE allocates the chunk of 2^24 addresses by fixing the first 24 bits of a MAC address and letting the company create unique combinations of the last 24 bits for each adapter**.
 
 ## ARP
 
@@ -77,5 +86,4 @@ Scan all existed IP inside the network along with the MAC address: ``sudo arp-sc
 
 A **hub** is a physical-layer device that **acts on individual bits** rather than **frames**. When a bit, representing a zero or a one, arrives from one interface, **the hub simply re-creates the bit**, **boosts its energy strength**, and **transmits the bit onto all the other interfaces**. Thus, Ethernet with a hub-based star topology is also a broadcast LAN—**whenever a hub receives a bit from one of its interfaces**, **it sends a copy out on all of its other interfaces**. In particular, **if a hub receives frames from two different interfaces at the same time**, **a collision occurs and the nodes that created the frames must retransmit**.
 
-Historically, an Ethernet was initially conceived of as a segment of coaxial cable. **The early 10BASE-2 and 10BASE-5 standards specify 10 Mbps Ethernet
-over two types of coaxial cable, each limited in length to 500 meters**. Longer runs could be obtained by using **a repeater**—**a physical-layer device that receives a signal on the input side, and regenerates the signal on the output side**.
+Historically, an Ethernet was initially conceived of as a segment of coaxial cable. **The early 10BASE-2 and 10BASE-5 standards specify 10 Mbps Ethernet over two types of coaxial cable, each limited in length to 500 meters**. Longer runs could be obtained by using **a repeater**—**a physical-layer device that receives a signal on the input side, and regenerates the signal on the output side**.
