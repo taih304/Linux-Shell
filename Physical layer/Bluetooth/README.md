@@ -1,17 +1,15 @@
-### Official document
+Bluetooth is implemented on Linux since Linux Kernel 3.4 and later through **BlueZ 5.0**. **BlueZ** is a Bluetooth stack for Linux kernel-based family of operating systems. Its goal is to program an implementation of the Bluetooth wireless standards specifications for Linux.
 
-Bluetooth official document can be found on Bluetooth webpage.
+Bluetooth official document, **Bluetooth Core Specification**, can be found on Bluetooth webpage.
 
-Official document: Bluetooth Core Specification
-
-### Acronyms and abbreviations
+# Acronyms and abbreviations
 
 * ``LAP``: Lower Address Part
 * ``OGF``: OpCode Group Field
 * ``OCF``: OpCode Command Field
 * ``PDU``: Protocol Data Units
 
-### l2ping
+## l2ping
 
 ``L2CAP``: Logical link control and adaptation protocol
 
@@ -23,6 +21,6 @@ Ping a classicial bluetooth device (must run with ``sudo``)
 $ sudo l2ping 0C:2F:B0:D4:03:D9
 ```
 
-### hcidump
+## hcidump
 
 hcidump has to be installed: ``sudo apt install bluez-hcidump``
