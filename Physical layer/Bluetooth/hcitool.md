@@ -31,6 +31,8 @@ hci0:	Type: Primary  Bus: USB
 
 ## HCI command
 
+``HCI`` stands for **Host Controller Interface**.
+
 ``hcitool cmd`` is used to send abitary command to HCI.
 
 For list of command and description: 
