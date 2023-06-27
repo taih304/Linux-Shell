@@ -189,6 +189,10 @@ free(returned_string);
 
 * ``du -h``: list out disk usage in MB
 * ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory
+# file
+
+``file file_name``: determine file type of ``file_name``
+**E.g**: ``file main.c`` will return ``main.c: C source, ASCII text, with CRLF line terminators``
 
 # Other commands
 
@@ -198,7 +202,7 @@ free(returned_string);
 
 ``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
 
-``file file_name``: determine file type of ``file_name``
+
 
 ``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
 
