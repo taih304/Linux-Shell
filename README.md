@@ -6,6 +6,7 @@ Documents in this repository is organized based on the Internet protocol stack w
 # Ubuntu 16.04 unresolvable issues till 3 June 2023
 * Github: Unable to copy file by Copy button
 * [GCC is fixed with 5.0 and is unable to upgrade to newer version, which causes issue when compiling device tree in Raspbian](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Kernel/Device%20tree/Add%20a%20new%20node%20to%20device%20tree%20by%20dtsi%20file%20modification.md)
+* [Raspberry Pi Imager fails to flash/write Raspbian to the SD card](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Environment/Install%20and%20config.md#using-raspberry-pi-imager)
 * [Linux kernel 4.15.0-142-generic which doesn't support epoll events like EPOLLET, EPOLLIN, EPOLLOUT, EPOLLHUP,... in kernel space](https://github.com/TranPhucVinh/C/tree/master/Kernel/Character%20device/Character%20device%20operations/Poll#epoll-handling-in-character-device)
 * [STM32CubeIDE](https://github.com/TranPhucVinh/STM32-HAL-Layer-Framework/blob/main/Environment/Install%2C%20run%20and%20debug.md):
   * v1.4.1.: Live Expression can't be used to watch/debug the Global variable
