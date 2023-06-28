@@ -1,4 +1,4 @@
-## Build an Ubunu image from Ubuntu OS
+# Build an Ubuntu image from Ubuntu OS
 
 Create ``build_docker``, a folder to include file ``Dockerfile``, the script file to build docker:
 
@@ -30,7 +30,7 @@ ubuntu                 latest    2dc39ba059dc   10 days ago      77.8MB
 
 Image ``simple_ubuntu_docker`` now support all features like [ubuntu docker](ubuntu%20docker.md), e.g support command like ``ls``, ``cd``,...
 
-## Build an Ubuntu image that only print out a string
+# Build an Ubuntu image that only prints out a string
 
 ``Dockerfile``
 
@@ -42,7 +42,7 @@ CMD echo "Hello, World !"
 
 Along with supporting all ubuntu docker features, running ``simple_ubuntu_docker`` (``sudo docker run simple_ubuntu_docker``) will result in ``Hello, World !``.
 
-### CMD and ENTRYPOINT
+## CMD and ENTRYPOINT
 
 Use ``CMD`` and ``ENTRYPOINT`` as the startup command, as the commands specified by them will print out when the docker started.
 
@@ -86,9 +86,9 @@ When using ``ENTRYPOINT`` with ``echo`` like this, user are no longer able to ex
 
 E.g: ``sudo docker run simple_ubuntu_docker ls`` will print out ``ls`` instead of executing ``ls`` command.
 
-## Build a docker with included files and installed library
+# Build a docker with included files and installed library
 
-**Add files to directory in the built docker**:
+**Add files to a directory in the built docker**:
 
 ```dockerfile
 FROM ubuntu
@@ -99,7 +99,7 @@ COPY test.sh .
 
 After successfully built, ``sudo docker run simple_ubuntu_docker ls`` will print out ``test.sh`` along with files in the ``/`` directory.
 
-**Add specific package to the built docker**:
+**Add a specific package to the built docker**:
 
 ```dockerfile
 FROM ubuntu
