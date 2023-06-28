@@ -59,7 +59,7 @@ Once successfully installed, command ``docker`` is available.
 
 ## Issue
 
-If your account are not added to ``docker`` group, running the program that related to docker will cause the issue like:
+If your account is not added to ``docker`` group, running the program that related to docker will cause the issue like:
 
 ```
 Could not run `docker` 
@@ -103,6 +103,8 @@ username$hostname:~$ sudo docker images
 REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
 ```
+
+``sudo docker image rm image_id``: Remove a docker with ID ``image_id``. ``sudo docker image rm -f image_id``: Force to remove docker
 
 ``sudo docker inspect ubuntu``: Provide docker named ``ubuntu``'s information in JSON format
 
