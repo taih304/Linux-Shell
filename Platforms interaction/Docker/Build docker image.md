@@ -99,7 +99,9 @@ COPY test.sh .
 
 After successfully built, ``sudo docker run simple_ubuntu_docker ls`` will print out ``test.sh`` along with files in the ``/`` directory.
 
-**Add a specific package to the built docker**:
+**Add a specific package to the built docker with RUN** 
+
+**RUN** inside Dockerfile only runs during the the docker build process:
 
 ```dockerfile
 FROM ubuntu
@@ -110,3 +112,12 @@ RUN apt-get install net-tools
 ```
 
 ``ifconfig`` from ``net-tools`` now is supported: ``sudo docker run simple_ubuntu_docker ifconfig``
+
+Adding **RUN** with **echo** will print out a message during the docker build process:
+
+```c
+FROM ubuntu
+
+RUN echo "Docker is being built"
+```
+Then the message **Docker is being built** will be printed out during the docker build process. Must not be confused [CMD](#build-an-ubuntu-image-that-only-prints-out-a-string) and **RUN** for echo as **CMD echo** will print out the message when running that docker.
