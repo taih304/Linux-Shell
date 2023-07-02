@@ -2,7 +2,7 @@
 
 **Compression** will reduce the file size.
 
-**Archive** just simply packing all the files into an archive object like ``tar``. The newly archived file will have its size less than the total size of all packed file by just a few memory.
+**Archive** just simply packing all the files into an archive object like ``tar``. The newly archived file will have its size less than the total size of all packed files by just a few memory.
 
 A GZ file (``.gz``) is an archive file compressed by the standard GNU zip (``gzip`` command) compression algorithm. ``gzip`` is primarily used on Unix operating systems for file compression.
 
@@ -63,7 +63,7 @@ The ``Extract here`` for ``rar`` files will be available, extracted folder will 
 
 ## tar
 
-``tar``: saves many files together into a single tape or disk archive. ``tar`` is also a file extension.
+``tar``: saves many files together into a single tape or disk archive. ``tar`` is also a file extension. The tar archived file is called a **tarball**.
 
 ``-c``: create a new archive
 
