@@ -1,7 +1,3 @@
-# Commands
-
-Detecting USB Drive: ``sudo fdisk -l``
-
 List USB devices: ``lsusb``
 
 # Cannot open /dev/ttyUSB0: Permission denied

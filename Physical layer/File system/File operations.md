@@ -4,6 +4,12 @@
 * ``mkdir foldername``: make a directory (a folder)
 * [File archive and compression](File%20archive%20and%20compression.md)
 
+## fdisk
+
+**fdisk** is a dialog-driven program for creation and manipulation of partition tables.
+
+``sudo fdisk -l``: List all disks/partitions information
+
 # [Read](Read%20operations.md)
 
 * [cat]()
@@ -38,7 +44,7 @@ Copy input from the current running terminal to a file, i.e writing to that file
 
 ``nano filename``: edit the content of file ``filename`` or create a new one if not existed.
 
- In some cases nano will try to dump the buffer into an emergency  file. This  will  happen  mainly if ``nano`` receives a ``SIGHUP`` or ``SIGTERM`` or runs out of memory.  It will write the buffer into a file named ``nano.save`` if the  buffer didn't have a name already, or will add a ``.save`` suffix to the current filename.
+In some cases nano will try to dump the buffer into an emergency  file. This  will  happen  mainly if ``nano`` receives a ``SIGHUP`` or ``SIGTERM`` or runs out of memory.  It will write the buffer into a file named ``nano.save`` if the  buffer didn't have a name already, or will add a ``.save`` suffix to the current filename.
  
 E.g: This is a wrong operation of nano with ``<`` operator and will result in the `SIGHUP``
 
@@ -54,52 +60,7 @@ Buffer written to nano.save
 ```
 
 ``README.md`` is then written to ``fake.md.save``
-## printf
 
-``printf hello`` and ``printf "hello"`` will printf to a stream.
-
-``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
-
-``printf`` ends when encountering the space
-
-```sh
-string="Hello, World !"
-printf $string #Hello,
-```
-
-Store value of ``printf`` to a variable:
-
-```sh
-text=$(printf "hello")
-echo $text
-```
-
-String format:
-
-```sh
-printf "%lf" 1.2 #1.200000
-printf "%.2f" 1.2 #1.20
-printf "%d" 12 #12
-printf "%04d" 12 #0012
-printf "%x" 10
-```
-
-```sh
-text=$(printf "hello %d" $1)
-echo $text
-```
-
-Run ``./test.sh 123``: ``hello 123``
-
-Notice that all implementation above print out the string, not number. To print out a number, use escape sequence ``\x`` for hex
-
-```sh
-printf "\x61" #For number 0x61
-```
-
-Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the terminal
-
-**Application**: Using ``\x`` will help sending a number to USB port instead of string.
 ## mv
 
 ``mv``: move a file from a directory to other

@@ -73,7 +73,7 @@ $
 
 That happens as ``bash`` runs the right-hand side of a pipeline in a subshell context, so changes to variables (which is what read does) are not preserved — they die when the subshell does, at the end of the command.
 
-# source and ``.``
+# source and .
 
 ``source filename [arguments]``
 
@@ -84,7 +84,52 @@ That happens as ``bash`` runs the right-hand side of a pipeline in a subshell co
 E.g: File ``test.txt`` has content ``ls``
 
 ``source test.txt`` and ``. text.txt`` will run ``ls`` command
+## printf
 
+``printf hello`` and ``printf "hello"`` will printf to a stream.
+
+``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
+
+``printf`` ends when encountering the space
+
+```sh
+string="Hello, World !"
+printf $string #Hello,
+```
+
+Store value of ``printf`` to a variable:
+
+```sh
+text=$(printf "hello")
+echo $text
+```
+
+String format:
+
+```sh
+printf "%lf" 1.2 #1.200000
+printf "%.2f" 1.2 #1.20
+printf "%d" 12 #12
+printf "%04d" 12 #0012
+printf "%x" 10
+```
+
+```sh
+text=$(printf "hello %d" $1)
+echo $text
+```
+
+Run ``./test.sh 123``: ``hello 123``
+
+Notice that all implementation above print out the string, not number. To print out a number, use escape sequence ``\x`` for hex
+
+```sh
+printf "\x61" #For number 0x61
+```
+
+Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the terminal
+
+**Application**: Using ``\x`` will help sending a number to USB port instead of string.
 # printenv
 
 ``printenv``: Print out all environment variable
@@ -198,11 +243,7 @@ free(returned_string);
 
 ``gnome-open filename``: gnome to open a file
 
-``libreoffice --writer file.odt``or ``libreoffice --writer file.doc``: Open libreoffice doc
-
 ``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
-
-
 
 ``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
 
