@@ -29,7 +29,7 @@ Connection closed by foreign host.
 ```
 Send a HTTP request to a HTTP server with multiple routes
 
-HTTP server: https://github.com/TranPhucVinh/Python/blob/master/Application%20layer/HTTP/HTTP%20server/Introduction.md#print-out-hello-world https://github.com/TranPhucVinh/C/blob/master/Application%20layer/HTTP%20server/simple_http_server.c
+HTTP server: [Python HTTP server](https://github.com/TranPhucVinh/C/blob/master/Application%20layer/HTTP%20server/simple_http_server.c)
 
 For a HTTP request with telnet, after setting the address, like ``telnet 127.0.0.1 8000``, start typing the HTTP request like ``GET / HTTP/1.1``.
 
