@@ -1,6 +1,6 @@
 Specify SSH port with ``-p``: ``ssh guest@10.3.112.253 -p 2022``
 
-### OpenSSH
+# OpenSSH
 
 ``OpenSSH`` is a suite of secure networking utilities based on the Secure Shell (SSH) protocol.
 
@@ -8,7 +8,7 @@ For Ubuntu desktop, SSH client is installed by default, which is part of ``OpenS
 
 To install: ``sudo apt-get install openssh-client``.
 
-### SSH key
+# SSH key
 
 For SSH client to access to SSH server, it also neccessary to use ``SSH key``.
 
@@ -28,7 +28,7 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 
 Then go to Github or Gitlab and add this key.
 
-### Add SSH key to known host
+## Add SSH key to known host
 
 If a SSH key is not known to host, there will be error:
 
@@ -69,7 +69,7 @@ The result will be like:
 
 Be sure to delete the duplicate IP in ``known_hosts`` file.
 
-### SCP
+# SCP
 
 SCP stands for Secure Copy. ``scp`` is a command for sending files over SSH
 
@@ -85,4 +85,8 @@ Setup password for SCP with ``sshpass``: ``sshpass -p 'your_password' scp link_t
 
 E.g: ``sshpass -p 'Hello@123atVPN' scp /home/usr/Documents/main.c root@192.168.1.1:/root``
 
+Acccess to a host with password and bypass **StrictHostKeyChecking** and **UserKnownHostsFile**:
+```sh
+sshpass -p 'Hello@123atVPN' ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null root@192.168.1.1
+```
 **Note**: ``sshpass`` is available only in Linux and isn't available in Windows
