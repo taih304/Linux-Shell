@@ -129,3 +129,29 @@ Then this wrong PATH will effect all built-in commands like ``ls``, ``cd``, ``ca
 Error: ``ls: command not found``
 
 To view all environment variables, use ``export`` or ``env`` command.
+## PS1
+
+A shell variable known as ``PS1`` is responsible for displaying the default command prompt in bash. To see your current setup try echo ``$PS1``. You can set ``PS1`` in your ``.bashrc`` file for a custom prompt. Updating ``PS1="\u@\H:\w$ "`` in ``.bashrc`` like this:
+
+```sh
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+#	PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#	PS1="\e[1;32m\u@\h:\W\$\e[m "
+	PS1="\u@\H:\w$ "
+    ;;
+*)
+    ;;
+esac
+```
+
+Result in the terminal display:
+```sh
+username@hostname:~/git_repo/work-in-progress$
+```
+
+With ``PS1="\u@\H:\w$ "``:
+* ``\u``: Username
+* ``\H``: Hostname
+* ``\w``: Working directory
