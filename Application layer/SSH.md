@@ -90,3 +90,8 @@ Specify port with ``-P`` (uppercase P): ``scp -P 2022 test.c root@10.3.112.253:~
 Setup password for SCP with ``sshpass``: ``sshpass -p 'your_password' scp link_to_scp_file username@host:/path``
 
 E.g: ``sshpass -p 'Hello@123atVPN' scp /home/usr/Documents/main.c root@192.168.1.1:/root``
+
+SCP file to a host with password and bypass **StrictHostKeyChecking** and **UserKnownHostsFile**:
+```sh
+sshpass -p 'xmwfSMSCpBHVC0s+6vo1zFnze0dD+Ili' scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r file_name.md root@192.168.1.1:/tmp
+```
