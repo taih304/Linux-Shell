@@ -79,10 +79,10 @@ This cd Makefile implementation is applied in out-out-tree kernel module as [usi
 
 ```sh
 target1:
-	@echo $(target_1)
+	@echo $(arg)
 ```
 
-Run ``make``: ``make target_1="Hello 1"``
+Run ``make``: ``make arg="Hello 1"``
 
 # Variable
 
