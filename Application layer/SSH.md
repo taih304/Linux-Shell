@@ -69,6 +69,12 @@ The result will be like:
 
 Be sure to delete the duplicate IP in ``known_hosts`` file.
 
+Acccess to a host with password and bypass **StrictHostKeyChecking** and **UserKnownHostsFile**:
+```sh
+sshpass -p 'Hello@123atVPN' ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null root@192.168.1.1
+```
+**Note**: ``sshpass`` is available only in Linux and isn't available in Windows
+
 # SCP
 
 SCP stands for Secure Copy. ``scp`` is a command for sending files over SSH
@@ -84,9 +90,3 @@ Specify port with ``-P`` (uppercase P): ``scp -P 2022 test.c root@10.3.112.253:~
 Setup password for SCP with ``sshpass``: ``sshpass -p 'your_password' scp link_to_scp_file username@host:/path``
 
 E.g: ``sshpass -p 'Hello@123atVPN' scp /home/usr/Documents/main.c root@192.168.1.1:/root``
-
-Acccess to a host with password and bypass **StrictHostKeyChecking** and **UserKnownHostsFile**:
-```sh
-sshpass -p 'Hello@123atVPN' ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null root@192.168.1.1
-```
-**Note**: ``sshpass`` is available only in Linux and isn't available in Windows
