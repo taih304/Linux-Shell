@@ -1,18 +1,16 @@
-# Fundamental concepts
+**CMake** is an open-source, cross-platform family of tools designed to build, test and package software.
 
-CMake is an open-source, cross-platform family of tools designed to build, test and package software.
-
-### Install
+# Install
 
 CMake can be installed with ``sudo apt install cmake`` or installed with the tar file.
 
 For installing with tar file, install ``cmake-3.23.0.tar.gz`` file from CMake webpage then extract to folder ``cmake-3.23.0``.
 
-Inside folder ``cmake-3.23.0``, run file ``./bootstrap`` to setup CMake. Also read file ``README.rst`` for any further information.
+Inside folder ``cmake-3.23.0``, run file ``./bootstrap`` to setup CMake.
 
 After successfully setup CMake, command ``cmake`` will be available. Folder ``cmake-3.23.0`` can then be deleted.
 
-### Build the first C program
+# Build the first C program
 
 Set up a working folder for CMake project like ``c_make_test``:
 
@@ -55,7 +53,7 @@ Project name can be used with ``${PROJECT_NAME}``:
 add_executable(${PROJECT_NAME} main.c)
 ```
 
-### Build the program with source files
+# Build the program with source files
 
 ```
 |--main.c
