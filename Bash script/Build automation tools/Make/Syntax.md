@@ -12,7 +12,7 @@ main:
 ```
 # -C option
 
-``-C DIRECTORY`` will change to DIRECTORY before doing anything.
+``-C DIRECTORY`` will change to DIRECTORY before doing anything. It will help running ``make`` inside a directory where  there is no **Makefile**.
 ```
 work_directory
 	|── Linux-Shell
