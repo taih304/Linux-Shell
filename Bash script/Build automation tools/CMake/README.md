@@ -31,7 +31,7 @@ project(test_c_make)
 add_executable(test_c_make main.c)
 ```
 
-In the same location with ``c_make_test``, run ``cmake c_make_test/``
+In the same location with ``c_make_test``, run ``cmake c_make_test/``. Output the build to ``c_workspace_cmake`` folder by ``-B`` flag: ``cmake C_workspace/ -B c_workspace_cmake/``
 
 The folder architecture where ``c_make_test`` is in now will be:
 
