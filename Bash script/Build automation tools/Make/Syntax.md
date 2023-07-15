@@ -76,3 +76,19 @@ target:
 ```
 
 ``abspath MAKEFILE_LIST`` will return the absolute path of ``Makefile``.
+
+# wildcard
+
+```
+work_directory
+	├── Makefile
+	└── main.c
+```
+This Makefile will build any .c file inside ``work_directory``
+```Makefile
+src := $(wildcard *.c)
+
+default: $(src)
+	@($(CC) $(src))
+	@(./a.out)
+```

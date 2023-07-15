@@ -64,5 +64,5 @@ target_4:
 * [Operator]()
 * [-C option]()
 * [Up to date error with .PHONY]()
-* [lastword]()
+* [lastword](), [dir](), [abspath]() and [wildcard]()
 * [MAKEFILE_LIST](#work-with-multiple-makefile)
