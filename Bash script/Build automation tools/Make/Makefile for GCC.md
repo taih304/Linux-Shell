@@ -1,6 +1,6 @@
 # Makefile with $(CC)
 
-Makefile supports ``$(CC)`` and ``cc`` command, which by default is ``gcc`` command:
+Makefile supports ``$(CC)``, which by default is ``gcc`` and ``cc`` command:
 ```Makefile
 build_gcc:
 	@($(CC) main.c)
