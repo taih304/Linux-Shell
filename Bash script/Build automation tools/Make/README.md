@@ -78,7 +78,7 @@ target_4:
 ``make target_4``: ``Makefile test.mak``
 
 # [Syntax](Syntax.md)
-* [$(MAKE)](), [MAKEFILE_LIST](#work-with-multiple-makefile)
+* [$(MAKE)](#make), [MAKEFILE_LIST](#work-with-multiple-makefile)
 * [Operator]()
 * [-C option]()
 * [Up to date error with .PHONY]()
