@@ -39,7 +39,14 @@ To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main
 * [Send argument to Makefile]()
 * [Variable]()
 
+# $(MAKE)
 
+``$(MAKE)`` will call make command.
+```sh
+test:
+	@(echo $(MAKE))
+```
+``make test`` return ``make``.
 # Work with multiple Makefile
 
 Use ``include`` to include multiple Makefile
@@ -71,9 +78,10 @@ target_4:
 ``make target_4``: ``Makefile test.mak``
 
 # [Syntax](Syntax.md)
+* [$(MAKE)](), [MAKEFILE_LIST](#work-with-multiple-makefile)
 * [Operator]()
 * [-C option]()
 * [Up to date error with .PHONY]()
 * [lastword](), [dir](), [abspath]()
 * [wildcard](), [wildcard with %]()
-* [MAKEFILE_LIST](#work-with-multiple-makefile)
+
