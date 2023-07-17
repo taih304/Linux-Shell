@@ -92,3 +92,11 @@ default: $(src)
 	@($(CC) $(src))
 	@(./a.out)
 ```
+# wildcard with ``%``
+
+``%config`` target will take any target ended with ``config``:
+```Makefile
+%config:
+	@(echo $@) # This will print out the target name
+```
+``make cpu_config`` results in ``cpu_config`` printed out.
