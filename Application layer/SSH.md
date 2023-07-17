@@ -79,7 +79,9 @@ sshpass -p 'Hello@123atVPN' ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=
 
 SCP stands for Secure Copy. ``scp`` is a command for sending files over SSH
 
-Copy file ``main.c`` to folder ``Documents`` of Raspberry Pi: ``scp main.c pi@192.168.47.26:Documents/``
+Copy file ``main.c`` from localhost to folder ``Documents`` of target Raspberry Pi (with username ``pi``): ``scp main.c pi@192.168.47.26:Documents/``
+
+Copy file ``Makefile`` from target with username ``username`` to ``localhost`` (port 2022): ``scp -P 2022 username@192.168.137.239:/home/username/wip/Makefile .``
 
 **Note**: Can't copy file like this: ``scp test.c pi@192.168.47.26``
 
