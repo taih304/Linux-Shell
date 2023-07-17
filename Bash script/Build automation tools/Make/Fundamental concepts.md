@@ -6,7 +6,7 @@ target: prerequisites
 ```    
 
 * **target**: target name to run, e.g: ``make targetName``
-* **prerequisites**: can be ``file names`` or ``targets``, and can seperated by spaces. If they are files, they need to exist before the commands for the target are run.
+* **prerequisites**: can be ``file_name`` or ``targets``, and can seperated by spaces. If they are files, they need to exist before the commands for the target are run.
 * **recipe**: recipe to perform when calling **target**. There must be a tab before recipe inside target.
 
 # Run the very first makefile
