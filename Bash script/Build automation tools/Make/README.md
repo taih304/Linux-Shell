@@ -19,6 +19,16 @@ test:
 	@echo "test script"
 ```
 
+``$@`` helps getting the target name:
+```Makefile
+target_1:
+	@(echo $@)
+
+target_2:
+	@(echo $@)
+```
+``make target_1`` results in ``target_1``. ``make target_2`` results in ``target_2``
+
 To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main`` and ``make -f test.mk main``
 
 [Fundamental concepts document](Fundamental%20concepts.md) also include:
