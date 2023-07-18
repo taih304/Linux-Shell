@@ -76,8 +76,13 @@ This cd Makefile implementation is applied in out-out-tree kernel module as [usi
 
 **make** also supports [-C option](Syntax.md#c-option) to change to a specific directory before doing anything.
 # Prerequisites
+## File as a prerequisite
 
-Example: [Makefile for GCC then run where a.out file is required](Makefile%20for%20GCC.md#makefile-without-cc)
+``a.out`` file is the prerequisite to run it:
+```Makefile
+run: a.out
+	@(./a.out)
+```
 
 # Send argument to Makefile
 
