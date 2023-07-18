@@ -11,37 +11,20 @@ build_gcc:
 	@(cc main.c)
 ```
 Target ``build_gcc`` will run ``gcc main.c``.
-# Makefile without $(CC)
-
-**Run a makefile to echo a string and compile C source code**
-
+# Makefile with gcc command
+**Build and run a C source code**:
 ```Makefile
-test:
-	@echo a
-
-build_c: 
-	@(gcc test.c)
-
-main: a.out	
-	@./a.out
+build_and_run: 
+	@(gcc main.c)
+	@(./a.out)
 ```
-
-``make test``: a
-
-``make main``: Result of ``a.out``
-
-**Compile a C program and list all files**
-
+**Assign gcc command to a Makefile variable**:
 ```Makefile
 GCC = gcc
 file = test.c
-LS = ls
 
 compile:
 	$(GCC) $(file)
-
-list:
-	$(LS)
 ```
 
 **Working with header files**
