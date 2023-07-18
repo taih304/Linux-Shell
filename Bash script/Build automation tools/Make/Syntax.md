@@ -10,6 +10,16 @@ a:=10
 main:
 	@echo $a #10
 ```
+# $@
+``$@`` helps getting the target name:
+```Makefile
+target_1:
+	@(echo $@)
+
+target_2:
+	@(echo $@)
+```
+``make target_1`` results in ``target_1``. ``make target_2`` results in ``target_2``
 # -C option
 
 ``-C DIRECTORY`` will change to DIRECTORY before doing anything. It will help running ``make`` inside a directory where  there is no **Makefile**.
