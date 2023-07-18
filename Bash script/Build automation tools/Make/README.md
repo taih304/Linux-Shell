@@ -36,6 +36,7 @@ To run ``test.mak`` or ``test.mk`` with target ``main``: ``make -f test.mak main
 * [Run the very first makefile](Fundamental%20concepts.md#run-the-very-first-makefile)
 * [Avoid echoing](Fundamental%20concepts.md#avoid-echoing)
 * [Work with command]()
+* [Prerequisites](Fundamental%20concepts.md#prerequisites): [File](Fundamental%20concepts.md#file-as-a-prerequisite), [target](Fundamental%20concepts.md#target-as-a-prerequisite), [both file and target](Fundamental%20concepts.md#file-and-target-are-both-prerequisites) as prerequisites
 * [Send argument to Makefile]()
 * [Variable]()
 
