@@ -91,6 +91,15 @@ build:
 	@($(CC) main.c)
 ```
 Run ``make`` will call target ``run``. Target ``run`` will then call target ``build``, which will compile ``main.c`` (``gcc main.c``).
+## File and target are both prerequisites
+```Makefile
+run: build a.out
+	@(./a.out)
+	@(./c_src)
+
+build:
+	@($(CC) main.c -o c_src)
+```
 # Send argument to Makefile
 
 ```sh
