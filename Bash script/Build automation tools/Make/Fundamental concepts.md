@@ -83,7 +83,14 @@ This cd Makefile implementation is applied in out-out-tree kernel module as [usi
 run: a.out
 	@(./a.out)
 ```
-
+## Target as a prerequisite
+```Makefile
+run: build
+	@(./a.out)
+build:
+	@($(CC) main.c)
+```
+Run ``make`` will call target ``run``. Target ``run`` will then call target ``build``, which will compile ``main.c`` (``gcc main.c``).
 # Send argument to Makefile
 
 ```sh
