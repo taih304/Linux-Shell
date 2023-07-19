@@ -69,7 +69,7 @@ target_4:
 ``make target_4``: ``Makefile test.mak``
 
 # [Syntax](Syntax.md)
-* [$(MAKE)](#make), [MAKEFILE_LIST](#work-with-multiple-makefile)
+* [$(MAKE)](#make), [$(MAKEFILE_LIST)](#work-with-multiple-makefile)
 * [Operator]()
 * [$@ helps getting the target name](Syntax.md)
 * [-C option]()
