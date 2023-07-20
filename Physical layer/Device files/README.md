@@ -5,17 +5,14 @@ The **device model** involves terms like **device**, **driver**, and **bus**:
 * **driver**: a software entity which may probe for and be bound to devices, and which can perform certain management functions.
 * **bus**: a device which serves as an attachment point for other devices.
 
-Linux supports three types of devices: **character devices**, **block devices** and **network devices**.
+Linux supports 4 types of devices:
 
-* **Character devices** is any device that can have streams of characters read from or written to it without buffering, for example, keyboards, monitors, printers, serial ports, terminals, etc
-
-Most of devices that are not block devices are represented by linux kernel as character device.
-
+* **Character devices** is any device that can have streams of characters read from or written to it without buffering, for example, keyboards, monitors, printers, serial ports, terminals, etc. **Character devices** provide access for userspace to kernel space.
 * **Block devices** is a device that composes of fixed-sized blocks, that can be read and write to store data. Block device can only be written to and read from in multiples of the block size, typically 512 or 1024 bytes. They may be randomly accessed i.e., any block can be read or written no matter where it is on the device. Block devices are hard disk, SD card,...
+* **Network devices** are accessed via the BSD socket interface and the networking subsystems.
+* **MTD devices**: MTD devices (MTD is abbreviated for **Memory Technology Device**) is a type of device file in Linux for interacting with flash memory. Flash memory is a unique device type that has translations to allow them to be used as **block** and **character devices**. For PC not supported flash memory (i.e UBIFS not existed), device file ``mtd`` like ``/dev/mtd4`` will not existed. Raspberry Pi 3B+ and Orange Pi Zero board doesn't have those device file/filesystems, too.
 
 List all character devices and block devices with major number: ``cat /proc/devices``
-
-**Network devices** are accessed via the BSD socket interface and the networking subsystems.
 
 ## Device drivers
 
@@ -41,11 +38,7 @@ For instance, the i.MX7D has several hardware UART ports. The same driver can be
 
 ## Other device files
 
-**MTD**: A Memory Technology Device (MTD) is a type of device file in Linux for interacting with flash memory.
-
 **UBIFS** file-system stands for UBI File System. UBI stands for “Unsorted Block Images”. UBIFS is a flash file system, which means it is designed to work with flash devices. It is important to understand, that UBIFS is completely different to any traditional file-system in Linux, like Ext2, XFS, JFS, etc. UBIFS represents a separate class of file-systems which work with **MTD devices**, not block devices.
-
-For PC not supported flash memory (i.e UBIFS not existed), device file ``mtd`` like ``/dev/mtd4``  will not existed. Raspberry Pi 3B+ and Orange Pi Zero board doesn't have those device file/filesystems, too.
 
 # /dev
 
