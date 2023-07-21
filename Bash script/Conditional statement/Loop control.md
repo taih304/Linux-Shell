@@ -1,13 +1,21 @@
 # For loop
-With syntax like C
+Print out from 1 to 10:
+
+Using syntax like C:
 ```sh
 for ((i=1; i <= 10; i++)) #Must be (()); () will give compilation error
 do
     echo $i
 done
 ```
-
-Using ``seq``
+Using ``{1..10}``:
+```sh
+for i in {1..10}
+do
+    echo $i
+done
+```
+Using ``seq``:
 ```sh
 for index in $(seq 0 10)
 do
@@ -36,16 +44,6 @@ done
 hello
 world
 ```
-
-Print out from 1 to 10 with ``{1..10}``
-
-```sh
-for i in {1..10}
-do
-    echo $i
-done
-```
-
 Add more string with ``{1..10}``
 
 ```sh
