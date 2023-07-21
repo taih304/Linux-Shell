@@ -30,7 +30,6 @@ do
     echo $value
 done
 ```
-
 ```sh
 string="hello world"
 for value in $string
@@ -58,6 +57,16 @@ done
 
 Print out from 0 to 9
 
+Using syntax like C:
+```sh
+i=0
+while (($i < 10)) #Must be (()); () will give compilation error
+do
+    echo $i
+    i=`expr $i + 1`
+done
+```
+Using ``[]`` and ``-lt``:
 ```sh
 i=0
 while [ $i -lt 10 ]
@@ -66,9 +75,7 @@ do
     i=`expr $i + 1`
 done
 ```
-
-For infinite loop
-
+``while true``:
 ```sh
 while true 
 do
