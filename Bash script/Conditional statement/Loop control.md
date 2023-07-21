@@ -1,5 +1,19 @@
-### For loop
+# For loop
+With syntax like C
+```sh
+for ((i=1; i <= 10; i++)) #Must be (()); () will give compilation error
+do
+    echo $i
+done
+```
 
+Using ``seq``
+```sh
+for index in $(seq 0 10)
+do
+    echo $index
+done
+```
 Print out all argument name
 
 ```sh
@@ -42,22 +56,7 @@ done
 ```
 **Result**: ``name 1``, ``name 2``, ``name 3``,...
 
-With syntax like C
-```sh
-for ((i=1; i<=arraySize;i++))
-do
-    echo $i
-done
-```
-
-Using ``seq``
-```sh
-for index in $(seq 0 10)
-do
-    echo $index
-done
-```
-### While loop
+# While loop
 
 Print out from 0 to 9
 
@@ -82,7 +81,7 @@ done
 
 Or ``while [ true ]``
 
-### Until condition
+# Until condition
 
 ```sh
 i=0
@@ -93,7 +92,7 @@ do
 done
 ```
 
-### break
+# break
 
 Print out from 0 to 9, break the loop if variable i is equal to 6.
 
