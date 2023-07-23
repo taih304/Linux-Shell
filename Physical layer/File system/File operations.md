@@ -6,9 +6,58 @@
 
 ## fdisk
 
-**fdisk** is a dialog-driven program for creation and manipulation of partition tables.
+**fdisk**, abbreviated for **format disk**, is a dialog-driven program for creation and manipulation of partition tables.
 
 ``sudo fdisk -l``: List all disks/partitions information
+
+```sh
+username@hostname:~$ sudo fdisk /dev/sdc #Pass any device name as the argument to check for the command
+Command (m for help): m
+
+Help:
+
+  DOS (MBR)
+   a   toggle a bootable flag
+   b   edit nested BSD disklabel
+   c   toggle the dos compatibility flag
+
+  Generic
+   d   delete a partition
+   F   list free unpartitioned space
+   l   list known partition types
+   n   add a new partition
+   p   print the partition table
+   t   change a partition type
+   v   verify the partition table
+   i   print information about a partition
+
+  Misc
+   m   print this menu
+   u   change display/entry units
+   x   extra functionality (experts only)
+
+  Script
+   I   load disk layout from sfdisk script file
+   O   dump disk layout to sfdisk script file
+
+  Save & Exit
+   w   write table to disk and exit
+   q   quit without saving changes
+
+  Create a new label
+   g   create a new empty GPT partition table
+   G   create a new empty SGI (IRIX) partition table
+   o   create a new empty DOS partition table
+   s   create a new empty Sun partition table
+
+Command (m for help): p #Check p: print the partition table 
+Disk /dev/sdc: 14.9 GiB, 15931539456 bytes, 31116288 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x30c19d12
+```
 
 # [Read](Read%20operations.md)
 
