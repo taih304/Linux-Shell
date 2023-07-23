@@ -9,7 +9,7 @@
 **fdisk**, abbreviated for **format disk**, is a dialog-driven program for creation and manipulation of partition tables.
 
 ``sudo fdisk -l``: List all disks/partitions information
-
+### All fdisk commands
 ```sh
 username@hostname:~$ sudo fdisk /dev/sdc #Pass any device name as the argument to check for the command
 Command (m for help): m
