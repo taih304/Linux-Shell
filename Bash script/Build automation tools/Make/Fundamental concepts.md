@@ -1,6 +1,6 @@
 # Architecture
 
-```
+```Makefile
 target: prerequisites
     <TAB> recipe
 ```    
@@ -151,3 +151,11 @@ main:
 ```
 
 **Output** ``100 200``
+
+IP value can be set to the Makefile variable:
+```Makefile
+ip 		:= 192.168.1.1
+
+connection:
+	ping $(ip)
+```
