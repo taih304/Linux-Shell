@@ -1,6 +1,6 @@
 DRF1605H Zigbee module is able to communicate with other MCU by UART with 3.3V logic level. So it is able to communicate and configured with computer when connected by CP2102.
 
-### Connection
+# Connection
 
 | DRF1605H | CP2102 |
 | ------- |:------:|
@@ -11,9 +11,9 @@ DRF1605H Zigbee module is able to communicate with other MCU by UART with 3.3V l
 
 DRF1605H works normally with PlatformIO by reading its data from Serial port.
 
-### Working with Serial frame on GTKTerm
+# Working with Serial frame on GTKTerm
 
-Notice that serial frame must be enter with space like ``FC 02``.
+Notice that serial frame must be entered with space like ``FC 02``.
 
 Go to ``View`` -> ``Hexadecimal``. Then choose ``Send hexadecimal data``.
 
