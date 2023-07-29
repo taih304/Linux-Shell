@@ -6,6 +6,10 @@ To undo git add before a commit, run ``git reset <file>`` for a specific file or
   
 ``git reset --hard``: Reset (i.e clear/delete) all changes have set
 
+Delete the most recent commit, keeping the work you've done: ``git reset --soft HEAD~1``
+
+Delete the most recent commit, **destroying the work** you've done: ``git reset --hard HEAD~1``
+
 ## git clone
 
 For an extremely large repository like [raspberrypi/linux](https://github.com/raspberrypi/linux), this cloning method will help saving memory space:
