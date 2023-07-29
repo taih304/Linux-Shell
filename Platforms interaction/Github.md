@@ -2,7 +2,7 @@
 
 ## git reset
 
-To undo git add before a commit, run ``git reset <file>`` for a specific file or ``git reset .`` for all files.
+``git reset <file>``: Undo a previously git add file
   
 ``git reset --hard``: Reset (i.e clear/delete) all changes have set
 
