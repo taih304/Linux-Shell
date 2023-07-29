@@ -32,6 +32,11 @@ Mount a partition, like ``mmcblk0p2`` to a directory: ``sudo mount /dev/mmcblk0p
 
 After finish using, unmount to save memory: ``sudo umount /media/usb``
 
+# GTKTerm 
+**GTKTerm** is a useful tool to work with USB port which is only availabe in Unix OS. It supports:
+* Two-way communication with USB port
+* List out all connected USB ports
+**Examples**: [Configuration for DRF1605H zigbee module](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Sensors%20and%20Modules/DRF1605H%20zigbee%20module.md#working-with-serial-frame-on-gtkterm).
 # Examples
 
 ## Send characters from PC to MCU to control its GPIO
