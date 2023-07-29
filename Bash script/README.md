@@ -8,8 +8,8 @@ Linux based operating system uses **Bash shell**, the shell environment used for
 ```sh
 command <mandatory_arg> [optional_arg]
 ```
-* <mandatory_arg>: The mandatory arguments required for the command
-* [optional_arg>: The optional arguments required for the command
+* ``<mandatory_arg>``: The mandatory arguments required for the command
+* ``[optional_arg]``: The optional arguments required for the command
   
 **Subshell**: A child process created by a shell, check [exec command](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/README.md#exec) to clarify this operation.
 
