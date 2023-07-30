@@ -98,6 +98,11 @@ E.g: ``zip test.zip main.c main.cpp``, then using ``zgrep`` can only search in `
 ``zipgrep "Hello, World" test.zip``: Search for ``Hello, World`` inside all compressed file of ``test.zip``
 
 # find
+Find file ``ubuntu_kernel_module.ko`` in a specific path
+```c
+find /lib/modules/* -name ubuntu_kernel_module.ko
+```
+/lib/modules/4.15.0-142-generic/kernel/ubuntu/ubuntu_kernel_module.ko
 
 Find file ``README.md`` in the current directory
 
