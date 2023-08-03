@@ -12,19 +12,15 @@ To view the available group in your account, use command: ``groups``
 
 To see all available groups type: ``compgen -g``
 
-# System handler
+# Init process
 
-[sysfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#sysfs) and [procfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#procfs) are filesystems which allow user to monitor system resources.
+## [Systemd](Systemd.md)
 
-## Script running when system booted
+## SysV init with [rc.local](File%20system/File%20hierarchy.md#rclocal) and [rcS](File%20system/File%20hierarchy.md#rcs)
 
-### [Systemd](Systemd.md)
+## [.netrc.md](.netrc.md)
 
-### [rc.local](File%20system/File%20hierarchy.md#rclocal) and [rcS](File%20system/File%20hierarchy.md#rcs)
-
-### [.netrc.md](.netrc.md)
-
-### crontab
+## crontab
 
 ``crontab`` command is used to setup a program to run in a specific time or when just start up. ``crontab`` is not available in default [ubuntu docker](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Docker/ubuntu%20docker.md).
 
@@ -87,7 +83,11 @@ echo "Hello, World !" > /home/username/work-in-progress/log.txt
 
 Absolute path must be used as cron jobs run in their own shell so without absolute path, they don't know where to log the ``echo`` output to.
 
-## Miscellaneous system handler commands
+# [File system](File%20system)
+
+[sysfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#sysfs) and [procfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#procfs) are filesystems which allow user to monitor system resources.
+
+# Miscellaneous system handler commands
 
 Other commands:
 
