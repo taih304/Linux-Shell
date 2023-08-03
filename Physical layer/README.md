@@ -18,7 +18,7 @@ To see all available groups type: ``compgen -g``
 
 ## SysV init with [rc.local](File%20system/File%20hierarchy.md#rclocal) and [rcS](File%20system/File%20hierarchy.md#rcs)
 
-## [.netrc.md](.netrc.md)
+## [.netrc](.netrc.md)
 
 ## crontab
 
