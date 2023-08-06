@@ -112,9 +112,10 @@ Run ``make``: ``make arg="Hello 1"``
 # Variable
 ```Makefile
 a=10
-
+b="Hello, World !"
 main:
-	@echo $a #10
+	@echo $a
+	@echo $b
 ```    
 You can assign the variable value with space
 ```Makefile
