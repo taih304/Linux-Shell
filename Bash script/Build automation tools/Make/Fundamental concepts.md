@@ -110,37 +110,19 @@ target1:
 Run ``make``: ``make arg="Hello 1"``
 
 # Variable
-
-Saving variable value inside a makefile target is not available
-
-```Makefile
-main:
-	a=10
-	echo $a
-```
-
-**Output** ``NULL`` (Expected ``10``)
-
-**Problem solved**
-
 ```Makefile
 a=10
 
 main:
-	@echo $a 
+	@echo $a #10
 ```    
-
-**Output** ``10``
-
 You can assign the variable value with space
-
 ```Makefile
 a = 10 #space include
 
 main:
 	@echo $a 
 ```    
-
 A variable in ``Makefile`` can store 2 value
 
 ```Makefile
@@ -158,4 +140,11 @@ ip 		:= 192.168.1.1
 
 connection:
 	ping $(ip)
+```
+Saving variable value inside a makefile target is not available
+
+```Makefile
+main:
+	a=10
+	echo $a #NULL, while expected 10
 ```
