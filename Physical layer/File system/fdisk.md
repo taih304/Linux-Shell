@@ -137,3 +137,8 @@ $ sudo mkfs.vfat -F 32 -n boot /dev/sdc1
 # ext4 for root partition
 $ sudo mkfs.ext4 -L root /dev/sdc2
 ```
+``mkfs.vfat``: Create an MS-DOS FAT file system under Linux.
+* ``-F FAT-size``: Specifies the type of file allocation tables used (12, 16 or 32 bit)
+* ``-n volume-name``
+``mkfs.ext4``: Create an ext4 filesystem
+* ``-L``: Set the volume label for the filesystem
