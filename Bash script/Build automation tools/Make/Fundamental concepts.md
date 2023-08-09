@@ -16,6 +16,8 @@ target1:
 	echo "target 1"
 target2:
 	echo "target 2"
+target3: # Calling make inside Makefile
+	make target1
 ```
 If running ``make`` (with no specific target), the first target in the Makefile will be executed.
 
@@ -25,7 +27,7 @@ If running ``make`` (with no specific target), the first target in the Makefile 
 echo "target 1"
 Hello
 ```
-
+Running ``make target3`` will call ``target1``.
 # Avoid echoing
 
 To avoid echoing (print out only ``Hello``) 
