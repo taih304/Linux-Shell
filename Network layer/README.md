@@ -70,12 +70,12 @@ In a **datagram network** the **forwarding tables** are modified by the **routin
 The virtual circuit evolve from the telephony world. The Internet as **a datagram network**, on the other hand, grew out of the need to connect computers together. Given more **sophisticated end-system devices**, the Internet architects chose to make the network-layer service model as simple as possible.
 
 Since the resulting Internet network-layer service model makes **minimal (no!) service guarantees**, it imposes minimal requirements on the network layer. This **makes it easier** to interconnect networks that use very different link-layer technologies (for example, satellite, Ethernet, fiber, or radio) that have very different transmission rates and loss characteristics.
-
+# Firewall
 In **firewalls** (covered in Chapter 8)—devices that filter out selected incoming packets—an incoming packet whose header matches a given criteria (e.g., a combination of source/destination IP addresses and transport-layer port numbers) may be prevented from being forwarded (action).
-
+# NAT
 In a **network address translator (NAT)**, an incoming packet whose transport-layer port number matches a given value will have its port number rewritten before forwarding (action).
 
-NAT is a method. The **NAT-enabled router** does not look like a router to the outside world. Instead the **NAT router** behaves to the outside world as a single device with a single **IP address**.
+NAT is a method. The **NAT-enabled router** allows **translating the private IP (IPv4) into the public IP and in vice-versa**. This will help reducing the usage number of IPv4 address so that IPv4 address isn't going to run out quickly. **NAT router** behaves to the outside world as a single device with a single **IP address**. 
 
 NAT traversal is increasingly provided by **Universal Plug and Play (UPnP)**, which is a protocol that allows a host to discover and configure a nearby **NAT**.
 # ICMP
