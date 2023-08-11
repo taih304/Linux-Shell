@@ -1,3 +1,4 @@
+# [If else](If%20else.md)
 # For loop
 Print out from 1 to 10:
 
@@ -114,3 +115,25 @@ do
     i=`expr $i + 1`    
 done
 ```
+# trap
+
+``trap handler_function condition_code``
+
+``condition_code`` has value:
+
+* ``0``: On exit from shell
+**Example**: Execute a function after pressing exit with trap command
+```sh
+exit_function(){
+	echo "exit function"
+}
+
+trap exit_function 0
+
+while [ true ]
+do
+	echo "1"
+done	
+```
+
+**Result**: Print ``exit function`` when pressing exit in shell
