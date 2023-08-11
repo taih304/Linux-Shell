@@ -198,26 +198,3 @@ printf "Enter a string"
 read enteredString
 echo "String is $enteredString"
 ```
-
-## Execute a function after pressing exit with trap command
-
-``trap handler_function condition_code``
-
-``condition_code`` has value:
-
-* ``0``: On exit from shell
-
-```sh
-exit_function(){
-	echo "exit function"
-}
-
-trap exit_function 0
-
-while [ true ]
-do
-	echo "1"
-done	
-```
-
-**Result**: Print ``exit function`` when pressing exit in shell
