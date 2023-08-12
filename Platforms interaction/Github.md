@@ -1,5 +1,9 @@
 # Command
 
+## git checkout
+
+``git checkout`` allows switching to a specific branch or commit: ``git checkout <branch>`` or ``git checkout <commit_hash>``
+
 ## git reset
 
 ``git reset <file>``: Undo a previously git add file
