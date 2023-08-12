@@ -44,6 +44,13 @@ printf '\033[8;64;240t' #must have ''
 ```
 # Desktop applications
 
+## Text editor
+
+By default, Linux support 2 terminal text editors, ``vim`` (with command ``vi``) and nano (with command ``nano``).
+
+``vi`` is extremely light while ``nano`` has bigger size. In some lightweight OS, like some Xilinx OS deployed in the Automotive drive monitoring system, only ``vim`` is supported.
+
+For nano, check [nano document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/Write%20operations.md#nano).
 ## Spreadsheet
 
 ``libreoffice --writer file.odt`` or ``libreoffice --writer file.doc: Open libreoffice doc``

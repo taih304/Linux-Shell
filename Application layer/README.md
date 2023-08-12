@@ -51,15 +51,8 @@ Fortunately, there's another way: multicast DNS, or mDNS.
 * [SMTP]() and [web-based e-mail]()
 # Wget
 
-``Wget`` is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS.
-# Text editor
+``Wget`` is a free software package for retrieving files using [HTTP](HTTP), HTTPS, FTP and FTPS.
 
-By default, Linux support 2 terminal text editors, ``vim`` (with command ``vi``) and nano (with command ``nano``).
+# Desktop applications and GUI
 
-``vi`` is extremely light while ``nano`` has bigger size. In some lightweight OS, like some Xilinx OS deployed in the Automotive drive monitoring system, only ``vim`` is supported.
-
-For nano, check [nano document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/Write%20operations.md#nano).
-
-# Desktop applications
-
-Check [Desktop applications document](Desktop%20applications.md)
+Check [Desktop applications document](GUI.md)
