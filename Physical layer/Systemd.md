@@ -89,8 +89,8 @@ To output ``StandardOutput`` log to a file, use ``file``
 Description=My service
 
 [Service]
-ExecStart=/home/username/VinhTran/work-in-progress/test.sh
-StandardOutput=file:/home/username/VinhTran/work-in-progress/log.txt
+ExecStart=/home/username/work-in-progress/test.sh
+StandardOutput=file:/home/username/work-in-progress/log.txt
 
 [Install]
 WantedBy=multi-user.target
@@ -101,7 +101,7 @@ With that setting, ``StandardOutput`` log will not display in ``systemctl status
 To append ``StandardOutput`` log to a file, use ``append``
 
 ```
-StandardOutput=append:/home/username/VinhTran/work-in-progress/log.txt
+StandardOutput=append:/home/username/work-in-progress/log.txt
 ```
 ### Run a.out file
 
@@ -109,7 +109,7 @@ For ``a.out`` file (C process), it can be run with the whole path:
 
 ```
 [Service]
-ExecStart=/home/tranphucvinh/Documents/Gitlab/work-in-progress/a.out
+ExecStart=/home/username/Documents/Gitlab/work-in-progress/a.out
 ```
 
 ``a.out`` can't be run with ``workingdirectory`` like this:
@@ -120,7 +120,7 @@ Description=My service
 
 [Service]
 ExecStart=a.out
-WorkingDirectory=/home/dekvn/VinhTran/work-in-progress/
+WorkingDirectory=/home/username/work-in-progress/
 
 [Install]
 WantedBy=multi-user.target
