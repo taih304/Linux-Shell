@@ -42,3 +42,5 @@ After successfully installing, go to ``localhost:8080`` on web browser. The **Ge
 Go to ``/var/lib/jenkins/secrets/initialAdminPassword`` to get the administrator password for this.
 
 In Customize Jenkins, choose **Install suggested plugins**. Jenkins will then automatically install all suggested plugins.
+# Terminology
+A **CI/CD pipeline** is a deployment pipeline integrated with automation tools.
