@@ -1,18 +1,16 @@
-# Internet protocol (IP)
-
 Be not to confuse **IP** with **IP address** as the **IP address** is a part of the IP datagram.
 
 ![](../Environment/Images/ipv4.png)
 
 The **IP datagram** include: Version number. Header length, Type of service, Datagram length,...., IP address,..., data (aka payload) (as can see in the picture)
 
-## IPv4 Addressing
+# IPv4 Addressing
 
-### How hosts and routers are connected into the network.
+## How hosts and routers are connected into the network.
 
 A host typically has only **a single link** into the network; when IP in the host wants to send a datagram, it does so over this link. **The boundary** between the host and the physical link is called **an interface**. Now consider **a router** and **its interfaces**. Because a router’s job is to **receive a datagram** on one link and **forward the datagram** on some other link, a router necessarily **has two or more links** to which it is connected. **The boundary** between the router and any one of its links is also called **an interface**. A router thus has **multiple interfaces**, one for each of its links. Because **every host and router is capable of sending and receiving IP datagrams**, **IP requires each host and router interface to have its own IP address**. Thus, **an IP address is technically associated with an interface**, **rather than with the host or router containing that interface**.
 
-### IP address
+## IP address
 
 Each **interface** on every **host** and **router** in the global Internet must have an **IP address** that is **globally unique** (except for interfaces behind NATs).
 
@@ -22,7 +20,7 @@ In IP terms, this network interconnecting three host interfaces and one router i
 
 ![](../Environment/Images/subnet.png)
 
-## IP addressing in global Internet
+# IP addressing in global Internet
 
 The Internet’s address assignment strategy is known as **Classless Interdomain
 Routing (CIDR—pronounced cider)** [RFC 4632]. **CIDR** generalizes the notion of subnet addressing. As with subnet addressing, **the 32-bit IP address is divided into two parts and again has the dotted-decimal form a.b.c.d/x**, where x indicates the number of bits in the first part of the address.
@@ -40,6 +38,8 @@ Once an organization has obtained a block of addresses, **it can assign individu
 * Class A: 10.x.x.x
 * Class B: 172.16.x.x -> 172.31.x.x
 * Class C: 192.168.x.x
+
+The IP address ``127.0.0.1`` is called a **loopback address** or **loopback IP**. Packets sent to this address never reach the network but are looped through the network interface card only. This can be used for diagnostic purposes to verify that the internal path through the TCP/IP protocols is working.
 
 # IP commands
 
