@@ -94,7 +94,7 @@ Status: Downloaded newer image for hello-world:latest
 
 ``sudo docker pull hello-world``: Only pull ``hello-world`` and not run it after successfully pulling
 
-``sudo docker images``: List all avaialbe images and their information
+``sudo docker images``: List all available images and their information
 
 E.g
 
