@@ -67,6 +67,8 @@ echo /sbin/mdev > /proc/sys/kernel/hotplug
 mdev -s
 ```
 For the virtual filesystem, like procfs, sysfs, tmpfs, ``none`` can be added to mean that there is no physical disk partition linked to the mount point.
+
+``mdev -s`` will scan ``/sys`` to create ``/dev``. Base on [its implementation in Busybox](https://coral.googlesource.com/busybox/+/refs/tags/1_18_2/util-linux/mdev.c), ``mdev -s`` scans ``/sys/class/xxx```, looking for directories which have ``dev`` file, e.g ``/sys/class/tty/tty0/dev``. Then ``mdev`` creates the ``/dev/device_name`` node.
 # [.netrc](.netrc.md)
 # crontab
 
