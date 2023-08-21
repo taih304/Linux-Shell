@@ -97,7 +97,7 @@ File ``/etc/rc.local`` runs when system is booted. Check [rc.local init script d
 
 ## rcS
 
-``rcS`` stands for Run Control Scripts.  Check [rcS init script document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/README.md#rcs) for its implemenation.
+``rcS``, which is located in ``/etc/init.d``, stands for Run Control Scripts.  Check [rcS init script document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/README.md#rcs) for its implemenation.
 
 
 # usr
