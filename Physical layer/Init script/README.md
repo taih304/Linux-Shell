@@ -1,9 +1,9 @@
-Init script includes:
-* [Systemd](Systemd.md)
-* * SysV init with [rc.local](File%20system/File%20hierarchy.md#rclocal) and [rcS](File%20system/File%20hierarchy.md#rcs)
-* [.netrc](.netrc.md)
-* [crontab](#crontab)
-## crontab
+# [Systemd](Systemd.md)
+# SysV init 
+## [rc.local](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/File%20hierarchy.md#rclocal) 
+## [rcS](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/File%20hierarchy.md#rcs)
+# [.netrc](.netrc.md)
+# crontab
 
 ``crontab`` command is used to setup a program to run in a specific time or when just start up. ``crontab`` is not available in default [ubuntu docker](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Docker/ubuntu%20docker.md).
 
