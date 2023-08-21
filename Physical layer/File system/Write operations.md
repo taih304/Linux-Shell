@@ -30,11 +30,14 @@ E.g:
 
 ``mount /dev/sdb1 /mnt``: Mount the USB ``sdb1``
 
-Mount to loop device: ``mount`` allows mounting via a loop device
+**Options**:
+* ``-o``: mount options
+
+**Mount to loop device**: ``mount`` allows mounting via a loop device
 
 E.g: ``mount -o loop=/dev/loop3 boot.img /mnt/tmp``
 
-If no explicit loop device is mentioned (but just an option '-o loop' is given), then mount will try to find some unused loop device and use that.
+If no explicit loop device is mentioned (but just an option ``-o loop`` is given), then mount will try to find some unused loop device and use that.
 
 E.g: ``mount -o loop boot.img /mnt/tmp``
 
