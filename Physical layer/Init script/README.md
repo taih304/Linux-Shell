@@ -33,7 +33,30 @@ exit 0
 To make that script executable after rebooting, change its mode to ``777``: ``sudo chmod 777 /etc/rc.local``
 
 After rebooting the OS, view the log of ``/etc/rc.local`` in ``/var/log/syslog``.
-## [rcS](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/File%20hierarchy.md#rcs)
+## rcS
+``rcS`` stands for Run Control Scripts. It is located in ``/etc/init.d``. ``rcS`` allows you to run additional programs at boot time.
+
+File ``rcS`` is availale in Ubuntu OS 16.04 and [Armbian 3.4.113-sun8i Orange Pi](https://github.com/TranPhucVinh/Orange-Pi), and is not available in Ubuntu 20.04, Raspbian and ubuntu docker.
+
+Original content of ``rcS`` file in Ubuntu 16.04:
+
+```sh
+#! /bin/sh
+#
+# rcS
+#
+# Call all S??* scripts in /etc/rcS.d/ in numerical/alphabetical order
+#
+
+exec /etc/init.d/rc S
+```
+
+Adding echo log like this won't print out on ``/var/log/syslog``.
+
+```c
+echo "Hello, World !"
+exec /etc/init.d/rc S
+```
 # [.netrc](.netrc.md)
 # crontab
 
