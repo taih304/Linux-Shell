@@ -31,6 +31,7 @@ E.g:
 ``mount /dev/sdb1 /mnt``: Mount the USB ``sdb1``
 
 **Options**:
+* ``-t``: indicate the filesystem type. The full list of all supported filesystems depends on your kernel.
 * ``-o``: mount options
 
 **Mount to loop device**: ``mount`` allows mounting via a loop device
