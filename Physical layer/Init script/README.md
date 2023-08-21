@@ -1,6 +1,38 @@
 # [Systemd](Systemd.md)
 # SysV init 
-## [rc.local](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/File%20hierarchy.md#rclocal) 
+## rc.local
+File ``/etc/rc.local`` runs when system is booted. It exists in Ubuntu 16.04 and doesn't exist in Ubuntu 20.04 
+
+0rigin file ``/etc/rc.local`` in Ubuntu 16.04
+
+```sh
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+exit 0
+```
+
+Adding a script to that file to run that script from boot time, e.g:
+
+```sh
+echo "Hello, World ! from /etc/rc.local"
+
+exit 0
+```
+
+To make that script executable after rebooting, change its mode to ``777``: ``sudo chmod 777 /etc/rc.local``
+
+After rebooting the OS, view the log of ``/etc/rc.local`` in ``/var/log/syslog``.
 ## [rcS](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/File%20hierarchy.md#rcs)
 # [.netrc](.netrc.md)
 # crontab
