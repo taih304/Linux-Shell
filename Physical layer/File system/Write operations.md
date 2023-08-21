@@ -43,6 +43,10 @@ E.g: ``mount -o loop boot.img /mnt/tmp``
 
 Notice that if the mount file is ``img``, as an image file of an OS (like ``rootfs.img``, the whole files from ``~``), after mounting it with ``mount`` to the ``target_folder``. The ``target_folder`` will then then have all files of that directory like ``boot``, ``bin``, ``home``,...
 
+**remount**: Option ``remount`` will attempt to remount an already-mounted filesystem. This is commonly used to change the mount flags for a filesystem, especially to make a readonly filesystem writeable.
+```sh
+mount -o remount,rw / #This will make path / (as rootfs) to be writeable
+```
 # umount
 
 ``umount`` will detache/unmount a file system.
