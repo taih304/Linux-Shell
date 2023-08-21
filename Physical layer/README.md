@@ -12,7 +12,7 @@ To view the available group in your account, use command: ``groups``
 
 To see all available groups type: ``compgen -g``
 
-# Init process
+# Init script
 
 ## [Systemd](Systemd.md)
 
