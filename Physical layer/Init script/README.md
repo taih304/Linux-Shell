@@ -57,6 +57,15 @@ Adding echo log like this won't print out on ``/var/log/syslog``.
 echo "Hello, World !"
 exec /etc/init.d/rc S
 ```
+**Mdev** has a config file for controlling ownership/permissions of device nodes if your system needs something more than the default root/root ``660`` permissions. For this, you need to have hotplugging enabled in your kernel.
+
+So a typical code snippet from the ``rcS`` init script will be:
+```sh
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s
+```
 # [.netrc](.netrc.md)
 # crontab
 
