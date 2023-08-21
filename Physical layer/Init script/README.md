@@ -66,6 +66,7 @@ mount -t sysfs sysfs /sys
 echo /sbin/mdev > /proc/sys/kernel/hotplug
 mdev -s
 ```
+For the virtual filesystem, like procfs, sysfs, tmpfs, ``none`` can be added to mean that there is no physical disk partition linked to the mount point.
 # [.netrc](.netrc.md)
 # crontab
 
