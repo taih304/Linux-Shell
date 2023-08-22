@@ -1,4 +1,4 @@
-### Install new package
+# Install new package
 
 **Install packages**: ``sudo apt install package_name1 package_name2``, ``sudo apt-get install package_name``
 
@@ -8,7 +8,7 @@
 
 **Remove an installed Debian package**: ``sudo dpkg --remove package_name``
 
-### Download a Debian package from link and get its file source
+# Download a Debian package from link and get its file source
 
 Take this example to download [libi2c-dev](https://packages.debian.org/sid/libi2c-dev) package.
 
@@ -56,7 +56,7 @@ dpkg -x libi2c-dev.deb .
 
 ``i2c/smbus.h`` can be used as the header file for other source code while ``libi2c.a`` is the static library source code. Check [libi2c-dev static library in Bazel for this implementation](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Build%20automation%20tools/Bazel/C%20source%20files.md#static-library).
 
-### Download Debian package from link for used as system library in /usr/lib/x86_64-linux-gnu/
+# Download Debian package from link for used as system library in /usr/lib/x86_64-linux-gnu/
 
 Take [libcppunit](https://packages.ubuntu.com/bionic/libs/libcppunit-1.14-0) as an example
 
