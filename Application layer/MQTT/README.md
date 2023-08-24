@@ -1,5 +1,7 @@
 MQTT is a publish/subscribe model that runs over **TCP/IP sockets** or **WebSockets**. 
 
+Based on the [OASIS official document for MQTT](http://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html), the maximum MQTT packet size is 65535 bytes.
+
 MQTT over WebSockets can be secured with TLS/SSL. You should only need to run **MQTT over websockets** if you intend to publish/subscribe to messages directly from **within webapps** (in page) or any other applications that don't want to use the 1883/8883 port and want to go over HTTP/HTTPS instead - this could be so that there is less of a chance of being blocked by a firewall (e.g. in a corporate network), as most firewalls will let HTTP traffic through.
 
 Commercialized cloud service nowadays supporting updating data by either using a [REST GET or POST]() request or using MQTT Publish method. You can retrieve data from those clouds by using a REST GET request or MQTT Subscribe.
