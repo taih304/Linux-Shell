@@ -1,4 +1,10 @@
-## Cisco AnyConnect client
+# Fundamental concepts
+A **virtual private network** is a mechanism for creating a secure connection between a computing device and a computer network, or between two networks, using an insecure communication medium such as the public Internet.
+
+For normal access without VPN, your internet connection will be routed through your ISP servers. It means that your ISP can see and log all of your Internet activity.
+
+When using VPN, your internet connection will bypass the ISP server and will be redirected to the VPN server so that your ISP can't see your activity, the website you visit can't see your real IP but they see the VPN server IP instead.
+# Cisco AnyConnect client
 
 ### Install Cisco AnyConnect client
 
@@ -61,6 +67,6 @@ It works similar in GUI to set up connection
 
 * [Anyconnect VPN client](https://www.socsci.uci.edu/~jstern/uci_vpn_ubuntu/)
 
-## VPN for Google Chrome
+# VPN for Google Chrome
 
 There are various Google extensions to support running VPN on Google Chrome, like Betternet.
