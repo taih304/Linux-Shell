@@ -6,7 +6,7 @@ For normal access without VPN, your internet connection will be routed through y
 When using VPN, your internet connection will bypass the ISP server and will be redirected to the VPN server so that your ISP can't see your activity, the website you visit can't see your real IP but they see the VPN server IP instead.
 # Cisco AnyConnect client
 
-### Install Cisco AnyConnect client
+## Install Cisco AnyConnect client
 
 First, make sure you have the necessary Debian/Ubuntu support packages installed:
 
@@ -15,7 +15,7 @@ $ sudo apt-get update
 $ sudo apt-get install lib32z1 lib32ncurses5
 ```
 
-Go to [UCI OIT Cisco Anyconnect/Linux instruction page](https://uci.service-now.com/kb_view.do?sysparm_article=KB0010201) and download the ``Anyconnect VPN client``.
+[Download the Anyconnect VPN client](https://sites.socsci.uci.edu/~jstern/uci_vpn_ubuntu/ubuntu-openconnect-uci-instructions.html).
 
 Then extract this file:  ``tar -xzvf anyconnect-predeploy-linux-64-4.3.05017-k9.tar\ 6.59.23\ AM.gz``
 
