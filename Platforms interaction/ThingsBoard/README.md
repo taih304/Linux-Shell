@@ -1,12 +1,11 @@
-# ThingsBoard API reference
+# ThingsBoard API
 
-ThingsBoard API consists of two main parts: [device API](https://github.com/TranPhucVinh/ESP8266-Arduino-framework/blob/master/Platforms%20interaction/ThingsBoard/Device%20API.md) and server-side API.
+ThingsBoard API consists of two main parts: [device API](https://github.com/TranPhucVinh/ESP8266-Arduino-framework/blob/master/Platforms%20interaction/ThingsBoard/Device%20API.md) and [server-side API](#server-side-api).
 
+## Server-side API
 Server-side API is available as REST API.
 
 ThingsBoard support Swagger, a webpage to test its API. To access the Swagger webpage, add ``/swagger-ui`` after the ThingsBoard host. E.g ``demo.thingsboard.io/swagger-ui/``
-
-## Server-side API
 
 ### JWT Tokens
 
@@ -58,11 +57,11 @@ For example, the ``.bin`` file is uploaded and then named as ``test_device_firmw
 
 ThingsBoard has attributes value for all of its entity like device, customer, assets,...
 
-### Server attributes
+## Server attributes
 
 **Server attributes** allow CRUD operation on admin webpage and by API.
 
-### Client attributes
+## Client attributes
 
 **Client attributes** is only available on device. Client attributes are not allowed user to CRUD on the admin webpage but those operation can be performed by API on 
 Device API Controller
@@ -95,7 +94,7 @@ mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes" -u "
 
 **Note**: By default setup of [Save attributes widget](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/ThingsBoard/Rule%20chain/README.md#save-attributes) in root rule chain, this MQTT publish message will be updated to client attributes. Update the Save attributes widget in root rule chain for Server attributes or Shared attributes updated.
 
-### Share attributes
+## Share attributes
 
 **Share attributes** are attributes with value that can be shared to the shared value input widgets in dashboard like ``Update shared double attribute``, ``Update shared integer attribute``,... It allows user to CRUD on the admin webpage and by API.
 
@@ -109,7 +108,7 @@ mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/attributes" -u "
 
 **Step 2**: In dashboard, from ``Input widgets`` choose ``Update shared double attribute``. In that widget, choose the share attribute key setup in step 1, e.g ``node_1_share_attributes`` in this case.
 
-### Get client and shared attributes
+## Get client and shared attributes
 
 In order to request client-side or shared device attributes to ThingsBoard server node, send ``PUBLISH`` message to the following topic:
 
