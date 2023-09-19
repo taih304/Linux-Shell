@@ -93,6 +93,8 @@ socat tcp-listen:8001,fork tcp:localhost:8000
 * ``tcp:localhost:8000`` means the current running TCP client (localhost) on port ``8000``, ``tcp-listen:8001`` means the newly port mapping is on ``8001``
 * Without ``fork``, i.e ``socat tcp-listen:8001 tcp:localhost:8000``, then loading ``192.168.1.3:8001`` is available for just only 1 time. ``fork`` will child a new child process for the port fowarding everytime we reload the webpage
 
+**NAT implementation**: [NAT port in a local ISP router for a DDNS-supported domain registered from noip](https://www.youtube.com/watch?v=DoA5jc4PRHM)
+
 # ICMP
 
 **ICMP**, specified in [RFC 792], is used by hosts and routers to communicate network-layer information to each other. The most typical use of ICMP is for **error reporting**. For example, when running a Telnet, FTP, or HTTP session, you may have encountered an **error message** such as “Destination network unreachable.” This message had its origins in **ICMP**.
