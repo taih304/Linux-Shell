@@ -68,18 +68,18 @@ Thus, when a TCP segment arrives from the network to a host, the host uses all f
 
 # How TCP server and TCP client work
 
-• The **TCP server application** has a “welcoming socket,” that waits for connection-establishment requests from TCP clients on port number 12000.
-• The **TCP client** creates a socket and sends a connection establishment request segment with the lines:
+* The **TCP server application** has a “welcoming socket” that waits for connection-establishment requests from TCP clients on port number 12000.
+* The **TCP client** creates a socket and sends a connection establishment request segment with the lines:
 
-```c
+```py
 clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.connect((serverName,12000))
 ```
 
-• A connection-establishment request is nothing more than a TCP segment with destination port number 12000 and a special connection-establishment bit set in the TCP header (discussed in Section 3.5). The segment also includes a source port number that was chosen by the client.
-• When the host operating system of the computer running the server process receives the incoming connection-request segment with destination port 12000, it locates the server process that is waiting to accept a connection on port number 12000. The server process then creates a new socket:
+* A connection-establishment request is nothing more than a TCP segment with destination port number 12000 and a special connection-establishment bit set in the TCP header (discussed in Section 3.5). The segment also includes a source port number that was chosen by the client.
+* When the host operating system of the computer running the server process receives the incoming connection-request segment with destination port 12000, it locates the server process that is waiting to accept a connection on port number 12000. The server process then creates a new socket:
 
-```c
+```py
 connectionSocket, addr = serverSocket.accept()
 ```
 
@@ -97,13 +97,13 @@ Base on what we learn above, **a Web server that spawns a new process for each c
 
 **If the client and server are using persistent HTTP**, then throughout the duration of the persistent connection the client and server exchange HTTP messages via the same server socket. However, **if the client and server use non-persistent HTTP**, then **a new TCP connection is created and closed for every request/response**, and hence a new socket is created and later closed for every request/response. **This frequent creating and closing of sockets can severely impact the performance of a busy Web server** (although a number of operating system tricks can be used to mitigate the problem).
 
-### Securing TCP and UDP
+# Securing TCP and UDP
 
 Neither **TCP nor UDP** provide any encryption—the data that the sending process passes into its socket is the same data that travels over the network to the destination process. So, for example, if the sending process sends a password in cleartext (i.e., unencrypted) into its socket, the cleartext password will travel over all the links between sender and receiver, potentially getting sniffed and discovered at any of the intervening links.
 
 Because privacy and other security issues have become critical for many applications, the Internet community has developed an enhancement for TCP, called **Secure Sockets Layer (SSL)**. TCP-enhanced-with-SSL not only does everything that traditional TCP does but also provides critical process-to-process security services, including encryption, data integrity, and end-point authentication.
 
-We emphasize that **SSL is not a third Internet transport protocol**, on the same level as TCP and UDP, but instead is an enhancement of TCP, with the enhancements being implemented in the application layer. In particular, if an application wants to use the services of SSL, it needs to include SSL code (existing, highly optimized libraries and classes) in both the client and server sides of the application. SSL has its own socket API that is similar to the traditional TCP socket API.
+We emphasize that **SSL is not a third Internet transport protocol**, on the same level as TCP and UDP, but instead is an enhancement of TCP, with the enhancements being implemented in the **application layer**. In particular, if an application wants to use the services of SSL, it needs to include SSL code (existing, highly optimized libraries and classes) in both the client and server sides of the application. SSL has its own socket API that is similar to the traditional TCP socket API.
 
 When an application uses SSL, the sending process passes cleartext data to the SSL socket; SSL in the sending host then encrypts the data and passes the encrypted data to the TCP socket. The encrypted data travels over the Internet to the TCP socket in the receiving process. The receiving socket passes the encrypted data to SSL, which decrypts the data. Finally, SSL passes the cleartext data through its SSL socket to the receiving process.
 
