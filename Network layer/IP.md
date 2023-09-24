@@ -20,7 +20,7 @@ In IP terms, this network interconnecting three host interfaces and one router i
 
 ![](../Environment/Images/subnet.png)
 
-# IP addressing in global Internet
+# IP addressing in the global Internet
 
 The Internet’s address assignment strategy is known as **Classless Interdomain
 Routing (CIDR—pronounced cider)** [RFC 4632]. **CIDR** generalizes the notion of subnet addressing. As with subnet addressing, **the 32-bit IP address is divided into two parts and again has the dotted-decimal form a.b.c.d/x**, where x indicates the number of bits in the first part of the address.
@@ -39,7 +39,9 @@ Once an organization has obtained a block of addresses, **it can assign individu
 * Class B: 172.16.x.x -> 172.31.x.x
 * Class C: 192.168.x.x
 
-The IP address ``127.0.0.1`` is called a **loopback address** or **loopback IP**. Packets sent to this address never reach the network but are looped through the network interface card only. This can be used for diagnostic purposes to verify that the internal path through the TCP/IP protocols is working.
+The IP address **127.0.0.1** is called a **loopback address** or **loopback IP**. Packets sent to this address never reach the network but are looped through the network interface card only. This can be used for diagnostic purposes to verify that the internal path through the TCP/IP protocols is working.
+
+In both Windows and Linux, when selecting which of a host's IP address to use as a source IP, a program may specify [INADDR_ANY](https://github.com/TranPhucVinh/C/blob/master/Transport%20layer/API.md#sockaddr-in_addr-sockaddr_in) (**0.0.0.0**), i.e The IP address **0.0.0.0** is bound to the IP address of the current device. 
 
 # IP commands
 
