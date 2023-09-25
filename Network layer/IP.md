@@ -2,7 +2,7 @@ Be not to confuse **IP** with **IP address** as the **IP address** is a part of 
 
 ![](../Environment/Images/ipv4.png)
 
-The **IP datagram** include: Version number. Header length, Type of service, Datagram length,...., IP address,..., data (aka payload) (as can see in the picture)
+The **IP datagram** include: Version number, Header length, Type of service, Datagram length,...., IP address,..., data (aka payload) (as can see in the picture)
 
 # IPv4 Addressing
 
