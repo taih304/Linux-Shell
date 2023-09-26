@@ -20,6 +20,19 @@ In IP terms, this network interconnecting three host interfaces and one router i
 
 ![](../Environment/Images/subnet.png)
 
+## Private IP
+RFC 1918 define private Internet IP
+
+**Valid IP private**
+
+* Class A: 10.x.x.x
+* Class B: 172.16.x.x -> 172.31.x.x
+* Class C: 192.168.x.x
+
+The IP address **127.0.0.1** is called a **loopback address** or **loopback IP**. Packets sent to this address never reach the network but are looped through the network interface card only. This can be used for diagnostic purposes to verify that the internal path through the TCP/IP protocols is working.
+
+In both Windows and Linux, when selecting which of a host's IP address to use as a source IP, a program may specify [INADDR_ANY](https://github.com/TranPhucVinh/C/blob/master/Transport%20layer/API.md#sockaddr-in_addr-sockaddr_in) (**0.0.0.0**), i.e The IP address **0.0.0.0** is bound to the IP address of the current device. 
+
 # IP addressing in the global Internet
 
 The Internet’s address assignment strategy is known as **Classless Interdomain
@@ -32,16 +45,6 @@ Once an organization has obtained a block of addresses, **it can assign individu
 **DHCP** allows a host to obtain (be allocated) **an IP address automatically**. A network administrator can configure **DHCP** so that a given host receives **the same IP address** each time it connects to the network, or a host may be **assigned a temporary IP address** that will be **different** each time the host connects to the network.
 
 **DHCP** is a **client-server protocol**. A **client** is typically a newly arriving host wanting to obtain network configuration information, including an **IP address** for itself.
-
-## Valid IP private
-
-* Class A: 10.x.x.x
-* Class B: 172.16.x.x -> 172.31.x.x
-* Class C: 192.168.x.x
-
-The IP address **127.0.0.1** is called a **loopback address** or **loopback IP**. Packets sent to this address never reach the network but are looped through the network interface card only. This can be used for diagnostic purposes to verify that the internal path through the TCP/IP protocols is working.
-
-In both Windows and Linux, when selecting which of a host's IP address to use as a source IP, a program may specify [INADDR_ANY](https://github.com/TranPhucVinh/C/blob/master/Transport%20layer/API.md#sockaddr-in_addr-sockaddr_in) (**0.0.0.0**), i.e The IP address **0.0.0.0** is bound to the IP address of the current device. 
 
 # IP commands
 
