@@ -32,6 +32,7 @@ View process tree of a specific proccess, like ``2029``:  ``pstree -p 2029``
 
 ``pgrep``, ``pkill``: look  up  or signal processes based on name and other attributes
 
+``pkill a.out``: Kill the process named ``a.out`` (listed by ``ps`` command)
 # netstat
 
 ``netstat -tulpn``: Find out which process is listening upon a port
