@@ -4,10 +4,10 @@ The Internet’s network layer includes the celebrated IP Protocol, which define
 
 ![](../Environment/Images/network_layer.png)
 
-The Internet’s network layer has three major components:
-* The first component is the IP protocol.
-* The second major component is the **routing component**, which determines the path a datagram follows from source to destination. We mentioned earlier that **routing protocols** compute the forwarding tables that are used to forward packets through the network.
-* The final component of the network layer is a facility to report errors in datagrams and respond to requests for certain network-layer information: the **[Internet Control Message Protocol (ICMP)](#ICMP)**
+**The Internet’s network layer has three major components**:
+* IP protocol.
+* **Routing component**, which determines the path a datagram follows from source to destination. We mentioned earlier that **routing protocols** compute the forwarding tables that are used to forward packets through the network.
+* **[Internet Control Message Protocol (ICMP)](#ICMP)**: The facility to report errors in datagrams and respond to requests for certain network-layer information
 
 # Network Service Models
 
