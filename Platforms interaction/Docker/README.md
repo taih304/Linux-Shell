@@ -6,8 +6,6 @@ An **image** is a package or a template, just like a VM template that work withi
 
 **Container** is a running instance of images that is isolated and has their own environment and set of processes. Unlike a virtual machine, containers aren't meant to host an OS. **Containers only recreate, or virtualize, the operating systems**. Containers meant to run a specific task or process, e.g run a webserver, database,... Once the task is completed, the container exits. A container only lives as long as the process inside it is alive.
 
-Virtual machines recreate a full representation of the hardware. .
-
 # Install
 
 ## Set up the repository
