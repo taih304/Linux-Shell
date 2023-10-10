@@ -62,7 +62,9 @@ As an example, suppose a browser is requesting the object ``http://www.someschoo
 
 Note that **a cache is both a server and a client at the same time**. When it receives requests from and sends responses to a browser, it is a server. When it sends requests to and receives responses from an origin server, it is a client.
 
-Web caching has seen deployment in the Internet for **two reasons**. First, a Web cache can substantially **reduce the response time for a client request**, Web caches can substantially **reduce traffic on an institution’s access link to the Internet**. By reducing traffic, the institution (for example, a company or a university) does not have to upgrade bandwidth as quickly, thereby reducing costs. Furthermore, Web caches can substantially reduce Web traffic in the Internet as a whole, thereby improving performance for all applications.
+Web caching has seen deployment in the Internet for **two reasons**:
+* **Reduce the response time for a client request**, Web caches can substantially **reduce traffic on an institution’s access link to the Internet**. By reducing traffic, the institution (for example, a company or a university) does not have to upgrade bandwidth as quickly, thereby reducing costs.
+* **Reduce Web traffic in the Internet as a whole**, thereby improving performance for all applications.
 
 # REST
 
