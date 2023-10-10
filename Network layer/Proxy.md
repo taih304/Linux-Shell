@@ -21,3 +21,12 @@ Forward proxy has seen deployment in the Internet for **two reasons**:
 * **Reduce the response time for a client request**, Web caches can substantially **reduce traffic on an institution’s access link to the Internet**. By reducing traffic, the institution (for example, a company or a university) does not have to upgrade bandwidth as quickly, thereby reducing costs.
 * **Reduce Web traffic in the Internet as a whole**, thereby improving performance for all applications.
 
+# Reverse proxy
+A reverse proxy is a proxy deployed on the server side computer network which regulate incoming traffic from clients. The clients will then communicate with the reverse proxy server and the reverse proxy server will fetch the data from the server then direct it back to the client.
+
+![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/reverse_proxy.png)
+
+The reverse proxy server will help:
+* Load balancing: Multiple server can be overwhelmed by the network from clients. Reverse proxy can distribute traffic to multiple servers so that certain servers don't get overloaded.
+* Hide the server IP as the client can only see the IP of the reverse proxy
+* Increase the security on the server side computer network, e.g block malicious traffic from client 
