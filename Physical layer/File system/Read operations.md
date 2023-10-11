@@ -84,7 +84,7 @@ That happens as ``bash`` runs the right-hand side of a pipeline in a subshell co
 E.g: File ``test.txt`` has content ``ls``
 
 ``source test.txt`` and ``. text.txt`` will run ``ls`` command
-## printf
+# printf
 
 ``printf hello`` and ``printf "hello"`` will printf to a stream.
 
