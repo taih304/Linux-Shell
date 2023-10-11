@@ -1,0 +1,9 @@
+# Parameters
+* ``-m rtu``: Modbus RTU protocol
+* ``-a #``: Slave address (1-255 for RTU/ASCII, 0-255 for TCP)
+
+# Initiate a Modbus RTU slave/server
+Initiate a Modbus RTU slave/server with address ``123``:
+```sh
+diagslave -b 9600 -p none -m rtu -a 123 /dev/ttyUSB0
+```
