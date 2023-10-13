@@ -5,7 +5,7 @@ Modpoll Modbus Master Simulator is a CLI tool to create/simulate a Modbus master
 
 Download modpoll-3.10.tgz file from the [official Modpoll Modbus Master Simulator webpage](https://www.modbusdriver.com/modpoll.html)
 
-Then extract ``tar -xf modpoll-3.10.tgz``.
+Then extract ``tar -xf modpoll-3.10.tgz``
 
 Inside the extracted folder ``modpoll``, ``x86_64-linux-gnu`` has ``modpoll`` command for the Linux environment. Same for other Embedded Linux environment with ``arm-linux-gnueabihf``,...
 
@@ -21,7 +21,7 @@ Then command ``modpoll`` is available.
 
 Download diagslave-3.4.tgz file from the [official Diagslave Modbus Slave Simulator webpage](https://www.modbusdriver.com/diagslave.html)
 
-Then extract ``tar -xf diagslave-3.4.tgz``.
+Then extract ``tar -xf diagslave-3.4.tgz``
 
 Inside the extracted folder ``diagslave``, ``x86_64-linux-gnu`` has ``diagslave`` command for the Linux environment. Same for other Embedded Linux environment with ``arm-linux-gnueabihf``,...
 
