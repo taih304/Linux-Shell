@@ -4,7 +4,7 @@
 
 # Read operation
 ## Read holding register 
-Read 10 holding register starting from register address ``500``, at slave/server address ``123`` with Modbus RTU at 9600 baud, no parity on ``/dev/ttyUSB0``:
+Initiate a Modbus RTU master/client with 9600 baud, no parity to read 10 holding register starting from register address ``500``at slave/server address ``123`` on ``/dev/ttyUSB0``:
 ```sh
 modpoll -b 9600 -p none -m rtu -a 3 -r 500 -c 10 /dev/ttyUSB0
 ```
@@ -41,12 +41,16 @@ Data type.............: 16-bit register, output (holding) register table
 -- Polling slave... (Ctrl-C to stop)
 ...
 ```
+
 ## Read coil/discrete output
 Read 10 coils starting from coil address ``2``
 ```sh
 modpoll -b 9600 -p none -m rtu -a 1 -t 0 -r 2 -c 10 /dev/ttyUSB0
 ```
-
+Initiate a Modbus ASCII master/client to read 10 coils starting from coil address ``2``:
+```sh
+modpoll -b 9600 -p none -m ascii -a 1 -t 0 -r 2 -c 10 /dev/ttyUSB0
+```
 # Write operation
 Write to 1 holding register starting at address ``500``, at slave/server address ``123`` with Modbus RTU at 9600 baud, no parity on ``/dev/ttyUSB0``:
 ```sh
