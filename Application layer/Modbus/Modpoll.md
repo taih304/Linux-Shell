@@ -4,6 +4,7 @@
 
 # Read operation
 
+## Read holding register 
 Read 10 holding register starting from register address ``500``, at slave/server address ``123`` with Modbus RTU at 9600 baud, no parity on ``/dev/ttyUSB0``:
 ```sh
 modpoll -b 9600 -p none -m rtu -a 3 -r 500 -c 10 /dev/ttyUSB0
