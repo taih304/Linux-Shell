@@ -7,3 +7,7 @@ Initiate a Modbus RTU slave/server with address ``123``:
 ```sh
 diagslave -b 9600 -p none -m rtu -a 123 /dev/ttyUSB0
 ```
+# Initiate a Modbus ASCII slave/server
+```sh
+diagslave -b 115200 -p none -m ascii -a 1 /dev/ttyUSB0
+```
