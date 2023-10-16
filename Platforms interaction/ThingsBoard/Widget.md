@@ -1,12 +1,12 @@
-# Connect existed device to widget on dashboard
+# Connect the existing device to widget on dashboard
 
-Create button widget to control device
+Create a button widget to control device
 
-### Step 1
+## Step 1
 
 Create a new dashboard, and a new widget
 
-### Step 2
+## Step 2
 
 A new widget can be, e.g ``Timeseries Line Chart``. After creaing a new widget, there will be a tab 
 ``Add Widget: Timeseries Line Chart``. In that tab, there will be 4 small tabs: `` Data``, ``Settings``, ``Advanced``, ``Actions``.
@@ -27,7 +27,7 @@ After creating the new Entity aliases, choose then **entity timeseries** to visu
 
 # Control widget
 
-### RPC button
+## RPC button
 
 When pressing the RPC button widget, a message is broadcasted to any subscribe MQTT client:
 
@@ -43,7 +43,7 @@ For customized responsed message, in Advanced tab, update the message in ``rpcCo
 {"message": "Hello, World"}
 ```
 
-### Knob control
+## Knob control
 
 Knob control is not yet implemented in Linux Shell, check [the corresponding RPC examples in ESP-IDF for its implementation](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Platforms%20interaction/ThingsBoard/MQTT/README.md#rpc)
 
@@ -96,7 +96,7 @@ Check **Example: Create a double share attribute of a device then connect it to 
 
 # Map
 
-**Step 1**: Create a map form map widget, then connect the device to that widget
+**Step 1**: Create a map from map widget, then connect the device to that widget
 
 **Step 2**: Choose the timeseries from that device with valid longitude and latitude to be displayed as the longitude and latitude on the map.
 
