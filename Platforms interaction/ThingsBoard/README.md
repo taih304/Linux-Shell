@@ -1,3 +1,7 @@
+**ThingsBoard model**: Tenant -> Customer -> User
+
+1 **tenants** can create many **customers**. 1 **customer** can create many **users**.
+
 # ThingsBoard API
 
 ThingsBoard API consists of two main parts: [device API](https://github.com/TranPhucVinh/ESP8266-Arduino-framework/blob/master/Platforms%20interaction/ThingsBoard/Device%20API.md) and [server-side API](#server-side-api).
