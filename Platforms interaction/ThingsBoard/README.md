@@ -1,6 +1,11 @@
-**ThingsBoard model**: Tenant -> Customer -> User
+# ThingsBoard entity
+ThingsBoard defines 3 main entities: Tenant -> Customer -> User
 
-1 **tenants** can create many **customers**. 1 **customer** can create many **users**.
+**Tenant**: A tenant can create customers and assign devices to those customers.
+
+**Customer**: A customer can create **user** accounts and has many **users**. A customer can have an email but **that email has not thing to deal with as it can't be used to log into ThingsBoard**.
+
+**User**: A user account created by a customer will have an email and password, an also an activation page. Use that email and password to login to ThingsBoard.
 
 # ThingsBoard API
 
