@@ -6,7 +6,25 @@ MQTT over WebSockets can be secured with TLS/SSL. You should only need to run **
 
 Commercialized cloud service nowadays supporting updating data by either using a [REST GET or POST]() request or using MQTT Publish method. You can retrieve data from those clouds by using a REST GET request or MQTT Subscribe.
 
-## When to use MQTT, instead of REST ?
+# EMQ
+We use EMQ, a free EMQ broker for testing
+## Mosquitto
+
+Publish data
+
+```sh
+mosquitto_pub -h broker.emqx.io -t "test/message" -m "Hello, world"
+```
+
+Subscribe to a topic
+
+```sh
+mosquitto_sub -h broker.emqx.io -t "test/message"
+```
+
+## [MQTT.js](MQTT.js.md)
+
+# When to use MQTT, instead of REST ?
 
 In these scenarios, it is useful to use MQTT to update data to a cloud service:
 * Your device is power-constrained, and you want lower battery consumption to send data.
