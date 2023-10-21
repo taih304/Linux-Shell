@@ -1,14 +1,14 @@
-### Device
+# Device
 
 * NFC reader: ACR122U
 * Document: ACR122U USB NFC Reader, Application Programming Interface V2.04
 
-### Appendix
+# Appendix
 
 * PICC: proximity integrated circuit card
 * ATR: Answer to reset
 
-### Install ACR122U NFC USB reader on Linux 
+# Install ACR122U NFC USB reader on Linux 
 
 **Install driver**: ACR122U USB NFC Reader
 

@@ -23,6 +23,13 @@ Init script includes:
 
 [sysfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#sysfs) and [procfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#procfs) are filesystems which allow user to monitor system resources.
 
+# [Connectivity](Connectivity)
+Connectivity implementation on Linux Shell includes:
+* [I2C]()
+* [USB]()
+* [Bluetooth]()
+* [Zigbee]()
+* [NFC]()
 # Miscellaneous system handler commands
 
 Other commands:
