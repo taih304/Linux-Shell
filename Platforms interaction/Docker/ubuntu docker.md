@@ -160,5 +160,5 @@ echo "$DOCKER_ENV"
 Use ``-e`` flag:
 
 ```sh
-sudo docker run -v /home/dekvn/VinhTran/docker_dir:/home -e DOCKER_ENV="Docker environment" ubuntu home/test.sh
+sudo docker run -v /home/hostname/VinhTran/docker_dir:/home -e DOCKER_ENV="Docker environment" ubuntu home/test.sh
 ```
