@@ -127,7 +127,7 @@ Map ``existed_dir``, an existed directory with existed data to ``home`` of docke
 sudo docker run -v /home/hostname/existed_dir:/home -i ubuntu #then perform operation with interactive mode
 ```
 
-Then all file operation inside ``home`` directory in the ``ubuntu`` docker container will be mapped to ``/home/hostname/existed_dir`` to the hosting OS, and also in reverse, as all operation in ``/home/hostname/existed_dir`` will effect ``home`` of ``ubuntu`` docker container.
+Then all file operation inside ``home`` directory in the ``ubuntu`` docker container will be mapped to ``/home/hostname/existed_dir`` of the hosting OS, and also in reverse, as all operation in ``/home/hostname/existed_dir`` will effect ``home`` of ``ubuntu`` docker container.
 
 # Run a specific process on docker
 
