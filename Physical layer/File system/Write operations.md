@@ -154,4 +154,6 @@ Replacing string on a specific line number, e.g ``2``: ``sed -i "2 s/const/var/g
 
 **Soft link**, also call **symbolic link**, abbreviated as **symlink**, is similar to MS Windows shortcuts.
 
+**Implementation**: [symbolic link setup is required for Python in /usr/bin/env](https://github.com/TranPhucVinh/Python/blob/master/README.md#symbolic-link-issue)
+
 **Hard links** are just different names for the same files.
