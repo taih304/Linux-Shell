@@ -140,3 +140,8 @@ E.g:
 sudo docker import esp8266_rtos_sdk_docker.tar esp8266_rtos_sdk_docker_modified
 ```
 Now ``esp8266_rtos_sdk_docker_modified`` docker contains all the installed packages, and work progress from the origin docker which has IMAGE ID ``d99f7b921eb1``
+
+Enter the terminal mode of this docker (must have **sh** argument):
+```sh
+sudo docker run -it esp8266_rtos_sdk_docker_modified sh
+```
