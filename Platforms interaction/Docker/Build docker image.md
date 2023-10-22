@@ -101,7 +101,7 @@ After successfully built, ``sudo docker run simple_ubuntu_docker ls`` will print
 
 **Add a specific package to the built docker with RUN** 
 
-**RUN** inside Dockerfile only runs during the the docker build process:
+**RUN** inside Dockerfile only runs during the docker build process:
 
 ```dockerfile
 FROM ubuntu
@@ -121,3 +121,22 @@ FROM ubuntu
 RUN echo "Docker is being built"
 ```
 Then the message **Docker is being built** will be printed out during the docker build process. Must not be confused [CMD](#build-an-ubuntu-image-that-only-prints-out-a-string) and **RUN** for echo as **CMD echo** will print out the message when running that docker.
+# Export
+Export the current working docker container so that the newly exported container contains all the installed packages, and work progress from the origin one.
+
+```sh
+sudo docker export <IMAGE_ID > exported_docker_name.tar
+```
+E.g:
+```sh
+sudo docker export d99f7b921eb1 > exported_docker_container.tar
+```
+Then import the newly exported docker tar file
+```sh
+sudo docker import exported_docker_container.tar new_docker_name
+```
+E.g: 
+```sh
+sudo docker import esp8266_rtos_sdk_docker.tar esp8266_rtos_sdk_docker_modified
+```
+Now ``esp8266_rtos_sdk_docker_modified`` docker contains all the installed packages, and work progress from the origin docker which has IMAGE ID ``d99f7b921eb1``
