@@ -152,6 +152,6 @@ Replacing string on a specific line number, e.g ``2``: ``sed -i "2 s/const/var/g
 
 ``ln -s source_file.txt target_file.txt``: ``target_file.txt`` now is the symbolic link (also called soft link) of ``source_file.txt``. ``target_file.txt`` now has different inode with ``source_file.txt``. Its file type now is ``symbolic link`` (check by ``file``). Removing ``source_file.txt`` makes ``target_file.txt`` unable to read.
 
-**Soft link**, also call **symbolic link** is similar to MS Windows shortcuts.
+**Soft link**, also call **symbolic link**, abbreviated as **symlink**, is similar to MS Windows shortcuts.
 
 **Hard links** are just different names for the same files.
