@@ -112,9 +112,7 @@ hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
 
 ``sudo docker ps -a``: List all running or exited containers
 
-## ubuntu docker
-
-Check [ubuntu docker document](ubuntu%20docker.md)
+## [ubuntu docker](ubuntu%20docker.md)
 
 Table of content for ``ubuntu docker`` implementations:
 
