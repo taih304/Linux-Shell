@@ -35,7 +35,15 @@ A Dockerfile must begin with a **FROM** instruction. The **FROM** instruction sp
 
 # Build an Ubuntu image that only prints out a string
 
-``Dockerfile``
+Use ``CMD`` and ``ENTRYPOINT`` as the startup command, as the commands specified by them will print out when the docker started.
+
+## CMD
+
+**CMD** is executing at run time.
+
+``CMD command param``, e.g ``CMD echo "Hello, World !"``
+
+``CMD ["command", "param"]``, e.g ``CMD ["echo", "Hello, World !"]``
 
 ```dockerfile
 FROM ubuntu
@@ -45,17 +53,7 @@ CMD echo "Hello, World !"
 
 Along with supporting all ubuntu docker features, running ``simple_ubuntu_docker`` (``sudo docker run simple_ubuntu_docker``) will result in ``Hello, World !``.
 
-## CMD and ENTRYPOINT
-
-Use ``CMD`` and ``ENTRYPOINT`` as the startup command, as the commands specified by them will print out when the docker started.
-
-**CMD**
-
-``CMD command param``, e.g ``CMD echo "Hello, World !"``
-
-``CMD ["command", "param"]``, e.g ``CMD ["echo", "Hello, World !"]``
-
-**ENTRYPOINT**
+## ENTRYPOINT
 
 ```dockerfile
 FROM ubuntu
@@ -90,21 +88,11 @@ When using ``ENTRYPOINT`` with ``echo`` like this, user are no longer able to ex
 E.g: ``sudo docker run simple_ubuntu_docker ls`` will print out ``ls`` instead of executing ``ls`` command.
 
 # Build a docker with included files and installed library
-
-**Add files to a directory in the built docker**:
-
-```dockerfile
-FROM ubuntu
-
-#Copy file test.sh in build_docker to / in simple_ubuntu_docker
-COPY test.sh .
-```
-
-After successfully built, ``sudo docker run simple_ubuntu_docker ls`` will print out ``test.sh`` along with files in the ``/`` directory.
-
-**Add a specific package to the built docker with RUN** 
+## RUN
 
 **RUN** inside Dockerfile only runs during the docker build process:
+
+**Add a specific package to the built docker with RUN** 
 
 ```dockerfile
 FROM ubuntu
@@ -124,6 +112,18 @@ FROM ubuntu
 RUN echo "Docker is being built"
 ```
 Then the message **Docker is being built** will be printed out during the docker build process. Must not be confused [CMD](#build-an-ubuntu-image-that-only-prints-out-a-string) and **RUN** for echo as **CMD echo** will print out the message when running that docker.
+
+## COPY
+**Add files to a directory in the built docker**:
+
+```dockerfile
+FROM ubuntu
+
+#Copy file test.sh in build_docker to / in simple_ubuntu_docker
+COPY test.sh .
+```
+
+After successfully built, ``sudo docker run simple_ubuntu_docker ls`` will print out ``test.sh`` along with files in the ``/`` directory.
 # Export
 Export the current working docker container so that the newly exported container contains all the installed packages, and work progress from the origin one.
 
