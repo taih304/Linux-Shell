@@ -29,6 +29,9 @@ ubuntu                 latest    2dc39ba059dc   10 days ago      77.8MB
 ```
 
 Image ``simple_ubuntu_docker`` now support all features like [ubuntu docker](ubuntu%20docker.md), e.g support command like ``ls``, ``cd``,...
+## FROM
+
+A Dockerfile must begin with a **FROM** instruction. The **FROM** instruction specifies the Parent Image from which you are building.
 
 # Build an Ubuntu image that only prints out a string
 
