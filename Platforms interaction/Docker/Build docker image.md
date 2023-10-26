@@ -131,6 +131,14 @@ COPY test.sh .
 ```
 
 After successfully built, ``sudo docker run simple_ubuntu_docker ls`` will print out ``test.sh`` along with files in the ``/`` directory.
+## ARG
+
+```sh
+ARG <name>[=<default value>]
+```
+
+The ARG instruction defines a variable that users can pass at build-time to the builder with the docker build command using the ``--build-arg <varname>=<value>`` flag. If a user specifies a build argument that was not defined in the Dockerfile, the build outputs a warning.
+
 # Export
 Export the current working docker container so that the newly exported container contains all the installed packages, and work progress from the origin one.
 
