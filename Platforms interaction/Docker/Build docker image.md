@@ -33,10 +33,8 @@ Image ``simple_ubuntu_docker`` now support all features like [ubuntu docker](ubu
 
 A Dockerfile must begin with a **FROM** instruction. The **FROM** instruction specifies the Parent Image from which you are building.
 
-# Build an Ubuntu image that only prints out a string
-
-Use ``CMD`` and ``ENTRYPOINT`` as the startup command, as the commands specified by them will print out when the docker started.
-
+# Run-time instructions
+Run-time instructions are instruction which run/execute when the docker is running.
 ## CMD
 
 **CMD** is executing at run time.
@@ -86,13 +84,20 @@ Result: ``Hello, World !``
 When using ``ENTRYPOINT`` with ``echo`` like this, user are no longer able to execute command when running ``run``.
 
 E.g: ``sudo docker run simple_ubuntu_docker ls`` will print out ``ls`` instead of executing ``ls`` command.
-
-# Build a docker with included files and installed library
+## ENV
+```Dockerfile
+FROM ubuntu
+ENV string="Hello, World !"
+CMD echo $string
+```
+Build and run ``simple_ubuntu_docker``: ``sudo docker run simple_ubuntu_docker`` will print out ``Hello, World !``
+# Build-time instructions
+Build-time instructions are instructions which run/execute while the docker is compiling/building. Build-time instructions won't run when the docker is running.
 ## RUN
 
 **RUN** inside Dockerfile only runs during the docker build process:
 
-**Add a specific package to the built docker with RUN** 
+### Add a specific package to the built docker with RUN
 
 ```dockerfile
 FROM ubuntu
@@ -104,9 +109,11 @@ RUN apt-get install net-tools
 
 ``ifconfig`` from ``net-tools`` now is supported: ``sudo docker run simple_ubuntu_docker ifconfig``
 
+### Display debug message during docker build
+
 Adding **RUN** with **echo** will print out a message during the docker build process:
 
-```c
+```dockerfile
 FROM ubuntu
 
 RUN echo "Docker is being built"
