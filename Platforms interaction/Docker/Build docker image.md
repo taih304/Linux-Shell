@@ -151,7 +151,8 @@ Use **ENV** if trying to get the **ARG** value. Using **ARG** with string value,
 ```Dockerfile
 ARG string
 FROM ubuntu
-ENV string=Hello_World # Must not be string, i.e musn't be "Hello, World !"
+# Must not be string, i.e musn't be "Hello, World !"
+ENV string=Hello_World 
 RUN echo $string
 ```
 Then when building ``sudo docker build . -t "simple_ubuntu_docker"``, string **Hello, World !** will be printed out.
