@@ -91,7 +91,7 @@ Volume mapping is a technique to map a folder in the OS hosting the docker conta
 1. Maintain data persistent in the mapped container folder
 2. Act as a bridge to share data between the existed mapped folder in the hosting OS and the docker container folder
 
-## Maintain data persistent in the mapped container folder
+## -v flag: Maintain data persistent in the mapped container folder
 
 **Non-persistent feature**: Base on the definition of docker container, the data created while running the container will be losted when the container ends its life.
 
@@ -129,6 +129,12 @@ sudo docker run -v /home/hostname/existed_dir:/home -i ubuntu #then perform oper
 
 Then all file operation inside ``home`` directory in the ``ubuntu`` docker container will be mapped to ``/home/hostname/existed_dir`` of the hosting OS, and also in reverse, as all operation in ``/home/hostname/existed_dir`` will effect ``home`` of ``ubuntu`` docker container.
 
+### -w flag
+``-w`` flag goes with ``-v`` as it specifies the working directory that the docker will enter entering its terminal mode:
+```sh
+vinhtran@DESKTOP-34VG5H3:~/work_in_progress/ubuntu_docker$ sudo docker run -it -v $(pwd):/proj -w /proj ubuntu
+root@50d799dab29d:/proj#
+```
 # Run a specific process on docker
 
 ## Run a simple process
