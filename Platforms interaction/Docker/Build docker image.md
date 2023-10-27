@@ -91,6 +91,14 @@ ENV string="Hello, World !"
 CMD echo $string
 ```
 Build and run ``simple_ubuntu_docker``: ``sudo docker run simple_ubuntu_docker`` will print out ``Hello, World !``
+
+**Wrong use of ENV**: As ENV is run-time instruction, using it with RUN won't print out anything
+```Dockerfile
+# This is the wrong implementation of ENV with RUN, must not do it
+FROM ubuntu
+ENV string="Hello, World !"
+RUN echo $string #Empty
+```
 # Build-time instructions
 Build-time instructions are instructions which run/execute while the docker is compiling/building. Build-time instructions won't run when the docker is running.
 ## RUN
