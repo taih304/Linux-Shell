@@ -10,7 +10,7 @@ systemd unit file locations:
 * ``/run/systemd/system``: transient unit files
 * ``/etc/systemd/system``: Custom unit files
 
-For system not supporting ``systemd`` like WSL, if typing its command like ``systemctl``, there will be error:
+For **system not supporting systemd like WSL**, if typing its command like ``systemctl``, there will be error:
 
 ```
 System has not been booted with systemd as init system (PID 1). Can't operate.
