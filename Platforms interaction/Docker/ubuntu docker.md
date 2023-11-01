@@ -135,6 +135,15 @@ Then all file operation inside ``home`` directory in the ``ubuntu`` docker conta
 vinhtran@DESKTOP-34VG5H3:~/work_in_progress/ubuntu_docker$ sudo docker run -it -v $(pwd):/proj -w /proj ubuntu
 root@50d799dab29d:/proj#
 ```
+## Give access to a host USB or serial device
+Use flag ``--device=/dev/ttyUSB0``, e.g: 
+
+```sh
+docker run -it --device=/dev/ttyUSB0 esp8266_rtos_sdk_docker bash
+```
+
+Check the implementation of [Install and build ESP8266 RTOS SDK source code with docker](https://github.com/TranPhucVinh/ESP8266-RTOS-SDK/blob/main/Environment/Install%20and%20Build.md#install-and-build-esp8266-rtos-sdk-source-code-with-docker) where [esp8266_rtos_sdk_docker](https://github.com/TranPhucVinh/ESP8266-RTOS-SDK/tree/main/Environment/esp8266_rtos_docker) has access to the USB port in order to flash firmware.
+
 # Run a specific process on docker
 
 ## Run a simple process
