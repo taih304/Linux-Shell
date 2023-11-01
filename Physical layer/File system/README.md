@@ -127,7 +127,7 @@ First character acceptance value
 ``mode = 4+2+1 = 7``: file can be read, write, execute
 
 ``4+2``: can be read and write
- 
+# chmod
 ``chmod``: change mode of folder or file
 
 E.g ``chmod 775 name.sh``
@@ -135,6 +135,8 @@ E.g ``chmod 775 name.sh``
 ``chmod +x``: Make file executable
 
 The typical file permission is: ``trwxrwxrwx``
+
+``chmod -R``: Change permission to all files inside the whole folder
 
 ## Example: Cannot open /dev/ttyUSB0: Permission denied
 
