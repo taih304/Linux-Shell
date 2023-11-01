@@ -126,4 +126,6 @@ Table of contents for ``ubuntu docker`` implementations:
 * [Build an Ubuntu image from Ubuntu OS](Build%20docker%20image.md#build-an-ubuntu-image-from-ubuntu-os)
 * [Build an Ubuntu image that only prints out a string](Build%20docker%20image.md#build-an-ubuntu-image-that-only-prints-out-a-string): [CMD and ENTRYPOINT](Build%20docker%20image.md#cmd-and-entrypoint)
 * [Build a docker with included files and installed library](Build%20docker%20image.md#build-a-docker-with-included-files-and-installed-library)
-
+# Applications
+* [Docker to build Raspberry Pi cross-compiled kernel module](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/tree/main/Kernel/Loadable%20kernel%20module/Cross-compiled%20kernel%20module#build-with-docker-which-contains-the-raspbian-environment-including-the-commit-hash)
+* [Install and build ESP8266 RTOS SDK source code with docker](https://github.com/TranPhucVinh/ESP8266-RTOS-SDK/blob/main/Environment/Install%20and%20Build.md#install-and-build-esp8266-rtos-sdk-source-code-with-docker)
