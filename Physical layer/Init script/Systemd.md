@@ -1,4 +1,4 @@
-## Fundamental concepts
+# Fundamental concepts
 
 systemd is a software suite that provides an array of system components for Linux operating systems. It provides a system and service manager that runs as PID 1 and starts the rest of the system. Other parts include a logging daemon, utilities to control basic system configuration like the hostname, date, locale, maintain a list of logged-in users and running containers and virtual machines, system accounts, runtime directories and settings, and daemons to manage simple network configuration, network time synchronization, log forwarding, and name resolution.
 
@@ -21,7 +21,7 @@ Commands:
 * ``systemctl`` is a command to inspect and control the state of the systemd system and service manager
 * ``timedatectl``: display the current time, both, the system clock and the hardware clock
 
-## systemctl
+# systemctl
 
 Self start a program with Linux service ``my-startup.service``
 
@@ -103,7 +103,7 @@ To append ``StandardOutput`` log to a file, use ``append``
 ```
 StandardOutput=append:/home/username/work-in-progress/log.txt
 ```
-### Run a.out file
+## Run a.out file
 
 For ``a.out`` file (C process), it can be run with the whole path:
 
