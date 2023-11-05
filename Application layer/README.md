@@ -57,12 +57,10 @@ Fortunately, there's another way: multicast DNS, or mDNS.
 
 ``Wget`` is a free software package for retrieving files using [HTTP](HTTP), HTTPS, FTP and FTPS.
 
-# Desktop applications and GUI
-
-Check [Desktop applications document](GUI.md)
-## Free software
+# [Desktop applications and GUI](GUI.md)
+# Free software
 **Free software** or **libre software** or **libreware** is computer software distributed under terms that allow users to run the software for any purpose as well as to study, change, and distribute it and any adapted versions. Free software is a matter of liberty, not price; all users are legally free to do what they want with their copies of a free software (including profiting from them) regardless of how much is paid to obtain the program.
 
 Be not to confuse free software with [freeware](#freeware).
-## Freeware
+# Freeware
 Freeware is software, most often proprietary, that is distributed at no monetary cost to the end user. There is no agreed-upon set of rights, license, or **EULA** (**End-user license agreement**) that defines freeware unambiguously; every publisher defines its own rules for the freeware it offers. For instance, modification, redistribution by third parties, and reverse engineering are permitted by some publishers but prohibited by others. Unlike with free and open-source software, which are also often distributed free of charge, the source code for freeware is typically not made available.
