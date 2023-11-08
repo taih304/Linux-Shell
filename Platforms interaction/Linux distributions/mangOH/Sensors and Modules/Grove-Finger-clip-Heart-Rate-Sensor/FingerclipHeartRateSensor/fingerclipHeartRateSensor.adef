@@ -1,0 +1,21 @@
+executables:
+{
+    fingerclipHeartRateSensor = ( fingerclipHeartRateSensorComponent )
+}
+ 
+processes:
+{
+    run:
+    {
+        ( fingerclipHeartRateSensor )
+    }
+}
+
+requires:
+{
+    device:
+    {
+        // replace these devices based on your module
+        [rw]    /dev/i2c-4  /dev/
+    }
+}

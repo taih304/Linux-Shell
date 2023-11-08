@@ -1,0 +1,21 @@
+executables:
+{
+    fourChannelSPDTRelay = ( fourChannelSPDTRelayComponent )
+}
+ 
+processes:
+{
+    run:
+    {
+      ( fourChannelSPDTRelay )
+    }
+}
+
+requires:
+{
+    device:
+    {
+        // replace these devices based on your module
+        [rw]    /dev/i2c-4  /dev/
+    }
+}

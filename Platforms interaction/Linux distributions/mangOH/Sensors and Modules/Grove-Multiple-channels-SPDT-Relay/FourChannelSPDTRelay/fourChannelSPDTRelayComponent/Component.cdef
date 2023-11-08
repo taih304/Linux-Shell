@@ -1,0 +1,10 @@
+cflags:
+{
+    -I$CURDIR/../i2cUtils
+    -std=c99
+}
+
+sources:
+{
+    fourChannelSPDTRelay.c
+}

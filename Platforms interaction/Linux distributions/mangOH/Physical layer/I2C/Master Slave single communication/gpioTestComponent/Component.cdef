@@ -1,0 +1,18 @@
+cflags:
+{
+    -I$CURDIR/../i2cUtils
+    -std=c99
+}
+
+requires:
+{
+    component:
+    {
+        $CURDIR/../i2cUtils
+    }
+}
+
+sources:
+{
+    gpioTest.c
+}

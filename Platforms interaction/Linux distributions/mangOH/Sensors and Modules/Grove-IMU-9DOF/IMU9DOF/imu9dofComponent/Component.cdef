@@ -1,0 +1,21 @@
+cflags:
+{
+    -I$CURDIR/../mpu9250I2CUtils
+    -std=c99
+    -I$CURDIR/../i2cUtils
+    -std=c99
+}
+
+requires:
+{
+    component:
+    {
+        $CURDIR/../mpu9250I2CUtils
+        $CURDIR/../i2cUtils
+    }
+}
+
+sources:
+{
+    imu9dof.c
+}

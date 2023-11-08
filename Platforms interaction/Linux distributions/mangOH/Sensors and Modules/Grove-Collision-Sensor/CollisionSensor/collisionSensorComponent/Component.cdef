@@ -1,0 +1,13 @@
+requires:
+{
+    api:
+    {
+        le_gpioPinD5 = le_gpio.api
+    }
+}
+
+
+sources:
+{
+    collisionSensor.c
+}
