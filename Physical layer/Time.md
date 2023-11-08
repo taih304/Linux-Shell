@@ -22,9 +22,7 @@ Get Unix timestamps in miliseconds: ``echo $(($(date +%s%N)/1000000))``
 
 ``sudo hwclock -r``: Read current time (as display the RTC time)
 
-## Environment variable
-
-### $SECONDS
+## $SECONDS Environment variable
 
 ``SECONDS``: Return the total seconds that the current terminal has been running.
 
@@ -48,11 +46,7 @@ do
 done    
 ```
 
-# Examples
-
-## Using sleep
-
-Print out ``Hello, World!`` after every 1 second with ``sleep``
+# Print out a string after every 1 second with sleep
 
 ```sh
 while [ true ]
