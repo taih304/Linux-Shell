@@ -2,4 +2,4 @@
 
 Virtual machines recreate a full representation of the hardware. The software layer that enable this representation is called a **hypervisor**.
 
-An **instance** is a **virtual machine** (VM) hosted on Google's infrastructure.
+An **instance** is a **virtual machine** (VM) hosted on Google or AWS's infrastructure.
