@@ -30,4 +30,4 @@ On the Instance webpage like below, click on **Security groups**, then choose **
 
 Finally, we will have the Inbound rules like below:
 
-![]()
+![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/inbound_rules_security_groups.jpg)
