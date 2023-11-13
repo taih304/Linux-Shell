@@ -31,3 +31,5 @@ On the Instance webpage like below, click on **Security groups**, then choose **
 Finally, we will have the Inbound rules like below:
 
 ![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/inbound_rules_security_groups.jpg)
+
+Then access to this ThingsBoard webpage on port 9090, if the publicj IPv4 DNS is ``ec2-18-212-189-52.compute-1.amazonaws.com``, then the access link will be: ``http://ec2-18-212-189-52.compute-1.amazonaws.com:9090/``
