@@ -7,6 +7,10 @@ ThingsBoard defines 3 main entities: Tenant -> Customer -> User
 
 **User**: A user account created by a customer will have an email and password, an also an activation page. Use that email and password to login to ThingsBoard.
 
+# ThingsbBoard installtion
+
+* [Installation on Raspberry Pi](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Platforms%20interaction/ThingsBoard.md)
+
 # ThingsBoard API
 
 ThingsBoard API consists of two main parts: [device API](https://github.com/TranPhucVinh/ESP8266-Arduino-framework/blob/master/Platforms%20interaction/ThingsBoard/Device%20API.md) and [server-side API](#server-side-api).
