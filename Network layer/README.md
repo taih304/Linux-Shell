@@ -81,7 +81,7 @@ NAT traversal is increasingly provided by **Universal Plug and Play (UPnP)**, wh
 
 **Port forwarding** or **port mapping** is an application of **NAT** that redirects a communication request from one address and port number combination to another. 
 
-Some programming language like Python, doesn;t support port fowarding by default when building the HTTP server. For example, when running [this simple Python HTTP server](https://github.com/TranPhucVinh/Python/tree/master/Application%20layer/HTTP/HTTP%20server#a-simple-http-server-to-return-a-string), just only ``localhost:8000`` returns the webpage while the IP address, e.g ``192.168.1.3:8000`` doesn't. However, port forwarding, will allow listening on the other port for that IP address, e.g ``8001``.
+Some programming language like Python, doesn't support port fowarding by default when building the HTTP server. For example, when running [this simple Python HTTP server](https://github.com/TranPhucVinh/Python/tree/master/Application%20layer/HTTP/HTTP%20server#a-simple-http-server-to-return-a-string), just only ``localhost:8000`` returns the webpage while the IP address, e.g ``192.168.1.3:8000`` doesn't. However, port forwarding, will allow listening on the other port for that IP address, e.g ``8001``.
 
 ``socat`` command is used to implement the port forwarding.
 
