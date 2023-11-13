@@ -11,6 +11,7 @@ ThingsBoard defines 3 main entities: Tenant -> Customer -> User
 
 * [Installation on Raspberry Pi](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Platforms%20interaction/ThingsBoard.md)
 * [Install on AWS E2C instance](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/AWS/README.md#install-thingsboard-on-aws-e2c-instance)
+  
 By default, after installing **System Administrator** has email **sysadmin@thingsboard.org** and password **sysadmin**, **Tenant Administrator** has **tenant@thingsboard.org** and **tenant**.
 # ThingsBoard API
 
