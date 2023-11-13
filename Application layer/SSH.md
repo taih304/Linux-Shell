@@ -1,5 +1,14 @@
+# ssh
+## -p
 Specify SSH port with ``-p``: ``ssh guest@10.3.112.253 -p 2022``
+## -i
 
+``-i`` specifies key, i.e **.pem**
+
+Connect to an AWS EC2 instance with its RSA key **Ubuntu_RSA_keys.pem**:
+```sh
+ssh -i "Ubuntu_RSA_keys.pem" ec2-user@ec2-44-212-53-1.compute-1.amazonaws.com
+```
 # OpenSSH
 
 ``OpenSSH`` is a suite of secure networking utilities based on the Secure Shell (SSH) protocol.
