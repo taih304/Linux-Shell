@@ -93,7 +93,9 @@ socat tcp-listen:8001,fork tcp:localhost:8000
 * ``tcp:localhost:8000`` means the current running TCP client (localhost) on port ``8000``, ``tcp-listen:8001`` means the newly port mapping is on ``8001``
 * Without ``fork``, i.e ``socat tcp-listen:8001 tcp:localhost:8000``, then loading ``192.168.1.3:8001`` is available for just only 1 time. ``fork`` will child a new child process for the port fowarding everytime we reload the webpage
 
-**NAT implementation**: [NAT port in a local ISP router for a DDNS-supported domain registered from noip](https://www.youtube.com/watch?v=DoA5jc4PRHM)
+**NAT implementation**: 
+* [NAT port in a local ISP router for a DDNS-supported domain registered from noip](https://www.youtube.com/watch?v=DoA5jc4PRHM)
+* [Port forwarding an HTTP server hosted on local PC to an EC2 domain](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/AWS/README.md#port-forwarding-an-http-server-hosted-on-local-pc-to-an-ec2-domain)
 
 # ICMP
 
