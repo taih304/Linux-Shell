@@ -17,7 +17,7 @@ We will port forward an [HTTP server host on local PC](https://github.com/TranPh
 ```sh
 ssh -i ubuntu_rsa_key.pem -R 1234:localhost:8000 ubuntu@ec2-18-212-189-52.compute-1.amazonaws.com
 ```
-This will forward your local traffic on localhost, port 8000 to the EC2 domain ec2-18-212-189-52.compute-1.amazonaws.com. After running this command, you have accessed to the CLI of this EC2 successfully, with port ``1234`` is opened:
+This [SSH tunnteling](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Application%20layer/SSH.md#secure-shell-tunneling-or-ssh-tunneling) will forward your local traffic on localhost, port 8000 to the EC2 domain ``ec2-18-212-189-52.compute-1.amazonaws.com``. After running this command, you have accessed to the CLI of this EC2 successfully, with port ``1234`` is opened:
 
 ```sh
 ubuntu@ip-172-31-91-123:~$ ss -ltun
