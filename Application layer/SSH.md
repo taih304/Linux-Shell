@@ -16,7 +16,10 @@ Connect to an AWS EC2 instance with its RSA key **Ubuntu_RSA_keys.pem**:
 ```sh
 ssh -i "Ubuntu_RSA_keys.pem" ec2-user@ec2-44-212-53-1.compute-1.amazonaws.com
 ```
-
+## -L and -R
+Those 2 options are used for [SSH tunneling]()
+* ``-L``: Local forwarding
+* ``-R``: Remote forwarding
 # SSH key
 
 For SSH client to access to SSH server, it also neccessary to use ``SSH key``.
@@ -87,4 +90,13 @@ E.g: ``sshpass -p 'password' scp /home/usr/Documents/main.c root@192.168.1.1:/ro
 SCP file to a host with password and bypass **StrictHostKeyChecking** and **UserKnownHostsFile**:
 ```sh
 sshpass -p 'xmwfSMSCpBHVC0s+6vo1zFnze0dD+Ili' scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r file_name.md root@192.168.1.1:/tmp
+```
+# Secure Shell tunneling or SSH tunneling
+
+A Secure Shell (SSH) tunnel consists of an encrypted tunnel created through an SSH protocol connection. SSH port forwarding is a mechanism in SSH for tunneling application ports from the client machine to the server machine, or vice versa.
+
+**Remote forwarding**: Remote forwarding or Remote Port Forwarding is when you want to expose a local service to the Internet.
+
+```sh
+ssh -R [remote_addr:]remote_port:local_addr:local_port [user@]gateway_addr
 ```
