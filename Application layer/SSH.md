@@ -100,3 +100,4 @@ A Secure Shell (SSH) tunnel consists of an encrypted tunnel created through an S
 ```sh
 ssh -R [remote_addr:]remote_port:local_addr:local_port [user@]gateway_addr
 ```
+Check [Port forwarding an HTTP server hosted on local PC to an EC2 domain](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/AWS/README.md#port-forwarding-an-http-server-hosted-on-local-pc-to-an-ec2-domain) for SSH tunneling implementation.
