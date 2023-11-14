@@ -39,25 +39,7 @@ Then go to Github or Gitlab and add this key.
 
 ## Add SSH key to known host
 
-If a SSH key is not known to host, there will be error:
-
-```
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
-Someone could be eavesdropping on you right now (man-in-the-middle attack)!
-It is also possible that a host key has just been changed.
-The fingerprint for the RSA key sent by the remote host is
-[...].
-Please contact your system administrator.
-Add correct host key in /home/sward/.ssh/known_hosts to get rid of this message.
-Offending RSA key in /home/sward/.ssh/known_hosts:86
-RSA host key for [...] has changed and you have requested strict checking.
-Host key verification failed.
-```
-
-To solve that isuse, add that SSH key to known host:
+If a SSH key is not known to host, there will be error. To solve that isuse, add that SSH key to known host:
 
 **Step 1**: Get the RSA key of your server, where ``server_ip`` is your server's IP address, such as ``192.168.1.1``: ``ssh-keyscan -t rsa server_ip``
 
