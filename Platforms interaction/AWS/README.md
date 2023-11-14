@@ -13,7 +13,7 @@ ssh -i "ubuntu_rsa_key.pem" ubuntu@ec2-18-212-189-52.compute-1.amazonaws.com
 ```
 # Install ThingsBoard on AWS E2C instance
 
-After [creating an AWS EC2 instance]() (choose Ubuntu image) and SSH to this instance, follow all [ThingsBoard installation step on Raspberry Pi]() as those installation steps are identical on AWS E2C Ubuntu image
+After [creating an AWS EC2 instance](#create-an-aws-ec2-instance) (choose Ubuntu image) and SSH to this instance, follow all [ThingsBoard installation step on Raspberry Pi](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Platforms%20interaction/ThingsBoard.md) as those installation steps are identical on AWS E2C Ubuntu image
 
 **Note**: Current used password for PostgreSQL is ubuntuaws
 
