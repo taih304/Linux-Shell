@@ -1,3 +1,21 @@
+# AWS account creation
+
+## Root user
+
+Signin with username, password then enter MFA password. Get the MFA password from any authenticator mobile app which is previously setup to be mapped to your account, like Microsoft Authenticator. **Getting the password from this app doesn't require Internet connection**.
+
+## IAM user
+
+After you create an AWS accout, this is treated as a root account. This root account will then automatically have a 12-digit account ID along with a Sign-in URL for IAM users in this account. As the name infered, this sign-in URL for IAM users will be used for all IAM users created by this root account to login.
+
+To get this IAM users sign-URL, go to the IAM service. The sign-in URL for IAM users will be: <12-digit-account-id>.signin.aws.amazon.com/console
+
+For example, if the account ID is 148349997011, then the sign-in URL for IAM users will be https://148349997011.signin.aws.amazon.com/console
+
+The next step is to create an IAM user by root account. Still inside the IAM page, in IAM resources, click on the numbers display below **Users**. For the 1st time use root account, there is 0 IAM user.
+
+Reference to video [Create AWS IAM account]() for full implementations.
+
 # Create an AWS EC2 instance
 
 Afet logging as a root user, head to **Build a solution** then choose **Launch a virtual machine** (with EC2). In order to use Ubuntu package like **apt-get**, choose **Ubuntu** as **Application and OS Images**. If choosing **AWS Linux**, **apt-get** won't be available but just only **yum** instead. Then follow all steps in the tutorial. For large application like ThingsBoard, choose **m3 medium**
