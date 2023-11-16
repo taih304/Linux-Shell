@@ -1,0 +1,100 @@
+# Install greengrass CLI
+
+sudo python3 -m pip install -U git+https://github.com/aws-greengrass/aws-greengrass-gdk-cli.git@v1.1.0
+
+sudo apt install awscli 
+
+# Set up one Greengrass core device
+**Step 1**:
+Get to AWS homepage, search for **Greengrass**. On **Getting started** → **Set up devices** → **Set up one core devices**. The whole clear cut tutorial with command to Set up one Greengrass core device is presented here.
+**Step 2**:
+Get the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY of the root account. Those key will help downloading and map the Greengrass packages installed on PC to the Greengrass core device on AWS cloud
+
+Example of an AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY got from root account:
+```sh
+export AWS_ACCESS_KEY_ID=AKIASFCSZJ7J7HFXN4Y6
+export AWS_SECRET_ACCESS_KEY=wWfe54MYX1NzsdntJ77zW7QPDpMgkaZjDpwLM2kC
+```
+Name the Greengrass core device, e.g **Greengrass_private_core_device**, For Thing group, choose **No group**.
+**Step 3**: Download the installer for AWS IoT Greengrass Core software
+```sh
+curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip > greengrass-nucleus-latest.zip && unzip greengrass-nucleus-latest.zip -d GreengrassInstaller
+```
+**Step 4**: Run the installer for AWS IoT Greengrass Core software
+
+```sh
+sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassInstaller/lib/Greengrass.jar --aws-region us-east-1 --thing-name Greengrass_private_core_device  --component-default-user ggc_user:ggc_group --provision true --setup-system-service true --deploy-dev-tools true
+```
+The installation process takes a few minutes. When the installer completes, you can find your device in the list of Greengrass core devices on the Core devices page.
+# Greengrass component
+A component is a software module that runs on AWS IoT Greengrass core devices. 
+
+**Recipes**: Every component contains a recipe file, which defines its metadata. The recipe also specifies the component's configuration parameters, component dependencies, lifecycle, and platform compatibility. The component lifecycle defines the commands that install, run, and shut down the component. Recipes are define in JSON or YAML format.
+
+**Artifacts**: Components can have any number of artifacts, which are component binaries. Artifacts can include scripts, compiled code, static resources, and any other files that a component consumes. Components can also consume artifacts from component dependencies.
+
+## Develop and test a component locally
+
+**Step 1**: Create ``recipes`` and ``artifacts`` folders:
+```sh
+username@hostname:~/private_greengrass_core_device$ mkdir {recipes,artifacts}
+```
+**Step 2**:
+Add the component recipes JSON file:
+```sh
+username@hostname:~/private_greengrass_core_device$ touch recipes/gg_core_device_component.json
+```
+```json
+{
+    "RecipeFormatVersion": "2020-01-25",
+    "ComponentName": "gg_core_device_component",
+    "ComponentVersion": "0.0.1",
+    "ComponentDescription": "Greengrass core device test component description",
+    "ComponentPublisher": "No one",
+    "ComponentConfiguration": {
+      "DefaultConfiguration": {
+        "Message": "Default config message"
+      }
+    },
+    "Manifests": [
+      {
+        "Platform": {
+          "os": "linux"
+        },
+        "Lifecycle": {
+          "run": "python3 -u {artifacts:path}/main.py"
+        }
+      }
+    ]
+  }
+```
+**RecipeFormatVersion**: RecipeFormatVersion is a fixed number defined by AWS, must not change it.
+
+Add component artifacts. You must use the following format for the artifact folder path. Include the component name and version that you specify in the recipe:
+
+```sh
+artifacts/componentName/componentVersion/
+```
+```sh
+username@hostname:~/private_greengrass_core_device$ mkdir -p artifacts/gg_core_device_component/0.0.1
+```
+Then add source code for the component:
+
+```sh
+username@hostname:~/private_greengrass_core_device$ nano artifacts/gg_core_device_component/0.0.1/main.py
+```
+Where ``main.py`` simply print out a string
+
+**Step**: Run the following command to locally deploy the component to the AWS IoT Greengrass core
+```sh
+username@hostname:~/private_greengrass_core_device$ sudo /greengrass/v2/bin/greengrass-cli deployment create --recipeDir $(pwd)/recipes --artifactDir $(pwd)/artifacts --merge "gg_core_device_component=0.0.1"
+[sudo] password for username:
+Local deployment submitted! Deployment Id: b5c0f11c-e6e5-48f0-8ee0-abb57c0682f3 #Result
+```
+``--merge``: add or update the component and version that you specify
+
+**Result**: The AWS IoT Greengrass Core software saves stdout from component process to log files in the logs folder. Run the following command to verify that the deploy component runs and prints messages.
+
+```sh
+sudo tail -f /greengrass/v2/logs/gg_core_device_component.log
+```
