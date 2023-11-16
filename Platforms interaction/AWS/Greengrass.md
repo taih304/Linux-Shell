@@ -1,9 +1,9 @@
-# Install greengrass CLI
-
+# Install Greengrass CLI
+```sh
 sudo python3 -m pip install -U git+https://github.com/aws-greengrass/aws-greengrass-gdk-cli.git@v1.1.0
 
 sudo apt install awscli 
-
+```
 # Set up one Greengrass core device
 **Step 1**:
 Get to AWS homepage, search for **Greengrass**. On **Getting started** → **Set up devices** → **Set up one core devices**. The whole clear cut tutorial with command to Set up one Greengrass core device is presented here.
