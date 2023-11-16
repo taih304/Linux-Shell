@@ -100,3 +100,6 @@ Local deployment submitted! Deployment Id: b5c0f11c-e6e5-48f0-8ee0-abb57c0682f3 
 ```sh
 sudo tail -f /greengrass/v2/logs/gg_core_device_component.log
 ```
+If successfully deployed locally, component **gg_core_device_component** will be available on this Greengrass core device as a local component:
+
+![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/greegrass_local_deploy.png)
