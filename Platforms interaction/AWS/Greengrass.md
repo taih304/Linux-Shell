@@ -4,6 +4,14 @@ sudo python3 -m pip install -U git+https://github.com/aws-greengrass/aws-greengr
 
 sudo apt install awscli 
 ```
+Uninstall Greengrass
+```sh
+sudo systemctl stop greengrass.service
+sudo systemctl disable greengrass.service
+sudo rm /etc/systemd/system/greengrass.service
+sudo systemctl daemon-reload && sudo systemctl reset-failed
+sudo rm -rf /greengrass/v2
+``` 
 # Set up one Greengrass core device
 **Step 1**:
 Get to AWS homepage, search for **Greengrass**. On **Getting started** → **Set up devices** → **Set up one core devices**. The whole clear cut tutorial with command to Set up one Greengrass core device is presented here.
