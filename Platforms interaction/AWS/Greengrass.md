@@ -45,7 +45,7 @@ A component is a software module that runs on AWS IoT Greengrass core devices.
 ## Greengrass nucleus component
 The Greengrass nucleus component (**aws.greengrass.Nucleus**) is a **mandatory component** and the **minimum requirement to run the AWS IoT Greengrass Core software on a device**. You can configure this component to customize and update your AWS IoT Greengrass Core software remotely. Deploy this component to configure settings such as proxy, device role, and AWS IoT thing configuration on your core devices.
 
-## Develop and test a component locally
+## Develop and test a component locally with Python source code
 
 **Step 1**: Create ``recipes`` and ``artifacts`` folders:
 ```sh
@@ -113,3 +113,14 @@ sudo tail -f /greengrass/v2/logs/gg_core_device_component.log
 If successfully deployed locally, component **gg_core_device_component** will be available on this Greengrass core device as a local component:
 
 ![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/greegrass_local_deploy.png)
+
+## Develop and test a component locally with C source code
+
+With main.c inside ``artifacts/gg_core_device_component/0.0.1/main.c``, change ``Lifecycle`` of ``gg_core_device_component.json`` of ``recipes`` to:
+
+```json
+"Lifecycle": {
+    "run": "gcc {artifacts:path}/main.c && ./a.out"
+}
+```
+**Note**: In ``run``, after ``gcc {artifacts:path}/main.c``, the working directory of this subshell is ``/greengrass/v2/work/gg_core_device_component/`` (not ``{artifacts:path}``) and the built file ``a.out`` is also located inside that location. **a.out doesn't built into {artifacts:path}**
