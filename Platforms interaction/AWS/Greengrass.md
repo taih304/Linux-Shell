@@ -43,7 +43,7 @@ A component is a software module that runs on AWS IoT Greengrass core devices.
 
 **Artifacts**: Components can have any number of artifacts, which are component binaries. Artifacts can include scripts, compiled code, static resources, and any other files that a component consumes. Components can also consume artifacts from component dependencies.
 ## Greengrass nucleus component
-The Greengrass nucleus component (**aws.greengrass.Nucleus**) is a mandatory component and the minimum requirement to run the AWS IoT Greengrass Core software on a device. You can configure this component to customize and update your AWS IoT Greengrass Core software remotely. Deploy this component to configure settings such as proxy, device role, and AWS IoT thing configuration on your core devices.
+The Greengrass nucleus component (**aws.greengrass.Nucleus**) is a **mandatory component** and the **minimum requirement to run the AWS IoT Greengrass Core software on a device**. You can configure this component to customize and update your AWS IoT Greengrass Core software remotely. Deploy this component to configure settings such as proxy, device role, and AWS IoT thing configuration on your core devices.
 
 ## Develop and test a component locally
 
