@@ -45,7 +45,7 @@ curl -v blynk-server.com:8080/mx0vpPtvd3BnillekvXj1CzQSFbUnd9o/project
 # Firebase
 Firebase is an alternative to Google Cloud for users who want to focus on building and deploying their applications in a highly opinionated framework.​ It is a separate product that Google Cloud bought in 2014, although it runs on Google Cloud and can be either managed from the Firebase platform OR the Google Cloud Console.
 
-Firebase is Google’s fully-managed platform for rapidly developing and deploying web and mobile applications.​It is a Platform as a Service utilizing Serverless technology
+Firebase is Google’s fully-managed platform for rapidly developing and deploying web and mobile applications.​ It is a Platform as a Service utilizing Serverless technology
 ## Realtime Database
 
 Read data of ``test.json`` database
