@@ -48,6 +48,8 @@ Firebase is an alternative to Google Cloud for users who want to focus on buildi
 Firebase is Google’s fully-managed platform for rapidly developing and deploying web and mobile applications.​ It is a Platform as a Service utilizing Serverless technology
 ## Realtime Database
 
+The **Firebase Realtime Database** is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client.
+
 Read data of ``test.json`` database
 
 ```sh
