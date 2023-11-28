@@ -147,7 +147,7 @@ For document that includes space, replace the space by ``%20``. E.g: Document ``
 # Google Apps Script
 ## GET request
 
-Script with Google Apps Script: **Example 2** in **HTTP requests.md: GET request** in ``JavaScript/Frameworks/Google Apps Script/``.
+Script with Google Apps Script as a Framework of JavaScript: [Get data from GET request and update to cell followed by date time](https://github.com/TranPhucVinh/JavaScript-and-Front-end/blob/master/Frameworks/Google%20Apps%20Script/HTTP%20requests.md#get-data-from-get-request-and-update-to-cell-followed-by-date-time).
 
 Send data with parameter ``id`` to Google Sheet with GET request: 
 
