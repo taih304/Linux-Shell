@@ -1,4 +1,4 @@
-# Linux distributions
+# [Linux distributions](Linux%20distributions)
 * Linux vs BSD
 * CentOS
 * Armbian with Orange Pi
