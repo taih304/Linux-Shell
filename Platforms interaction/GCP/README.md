@@ -110,3 +110,27 @@ curl -X POST -H "Content-Type: application/json" -d '{"fields": {"Field1": {"str
 ```
 
 For document that includes space, replace the space by ``%20``. E.g: Document ``User database`` will be ``User%20database``.
+# Google Apps Script
+## GET request
+
+Script with Google Apps Script as a Framework of JavaScript: [Get data from GET request and update to cell followed by date time](https://github.com/TranPhucVinh/JavaScript-and-Front-end/blob/master/Frameworks/Google%20Apps%20Script/HTTP%20requests.md#get-data-from-get-request-and-update-to-cell-followed-by-date-time).
+
+Send data with parameter ``id`` to Google Sheet with GET request: 
+
+```sh
+curl -X GET https://script.google.com/macros/s/AKfycby2CHiFSrC4tPpgKx1dscjO-wqM4zy0Px9X5OI3LPjqufQ4xNWdxiCC5U2oqniXrlBc/exec?id=13 
+```
+
+**Notice**: Google Apps Script is unable to handle the ``-d`` flag of ``curl``, sending like ``-d id=10`` will result in authentication error.
+
+## POST request
+
+Script with Google Apps Script: **Example 1** in **HTTP requests.md: POST request** in ``JavaScript/Frameworks/Google Apps Script/``.
+
+Send data with parameter ``id`` to Google Sheet with POST request: 
+
+```sh
+curl -X POST https://script.google.com/macros/s/AKfycby2CHiFSrC4tPpgKx1dscjO-wqM4zy0Px9X5OI3LPjqufQ4xNWdxiCC5U2oqniXrlBc/exec -d id=13
+```
+
+**Notice**: Google Apps Script is unable to handle the querystring request with POST (like ``/exec?id=13``) as this will result in authentication error. POST request must be like ``-d id=10``.
