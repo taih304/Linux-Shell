@@ -6,6 +6,8 @@ An **image** is a **package** or a **template**, just like a VM template that wo
 
 **Container** is a **running instance of images** that is isolated and has their own environment and set of processes. Unlike a virtual machine, containers aren't meant to host an OS. **Containers only recreate, or virtualize, the operating systems**. Containers meant to run a specific task or process, e.g run a webserver, database,... Once the task is completed, the container exits. A container only lives as long as the process inside it is alive. This means **all the processes running progress, packages installed,... in the current docker container will be deleted/removed after quitting this docker container**.
 
+**Docker Engine**: An application that supports launching Docker daemon process
+
 # Install
 
 ## Set up the repository
