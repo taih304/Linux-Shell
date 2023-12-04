@@ -128,6 +128,31 @@ Table of contents for ``ubuntu docker`` implementations:
 * [Build an Ubuntu image from Ubuntu OS](Build%20docker%20image.md#build-an-ubuntu-image-from-ubuntu-os)
 * [Build an Ubuntu image that only prints out a string](Build%20docker%20image.md#build-an-ubuntu-image-that-only-prints-out-a-string): [CMD and ENTRYPOINT](Build%20docker%20image.md#cmd-and-entrypoint)
 * [Build a docker with included files and installed library](Build%20docker%20image.md#build-a-docker-with-included-files-and-installed-library)
+## Docker Hub
+**Docker Hub** is a repository of Docker Images, which is quite similar to Github, where you can create, manage, and deliver containers.
+**Implementation**: Push local docker [esp8266_rtos_sdk_docker](https://github.com/TranPhucVinh/ESP8266-RTOS-SDK/tree/main/Environment/esp8266_rtos_sdk_docker) to docker hub ``tranphucvinh96/esp8266_rtos_sdk_docker``
+
+After creating a docker on Docker Hub, e.g ``tranphucvinh96/esp8266_rtos_sdk_docker``, it's empty so you can't pull it. This empty docker repository must be pushed from a local docker first
+
+**Step 1**: Login docker
+
+```sh
+docker login
+```
+
+**Step 2**:                 
+
+Then tag the local docker to its name on docker hub:
+
+```sh
+docker tag esp8266_rtos_sdk_docker:latest tranphucvinh96/esp8266_rtos_sdk_docker
+```
+Now both ``esp8266_rtos_sdk_docker`` and ``tranphucvinh96/esp8266_rtos_sdk_docker`` are the same docker, which can be both listed by **docker images**. Deleting ``tranphucvinh96/esp8266_rtos_sdk_docker`` will also delete ``esp8266_rtos_sdk_docker``.
+
+**Step 3**: Push the docker
+```sh
+docker push tranphucvinh96/esp8266_rtos_sdk_docker
+```
 # Applications
 * [Docker to build Raspberry Pi cross-compiled kernel module](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/tree/main/Kernel/Loadable%20kernel%20module/Cross-compiled%20kernel%20module#build-with-docker-which-contains-the-raspbian-environment-including-the-commit-hash)
 * [Install and build ESP8266 RTOS SDK source code with docker](https://github.com/TranPhucVinh/ESP8266-RTOS-SDK/blob/main/Environment/Install%20and%20Build.md#install-and-build-esp8266-rtos-sdk-source-code-with-docker)
