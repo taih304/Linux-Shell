@@ -10,7 +10,7 @@ The communication of applications/programs in multiple PCs or inside a single on
 
 In addition to knowing the address of the host to which a message is destined, **the sending process must also identify the receiving process (more specifically, the receiving socket) running in the host**. This information is needed because in general a host could be running many network applications. **A destination port number** serves this purpose. Popular applications have been assigned specific port numbers. For example, a **Web server** is identified by port number 80. A mail server process (using the **SMTP** protocol) is identified by port number 25.
 
-**Directory service**: a directory service or name service maps the names of network resources to their respective network addresses. A directory server or name server is a server that provides such a service. Domain Name System (DNS) is the first directory service on the Internet.
+**Directory service**: a directory service or name service maps the names of network resources to their respective network addresses. A directory server or name server is a server that provides such a service. **Domain Name System** (**DNS**) is the first directory service on the Internet.
 
 **VPS**, which stands for **virtual private server**, is a virtual machine sold as a service by an Internet hosting service.
 
