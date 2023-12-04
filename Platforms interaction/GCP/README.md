@@ -34,7 +34,8 @@ curl -X POST -d '{"string": "display"}' https://private-cloud-server-227507.fire
 ```
 
 ## Firestore Database
-**Firestore** or **Cloud Firestore** is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud.  
+**Firestore** or **Cloud Firestore** is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud. Be not to confuse **Firestore** with **Filestore**, a GCP **storage solution** that can be **mounted into the Compute Engine instances** or **Google Kubernetes Engine clusters**.
+   
 ### Implementations
 
 **Step 1**: Start collection
