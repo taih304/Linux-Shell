@@ -16,6 +16,13 @@ In addition to knowing the address of the host to which a message is destined, *
 
 A 16-bit computer means this computer can open up to 65536 port.
 
+Types of server:
+* Web server
+* Apps server
+* Mail server, FTP server
+* [Proxy server](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Network%20layer/Proxy.md#forward-proxy)
+* Telnet server
+* IRC server
 # DNS
 
 ## Hostname
