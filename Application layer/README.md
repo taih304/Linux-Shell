@@ -52,6 +52,8 @@ DNS works great for normal sites on the Internet, but most local networks don't 
 Fortunately, there's another way: multicast DNS, or mDNS.
 
 **mDNS** uses domain names with the ``.local`` suffix, for example ``http://esp8266.local``. If your computer needs to send a request to a domain name that ends in ``.local``, it will send a multicast query to all other devices on the LAN that support mDNS, asking the device with that specific domain name to identify itself. The device with the right name will then respond with another multicast and send its IP address. Now that your computer knows the IP address of the device, it can send normal requests.
+## Temporary URL 
+A temporary URL (short for Uniform Resource Locator) can be used when your domain name is not working.
 # [Mail protocols](Mail%20protocols.md)
 * [FTP]()
 * [SMTP]() and [web-based e-mail]()
