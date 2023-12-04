@@ -50,6 +50,9 @@ EMAC OE linux is an Embedded Linux. EMAC OE is EMAC's standard Linux distributio
 * **C-Runtime library**
 * **System shared libraries** 
 * **Root filesystem**
+
+When an embedded Linux is commercialized, e.g Raspberry Pi board, IMX board, Beaglebone board, their vendors will provide us the 4 main components (Bootloader, Kernel, Rootfs and toolchain) in a single package, known as  **BSP** - **Board Support Package**.
+
 # Building a Linux Embedded System
 Building an embedded Linux system requires:
 1. A cross toolchain.
