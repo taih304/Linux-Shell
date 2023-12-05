@@ -171,7 +171,7 @@ ADD <src>... <dest>
 ADD ["<src>",... "<dest>"]
 ```
 The **ADD** instruction copies new files, directories or remote file URLs from **<src>** and adds them to the filesystem of the image at the path **<dest>**.
-# Export
+# Export and import
 Export the current working docker container so that the newly exported container contains all the installed packages, and work progress from the origin one.
 
 ```sh
