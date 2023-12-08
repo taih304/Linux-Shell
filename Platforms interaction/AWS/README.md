@@ -18,7 +18,7 @@ The next step is to create an IAM user by root account. Still inside the IAM pag
 
 Reference to video [Create AWS IAM account]() for full implementations.
 # AWS services
-The AWS Command Line Interface (AWS CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.
+The **AWS Command Line Interface** (**AWS CLI**) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.
 
 Install awscli: ``sudo apt install awscli``
 # Create an AWS EC2 instance
