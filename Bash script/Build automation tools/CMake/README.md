@@ -21,7 +21,7 @@ Set up a working folder for CMake project like ``c_make_test``:
 
 ``CMakeLists.txt``
 
-```
+```CMake
 # cmake_minimum_required(VERSION 3.10)
 
 # set the project name
