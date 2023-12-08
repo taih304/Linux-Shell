@@ -31,6 +31,16 @@ project(test_c_make)
 add_executable(test_c_make main.c)
 ```
 
+Project's name can be used with ``${PROJECT_NAME}``:
+
+```CMake
+# set the project name
+project(CMake_for_C_src_code)
+
+# add the executable
+add_executable(${PROJECT_NAME} main.c) # ${PROJECT_NAME} will get the PROJECT_NAME setup previously from project()
+```
+
 In the same location with ``c_make_test``, run ``cmake c_make_test/``. Output the build to ``c_workspace_cmake`` folder by ``-B`` flag: ``cmake C_workspace/ -B c_workspace_cmake/``
 
 The folder architecture where ``c_make_test`` is in now will be:
@@ -45,13 +55,7 @@ The folder architecture where ``c_make_test`` is in now will be:
 
 Then run: ``make``, binary file ``test_c_make`` will be created. Then run ``test_c_make`` to run the C program.
 
-If there is error with the source file, running ``cmake c_make_test/`` will be file then run ``make`` will have error.
-
-Project name can be used with ``${PROJECT_NAME}``:
-
-```CMake
-add_executable(${PROJECT_NAME} main.c)
-```
+If there is error with the source file, running ``cmake c_make_test/`` will still be fine then run ``make`` will have error.
 
 # Build the program with source files
 
