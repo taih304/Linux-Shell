@@ -1,4 +1,5 @@
 # Install Greengrass CLI
+Install AWS Greengrass GDK CLI and AWS CLI:
 ```sh
 sudo python3 -m pip install -U git+https://github.com/aws-greengrass/aws-greengrass-gdk-cli.git@v1.1.0
 
