@@ -1,10 +1,11 @@
 # Install Greengrass CLI
-Install AWS Greengrass GDK CLI and AWS CLI:
+Install AWS Greengrass GDK CLI and AWS CLI: (**GDK**: **Greengrass development kit**)
 ```sh
 sudo python3 -m pip install -U git+https://github.com/aws-greengrass/aws-greengrass-gdk-cli.git@v1.1.0
 
 sudo apt install awscli 
 ```
+After installing, ``gdk`` command is available.
 Uninstall Greengrass
 ```sh
 sudo systemctl stop greengrass.service
