@@ -17,7 +17,10 @@ For example, if the account ID is 148349997011, then the sign-in URL for IAM use
 The next step is to create an IAM user by root account. Still inside the IAM page, in IAM resources, click on the numbers display below **Users**. For the 1st time use root account, there is 0 IAM user.
 
 Reference to video [Create AWS IAM account]() for full implementations.
+# AWS services
+The AWS Command Line Interface (AWS CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.
 
+Install awscli: ``sudo apt install awscli``
 # Create an AWS EC2 instance
 
 Afet logging as a root user, head to **Build a solution** then choose **Launch a virtual machine** (with EC2). In order to use Ubuntu package like **apt-get**, choose **Ubuntu** as **Application and OS Images**. If choosing **AWS Linux**, **apt-get** won't be available but just only **yum** instead. Then follow all steps in the tutorial. For large application like ThingsBoard, choose **m3 medium**
