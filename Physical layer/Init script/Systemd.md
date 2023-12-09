@@ -29,7 +29,7 @@ For **system which doesn't have systemd installed by default like WSL**, if typi
 System has not been booted with systemd as init system (PID 1). Can't operate.
 Failed to create bus connection: Host is down
 ```
-
+**WSL** has SysV installed by default instead.
 # systemctl
 
 Self start a program with Linux service ``my-startup.service``
