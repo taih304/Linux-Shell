@@ -25,7 +25,7 @@ The installation process takes a few minutes. When the installer completes, you 
 
 # Greengrass components
 ## Greengrass nucleus component
-The Greengrass nucleus component (**aws.greengrass.Nucleus**) is a **mandatory component** and the **minimum requirement to run the AWS IoT Greengrass Core software on a device**. You can configure this component to customize and update your AWS IoT Greengrass Core software remotely. Deploy this component to configure settings such as proxy, device role, and AWS IoT thing configuration on your core devices.
+The Greengrass nucleus component (**aws.greengrass.Nucleus**) is a **mandatory component** and the **minimum requirement to run the AWS IoT Greengrass Core software on a device**. You can configure this component to customize and update your AWS IoT Greengrass Core software remotely. Deploy this component to configure settings such as proxy, device role, and AWS IoT thing configuration on your core devices. The Greengrass nucleus component facilitates communication between AWS IoT Greengrass components locally on an individual device. 
 ## Develop and test a component locally with Python source code
 
 **Step 1**: Create ``recipes`` and ``artifacts`` folders:
