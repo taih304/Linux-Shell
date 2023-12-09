@@ -10,16 +10,16 @@ systemd unit file locations:
 * ``/run/systemd/system``: transient unit files
 * ``/etc/systemd/system``: Custom unit files
 
-For **system not supporting systemd like WSL**, if typing its command like ``systemctl``, there will be error:
+Commands:
+* ``systemctl`` is a command to inspect and control the state of the systemd system and service manager
+* ``timedatectl``: display the current time, both, the system clock and the hardware clock
+ 
+For **system which doesn't have systemd installed by default like WSL**, if typing its command like ``systemctl``, there will be error:
 
 ```
 System has not been booted with systemd as init system (PID 1). Can't operate.
 Failed to create bus connection: Host is down
 ```
-
-Commands:
-* ``systemctl`` is a command to inspect and control the state of the systemd system and service manager
-* ``timedatectl``: display the current time, both, the system clock and the hardware clock
 
 # systemctl
 
