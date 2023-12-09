@@ -78,7 +78,7 @@ username@hostname:~/private_greengrass_core_device$ nano artifacts/gg_core_devic
 ```
 Where ``main.py`` simply print out a string
 
-**Step**: Run the following command to locally deploy the component to the AWS IoT Greengrass core
+**Step 3**: Run the following command to locally deploy the component to the AWS IoT Greengrass core
 ```sh
 username@hostname:~/private_greengrass_core_device$ sudo /greengrass/v2/bin/greengrass-cli deployment create --recipeDir $(pwd)/recipes --artifactDir $(pwd)/artifacts --merge "gg_core_device_component=0.0.1"
 [sudo] password for username:
@@ -95,6 +95,10 @@ If successfully deployed locally, component **gg_core_device_component** will be
 
 ![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/greegrass_local_deploy.png)
 
+**View all deployed components**:
+```sh
+sudo /greengrass/v2/bin/greengrass-cli component list
+```
 ## Develop and test a component locally with C source code
 
 With main.c inside ``artifacts/gg_core_device_component/0.0.1/main.c``, change ``Lifecycle`` of ``gg_core_device_component.json`` of ``recipes`` to:
