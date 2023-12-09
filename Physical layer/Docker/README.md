@@ -76,7 +76,7 @@ To solve that problem: ``sudo usermod -aG docker ${USER}``. If setting successfu
 
 ## Command
 
-``sudo service docker start``: Start docker service
+``sudo service docker start`` (SysV) or ``sudo systemctl start docker`` (systemd): Start docker service
 
 ``sudo docker run hello-world``: Run docker image ``hello-world``. If running it for the first time after installed, it will be pulled from the docker hub
 
