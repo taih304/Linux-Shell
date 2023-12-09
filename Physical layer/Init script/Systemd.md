@@ -13,7 +13,9 @@ systemd unit file locations:
 Commands:
 * ``systemctl`` is a command to inspect and control the state of the systemd system and service manager
 * ``timedatectl``: display the current time, both, the system clock and the hardware clock
- 
+
+**Install systemd**: ``sudo apt install systemd``
+
 For **system which doesn't have systemd installed by default like WSL**, if typing its command like ``systemctl``, there will be error:
 
 ```
