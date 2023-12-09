@@ -1,5 +1,11 @@
 # [Systemd](Systemd.md)
 # SysV init 
+| SysV | Systemd |
+| ------- |:------:|
+| sudo service docker start   | sudo systemctl start docker   |
+| sudo service docker stop     | sudo systemctl stop docker    |
+| sudo service docker status     | sudo systemctl status docker    |
+
 ## rc.local
 File ``/etc/rc.local`` runs when system is booted. It exists in Ubuntu 16.04 and doesn't exist in Ubuntu 20.04 
 
