@@ -44,3 +44,9 @@ Name of OS:
 * ``uname -v``: Name of Kernel version. E.g: ``#82-Ubuntu SMP Fri Sep 4 12:23:10 UTC 2020``
 * ``sudo lshw``: list system hardware information
 * ``xinput``: list all available input devices
+# Virtual machine
+**Virtualization** is a form of resource optimization that allows multiple systems to run on the same hardware. These system are called virtual machines.
+
+Virtual machines recreate a full representation of the hardware. The software layer that enable this representation is called a **hypervisor**.
+
+An **instance** is a **virtual machine** (VM) hosted on Google or AWS's infrastructure.
