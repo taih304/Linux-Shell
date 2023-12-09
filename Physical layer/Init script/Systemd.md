@@ -16,6 +16,8 @@ Commands:
 
 **Install systemd**: ``sudo apt install systemd``
 
+Check version: **systemd --version**
+
 For **system which doesn't have systemd installed by default like WSL**, if typing its command like ``systemctl``, there will be error:
 
 ```
