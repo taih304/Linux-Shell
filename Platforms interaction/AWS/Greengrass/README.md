@@ -15,7 +15,7 @@ sudo rm -rf /greengrass/v2
 ```
 # Terminologies
 
-**Greengrass core device** is an **AWS IoT thing** which runs the AWS IoT Greengrass Core software (on its operating system) to process, filter, and aggregate data from Greengrass client devices that connect to it. It can be configured to relay MQTT messages between client devices, the AWS IoT Core cloud service, and Greengrass components.
+**Greengrass core device** is an **AWS IoT thing** which runs the AWS IoT Greengrass Core software (on its operating system) to process, filter, and aggregate data from **Greengrass client devices** that connect to it. It can be configured to relay MQTT messages between client devices, the AWS IoT Core cloud service, and Greengrass components.
 
 **Greengrass component**: A component is a software module that runs on AWS IoT Greengrass core devices. A Greengrass component can be deployed to single or multiple core devices.
 
