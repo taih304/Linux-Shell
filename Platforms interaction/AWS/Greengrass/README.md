@@ -13,6 +13,7 @@ sudo rm /etc/systemd/system/greengrass.service
 sudo systemctl daemon-reload && sudo systemctl reset-failed
 sudo rm -rf /greengrass/v2
 ```
+Greengrass also requires [Java](https://github.com/TranPhucVinh/Java).
 # Terminologies
 
 **Greengrass core device** is an **AWS IoT thing** which runs the AWS IoT Greengrass Core software on its operating system to process, filter, and aggregate data from **Greengrass client devices** that connect to it. It can be configured to relay MQTT messages between client devices, the AWS IoT Core cloud service, and Greengrass components. **Greengrass core device** can be single-board computer like Raspberry Pi or local Ubuntu PC.
