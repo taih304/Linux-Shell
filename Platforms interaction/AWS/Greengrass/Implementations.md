@@ -61,7 +61,7 @@ username@hostname:~/private_greengrass_core_device$ touch recipes/gg_core_device
     ]
   }
 ```
-**RecipeFormatVersion**: RecipeFormatVersion is a fixed number defined by AWS, must not change it.
+**RecipeFormatVersion**: RecipeFormatVersion is **a fixed number defined by AWS**, must not change it.
 
 Add component artifacts. You must use the following format for the artifact folder path. Include the component name and version that you specify in the recipe:
 
