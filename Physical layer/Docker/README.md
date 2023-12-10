@@ -114,6 +114,14 @@ hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
 
 ``sudo docker ps -a``: List all running or exited containers
 
+**Create a container**, e.g ``ubuntu-container`` from an image, e.g ``ubuntu`` image: ``docker run --name ubuntu-container -d -t -i ubuntu``. 
+
+* ``-d`` (shorthand for --detach) sets the container to run in the background, in detached mode
+* ``-t``: Set a pseudo-TTY attached
+* ``-i``: Keep STDIN attached, which prevents the ``sh`` process from exiting immediately.
+
+After creating that container, connect to it: ``docker exec -it ubuntu-container /bin/bash``. You will then be prompted into the ``root@<host_name>`` CLI.
+
 ## [ubuntu docker](ubuntu%20docker.md)
 
 Table of contents for ``ubuntu docker`` implementations:
