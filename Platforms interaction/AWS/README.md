@@ -18,10 +18,12 @@ The next step is to create an IAM user by root account. Still inside the IAM pag
 
 Reference to video [Create AWS IAM account]() for full implementations.
 # AWS services
+## AWS CLI
 The **AWS Command Line Interface** (**AWS CLI**) is a unified tool to manage your AWS services. With AWS CLI, you can control multiple AWS services from the command line and automate them through scripts.
 
 Install awscli: ``sudo apt install awscli``
-# Create an AWS EC2 instance
+## EC2
+### Create an AWS EC2 instance
 
 Afet logging as a root user, head to **Build a solution** then choose **Launch a virtual machine** (with EC2). In order to use Ubuntu package like **apt-get**, choose **Ubuntu** as **Application and OS Images**. If choosing **AWS Linux**, **apt-get** won't be available but just only **yum** instead. Then follow all steps in the tutorial. For large application like ThingsBoard, choose **m3 medium**
 
@@ -34,7 +36,7 @@ Then SSH to the EC2 instance with that RSA key:
 ```sh
 ssh -i "ubuntu_rsa_key.pem" ubuntu@ec2-18-212-189-52.compute-1.amazonaws.com
 ```
-# Port forwarding an HTTP server hosted on local PC to an EC2 domain
+### Port forwarding an HTTP server hosted on local PC to an EC2 domain
 We will port forward an [HTTP server host on local PC](https://github.com/TranPhucVinh/C/blob/master/Application%20layer/HTTP%20server/multithread_http_server.c), port 8000 to EC2 domain ``ec2-18-212-189-52.compute-1.amazonaws.com``
 
 ```sh
@@ -52,7 +54,7 @@ Then run [socat](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Network
 ubuntu@ip-172-31-91-123:~$ socat tcp-listen:9090,reuseaddr,fork tcp:localhost:1234
 ```
 Then the webpage hosted by this [HTTP server](https://github.com/TranPhucVinh/C/blob/master/Application%20layer/HTTP%20server/multithread_http_server.c) can be viewed on ``ec2-18-212-189-52.compute-1.amazonaws.com:9090``.
-# Install ThingsBoard on AWS E2C instance
+### Install ThingsBoard on AWS E2C instance
 
 After [creating an AWS EC2 instance](#create-an-aws-ec2-instance) (choose Ubuntu image) and SSH to this instance, follow all [ThingsBoard installation step on Raspberry Pi](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Platforms%20interaction/ThingsBoard.md) as those installation steps are identical on AWS E2C Ubuntu image
 
@@ -76,3 +78,5 @@ Finally, we will have the Inbound rules like below:
 Then access to this ThingsBoard webpage on port 9090, if the public IPv4 DNS is ``ec2-18-212-189-52.compute-1.amazonaws.com``, then the access link will be: ``http://ec2-18-212-189-52.compute-1.amazonaws.com:9090/``
 
 After turning off the socat command run above, the ThingsBoard webpage will then go offline
+## Amazon S3
+Amazon S3 is a storage service. Stored file are called **object**. All objects are stored inside a **bucket**. Bucket can have folders. In order to store file, user has to create bucket.
