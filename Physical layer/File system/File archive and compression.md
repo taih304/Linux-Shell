@@ -14,7 +14,7 @@ Zip several files: ``zip test.zip README.md document.md``
 
 ## unzip
 
-Command ``unzip`` for ``unzipping`` files
+Command ``unzip`` for **unzipping files**
 
 ## unrar
 
