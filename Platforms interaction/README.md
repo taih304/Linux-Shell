@@ -9,10 +9,14 @@
 * [Heroku](Platform%20as%20a%20service.md#heroku)
 * Firebase
 * Blynk
-* Google App Script
 # [Software as a service](Software%20as%20a%20service.md)
 * Telegram
 * PlayOnLinux
 * Wine
 * Google Drive
 * AsciiDoc
+# Storage services
+
+* DAS (Direct Attached Storage): Store data by direct attached storage media
+* NAS (Network Attached Storage): Store data into storage device by IP network
+* SAN (Storage Area Network): Store data by dedicated storage network
