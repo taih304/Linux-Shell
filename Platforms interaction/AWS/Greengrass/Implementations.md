@@ -111,6 +111,8 @@ With main.c inside ``artifacts/gg_core_device_component/0.0.1/main.c``, change `
 **Note**: In ``run``, after ``gcc {artifacts:path}/main.c``, the working directory of this subshell is ``/greengrass/v2/work/gg_core_device_component/`` (not ``{artifacts:path}``) and the built file ``a.out`` is also located inside that location. **a.out doesn't built into {artifacts:path}**
 # Build and deploy Greengrass component by gdk commands
 
+At first, export **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** to the current terminal session.
+
 Inisde working folder ``gdk_component``, init a component named ``python_component`` by using the template ``HelloWorld``:
 
 ```sh
@@ -148,6 +150,13 @@ print("Hello, World !")
   "gdk_version": "1.0.0"
 }
 ```
+* **Version**: 
+  *	The version of the component (in the AWS IoT Greengrass cloud service) to use when the GDK CLI publishes the Greengrass component to the AWS IoT Greengrass cloud service. Must be fixed with the version naming convention.
+  *	Default: 1.0.0
+  *	``NEXT_PATCH`` specifies to choose the next patch version after the latest version available in the AWS IoT Greengrass cloud service.
+* **Region**:	AWS region where your core device operates. The GDK CLI publishes the component in this AWS Region.
+* **Bucket**:	Prefix for the S3 bucket where the GDK CLI uploads the component's artifacts.
+
 ``recipe.yaml``
 ```yaml
 ---
@@ -173,11 +182,15 @@ Then go to the component folder ``python_component`` to build it:
 ```sh
 vinhtran@DESKTOP-34VG5H3:~/wsl_core_device_vinh/gdk_component/python_component$ gdk component build
 ```
-
+``gdk component build`` will:
+* Creates a recipe and artifacts based on the GDK CLI configuration file
+* Creates a ZIP file that contains the component's source code
 Then publish the component:
 
 ```sh
 vinhtran@DESKTOP-34VG5H3:~/wsl_core_device_vinh/gdk_component/python_component$ gdk component publish
 ```
+
+``gdk component publish`` uploads the component's ZIP file artifact to an S3 bucket. Then, it updates the ZIP file's S3 URI in the component recipe and uploads the recipe to the AWS IoT Greengrass service. In this process, the GDK CLI checks what version of the component is already available in the AWS IoT Greengrass cloud service, so it can choose the NEXT_PATCH version after that version. If the component doesn't exist yet, the GDK CLI uses version ``1.0.0``.
 
 If successfully publishing, a new bucket ``bucket-name-ap-southeast-1-148349997011`` is automatically created. The newly created bucket's name follows the AWS naming convention ``{PLACEHOLDER_BUCKET}-{PLACEHOLDER_REGION}-{account_id}``
