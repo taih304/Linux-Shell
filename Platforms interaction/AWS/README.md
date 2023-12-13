@@ -16,7 +16,7 @@ For example, if the account ID is 148349997011, then the sign-in URL for IAM use
 
 The next step is to create an IAM user by root account. Still inside the IAM page, in IAM resources, click on the numbers display below **Users**. For the 1st time use root account, there is 0 IAM user.
 
-Reference to video [Create AWS IAM account]() for full implementations.
+Reference to video [Create AWS IAM account](https://www.youtube.com/watch?v=l17Ka8jeJ_4) for full implementations.
 # AWS services
 ## AWS CLI
 The **AWS Command Line Interface** (**AWS CLI**) is a unified tool to manage your AWS services. With AWS CLI, you can control multiple AWS services from the command line and automate them through scripts.
