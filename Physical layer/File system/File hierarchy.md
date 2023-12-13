@@ -6,7 +6,7 @@ Root folder ``/`` contains those folder:
 * [bin](#bin):  Commands and programs
 * [usr](#usr): Application files
 * [var](#var): Variable files
-* [dev](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Device%20files/dev.md): [Device files](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/Device%20files)
+* [dev](#dev)
 * [etc](#etc): Configuration files
 * ``opt``: Optional
 * [tmp](#tmp)
@@ -20,7 +20,8 @@ Example: [Set up command from a C process by using the /bin directory](https://g
 # var
 
 ``sudo cat /var/log/syslog``: View all system log, like ``crontab``, ``systemctl``
-
+# dev
+``/dev`` is the location of special or device files. Check [/dev document](dev.md)
 # etc
 
 ``/etc`` (which stands for **etcetera** due to its history) is a folder where all configuration files are stored.
