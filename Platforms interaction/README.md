@@ -13,10 +13,4 @@
 * Telegram
 * PlayOnLinux
 * Wine
-* Google Drive
 * AsciiDoc
-# Storage services
-On-premise storage:
-* DAS (Direct Attached Storage): Store data by direct attached storage media
-* NAS (Network Attached Storage): Store data into storage device by IP network
-* SAN (Storage Area Network): Store data by dedicated storage network

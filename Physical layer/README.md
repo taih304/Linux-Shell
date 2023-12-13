@@ -21,8 +21,9 @@ Init script includes:
 
 # [File system](File%20system)
 
-[sysfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#sysfs) and [procfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#procfs) are filesystems which allow user to monitor system resources.
-
+* [sysfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#sysfs) and [procfs](https://github.com/TranPhucVinh/Linux-Shell/tree/master/Physical%20layer/File%20system#procfs) are filesystems which allow user to monitor system resources.
+* File operations: Create, read and write 
+* [Storage services](): On-premise storage includes DAS, NAS and SAN
 # [Connectivity](Connectivity)
 Connectivity implementation on Linux Shell includes:
 * [I2C]()
@@ -30,6 +31,8 @@ Connectivity implementation on Linux Shell includes:
 * [Bluetooth]()
 * [Zigbee]()
 * [NFC]()
+# Storage services
+
 # Miscellaneous system handler commands
 
 Other commands:
