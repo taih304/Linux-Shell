@@ -109,3 +109,75 @@ With main.c inside ``artifacts/gg_core_device_component/0.0.1/main.c``, change `
 }
 ```
 **Note**: In ``run``, after ``gcc {artifacts:path}/main.c``, the working directory of this subshell is ``/greengrass/v2/work/gg_core_device_component/`` (not ``{artifacts:path}``) and the built file ``a.out`` is also located inside that location. **a.out doesn't built into {artifacts:path}**
+# Build and deploy Greengrass component by gdk commands
+
+Inisde working folder ``gdk_component``, init a component named ``python_component`` by using the template ``HelloWorld``:
+
+```sh
+vinhtran@DESKTOP-34VG5H3:~/wip/gdk_component$ gdk component init --template HelloWorld --language python -n python_component
+```
+Then folder ``python_component`` will be available:
+```sh
+vinhtran@DESKTOP-34VG5H3:~/wsl_core_device_vinh/gdk_component$ ls
+python_component
+```
+
+Inside ``python_component``, specially care for ``main.py``, ``recipe.yaml`` and ``gdk-config.json``.
+
+``main.py``
+```py
+print("Hello, World !")
+```
+``gdk-config.json``
+
+```json
+{
+  "component": {
+    "python_component": {
+      "author": "AUTHOR_NAME",
+      "version": "0.0.1",
+      "build": {
+        "build_system": "zip"
+      },
+      "publish": {
+        "bucket": "bucket-name",
+        "region": "ap-southeast-1"
+      }
+    }
+  },
+  "gdk_version": "1.0.0"
+}
+```
+``recipe.yaml``
+```yaml
+---
+RecipeFormatVersion: "2020-01-25"
+ComponentName: "{COMPONENT_NAME}"
+ComponentVersion: "{COMPONENT_VERSION}"
+ComponentDescription: "This is a simple component written in Python"
+ComponentPublisher: "{COMPONENT_AUTHOR}"
+ComponentConfiguration:
+  DefaultConfiguration:
+    Message: NULL
+Manifests:
+  - Platform:
+      os: all
+    Artifacts:
+      - URI: "s3://bucket-name/python_component/0.0.1/python_component.zip"
+        Unarchive: ZIP
+    Lifecycle:
+      Run: "python3 -u {artifacts:decompressedPath}/python_component/main.py {configuration:/Message}"
+```
+Then go to the component folder ``python_component`` to build it:
+
+```sh
+vinhtran@DESKTOP-34VG5H3:~/wsl_core_device_vinh/gdk_component/python_component$ gdk component build
+```
+
+Then publish the component:
+
+```sh
+vinhtran@DESKTOP-34VG5H3:~/wsl_core_device_vinh/gdk_component/python_component$ gdk component publish
+```
+
+If successfully publishing, a new bucket ``bucket-name-ap-southeast-1-148349997011`` is automatically created. The newly created bucket's name follows the AWS naming convention ``{PLACEHOLDER_BUCKET}-{PLACEHOLDER_REGION}-{account_id}``
