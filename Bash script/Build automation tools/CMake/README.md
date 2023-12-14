@@ -42,11 +42,17 @@ project(CMake_for_C_src_code)
 add_executable(${PROJECT_NAME} main.c) # ${PROJECT_NAME} will get the PROJECT_NAME setup previously from project()
 ```
 
-In the same location with ``c_make_test``, run ``cmake c_make_test/``. Output the build to ``c_workspace_cmake`` folder by ``-B`` flag: ``cmake C_workspace/ -B c_workspace_cmake/``
+In the same location with ``c_make_test``, run ``cmake c_make_test/``:
 
-The folder architecture where ``c_make_test`` is in now will be:
+```sh
+username@hostname:~/wip/ ls
+c_make_test
+username@hostname:~/wip/ cmake c_make_test/
+```
+The build will be output to the same location of ``c_make_test``, the folder architecture where ``c_make_test`` is in now will be:
 
 ```
+username@hostname:~/wip/ ls
 |--CMakeFiles
 |--c_make_test
 |--CMakeCache.txt
@@ -54,7 +60,13 @@ The folder architecture where ``c_make_test`` is in now will be:
 |--Makefile
 ```
 
-Then run: ``make``, binary file ``test_c_make`` will be created. Then run ``test_c_make`` to run the C program.
+Still in that Then run: ``make``, binary file ``test_c_make`` will be created. Then run ``test_c_make`` to run the C program.
+```sh
+username@hostname:~/wip/ make
+# test_c_make is created
+username@hostname:~/wip/ ./test_c_make
+```
+Specify the build output to ``c_workspace_cmake`` folder by ``-B`` flag: ``cmake c_make_test/ -B c_workspace_cmake/``
 
 If there is error with the source file, running ``cmake c_make_test/`` will still be fine then run ``make`` will have error.
 
