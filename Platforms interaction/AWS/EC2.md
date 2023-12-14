@@ -1,6 +1,6 @@
 # Create an AWS EC2 instance
 
-Afet logging as a root user, head to **Build a solution** then choose **Launch a virtual machine** (with EC2). In order to use Ubuntu package like **apt-get**, choose **Ubuntu** as **Application and OS Images**. If choosing **AWS Linux**, **apt-get** won't be available but just only **yum** instead. Then follow all steps in the tutorial. For large application like ThingsBoard, choose **m3 medium**
+After logging as a root user, head to **Build a solution** then choose **Launch a virtual machine** (with EC2). In order to use Ubuntu package like **apt-get**, choose **Ubuntu** as **Application and OS Images**. If choosing **AWS Linux**, **apt-get** won't be available but just only **yum** instead. Then follow all steps in the tutorial. For large application like ThingsBoard, choose **m3 medium**
 
 For the security setup to access by SSH, if choosing RSA key, a **.pem** key (for use with OpenSSH), e.g **ubuntu_rsa_key.pem**, will be created. After finishing security setup, simply launch EC2 instance/the virual machine.
 
