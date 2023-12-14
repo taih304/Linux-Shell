@@ -15,6 +15,7 @@ After successfully setup CMake, command ``cmake`` will be available. Folder ``cm
 Set up a working folder for CMake project like ``c_make_test``:
 
 ```
+c_make_test
 |--main.c
 |--CMakeLists.txt
 ```
