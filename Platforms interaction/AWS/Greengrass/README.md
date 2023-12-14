@@ -21,10 +21,10 @@ Greengrass also requires [Java](https://github.com/TranPhucVinh/Java).
 
 **Greengrass client device** is an AWS IoT thing as a device that connects to and communicates with a Greengrass core device over MQTT. **Greengrass client device** can be a MCU like ESP8266, ESP32.
 
+**AWS IoT thing group** is a group of Greengrass core devices which helps create and manage Greengrass multiple core devices.
+
 **Greengrass component**: A component is a software module that runs on AWS IoT Greengrass core devices. A Greengrass component can be deployed to single or multiple core devices.
 
 **Recipes**: Every component contains a recipe file, which defines its metadata. The recipe also specifies the component's configuration parameters, component dependencies, lifecycle, and platform compatibility. The component lifecycle defines the commands that install, run, and shut down the component. Recipes are define in JSON or YAML format.
 
 **Artifacts**: Components can have any number of artifacts, which are component binaries. Artifacts can include scripts, source code, compiled code/binaries, static resources, and any other files that a component consumes. Components can also consume artifacts from component dependencies.
-
-**AWS IoT thing group** is a group of Greengrass core devices which helps create and manage Greengrass multiple core devices.
