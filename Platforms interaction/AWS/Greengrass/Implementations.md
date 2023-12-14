@@ -99,6 +99,25 @@ If successfully deployed locally, component **gg_core_device_component** will be
 ```sh
 sudo /greengrass/v2/bin/greengrass-cli component list
 ```
+**Deploy this local component to the core device**: ``deployment.json`` for that deployment:
+
+```json
+{
+    "targetArn": "arn:aws:iot:ap-southeast-2:275507326469:thing/private_greengrass_core_device", //Get private_greengrass_core_device thing's ARN link
+    "deploymentName": "deployment_for_gg_core_device_component",
+    "components": {
+        "gg_core_device_component": {
+            "componentVersion": "0.0.1",
+            "configurationUpdate": {
+                "reset": []
+            }
+        }
+    }
+}
+```
+```sh
+aws greengrassv2 create-deployment --region ap-southeast-2 --cli-input-json file://deployment.json
+```
 ## Develop and test a component locally with C source code
 
 With main.c inside ``artifacts/gg_core_device_component/0.0.1/main.c``, change ``Lifecycle`` of ``gg_core_device_component.json`` of ``recipes`` to:
