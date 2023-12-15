@@ -1,4 +1,4 @@
-**CMake** is an open-source, cross-platform family of tools designed to build, test and package software.
+![image](https://github.com/TranPhucVinh/Linux-Shell/assets/30307543/7a0acce4-9e63-480c-b1a5-5042ce5262dc)**CMake** is an open-source, cross-platform family of tools designed to build, test and package software.
 
 # Install
 
@@ -42,17 +42,15 @@ project(CMake_for_C_src_code)
 add_executable(${PROJECT_NAME} main.c) # ${PROJECT_NAME} will get the PROJECT_NAME setup previously from project()
 ```
 
-In the same location with ``c_make_test``, run ``cmake c_make_test/``:
+Inside ``c_make_test``, run ``cmake .`` or in the same location with ``c_make_test``, run ``cmake c_make_test/``:
 
 ```sh
-username@hostname:~/wip/ ls
-c_make_test
-username@hostname:~/wip/ cmake c_make_test/
+username@hostname:~/wip/c_make_test$ cmake .
 ```
-The build will be output to the same location of ``c_make_test``, the folder architecture where ``c_make_test`` is in now will be:
+If building inside ``c_make_test``, the folder now will include:
 
 ```
-username@hostname:~/wip/ ls
+username@hostname:~/wip/c_make_test$ ls
 |--CMakeFiles
 |--c_make_test
 |--CMakeCache.txt
@@ -60,11 +58,11 @@ username@hostname:~/wip/ ls
 |--Makefile
 ```
 
-Still in that Then run: ``make``, binary file ``test_c_make`` will be created. Then run ``test_c_make`` to run the C program.
+Still inside ``c_make_test``, run: ``make``, binary file ``test_c_make`` will be created. Then run ``test_c_make`` to run the C program.
 ```sh
-username@hostname:~/wip/ make
+username@hostname:~/wip/c_make_test$ make
 # test_c_make is created
-username@hostname:~/wip/ ./test_c_make
+username@hostname:~/wip/c_make_test$ ./test_c_make
 ```
 Specify the build output to ``c_workspace_cmake`` folder by ``-B`` flag: ``cmake c_make_test/ -B c_workspace_cmake/``
 
