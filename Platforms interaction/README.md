@@ -7,7 +7,7 @@
 # [Platform as a service](Platform%20as%20a%20service.md)
 * [ThingsBoard](ThingsBoard)
 * [Heroku](Platform%20as%20a%20service.md#heroku)
-* Firebase
+* Github
 * Blynk
 # [Software as a service](Software%20as%20a%20service.md)
 * Telegram
