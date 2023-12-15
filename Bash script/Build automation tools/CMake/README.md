@@ -51,11 +51,11 @@ If building inside ``c_make_test``, the folder now will include:
 
 ```
 username@hostname:~/wip/c_make_test$ ls
-|--CMakeFiles
-|--c_make_test
-|--CMakeCache.txt
-|--cmake_install.cmake
-|--Makefile
+CMakeFiles
+c_make_test
+CMakeCache.txt
+cmake_install.cmake
+Makefile
 ```
 
 Still inside ``c_make_test``, run: ``make``, binary file ``test_c_make`` will be created. Then run ``test_c_make`` to run the C program.
