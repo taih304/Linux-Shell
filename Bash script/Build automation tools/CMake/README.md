@@ -1,4 +1,4 @@
-![image](https://github.com/TranPhucVinh/Linux-Shell/assets/30307543/7a0acce4-9e63-480c-b1a5-5042ce5262dc)**CMake** is an open-source, cross-platform family of tools designed to build, test and package software.
+**CMake** is an open-source, cross-platform family of tools designed to build, test and package software.
 
 # Install
 
