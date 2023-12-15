@@ -1,4 +1,4 @@
-# Build and deploy Greengrass component by gdk commands
+# Build and publish Greengrass component by gdk commands
 
 At first, export **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** to the current terminal session.
 
@@ -83,7 +83,7 @@ vinhtran@DESKTOP-34VG5H3:~/wsl_core_device_vinh/gdk_component/python_component$ 
 ``gdk component publish`` uploads the component's ZIP file artifact to an S3 bucket. Then, it updates the ZIP file's S3 URI in the component recipe and uploads the recipe to the AWS IoT Greengrass service. In this process, the GDK CLI checks what version of the component is already available in the AWS IoT Greengrass cloud service, so it can choose the NEXT_PATCH version after that version. If the component doesn't exist yet, the GDK CLI uses version ``1.0.0``.
 
 If successfully publishing, a new bucket ``bucket-name-ap-southeast-1-148349997011`` is automatically created. The newly created bucket's name follows the AWS naming convention ``{PLACEHOLDER_BUCKET}-{PLACEHOLDER_REGION}-{account_id}``
-# GDK CLI to publish component with recipe.json
+# Publish a component with recipe.json
 
 After calling ``gdk component init`` for the new component initialization, replace file ``recipe.yaml`` by ``recipe.json``. Use any online tool to convert the existed ``recipe.yaml`` file into ``recipe.json`` file.
 
