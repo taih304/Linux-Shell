@@ -19,8 +19,16 @@ For each component, CMakeLists file calls ``register_component``, which calls th
 
 ## set()
 
-```c
+```cmake
 set(<variable> <value>... [PARENT_SCOPE])
 ```
 
-Set the given <variable> in the current function or directory scope.
+Set the given ``variable`` in the current function or directory scope. E.g
+
+```cmake
+# Set the source file
+set(SRC_FILE header.c)
+
+# Set the header file
+set(HEADER_FILE header.h)
+```
