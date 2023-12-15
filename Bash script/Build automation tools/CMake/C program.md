@@ -105,7 +105,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE header)
 ```
 
 Other library types can be specified like ``SHARED``, ``STATIC``, ``MODULE``.
-# Library with cmake --build
+# cmake --build for static library
 ```sh
 c_make_test
 |--main.c
@@ -117,3 +117,57 @@ c_make_test
 ```
 
 ``cmake --build`` helps build binary library, like static and dynamic library.
+
+``CMakeLists.txt`` inside ``header_lib``
+```CMake
+cmake_minimum_required(VERSION 3.12)
+project(static_library)
+
+# Set the source file
+set(SRC_FILE header.c)
+
+# Set the header file
+set(HEADER_FILE header.h)
+
+# Create the static library
+add_library(headerlib STATIC ${SRC_FILE} ${HEADER_FILE})
+```
+Build the static lib inside ``header_lib``
+```sh
+username@hostname:~/wip/c_make_test/header_lib$ cmake .
+username@hostname:~/wip/c_make_test/header_lib$ cmake --build . # This will generate libheaderlib.a
+```
+Main ``CMakeLists.txt`` inside ``c_make_test``
+```CMake
+cmake_minimum_required(VERSION 3.12)
+project(MAIN_SRC)
+
+# Set the source files for the main executable
+set(MAIN_SOURCE main.c)
+
+# Set the header files
+set(HEADER_FILES header_lib/header.h)
+
+# Set the library directory
+set(LIBRARY_DIR header_lib)
+
+# Set the name of your static library
+set(LIB_NAME headerlib)
+
+# Add the static library
+add_library(${LIB_NAME} STATIC IMPORTED)
+set_target_properties(${LIB_NAME} PROPERTIES IMPORTED_LOCATION ${LIBRARY_DIR}/lib${LIB_NAME}.a)
+
+# Create the executable and link with the static library
+add_executable(main_src ${MAIN_SOURCE} ${HEADER_FILES}) # main_src is the main program to be built into
+target_link_libraries(main_src ${LIB_NAME})
+
+# Set include directories
+target_include_directories(main_src PRIVATE header_lib)
+```
+Then build and run the main source:
+```sh
+username@hostname:~/wip/c_make_test$ cmake .
+username@hostname:~/wip/c_make_test$ cmake --build . # This will build target main_src (main program to be built)
+username@hostname:~/wip/c_make_test$ ./main_src # Run main_src
+```
