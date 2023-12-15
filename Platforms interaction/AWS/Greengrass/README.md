@@ -23,7 +23,7 @@ Greengrass also requires [Java](https://github.com/TranPhucVinh/Java).
 
 **AWS IoT thing group** is a group of Greengrass core devices which helps create and manage Greengrass multiple core devices.
 
-**Greengrass component**: A component is a software module that runs on AWS IoT Greengrass core devices. A Greengrass component can be deployed to single or multiple core devices.
+**Greengrass component**: A component is a software module that runs on AWS IoT Greengrass core devices. A Greengrass component can runs locally on a core devices and be deploy to Greengrass.
 
 **Recipes**: Every component contains a recipe file, which defines its metadata. The recipe also specifies the component's configuration parameters, component dependencies, lifecycle, and platform compatibility. The component lifecycle defines the commands that install, run, and shut down the component. Recipes are define in JSON or YAML format.
 
