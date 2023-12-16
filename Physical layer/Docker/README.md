@@ -74,7 +74,7 @@ To solve that problem: ``sudo usermod -aG docker ${USER}``. If setting successfu
 
 # Implementations
 
-## Command
+## Docker commands
 
 ``sudo service docker start`` (SysV) or ``sudo systemctl start docker`` (systemd): Start docker service
 
@@ -92,8 +92,6 @@ Status: Downloaded newer image for hello-world:latest
 
 (Then the log message will print out the content of ``hello-world`` image)
 
-``docker run --rm``: With ``--rm`` flag, Docker also removes the anonymous volumes associated with the container when the container is removed.
-
 ``sudo docker pull hello-world``: Only pull ``hello-world`` and not run it after successfully pulling
 
 ``sudo docker images``: List all available images and their information
@@ -110,9 +108,7 @@ hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
 
 ``sudo docker inspect ubuntu``: Provide docker named ``ubuntu``'s information in JSON format
 
-``sudo docker ps``: List all running container
-
-``sudo docker ps -a``: List all running or exited containers
+## Container commands 
 
 **Create a container**, e.g ``ubuntu-container`` from an image, e.g ``ubuntu`` image: ``docker run --name ubuntu-container -d -t -i ubuntu``. 
 
@@ -122,6 +118,14 @@ hello-world   latest    feb5d9fea6a5   11 months ago   13.3kB
 
 After creating that container, connect to it: ``docker exec -it ubuntu-container /bin/bash``. You will then be prompted into the ``root@<host_name>`` CLI.
 
+``sudo docker ps``: List all running container
+
+``sudo docker ps -a``: List all running or exited containers
+
+``docker run --rm``: With ``--rm`` flag, Docker also removes the anonymous volumes associated with the container when the container is removed.
+
+``docker rm <container-name>``: Remove a container named ``<container-name>``
+ 
 ## [ubuntu docker](ubuntu%20docker.md)
 
 Table of contents for ``ubuntu docker`` implementations:
