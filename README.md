@@ -76,7 +76,7 @@ In addition to knowing the address of the host to which a message is destined, t
 
 Consider what you do when you want to ask someone for the time of day.
 
-One person offer a greeting (the first “Hi” in Figure 1.2) to initiate communication with someone else. The typical response to a “Hi” is a returned “Hi” message.
+One person offer a greeting. e.g “Hi”, to initiate communication with someone else. The typical response to a “Hi” is a returned “Hi” message.
 
 Implicitly, one then takes a **cordial** “Hi” response as an indication that one can proceed and ask for the time of day. A different response to the initial “Hi” (such as “Don’t bother me!” or “I don’t speak English,” or some unprintable reply) might indicate an unwillingness or inability to communicate.
 
