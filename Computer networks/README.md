@@ -111,3 +111,24 @@ In a **wireless LAN** setting, wireless users transmit/receive packets to/from a
 ## Wide-area wireless access by cellular network
 
 Devices, which employ the same wireless infrastructure used for **cellular telephony**, are able to access the Internet through a base station that is operated by the cellular network provider. Unlike WiFi, devies need only be within **a few tens of kilometers** (as opposed to a few tens of meters) of the base station to be able to access to that Internet services.
+# Cloud provider
+
+A **service level agreement** or **SLA** is a contractual commitment between the cloud service provider and the customer about the **expected level of service**. If customers get the service under SLA, customer will be eligible to receive the compensation, e.g financial or Service credits.
+
+**Service Level Indicator** (**SLI**) is a **metric/measurement** that indicates what measure of performance a customer is receiving at a given time.
+
+A **SLI metric** could be **uptime**, **performance**, **availability**, **throughput**, **latency**, **error rate**, **durability**, **correctness**,...
+
+**Service level objective** or **SLO**: The objective that the provider has agreed to meet​/The goal for your cloud service performance level. SLOs are represented as a specific target percentage over a period of time, e.g SLO of latency is 0.1 ms, SLO of availability is 99.99%,...
+
+When the service performance meets or exceeds the SLO, end users, customers, and internal stakeholders will be happy for sure
+
+SLO is treated as a part of SLA
+
+Why is the expectation for 100% service availability misleading ?
+
+Because service maintenance is **inevitable** and **requires downtime**. In order to roll out updates, operators have to take a system offline. Ensuring 100% service availability is also incredibly expensive for any business.
+
+Error budget is the space between SLA and SLO
+
+![](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Environment/Images/error_budget.png)
