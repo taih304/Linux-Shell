@@ -29,7 +29,13 @@ Greengrass also requires [Java](https://github.com/TranPhucVinh/Java).
 
 **Greengrass CLI component** (**aws.greengrass.Cli**) is a **built-in component** which provides a local command-line interface that you can use on core devices to develop and debug components locally.
 
-## Implement of Greengrass component
+## Implement Greengrass component
+### Recipes
 **Recipes**: Every component contains a recipe file, which defines its metadata. The recipe also specifies the component's configuration parameters, component dependencies, lifecycle, and platform compatibility. The component lifecycle defines the commands that install, run, and shut down the component. Recipes are define in JSON or YAML format.
 
+In component recipe file, e.g [gg_core_device_component.json](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/AWS/Greengrass/Components%20with%20shell%20commands.md#develop-a-local-python-component-then-deploy-to-aws), those are fields:
+
+* ``Lifecycle``: An object or string that defines how to install and run the component on the platform that this manifest defines
+* ``run`` (inside ``Lifecycle``): An object or string that defines the script to run when the component starts.
+### Artifacts
 **Artifacts**: Components can have any number of artifacts, which are component binaries. Artifacts can include scripts, source code, compiled code/binaries, static resources, and any other files that a component consumes. Components can also consume artifacts from component dependencies.
