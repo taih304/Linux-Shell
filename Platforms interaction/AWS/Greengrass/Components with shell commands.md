@@ -23,12 +23,7 @@ sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassInstaller
 ```
 The installation process takes a few minutes. When the installer completes, you can find your device in the list of Greengrass core devices on the Core devices page.
 
-# Greengrass components
-## Greengrass nucleus component
-The Greengrass nucleus component (**aws.greengrass.Nucleus**) is a **mandatory** and **built-in component** and the **minimum requirement to run the AWS IoT Greengrass Core software on a device**. You can configure this component to customize and update your AWS IoT Greengrass Core software remotely. Deploy this component to configure settings such as proxy, device role, and AWS IoT thing configuration on your core devices. The Greengrass nucleus component facilitates communication between AWS IoT Greengrass components locally on an individual device. 
-## Greengrass CLI component
-The Greengrass CLI component (**aws.greengrass.Cli**) is a **built-in component** which provides a local command-line interface that you can use on core devices to develop and debug components locally.
-## Develop and test a component locally with Python source code
+# Develop a local Python component then deploy to AWS
 
 **Step 1**: Create ``recipes`` and ``artifacts`` folders:
 ```sh
@@ -126,7 +121,7 @@ username@hostname:~/wip/gg_cli_components$ aws greengrassv2 create-deployment --
 ``get-deployment`` from that ``deploymentId``: ``aws greengrassv2 get-deployment --region ap-southeast-2 --deployment-id 4514dd91-8784-4b87-a280-fa5bafd8dd26``
 
 **Remove a deployed component**: ``sudo /greengrass/v2/bin/greengrass-cli deployment create --remove="gg_core_device_component"``
-## Develop and test a component locally with C source code
+# Develop and test a component locally with C source code
 
 With main.c inside ``artifacts/gg_core_device_component/0.0.1/main.c``, change ``Lifecycle`` of ``gg_core_device_component.json`` of ``recipes`` to:
 
