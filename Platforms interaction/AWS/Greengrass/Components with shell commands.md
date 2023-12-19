@@ -26,11 +26,13 @@ The installation process takes a few minutes. When the installer completes, you 
 
 # Develop a local Python component then deploy to AWS
 
-**Step 1**: Create ``recipes`` and ``artifacts`` folders:
+**Step 1**: Export AWS access keys **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** of the root account. 
+
+**Step 2**: Create ``recipes`` and ``artifacts`` folders:
 ```sh
 username@hostname:~/private_greengrass_core_device$ mkdir {recipes,artifacts}
 ```
-**Step 2**:
+**Step 3**:
 Add the component recipes JSON file:
 ```sh
 username@hostname:~/private_greengrass_core_device$ touch recipes/gg_core_device_component.json
@@ -76,7 +78,7 @@ username@hostname:~/private_greengrass_core_device$ nano artifacts/gg_core_devic
 ```
 Where ``main.py`` simply print out a string
 
-**Step 3**: Run the following command to locally deploy the component to the AWS IoT Greengrass core
+**Step 4**: Run the following command to locally deploy the component to the AWS IoT Greengrass core
 ```sh
 username@hostname:~/private_greengrass_core_device$ sudo /greengrass/v2/bin/greengrass-cli deployment create --recipeDir $(pwd)/recipes --artifactDir $(pwd)/artifacts --merge "gg_core_device_component=0.0.1"
 [sudo] password for username:
