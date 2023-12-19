@@ -20,6 +20,7 @@ Download an image from a HTTPS server: ``curl -o output_image_name.png image_URL
 
 E.g ``curl -o test.jpg https://vignette.wikia.nocookie.net/testwikia/images/4/44/png_image.png/revision/latest?cb=20200927143723``
 
+``-L``: ``curl -L`` is used for login option, check [.netrc](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/.netrc.md) for this implementation.
 ### Get data from Python HTTP server
 
 HTTP server: ``Python/Application layer/HTTP/HTTP server.md``
