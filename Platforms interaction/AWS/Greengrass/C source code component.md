@@ -12,7 +12,7 @@ With main.c inside ``artifacts/gg_core_device_component/0.0.1/main.c``, change `
 
 In this component hierarchy
 
-```Makefile
+```sh
 c_src_component
 ├── artifacts
 │    ├── c_src_component
