@@ -124,13 +124,3 @@ username@hostname:~/wip/gg_cli_components$ aws greengrassv2 create-deployment --
 ``get-deployment`` from that ``deploymentId``: ``aws greengrassv2 get-deployment --region ap-southeast-2 --deployment-id 4514dd91-8784-4b87-a280-fa5bafd8dd26``
 
 **Remove a deployed component**: ``sudo /greengrass/v2/bin/greengrass-cli deployment create --remove="gg_core_device_component"``
-# Develop and test a component locally with C source code
-
-With main.c inside ``artifacts/gg_core_device_component/0.0.1/main.c``, change ``Lifecycle`` of ``gg_core_device_component.json`` of ``recipes`` to:
-
-```json
-"Lifecycle": {
-    "run": "gcc {artifacts:path}/main.c && ./a.out"
-}
-```
-**Note**: In ``run``, after ``gcc {artifacts:path}/main.c``, the working directory of this subshell is ``/greengrass/v2/work/gg_core_device_component/`` (not ``{artifacts:path}``) and the built file ``a.out`` is also located inside that location. **a.out doesn't built into {artifacts:path}**
