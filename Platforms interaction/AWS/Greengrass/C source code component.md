@@ -15,10 +15,10 @@ In this component hierarchy
 ```sh
 c_src_component
 ├── artifacts
-│    ├── c_src_component
-│           ├── 0.1.0
-│               └── main.c
-│               ├── Makefile
+│    └── c_src_component
+│           └── 0.1.0
+│               ├── main.c
+│               └── Makefile
 └── recipes
     └── c_src_component.json
 ```
