@@ -72,7 +72,7 @@ target_4:
 * [$(MAKE)](#make), [$(MAKEFILE_LIST)](#work-with-multiple-makefile)
 * [Operator](Syntax.md#operator): ?= :=
 * [$@ helps getting the target name](Syntax.md)
-* [-C option]()
+* [-C option](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Build%20automation%20tools/Make/Syntax.md#-c-option): Build Makefile in another location
 * [Up to date error with .PHONY]()
 * [lastword](), [dir](), [abspath]()
 * [wildcard](), [wildcard with %]()
