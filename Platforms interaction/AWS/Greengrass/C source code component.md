@@ -50,7 +50,7 @@ sudo /greengrass/v2/bin/greengrass-cli deployment create --recipeDir $(pwd)/reci
 ```
 There will be error:
 ```sh
-2023-12-20T03:49:35.035Z [WARN] (Copier) gg_c_src_componentipc_c: stderr. sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper. {scriptName=services.c_src_component.lifecycle.run, serviceName=c_src_component, currentState=RUNNING}
+2023-12-20T03:49:35.035Z [WARN] (Copier) c_src_component: stderr. sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper. {scriptName=services.c_src_component.lifecycle.run, serviceName=c_src_component, currentState=RUNNING}
 ```
 Running sudo inside ``Makefile`` like this request entering password.
 
