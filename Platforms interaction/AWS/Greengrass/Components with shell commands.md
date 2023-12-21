@@ -24,6 +24,8 @@ sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassInstaller
 ```
 The installation process takes a few minutes. When the installer completes, you can find your device in the list of Greengrass core devices on the Core devices page.
 
+After successfully installing this core device in your system (e.g Ubuntu PC or single board computer), all the components developed in later steps belonged to this core device.
+
 # Develop a local Python component then deploy to AWS
 
 **Step 1**: Export AWS access keys **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** of the root account. 
