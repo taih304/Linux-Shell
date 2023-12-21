@@ -1,8 +1,8 @@
-## Authentication
+# Authentication
 
 ThingsBoard MQTT broker only allow MQTT client to subsribe to its allowed topic. Subscribing to its disallowed topic like this ``mosquitto_sub -h "thingsboard.sysats.tech" -t "disallowed_topic"`` will result in error: ``Connection error: Connection Refused: not authorised``
 
-## Telemetry
+# Telemetry
 
 ```sh
 mosquitto_pub -d -h "demo.thingsboard.io" -t "v1/devices/me/telemetry" -u "O0kt6xUl6cTGv9RM7M9P" -f "telemetry-data-as-object.json"
@@ -30,7 +30,7 @@ Get timestamp by command and send:
 mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/telemetry" -u "rg6k7jyrX31SB36fgH9i" -m "{'ts':$(($(date +%s%N)/1000000)), 'values':{'value':'Hello, World !'}}"
 ```
 
-## RPC
+# RPC
 
 Print out the MQTT response message when changing state in Switch control widget:
 
@@ -40,13 +40,13 @@ mosquitto_sub -d -h "thingsboard.sysats.tech" -t "v1/devices/me/rpc/request/+" -
 
 MQTT RPC with **Basic GPIO panel** is not yet implemented. Check [the corresponded example in ESP-IDF](https://github.com/TranPhucVinh/ESP-IDF/blob/master/Platforms%20interaction/ThingsBoard/MQTT/rpc_gpio_control.c) for its implementation or [the corresponded example in Python](https://github.com/TranPhucVinh/Python/blob/master/Platforms%20interaction/ThingsBoard/MQTT.md#rpc) for easier implementation with JSON.
 
-## Attributes
+# Attributes
 
 API ``v1/devices/me/attributes`` allows creating and updating client attribute by MQTT publish message.
 
-## MQTT device profile
+# MQTT device profile
 
-### Change MQTT Telemetry topic filter of a MQTT device profile
+## Change MQTT Telemetry topic filter of a MQTT device profile
 
 **Step 1**:  Edit the **Telemetry topic filter** to any value, e.g ``mqtt_device_profile``.
 
@@ -64,8 +64,10 @@ mosquitto_pub -d -h "thingsboard.sysats.tech" -t "v1/devices/abc/telemetry" -u "
 
 However ``-t "v1/devices/+/telemetry"`` is not supported.
 
-### Change MQTT Attributes topic filter of a MQTT device profile
+## Change MQTT Attributes topic filter of a MQTT device profile
 
 **Step 1**:  Edit the **Attributes topic filter** to any value, e.g ``device_test_attributes``.
 
 **Step 2**: In any implementation with attributes topic, like Basic GPIO panel, change the attribute topic to that newly changed value, e.g ``device_test_attributes``. All left operations then work as usual. 
+
+## [MQTT rule chain](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/ThingsBoard/Rule%20chain/MQTT.md)
