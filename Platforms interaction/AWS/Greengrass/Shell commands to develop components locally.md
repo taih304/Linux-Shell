@@ -26,7 +26,7 @@ The installation process takes a few minutes. When the installer completes, you 
 
 After successfully installing this core device in your system (e.g Ubuntu PC or single board computer), **all the components developed in later steps belonged to this core device**.
 
-# Develop a local Python component then deploy to AWS
+# Develop a Python component locally
 
 **Step 1**: Export AWS access keys **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY** of the root account. 
 
@@ -78,7 +78,7 @@ Then add source code for the component:
 ```sh
 username@hostname:~/private_greengrass_core_device$ nano artifacts/gg_core_device_component/0.0.1/main.py
 ```
-Where ``main.py`` simply print out a string
+Where ``main.py`` simply prints out a string
 
 **Step 4**: Run the following command to locally deploy the component to the AWS IoT Greengrass core
 ```sh
@@ -101,28 +101,4 @@ If successfully deployed locally, component **gg_core_device_component** will be
 ```sh
 sudo /greengrass/v2/bin/greengrass-cli component list
 ```
-**Deploy this local component to the core device**: ``deployment.json`` for that deployment:
-
-```json
-{
-    "targetArn": "arn:aws:iot:ap-southeast-2:275507326469:thing/private_greengrass_core_device", //Get private_greengrass_core_device thing's ARN link
-    "deploymentName": "deployment_for_gg_core_device_component",
-    "components": {
-        "gg_core_device_component": {
-            "componentVersion": "0.0.1",
-            "configurationUpdate": {
-                "reset": []
-            }
-        }
-    }
-}
-```
-```sh
-username@hostname:~/wip/gg_cli_components$ aws greengrassv2 create-deployment --region ap-southeast-2 --cli-input-json file://deployment.json
-{
-    "deploymentId": "4514dd91-8784-4b87-a280-fa5bafd8dd26"
-}
-```
-``get-deployment`` from that ``deploymentId``: ``aws greengrassv2 get-deployment --region ap-southeast-2 --deployment-id 4514dd91-8784-4b87-a280-fa5bafd8dd26``
-
 **Remove a deployed component**: ``sudo /greengrass/v2/bin/greengrass-cli deployment create --remove="gg_core_device_component"``
