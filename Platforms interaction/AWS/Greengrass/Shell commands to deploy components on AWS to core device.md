@@ -2,14 +2,13 @@ After having the [component developed locally](Shell%20commands%20to%20develop%2
 
 # Create a component on AWS 
 
-Create an S3 bucket on AWS cloud. Then upload the artifact folder (which includes source codes) of the [locally developed component on PC](Shell%20commands%20to%20develop%20components%20locally.md) to this newly created S3 bucket.
+Create an S3 bucket on AWS cloud. Then manually upload the artifact folder (which includes source codes) of the [locally developed component on PC](Shell%20commands%20to%20develop%20components%20locally.md) to this newly created S3 bucket.
 
-Then in the AWS IoT console, go to **Manage** -> **Greengrass devices** -> **Components** -> **Create components**. In **Component information**, for **Enter recipe as JSON** (choose recipe as a JSON file), copy the whole recipe JSON file from the [locally developed component](Shell%20commands%20to%20develop%20components%20locally.md).
- 
+Then in the AWS IoT console, go to **Manage** -> **Greengrass devices** -> **Components** -> **Create components**. In **Component information**, for **Enter recipe as JSON** (choose recipe as a JSON file), copy the whole recipe JSON file from the [locally developed component](Shell%20commands%20to%20develop%20components%20locally.md). Then start editing. In **Artifacts** field with **URI** for the URI of the newly created S3 bucket for the component artifact source code manually uploaded before, paste the link of that uploaded artifact to this field. Finally, press **Create component** to create a new component as the digital twin of the locally developed component on core device.
 
 # Deploy the cloud component back to core device 
 
-**Deploy this local component to the core device**: ``deployment.json`` for that deployment:
+**Deploy the component created on AWS Cloud back to the core device**: ``deployment.json`` for that deployment:
 
 ```json
 {
