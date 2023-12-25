@@ -46,8 +46,6 @@ In component recipe file, e.g [gg_core_device_component.json](https://github.com
 
 Components can also be build and publish with [GDK CLI](Components%20with%20GDK%20CLI.md).
 
-Communication locally between Greengrass components use AWS GG IPC, refer to its [implementation on CPP](https://github.com/TranPhucVinh/Cplusplus/tree/master/Application%20layer/AWS%20Greengrass%20IPC)
+**Communication locally between Greengrass components** use **AWS GG IPC**, refer to its [implementation on CPP](https://github.com/TranPhucVinh/Cplusplus/tree/master/Application%20layer/AWS%20Greengrass%20IPC)
 
-Communication locally between Greengrass components inside a core device use AWS GG IPC, refer to its [implementation on CPP](https://github.com/TranPhucVinh/Cplusplus/tree/master/Application%20layer/AWS%20Greengrass%20IPC)
-
-Communication between Greengrass components on different core devices via Internet use AWS GG MQTT, refer to its [implementation on CPP](https://github.com/TranPhucVinh/Cplusplus/tree/master/Application%20layer/AWS%20Greengrass%20MQTT) and [Python](https://github.com/TranPhucVinh/Python/tree/master/Application%20layer/AWS%20Greengrass%20MQTT).
+**Communication between Greengrass components on different core devices via Internet** use **AWS GG MQTT**, refer to its [implementation on CPP](https://github.com/TranPhucVinh/Cplusplus/tree/master/Application%20layer/AWS%20Greengrass%20MQTT) and [Python](https://github.com/TranPhucVinh/Python/tree/master/Application%20layer/AWS%20Greengrass%20MQTT).
