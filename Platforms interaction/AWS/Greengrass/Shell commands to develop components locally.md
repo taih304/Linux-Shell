@@ -88,6 +88,10 @@ Local deployment submitted! Deployment Id: b5c0f11c-e6e5-48f0-8ee0-abb57c0682f3 
 ```
 ``--merge``: add or update the component and version that you specify
 
+Check deployment status of that deployment:
+```sh
+sudo /greengrass/v2/bin/greengrass-cli deployment status -i b5c0f11c-e6e5-48f0-8ee0-abb57c0682f3
+```
 **Result**: The AWS IoT Greengrass Core software saves stdout from component process to log files in the logs folder. Run the following command to verify that the deploy component runs and prints messages.
 
 ```sh
