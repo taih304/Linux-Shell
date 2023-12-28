@@ -4,7 +4,7 @@ Install AWS Greengrass GDK CLI:
 ```sh
 sudo python3 -m pip install -U git+https://github.com/aws-greengrass/aws-greengrass-gdk-cli.git@v1.1.0
 ```
-After installing, ``gdk`` command and ``greengrass.service`` are available. 
+After installing, ``gdk`` command and ``greengrass.service`` are available. Then proceed to [Set up one Greengrass core device](Shell%20commands%20to%20develop%20components%20locally.md#set-up-one-greengrass-core-device) steps as this will fully setup the Greengrass working environment.
 
 **Uninstall Greengrass**
 ```sh
