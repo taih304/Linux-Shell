@@ -43,7 +43,7 @@ username@hostname:~/private_greengrass_core_device$ touch recipes/gg_core_device
 {
     "RecipeFormatVersion": "2020-01-25",
     "ComponentName": "gg_core_device_component",
-    "ComponentVersion": "0.0.1",
+    "ComponentVersion": "0.1.0",
     "ComponentDescription": "Greengrass core device test component description",
     "ComponentPublisher": "No one",
     "ComponentConfiguration": {
@@ -71,18 +71,18 @@ Add component artifacts. You must use the following format for the artifact fold
 artifacts/componentName/componentVersion/
 ```
 ```sh
-username@hostname:~/private_greengrass_core_device$ mkdir -p artifacts/gg_core_device_component/0.0.1
+username@hostname:~/private_greengrass_core_device$ mkdir -p artifacts/gg_core_device_component/0.1.0
 ```
 Then add source code for the component:
 
 ```sh
-username@hostname:~/private_greengrass_core_device$ nano artifacts/gg_core_device_component/0.0.1/main.py
+username@hostname:~/private_greengrass_core_device$ nano artifacts/gg_core_device_component/0.1.0/main.py
 ```
 Where ``main.py`` simply prints out a string
 
 **Step 4**: Run the following command to locally deploy the component to the AWS IoT Greengrass core
 ```sh
-username@hostname:~/private_greengrass_core_device$ sudo /greengrass/v2/bin/greengrass-cli deployment create --recipeDir $(pwd)/recipes --artifactDir $(pwd)/artifacts --merge "gg_core_device_component=0.0.1"
+username@hostname:~/private_greengrass_core_device$ sudo /greengrass/v2/bin/greengrass-cli deployment create --recipeDir $(pwd)/recipes --artifactDir $(pwd)/artifacts --merge "gg_core_device_component=0.1.0"
 [sudo] password for username:
 Local deployment submitted! Deployment Id: b5c0f11c-e6e5-48f0-8ee0-abb57c0682f3 #Result
 ```
