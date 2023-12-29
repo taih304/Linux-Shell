@@ -6,10 +6,7 @@ For Linux, Bazel can be installed easily from Bazel official webpage. After inst
 sudo ln -s /usr/bin/bazel-1.0.0 /usr/bin/bazel
 ```
 
-# C source files
-
-Check [C source files document](C%20source%20files.md)
-
+# [C source files](https://github.com/TranPhucVinh/C/blob/master/Environment/Bazel.md)
 # CPP source files
 
 ```
