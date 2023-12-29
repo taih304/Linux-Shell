@@ -1,6 +1,6 @@
 # Basic operations
 
-Install ``ubuntu`` docker: ``sudo docker pull ubuntu``
+Install ``ubuntu`` docker: ``sudo docker pull ubuntu``.
 
 In ``ubuntu`` docker ``~`` is ``/root``.
 
@@ -50,6 +50,8 @@ To exit terminal mode easily, use ``-it`` flag which include ``-i`` for interact
 
 ## Network
 
+Docker image ``ubuntu`` can access to the Internet normally.
+
 In the hosting OS, after installing docker, there will be ``docker0`` with IP ``172.17.0.1``.
 
 Install ``net-tools`` package for ``ifconfig`` inside a ``ubuntu`` container
@@ -61,6 +63,7 @@ apt-get -y install net-tools
 
 Checking its IP with ``ifconfig`` will return ``172.17.0.2``
 
+For ``ping``, install ``iputils-ping``: ``apt-get install -y iputils-ping``
 # Handle input
 
 Error with input command like ``read``:
