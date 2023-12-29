@@ -1,4 +1,4 @@
-### Build the first program
+# Build the first program
 
 Organize a workspace folder for C source code with the following architecture:
 
@@ -38,15 +38,14 @@ If building successfully, the workspace architecture will be:
 ```
 
 To run the built program: ``bazel run test_bazel``
-
-### Build specific component
+# Build specific component
 
 This architecture will help a project to have multiple components, in this case the component is ``main``:
 
 ```
 |--main
-	|--main.c
-	|--BUILD
+|	|--main.c
+|	|--BUILD
 |--WORKSPACE
 ```
 
@@ -58,7 +57,7 @@ Run component ``main``: ``bazel run //main:test_bazel``
 
 **Note**: Currently, in 9th September 2022, bazel is unable to build if it is inside a path with space like ``~/Documents/Gitlab/Work in progress$`` 
 
-### Build with header files/library files
+# Build with header files and library
 
 ```c
 |--main.c
@@ -112,7 +111,7 @@ main.c:1:18: fatal error: head.h: No such file or directory
 
 ``include`` keyword in ``BUILD`` file is used to include the general folder for ``include`` in C source code like ``#include "header.h``. With ``includes = ["cJSON-1.7.15"],`` in ``BUILD`` file, user can call ``#include "cJSON.h"`` instead of ``#include "cJSON-1.7.15/cJSON.h"``
 
-### Read file when running bazel build
+# Read file when running bazel build
 
 ```
 |--main.c
@@ -136,7 +135,7 @@ With file ``test.json`` inside folder ``file`` and ``BUILD`` file like this:
 ```
 |--main.c
 |--file
-	|--test.json
+|	|--test.json
 |--WORKSPACE
 |--BUILD
 ```
@@ -179,7 +178,7 @@ To read ``test.json`` inside folder ``file``, the source code now need to change
 printf("%s\n", read_file("file/test.json"));
 ```
 
-### Build external library
+# Build external library
 
 Build external library like ``pthread`` (``gcc main.c -lpthread``):
 
@@ -197,7 +196,7 @@ For multiple external library, e.g ``-li2c``:
 linkopts = ["-lpthread", "-li2c"],
 ```
 
-### Static library
+# Static library
 
 Include an existed static library ``.a`` to ``BUILD`` with ``cc_import()``
 
