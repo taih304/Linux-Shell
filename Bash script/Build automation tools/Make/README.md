@@ -76,4 +76,4 @@ target_4:
 * [Up to date error with .PHONY]()
 * [lastword](), [dir](), [abspath]()
 * [wildcard](), [wildcard with %]()
-
+# [Makefile for GCC](https://github.com/TranPhucVinh/C/blob/master/Environment/Makefile%20for%20GCC.md)
