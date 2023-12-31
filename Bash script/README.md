@@ -133,7 +133,7 @@ When it needs or involves different software tools.
 * [Shell builtins commands](Shell%20builtins.md)
 * [Install package](Install%20package.md)
 
-## --help
+## --help and man
 
 ```shell
 $ ls --help
@@ -180,21 +180,3 @@ To work with a file containing space, like ``"Folder 1"``:
 
 * Add ``" "`` in the command: E.g ``cd "Folder 1"``
 * Add ``\`` in the command: E.g ``cd Folder\ 1/"``
-# Examples
-
-## Read value you enter and print out
-
-**On terminal**
-
-```bash
-$ read enteredString
-$ echo $enteredString
-```
-
-**Shell script**
-
-```sh
-printf "Enter a string"
-read enteredString
-echo "String is $enteredString"
-```
