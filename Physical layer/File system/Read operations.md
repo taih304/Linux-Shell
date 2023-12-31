@@ -11,10 +11,14 @@ Using **cat** to create a new file then enter the value for it: ``cat > filename
 After finishing, type **Ctrl+D** or **Ctrl+C**.
 
 # read
+**Read value you enter and print out**
 
-Read a line from the standard input and split it into fields.
+```bash
+$ read enteredString
+$ echo $enteredString
+```
 
-Read the entered string into variable ``var_1`` and ``var_2``:
+**Read a line from the standard input and split it into fields**: Read the entered string into variable ``var_1`` and ``var_2``:
 
 ```sh
 username$hostname: read var_1 var_2
