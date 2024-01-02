@@ -21,3 +21,5 @@ cc_binary(
 ```
 
 Then ``build`` and ``run`` normally like with C source files.
+# Keywords
+* **deps**: deps is used for dependancies in libraries, components and header files. Refer to their implementation on [Bazel for library in C](https://github.com/TranPhucVinh/C/blob/master/Environment/Bazel%20for%20library.md).
