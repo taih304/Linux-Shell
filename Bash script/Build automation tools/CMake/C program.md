@@ -171,3 +171,16 @@ username@hostname:~/wip/c_make_test$ cmake .
 username@hostname:~/wip/c_make_test$ cmake --build . # This will build target main_src (main program to be built)
 username@hostname:~/wip/c_make_test$ ./main_src # Run main_src
 ```
+# Cross compiler
+Add flag ``CMAKE_C_COMPILER`` for the cross compiler location:
+```CMake
+# cmake_minimum_required(VERSION 3.10)
+
+# set the project name
+project(test_c_make)
+
+set(CMAKE_C_COMPILER /bin/aarch64-linux-gnu-gcc)
+
+# add the executable
+add_executable(${PROJECT_NAME} main.c)
+```
