@@ -1,5 +1,11 @@
 List USB devices: ``lsusb``
 
+Ubuntu 18.04 and 20.04 has kernel module installed by default for CP210x (e.g CP2102) and CH341, which are located in ``/lib/modules/5.15.0-79-generic/kernel/drivers/usb/serial``. Those kernel modules are not loaded when CP210x and CH341 are not plugged in.
+
+For usb keyboard, most kernels already go with default built-in ``usbhid`` module. Experiment with removal of default kernel module ``usbhid`` could be problematic for the system and maybe difficult to recover.
+
+All USB HID devices are automatically managed by usbhid driver. For example with CP2102, every time a CP2102 is plugged into the USB port, usbhid driver will automatically load the cp210x.ko kernel module as CP2102 device driver for usage.
+
 # Cannot open /dev/ttyUSB0: Permission denied
 
 This error happen as your user account is not added to ``dialout`` or ``tty`` group.
