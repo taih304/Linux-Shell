@@ -4,6 +4,8 @@
 
 Linux based operating system uses **Bash shell**, the shell environment used for several purposes like storing data, storing software configuration, locating terminal settings and changing shell environments.
 
+**Subshell**: A child process created by a shell, check [exec command](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/Process%20command.md#exec) to clarify this operation.
+
 **Structure of a Unix command**:
 ```sh
 command <mandatory_arg> [optional_arg]
@@ -11,8 +13,6 @@ command <mandatory_arg> [optional_arg]
 * ``<mandatory_arg>``: The mandatory arguments required for the command
 * ``[optional_arg]``: The optional arguments required for the command
   
-**Subshell**: A child process created by a shell, check [exec command](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/README.md#exec) to clarify this operation.
-
 # Shell script overview
 
 The Shebang line is present at the top of the script, e.g:
