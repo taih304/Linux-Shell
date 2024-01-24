@@ -20,7 +20,7 @@ Write content to a file
 
 # mount
 
-mount a filesystem
+mount a filesystem. Everytime a block device like USB, SD card is plugged into an Ubuntu PC, it will **automatically mount** those devices into a file system.
 
 ``mount source_block_device target_folder``: Mount ``source_block_device`` (the source block device like ``USB``, ``SD card``,...)  to ``target_folder`` (the target folder). Note that ``target_folder`` must exist before mounting.
 
