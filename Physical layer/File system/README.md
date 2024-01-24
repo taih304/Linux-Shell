@@ -26,4 +26,16 @@ For file hierarchy inside a Linux system, check [file hierarchy document](File%2
 * file: determine file type
 * df, du
 ## [Write](Write%20operations.md)
+* cp
+* nano
+* mv
+* dd
+* tee
+* mount, umount
+* Redirect operators: >, <, >>, <<, <<<
+* pipe: send the output of the program
+* sed: Stream editor
+* ln: Hard link, soft link
 ## [Delete](File%20operations.md#delete)
+* rm: Remove a file, not directory
+* rmdir: Remove an empty directory
