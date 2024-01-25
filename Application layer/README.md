@@ -67,7 +67,8 @@ A **temporary URL** can be **used when your domain name is not working**.
 # Wget
 
 ``Wget`` is a free software package for retrieving files using [HTTP](HTTP), HTTPS, FTP and FTPS.
-
+# FTP
+Install FTP server ``sudo apt install tftpd-hpa``. Just only when having FTP server, UDP port 69 will be available for it.
 # [Desktop applications and GUI](GUI.md)
 # Free software
 **Free software** or **libre software** or **libreware** is computer software distributed under terms that allow users to run the software for any purpose as well as to study, change, and distribute it and any adapted versions. Free software is a matter of liberty, not price; all users are legally free to do what they want with their copies of a free software (including profiting from them) regardless of how much is paid to obtain the program.
