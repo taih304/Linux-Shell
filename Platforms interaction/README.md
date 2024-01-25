@@ -2,7 +2,6 @@
 * Linux vs BSD
 * CentOS
 * Armbian with Orange Pi
-* [mangOH](mangOH)
 
 # [Platform as a service](Platform%20as%20a%20service.md)
 * [ThingsBoard](ThingsBoard)
