@@ -67,8 +67,20 @@ A **temporary URL** can be **used when your domain name is not working**.
 # Wget
 
 ``Wget`` is a free software package for retrieving files using [HTTP](HTTP), HTTPS, FTP and FTPS.
-# FTP
-Install FTP server ``sudo apt install tftpd-hpa``. Just only when having FTP server, UDP port 69 will be available for it.
+# TFTP
+Install TFTP server ``sudo apt install tftpd-hpa``. Just only when having FTP server, UDP port 69 will be available for it.
+
+All TFTP server config are defined in ``/etc/default/tftpd-hpa``. All files for TFTP transfering are stored inside ``/var/lib/tftpboot``, users can change that to another location. In ``TFTP_OPTIONS``, add ``--create`` option to create or upload new files to the TFTP server.
+
+```sh
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/var/lib/tftpboot"
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--secure --create"
+```
+
+With those configuration, simply put for for transfering into the ``TFTP_DIRECTORY``. The TFTP client will then be able to get that file.
+
 # [Desktop applications and GUI](GUI.md)
 # Free software
 **Free software** or **libre software** or **libreware** is computer software distributed under terms that allow users to run the software for any purpose as well as to study, change, and distribute it and any adapted versions. Free software is a matter of liberty, not price; all users are legally free to do what they want with their copies of a free software (including profiting from them) regardless of how much is paid to obtain the program.
