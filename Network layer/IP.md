@@ -6,7 +6,7 @@ The **IP datagram** include: Version number, Header length, Type of service, Dat
 
 # IPv4 Addressing
 
-## How hosts and routers are connected into the network.
+## How hosts and routers are connected into the network ?
 
 A host typically has only **a single link** into the network; when IP in the host wants to send a datagram, it does so over this link. **The boundary** between the host and the physical link is called **an interface**. Now consider **a router** and **its interfaces**. Because a router’s job is to **receive a datagram** on one link and **forward the datagram** on some other link, a router necessarily **has two or more links** to which it is connected. **The boundary** between the router and any one of its links is also called **an interface**. A router thus has **multiple interfaces**, one for each of its links. Because **every host and router is capable of sending and receiving IP datagrams**, **IP requires each host and router interface to have its own IP address**. Thus, **an IP address is technically associated with an interface**, **rather than with the host or router containing that interface**.
 
