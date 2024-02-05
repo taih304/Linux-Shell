@@ -40,7 +40,7 @@ Check: ``dpkg --list | grep unrar``
 Give:
 
 ```
-ii  unrar                                       1:5.3.2-1+deb9u1build0.16.04.1                  amd64        Unarchiver for .rar files (non-free version)
+ii  unrar  1:5.3.2-1+deb9u1build0.16.04.1  amd64  Unarchiver for .rar files (non-free version)
 ```
 
 The ``Extract here`` for ``rar`` files will be available, extracted folder will not be empty. 
