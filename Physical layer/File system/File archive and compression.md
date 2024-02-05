@@ -27,7 +27,7 @@ Check: ``dpkg --list | grep unrar``
 Give:
 
 ```
-ii  unrar-free                                  1:0.0.1+cvs20140707-4~build0.16.04.1            amd64        Unarchiver for .rar files
+ii  unrar-free  1:0.0.1+cvs20140707-4~build0.16.04.1  amd64  Unarchiver for .rar files
 ```
 
 **Problem solve**: Uninstall ``unrar-free`` and install ``unrar`` 
