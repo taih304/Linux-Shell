@@ -63,21 +63,27 @@ The ``Extract here`` for ``rar`` files will be available, extracted folder will 
 
 ## tar
 
-``tar``: saves many files together into a single tape or disk archive. ``tar`` is also a file extension. The tar archived file is called a **tarball**.
+``tar`` is used to archive and unarchive, saves many files together into a single tape or disk archive. ``tar`` is also a file extension. The tar archived file is called a **tarball**.
 
-``-c``: create a new archive
+You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just archive to ``.tar`` file.
 
-``-f``: use archive file or device ARCHIVE
+**Archive**
+* ``-c``: create a new archive
+* ``-f``: use archive file or device ARCHIVE
 
 Archive multiple files to a ``.tar`` file: ``tar -cf test.tar file1.md file2.md``
 
-Extract files from a ``.tar`` file: ``tar -xf test.tar``
+**Unarchive**
+* Extract ``.tar`` file: ``tar -xf test.tar``
+* Extract ``tgz`` file: E.g: ``tar -xf p4v.tgz``
+* Extract ``.gz`` file: ``tar -xzvf gz_file.tar.gz``. If not using ``-xzvf``, ``.gz`` file can't be extracted.
 
-``tar`` can be used to extract ``tgz`` file: E.g: ``tar -xf p4v.tgz``
+In order to unarchive files into a folder, that folder must existed first:
 
-For ``.gz`` file: ``tar -xzvf gz_file.tar.gz``. If not using ``-xzvf``, ``.gz`` file can't be extracted.
-
-You can't archive or unarchive other types of file like ``.zip``, ``rar`` with ``tar``, ``tar`` can just archive to ``.tar`` file.
+```sh
+username@hostname:~/$ mkdir extracted_dir
+username@hostname:~/$ tar -xzvf test.tar.gz -C extracted_dir
+```
 
 ## gzip and gunzip
 
