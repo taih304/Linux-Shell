@@ -1,6 +1,6 @@
 # wildcard
 
-Wildcards are special characters that can stand in for unknown characters in a text value and are handy for locating multiple items with similar, but not identical data. Another common use of wildcard characters is to create regular expressions.
+Wildcards are **special characters** that can **stand in for unknown characters in a text value** and are handy for locating multiple items with similar, but not identical data. Another common use of wildcard characters is to **create regular expressions**.
 
 Wildcards has specific character definition/features on each fields, e.g Unix, Microsoft, other IoT platforms like ThingsBoard
 
