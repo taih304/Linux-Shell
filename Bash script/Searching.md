@@ -22,11 +22,11 @@ A regular expression (**regex**) is **a sequence of characters that define a sea
 
 **The asterisk symbol** ( * ) will match the preceding character (or set of characters) for 0 or more times (upto infinite).
 
-**Example**: **ab*c** will give ac, abc, abbc, abbbc,...
+E.g: **ab*c** will give ac, abc, abbc, abbbc,...
 
 **The plus symbol** ( + ) will repeat the preceding character (or set of characters) at at least one or more times (up to infinite).
 
-**Example**: The regular expression ab+c will give abc, abbc, abbc,...
+E.g: **ab+c** will give abc, abbc, abbc,...
 
 # grep
 
