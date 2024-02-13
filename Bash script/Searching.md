@@ -28,6 +28,8 @@ E.g: **ab*c** will give ac, abc, abbc, abbbc,...
 
 E.g: **ab+c** will give abc, abbc, abbc,...
 
+**[first-last] character range**: Matches any single character in the range from first to last. E.g **[a-zA-z]** will match any character from a to z or A to Z.
+
 # grep
 
 ``grep`` searches for ``PATTERN`` in each ``FILE``:
