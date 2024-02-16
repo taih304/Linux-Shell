@@ -64,7 +64,9 @@ Switched to a new branch 'rpi-5.15.y'
 ```
 
 ## Authentication to fetch user information
-API **api.github.com/user** is used to fetch user information. An insecure approach is to use ``-u`` flag with plain text **user_name** and **password**:
+API **api.github.com/user** is used to fetch user information. 
+### Plain text password as an insecure approach
+An insecure approach is to use ``-u`` flag with plain text **user_name** and **password**:
 ``curl https://api.github.com/user -u user_name:password``
 
 Example: ``curl https://api.github.com/user -u tranphucvinh:password``
@@ -77,7 +79,7 @@ By using this method, we don't need to setup the **Personal access token**. If s
 curl https://api.github.com/user -L --netrc
 ```
 
-## .netrc for Github
+### .netrc for Github
 
 Authentication step can be setup by .netrc file, check [.netrc document with the example for Github](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/.netrc.md).
 
