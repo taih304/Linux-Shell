@@ -63,15 +63,19 @@ tranphucvinh@tranphucvinh:~/Documents/Gitlab/linux$ git checkout -b rpi-5.15.y
 Switched to a new branch 'rpi-5.15.y'
 ```
 
-## Username login
-
+## Authentication to fetch user information
+API **api.github.com/user** is used to fetch user information. An insecure approach is to use ``-u`` flag with plain text **user_name** and **password**:
 ``curl https://api.github.com/user -u user_name:password``
 
 Example: ``curl https://api.github.com/user -u tranphucvinh:password``
 
-**Output**: This will list out all user information.
+**Output**: This will list out all user information. However, Github will then send you an email as a security warning for that as **password** is entering in plain text.
 
-**Note**: If not setting up **Personal access token**, use the login password for the ``password`` parameter. If setting up **Personal access token** (for later used with [.netrc file](#netrc-for-github), use that **Personal access token** for the ``password`` parameter.
+By using this method, we don't need to setup the **Personal access token**. If setting up **Personal access token** (for later used with [.netrc file](#netrc-for-github), use that **Personal access token** for the ``password`` parameter:
+
+```sh
+curl https://api.github.com/user -L --netrc
+```
 
 ## .netrc for Github
 
