@@ -71,11 +71,11 @@ Example: ``curl https://api.github.com/user -u tranphucvinh:password``
 
 **Output**: This will list out all user information.
 
-**Note**: If not setting up **Personal access token**, use the login password for the ``password`` parameter. If setting up **Personal access token** (for later used with [.netrc file](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/.netrc.md), use that **Personal access token** for the ``password`` parameter.
+**Note**: If not setting up **Personal access token**, use the login password for the ``password`` parameter. If setting up **Personal access token** (for later used with [.netrc file](#netrc-for-github), use that **Personal access token** for the ``password`` parameter.
 
 ## .netrc for Github
 
-Authentication step can be setup by .netrc file, check [.netrc document with the example for Github](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/.netrc.md#setup-netrc-for-github).
+Authentication step can be setup by .netrc file, check [.netrc document with the example for Github](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/.netrc.md).
 
 # Heroku
 Install: ``sudo snap install heroku``
