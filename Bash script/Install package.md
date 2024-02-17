@@ -55,27 +55,3 @@ dpkg -x libi2c-dev.deb .
 ```
 
 ``i2c/smbus.h`` can be used as the header file for other source code while ``libi2c.a`` is the static library source code. Check [libi2c-dev static library in Bazel for this implementation](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Build%20automation%20tools/Bazel/C%20source%20files.md#static-library).
-
-# Download a Debian package from link for used as system library in /usr/lib/x86_64-linux-gnu/
-
-Take [libcppunit](https://packages.ubuntu.com/bionic/libs/libcppunit-1.14-0) as an example
-
-Take the steps like **Download a Debian package from link and get its file source** above to get links then download the deb package with ``wget``:
-
-```sh
-wget http://mirrors.kernel.org/ubuntu/pool/universe/c/cppunit/libcppunit-1.14-0_1.14.0-3_amd64.deb
-```
-
-``libcppunit-1.14-0_1.14.0-3_amd64.deb`` will be output.
-
-Install: ``sudo dpkg -i libcppunit-1.14-0_1.14.0-3_amd64.deb``
-
-Result: ``ls /usr/lib/x86_64-linux-gnu/|grep cpp``
-
-```
-libcppunit-1.14.so
-libcppunit-1.14.so.0
-libcppunit-1.14.so.0.0.0
-libcppunit.a
-libcppunit.so
-```
