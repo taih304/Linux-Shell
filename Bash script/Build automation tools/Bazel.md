@@ -10,7 +10,7 @@ Binary built output of Bazel always has suffix ***_binary**, e.g [cc_binary](htt
 
 Bazel doesn't support build folder to have space like ``~/home/username/Work in progress$``
 
-# [C source files](https://github.com/TranPhucVinh/C/blob/master/Environment/Bazel.md)
+# [C source files](https://github.com/TranPhucVinh/C/tree/master/Environment/Bazel)
 # CPP source files
 
 ```
