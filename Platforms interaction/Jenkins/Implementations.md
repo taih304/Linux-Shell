@@ -8,7 +8,7 @@
 
 To setup a Pipeline: **New item** -> **Pipeline** -> **Advanced Project Options** -> **Pipeline**. In **Definition**, choose **Pipeline script**.
 
-Take this script to print out a string when building that pipeline:
+Take this script to print out a string when building that pipeline and run shell command pwd:
 
 ```groovy
 pipeline {
@@ -17,6 +17,7 @@ pipeline {
         stage("test_pipeline"){
             steps{
                 echo "Test pipeline"
+                sh "pwd"
             }
         }
     }
