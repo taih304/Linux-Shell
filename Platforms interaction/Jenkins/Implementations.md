@@ -29,10 +29,10 @@ To call a local Github repo:
 
 **Step 1**: Allow Jenkins to call local Github repo
 
-Edit ``/lib/systemd/system/jenkins.service`` file, add this line:
+Edit ``/lib/systemd/system/jenkins.service`` file, add ``-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true`` to **Arguments for the Jenkins JVM**, the whole **Environments** variable will be:
 
 ```sh
-Environment="JAVA_OPTS=-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true"
+Environment="JAVA_OPTS=-Djava.awt.headless=true -Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true"
 ```
 
 **Step 2**: In Repository URL, use path ``file:///<path_of_the_local_git_repository>``, e.g ``file:///home/username/github_repository``
