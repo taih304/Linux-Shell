@@ -23,3 +23,4 @@ pipeline {
     }
 }
 ```
+``pwd`` will return ``/var/lib/jenkins/workspace/<pipeline_name>``
