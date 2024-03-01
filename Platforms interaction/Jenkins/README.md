@@ -42,5 +42,14 @@ After successfully installing, go to ``localhost:8080`` on web browser. The **Ge
 Go to ``/var/lib/jenkins/secrets/initialAdminPassword`` to get the administrator password for this.
 
 In Customize Jenkins, choose **Install suggested plugins**. Jenkins will then automatically install all suggested plugins.
+# Environment setup
+For Jenkins to run docker, add user jenkins to docker group: ``sudo usermod -a -G docker jenkins`` then restarts Jenkins service.
+
+After installing, Jenkins is a new Linux account in your Linux PC as it can't access most of the resources lies on the $(USER) PC. By default, you won't be able to install any new package for that Jenkins account as error:
+
+**jenkins is not in the sudoers file. This incident will be reported**
+
+To solve that, add user jenkins to sudo group: **sudo usermod -aG sudo jenkins** then reboot the PC.
+
 # Terminology
 A **CI/CD pipeline** is a deployment pipeline integrated with automation tools.
