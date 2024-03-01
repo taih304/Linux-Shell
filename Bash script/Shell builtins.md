@@ -1,20 +1,16 @@
-## General
+Shell builtins commands include: [alias](#alias), [cd](#cd), [echo](#echo), [test](#test), [unset](#unset) and [wait](#wait).
 
-Shell builtins commands include: ``alias``, ``cd``, ``echo``, ``test``, ``unset`` and ``wait``.
-
-## Commands
-
-### cd
+# cd
 
 ``cd ../..``: change to previous folder
 
 ``cd`` to another folder can be perform with ``./folder_name``: ``cd ./folder_name``
 
-### echo
+# echo
 
 Check ``Introduction.md`` in ``Bash script/Variable`` for ``echo`` document.
 
-### alias
+# alias
 
 To setup an alias:
 
@@ -50,7 +46,7 @@ Then run ``echo $PATH`` will return empty
 
 To set system wide environment variables value, use ``export``.
 
-### test
+# test
 
 ``test`` is used for testing conditions. ``1`` for false and ``0`` for true
 
