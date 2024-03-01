@@ -25,7 +25,6 @@ pipeline {
 ```
 ``pwd`` will return ``/var/lib/jenkins/workspace/<pipeline_name>``
 
-For Jenkins to run docker, add user jenkins to docker group: ``sudo usermod -a -G docker jenkins`` then restarts Jenkins service.
 ## Pipeline script with SCM
 To call a local Github repo: 
 
