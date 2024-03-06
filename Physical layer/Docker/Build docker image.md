@@ -175,7 +175,7 @@ The **ADD** instruction copies new files, directories or remote file URLs from *
 Export the current working docker container so that the newly exported container contains all the installed packages, and work progress from the origin one.
 
 ```sh
-sudo docker export <IMAGE_ID > exported_docker_name.tar
+sudo docker export IMAGE_ID > exported_docker_name.tar
 ```
 E.g:
 ```sh
