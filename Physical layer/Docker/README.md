@@ -138,8 +138,10 @@ Table of contents for ``ubuntu docker`` implementations:
 
 ## [Build a docker image](Build%20docker%20image.md)
 * [Build an Ubuntu image from Ubuntu OS](Build%20docker%20image.md#build-an-ubuntu-image-from-ubuntu-os)
-* [Build an Ubuntu image that only prints out a string](Build%20docker%20image.md#build-an-ubuntu-image-that-only-prints-out-a-string): [CMD and ENTRYPOINT](Build%20docker%20image.md#cmd-and-entrypoint)
-* [Build a docker with included files and installed library](Build%20docker%20image.md#build-a-docker-with-included-files-and-installed-library)
+* [Run-time instructions](Build%20docker%20image.md#run-time-instructions): [CMD](), [ENTRYPOINT]() and ENV
+* [Build-time instructions](): Build a docker with included files and installed libraries
+* [Export the current working docker container so that the newly exported container contains all the installed packages, and work progress from the origin one](Build%20docker%20image.md#export-and-import)
+
 ## Docker Hub
 **Docker Hub** is a repository of Docker Images, which is quite similar to Github, where you can create, manage, and deliver containers.
 **Implementation**: Push local docker [esp8266_rtos_sdk_docker](https://github.com/TranPhucVinh/ESP8266-RTOS-SDK/tree/main/Environment/esp8266_rtos_sdk_docker) to docker hub ``tranphucvinh96/esp8266_rtos_sdk_docker``
