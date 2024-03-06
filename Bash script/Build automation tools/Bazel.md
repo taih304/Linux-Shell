@@ -6,7 +6,7 @@ For Linux, Bazel can be installed easily from Bazel official webpage. After inst
 sudo ln -s /usr/bin/bazel-1.0.0 /usr/bin/bazel
 ```
 
-Binary built output of Bazel always has suffix ***_binary**, e.g [cc_binary](https://github.com/TranPhucVinh/C/blob/master/Environment/Bazel.md) for C and CPP, [py_binary](https://github.com/TranPhucVinh/Python/tree/master/Introduction#bazel) for Python.
+Binary built output of Bazel always has suffix ***_binary**, e.g [cc_binary](https://github.com/TranPhucVinh/C/blob/master/Environment/Bazel) for C and CPP, [py_binary](https://github.com/TranPhucVinh/Python/tree/master/Introduction#bazel) for Python.
 
 Bazel doesn't support build folder to have space like ``~/home/username/Work in progress$``
 
