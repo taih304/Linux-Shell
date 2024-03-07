@@ -16,7 +16,7 @@ To see all available groups type: ``compgen -g``
 Init script includes:
 * [Systemd](Init%20script/Systemd.md)
 * SysV init with [rc.local](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/File%20hierarchy.md#rclocal) and [rcS](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/File%20system/File%20hierarchy.md#rcs)
-* [.netrc](.netrc.md)
+* [.netrc](Init%20script/.netrc.md)
 * [crontab](crontab)
 
 # [File system](File%20system)
