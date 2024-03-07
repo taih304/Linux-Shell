@@ -51,5 +51,13 @@ After installing, Jenkins is a new Linux account in your Linux PC as it can't ac
 
 To solve that, add user jenkins to sudo group: **sudo usermod -aG sudo jenkins** then reboot the PC.
 
+Access CLI of that jenkins user: **sudo su -s /bin/bash jenkins**. Password of this jenkins user is unknown and completely different from the password setup previously for the 1st time. User must change the password for that jenkins user:
+```sh
+username@hostname:~$ sudo passwd jenkins # From the main user, change password for jenkins user
+[sudo] password for username:
+New password: # Type in new password
+Retype new password: # Retype new password
+passwd: password updated successfully
+```
 # Terminology
 A **CI/CD pipeline** is a deployment pipeline integrated with automation tools.
