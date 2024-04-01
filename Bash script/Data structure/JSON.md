@@ -7,7 +7,7 @@ json_array["key_1"]="key 1"
 json_array[1]=0
 
 echo ${json_array["key_1"]} # key 1
-echo ${json_array[1]} #0
+echo ${json_array[1]} # 0
 ```
 
 # jq

@@ -48,10 +48,20 @@ hello, world !
 
 ``-a``: array
 
-``read -a store_array``: Read enterd string in the current running terminal and store to ``store_array``. The stored string will be broken if encounter space.
+``read -a store_array``: Read enterd string in the current running terminal and store to ``store_array``. The stored string will be broken if **encountering space**.
 
 ``read -a store_array -N 14``: Read 14 entered characters from the current running terminal (including space), it will break if having enough character.
 
+**Separated string by space**:
+```sh
+input_string="Hello World"
+
+read -ra words <<< "$input_string" # Here-string to send a string to the program
+
+for word in "${words[@]}"; do
+    echo "$word"
+done
+```
 ## Read and print out every line of file
 
 ```sh
