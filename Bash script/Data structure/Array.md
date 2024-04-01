@@ -4,8 +4,8 @@
 # Must not use "declare" when declaring array with ()
 array=(1 2 3)
 
-echo ${array[0]} # hello
-echo ${array[1]} # 0
+echo ${array[0]} # 1
+echo ${array[1]} # 2
 ```
 ## Use declare
 ```sh

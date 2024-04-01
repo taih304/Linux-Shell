@@ -9,7 +9,22 @@ json_array[1]=0
 echo ${json_array["key_1"]} # key 1
 echo ${json_array[1]} # 0
 ```
+**Count total duplicate elements inside an array**
+```sh
+array=(5 7 9 9 10 11 13 13 13 16 1 5 -2 -2 -4 0)
 
+declare -A Map
+
+for value in ${array[@]}
+do
+    ((Map[$value]++))
+done
+
+for key in "${!Map[@]}"
+do
+    echo "Key: $key, Value: ${Map[$key]}"
+done
+```
 # jq
 
 ``jq`` is a lightweight and flexible command-line JSON processor. Download ``jq`` from [stedolan/jq](https://github.com/stedolan/jq) or install using ``sudo apt-get install jq``.
