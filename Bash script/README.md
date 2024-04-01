@@ -174,6 +174,8 @@ username@hostname:~/$ echo $a #Back to parent shell, and variable a has its old 
 
 ``exit``: Exit the current running terminal 
 
+``type command_name``: information of that command. E.g ``type cd``: information of ``cd`` command
+
 ### Working with space
 
 To work with a file containing space, like ``"Folder 1"``:
