@@ -53,7 +53,52 @@ mount -o remount,rw / #This will make path / (as rootfs) to be writeable
 ``umount`` will detache/unmount a file system.
 
 E.g: ``umount /mnt/tmp``
+# printf
 
+``printf hello`` and ``printf "hello"`` will printf to a stream.
+
+``printf`` is not followed by newline character, for a new line, it has to be ``printf "hello \n"``.
+
+``printf`` ends when encountering the space
+
+```sh
+string="Hello, World !"
+printf $string #Hello,
+```
+
+Store value of ``printf`` to a variable:
+
+```sh
+text=$(printf "hello")
+echo $text
+```
+
+String format:
+
+```sh
+printf "%lf" 1.2 #1.200000
+printf "%.2f" 1.2 #1.20
+printf "%d" 12 #12
+printf "%04d" 12 #0012
+printf "%x" 10
+```
+
+```sh
+text=$(printf "hello %d" $1)
+echo $text
+```
+
+Run ``./test.sh 123``: ``hello 123``
+
+Notice that all implementation above print out the string, not number. To print out a number, use escape sequence ``\x`` for hex
+
+```sh
+printf "\x61" #For number 0x61
+```
+
+Character ``a`` which is corresponded to ASCII code ``0x61`` is print out on the terminal
+
+**Application**: Using ``\x`` will help sending a number to USB port instead of string.
 # Redirect
 
 * ``>``: Redirect ouput to a file, this can be used to write data to a file, this will overwrite an existing file
