@@ -10,6 +10,11 @@ Using **cat** to create a new file then enter the value for it: ``cat > filename
 
 After finishing, type **Ctrl+D** or **Ctrl+C**.
 
+**Read file content into a variable**:
+```sh
+file_contents=$(cat "main.cpp")
+echo "$file_contents"
+```
 # read
 ## Read value you enter and print out
 
@@ -103,55 +108,6 @@ E.g: File ``test.txt`` has content ``ls``
 
 ``source test.txt`` and ``. text.txt`` will run ``ls`` command
 
-# ls
-
-Print out all the folder in current directory
-
-``-l``: list in long format, show more detail of the file/list detail information, ``ll`` is the alias for ``ls -l``.
-
-``-i``: view inode
-
-``-a``: list all file and directory (including hidden files).
-
-In the result, a file start with ``.`` (dot) mean it is a hidden files
-
-To hide a file rename it to ``.itsname``
-
-**Combine**
-
-```bash
-$ ls -l -a
-$ ls -la
-```
-
-``ls -li test.c``: List all files information (including inode)
-
-Result of ``ls -l``:
-
-```
--rw-rw-r--  1 owner group   1108 Feb  5  2021 test.md
-drwxrwxr-x  8 owner group   4096 Jul 26 11:48 Folder 1
-lrwxrwxrwx  1 owner group      9 Sep 10 23:30 symlink_file -> test.md
-```
-
-(From left to right): File type + permission, links, owner, group, file size, Creation date or last modified time, file name
-
-E.g: 
-
-* ``Feb  5  2021`` of ``test.md`` is creation date
-* ``Jul 26 11:48`` is modified date.
-
-File types include file (``-``), directory (``d``), character device (``c``) and symbolic link (``l``).
-
-For character devices (located in ``/dev``), e.g:
-
-```
-crw-------  1 root root    238,   0 Sep 14 15:39 Character device
-crw-------  1 root root      5,   1 Sep 14 11:54 console
-```
-
-(From left to right): File type + permission, owner, group, major number, minor number, Creation date or last modified time, file name.
-
 # tree
 
 ``tree`` command is used to display the tree of all files inside a directory
@@ -193,10 +149,6 @@ free(returned_string);
 
 * ``du -h``: list out disk usage in MB
 * ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory
-# file
-
-``file file_name``: determine file type of ``file_name``
-**E.g**: ``file main.c`` will return ``main.c: C source, ASCII text, with CRLF line terminators``
 
 # Other commands
 
@@ -205,13 +157,3 @@ free(returned_string);
 ``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
 
 ``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
-
-``readlink``: Get path of a file. User have to be inside the folder where that file is in then type ``readlink -f file.txt``
-
-``pwd``: print working directory
-
-``dir``: print out all files and folders in current directory
-
-``realpath filename``: print out path of a file
-
-``sudo nautilus``: Open the folder with ``root`` permission
