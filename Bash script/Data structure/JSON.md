@@ -9,7 +9,19 @@ json_array[1]=0
 echo ${json_array["key_1"]} # key 1
 echo ${json_array[1]} # 0
 ```
-**Count total duplicate elements inside an array**
+## Traverse to get all members of a map
+```sh
+declare -A Map
+Map["key1"]="value1"
+Map["key2"]="value2"
+Map["key3"]="value3"
+
+# Print all key-value pairs
+for key in "${!Map[@]}"; do
+    echo "Key: $key, Value: ${Map[$key]}"
+done
+```
+## Count total duplicate elements inside an array
 ```sh
 array=(5 7 9 9 10 11 13 13 13 16 1 5 -2 -2 -4 0)
 
