@@ -1,17 +1,20 @@
-Export JSON
+# Define array like a JSON/Hashmap
 
 ```sh
-a="{'field1': 10, 'field2': 'Hello, World'}"
-b="{\"field1\": 10, \"field2\": \"Hello, World\"}"
-echo $a
-echo $b
+declare -A json_array
+
+json_array["key_1"]="key 1"
+json_array[1]=0
+
+echo ${json_array["key_1"]} # key 1
+echo ${json_array[1]} #0
 ```
 
-## jq
+# jq
 
 ``jq`` is a lightweight and flexible command-line JSON processor. Download ``jq`` from [stedolan/jq](https://github.com/stedolan/jq) or install using ``sudo apt-get install jq``.
 
-**Example 1**: Parse field from a JSON string variable
+## Parse field from a JSON string variable
 
 ```sh
 a="{\"field1\": 10, \"field2\": \"Hello, World\"}"
@@ -34,7 +37,7 @@ There will be error when parsing:
 parse error: Invalid numeric literal at line 1, column 10
 ```
 
-**Example 2**: Parse field from a JSON file
+## Parse field from a JSON file
 
 ``jsonData.json``
 
@@ -54,9 +57,7 @@ echo $a
 
 **Result**: ``10``
 
-**Example 3**
-
-Change value of a field of a JSON variable
+## Change value of a field of a JSON variable
 
 ```sh
 a="{\"field1\": 10, \"field2\": \"Hello, World\"}"
