@@ -17,6 +17,9 @@ Environment variable include:
 
 Local environment variable can be implemented by [export](Environment%20variable.md#export-command), [set](Environment%20variable.md#set-command) and [PATH](Environment%20variable.md#path).
 
+**printenv** command will print out all environment variable.
+
+All environment variable can be print out with ``echo $env``, e.g: ``echo $USER``. E.g: ``echo user: $USER``
 ## Status value
 
 ### Exit status $?
