@@ -11,14 +11,16 @@ Using **cat** to create a new file then enter the value for it: ``cat > filename
 After finishing, type **Ctrl+D** or **Ctrl+C**.
 
 # read
-**Read value you enter and print out**
+## Read value you enter and print out
 
 ```bash
 $ read enteredString
 $ echo $enteredString
 ```
 
-**Read a line from the standard input and split it into fields**: Read the entered string into variable ``var_1`` and ``var_2``:
+## Read a line from the standard input and split it into fields
+
+Read the entered string into variable ``var_1`` and ``var_2``:
 
 ```sh
 username$hostname: read var_1 var_2
@@ -45,7 +47,7 @@ hello, world !
 
 ``read -a store_array -N 14``: Read 14 entered characters from the current running terminal (including space), it will break if having enough character.
 
-Read and print out every line of file
+## Read and print out every line of file
 
 ```sh
 while read textLine
@@ -55,6 +57,18 @@ done < test.c
 ```
 **Notice**: If the file has no new line at the end, the software above is unable to read the last line
 
+**To print out a specific line**
+```sh
+line=1
+while read textLine
+do 
+    echo $line
+    if [ $line == 3 ] 
+        then echo $textLine 
+    fi
+    line=`expr $line + 1`
+done < tmp.md
+```
 To read the whole file when that file has no new line at the end:
 
 ```sh
