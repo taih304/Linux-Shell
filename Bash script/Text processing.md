@@ -94,7 +94,7 @@ echo "string is $string"
 ``` 
 ## Working with CSV data
 
-``-F,``: ``,`` as seperator
+``-F,`` or ``-F","`` will treat ``,`` as separator
 
 **data.csv**
 
@@ -104,7 +104,7 @@ field2,field2Value
 field3,field3Value
 ```
 
-``awk -F, '{print $2}' data.csv``: Print argument 2 value of csv file.
+``awk -F, '{print $2}' data.csv`` and ``awk -F"," '{print $2}' data.csv``: Print argument 2 value of csv file.
 
 Append parsed/read value to file ``result.csv``. ``awk`` can use regular expression to get data.
 
