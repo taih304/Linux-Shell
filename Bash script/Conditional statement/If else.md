@@ -100,10 +100,8 @@ fi
 string1="hello world"
 string2="hello world 1"
 if [ "$string1" == "$string2" ]
-then 
-	echo "A and B is equal"
-else	
-	echo "A and B is not equal"
+then echo "A and B is equal"
+else echo "A and B is not equal"
 fi
 ```
 
