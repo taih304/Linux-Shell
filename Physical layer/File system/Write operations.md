@@ -172,7 +172,7 @@ const 1 2 3 const 4
 1 2 3 const 44
 ```
 
-``sed "s/const/var/" test.txt`` will replace ``const`` by ``var`` in the first occurrence of ``const`` in each line, then print out the result in stream. File ``test.txt`` will not be changed.
+``sed "s/const/var/" test.txt``, with **s** stands for **substitution**, will replace ``const`` by ``var`` in the first occurrence of ``const`` in each line, then print out the result in stream. File ``test.txt`` will not be changed.
 
 Result
 
