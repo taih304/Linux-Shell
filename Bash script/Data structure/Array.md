@@ -1,12 +1,13 @@
 # Create
 
 ```sh
-#Declare array value first
+declare -A array
+
 array[0]="hello"
 array[1]=0
 
-echo ${array[0]} #hello
-echo ${array[1]} #0
+echo ${array[0]} # hello
+echo ${array[1]} # 0
 ```
 
 ## Set value for all member inside array with index
