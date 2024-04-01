@@ -137,7 +137,16 @@ do
     echo $value
 done
 ```
+## Sort an array by sort command
+```sh
+array=(5 7 9 9 10 11 13 13 13 16 1 5 -2 -2 -4 0)
 
+sorted_array=($(for element in "${array[@]}"; do echo "$element"; done | sort -n))
+
+for element in "${sorted_array[@]}"; do
+    echo "$element"
+done
+```
 # Remove
 
 ```sh
