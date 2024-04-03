@@ -48,10 +48,10 @@ Once an organization has obtained a block of addresses, **it can assign individu
 
 # IP commands
 
-## Check IP of current Linux device
+## ip
 
-```
-ip addr show
+```sh
+ip addr show # Show IP of current Linux device
 ```
 ## nmap
 
