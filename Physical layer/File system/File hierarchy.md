@@ -72,6 +72,9 @@ auto lo
 iface lo inet loopback
 ```
 **auto lo** instructs the system to automatically bring up the **loopback interface** (lo) during the boot process.
+
+**iface lo inet loopback** configures the loopback interface (lo) with the inet address family (IPv4) to operate as a loopback device. 
+
 ## modules
 
 ``/etc/modules`` file is used for kernel modules to load at boot time.
