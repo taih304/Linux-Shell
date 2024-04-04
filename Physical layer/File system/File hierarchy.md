@@ -64,7 +64,14 @@ This error might happen as the devicename is changed
 * Then add ``127.0.0.1	user_name`` below the existed hosts
 
 ``sudo nano /etc/hosts`` will also help you change the hostname
-
+## network
+```sh
+username@hostname:~/$ cat /etc/network/interfaces
+# This interface file used by ifup() and ifdown()
+auto lo
+iface lo inet loopback
+```
+**auto lo** instructs the system to automatically bring up the **loopback interface** (lo) during the boot process.
 ## modules
 
 ``/etc/modules`` file is used for kernel modules to load at boot time.
@@ -94,12 +101,11 @@ For systemd implementation in /etc/systemd, check [systemd document](https://git
 
 ## rc.local
 
-File ``/etc/rc.local`` runs when system is booted. Check [rc.local init script document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/README.md#rclocal) for its implemenation.
+File ``/etc/rc.local`` runs when system is booted. Check [rc.local init script document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/README.md#rclocal) for its implementation.
 
 ## rcS
 
-``rcS``, which is located in ``/etc/init.d``, stands for Run Control Scripts.  Check [rcS init script document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/README.md#rcs) for its implemenation.
-
+``rcS``, which is located in ``/etc/init.d``, stands for Run Control Scripts.  Check [rcS init script document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/README.md#rcs) for its implementation.
 
 # usr
 
