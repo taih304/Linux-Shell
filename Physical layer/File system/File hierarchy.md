@@ -73,7 +73,7 @@ iface lo inet loopback
 ```
 **auto lo** instructs the system to automatically bring up the **loopback interface** (lo) during the boot process.
 
-**iface lo inet loopback** configures the loopback interface (lo) with the inet address family (IPv4) to operate as a loopback device. 
+**iface lo inet loopback** configures the **loopback interface** (lo) with the inet address family (IPv4) to operate as a loopback device, allowing the system to communicate with itself using the loopback address 127.0.0.1.
 
 ## modules
 
