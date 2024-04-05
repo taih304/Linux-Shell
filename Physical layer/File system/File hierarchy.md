@@ -75,6 +75,8 @@ iface lo inet loopback
 
 **iface lo inet loopback** configures the **loopback interface** (lo) with the inet address family (IPv4) to operate as a loopback device, allowing the system to communicate with itself using the loopback address 127.0.0.1.
 
+If commenting out those 2 lines then rebooting the system, communicating through loopback address 127.0.0.1 is still available, e.g [TCP sender and receiver communication](https://github.com/TranPhucVinh/C/tree/master/Transport%20layer#a-tcp-sender-sends-string-to-a-tcp-receiver). That happens as Ubuntu has another internal mechanism to allow loopback address communication.
+
 ## modules
 
 ``/etc/modules`` file is used for kernel modules to load at boot time.
