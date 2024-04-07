@@ -121,6 +121,8 @@ File ``/etc/rc.local`` runs when system is booted. Check [rc.local init script d
 
 In Unix and Linux, the global temporary directories are ``/tmp`` and ``/var/tmp`` where temporary files of the running program are stored here. However, files created by user in those locations are not temporary as they are still in there and can still keep the value after the OS is powered off.
 
+The [tmpfs]() filesystem is used for managing the ``/tmp`` directory.
+
 # ~/.local
 
 Trash folder are located under ``~/.local/share/Trash``
