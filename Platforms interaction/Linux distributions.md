@@ -1,6 +1,11 @@
 # Linux vs BSD
 
 Both Linux and the BSDs are free and open-source, Unix-like operating systems. ``BSD`` stands for ``Berkeley Software Distribution`` as it was originally a set of modifications to Bell Unix created at the University of California, Berkeley. It eventually grew into a complete operating system and now there are multiple different BSDs.
+# Debian
+
+From the Debian base, many other famous distributions were built on it (eg: Ubuntu, Raspian, Armbian, ...). With a unique package management ``apt``, Linux development with Debian couldn't be any easier than that. 
+
+[Install Debian package](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Install%20package.md)
 
 # Centos: Error IUSE 100% in CentOS
 
