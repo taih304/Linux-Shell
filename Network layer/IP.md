@@ -31,9 +31,13 @@ RFC 1918 define private Internet IP
 
 The IP address **127.0.0.1** is called a **loopback address** or **loopback IP**. Packets sent to this address never reach the network but are looped through the network interface card only. This can be used for diagnostic purposes to verify that the internal path through the TCP/IP protocols is working.
 
+A **loopback address** is a special type of IP address that is used to send network traffic back to the same device that generated it. By suing **loopback address**, we can perform **interprocess communication**. 
+
 In both Windows and Linux, when selecting which of a host's IP address to use as a source IP, a program may specify [INADDR_ANY](https://github.com/TranPhucVinh/C/blob/master/Transport%20layer/API%20socket%20parameters%20setup.md#sockaddr-in_addr-sockaddr_in) (**0.0.0.0**), i.e The IP address **0.0.0.0** is bound to the IP address of the current device. 
 
 The **loopback interface** (**lo** in ``/etc/network/interfaces``) is a special network interface used by the system to communicate with itself, and it is typically configured with the IP address **127.0.0.1**. When packets are sent to the loopback interface, they are looped back internally and delivered to the receiving software on the same machine without being transmitted over any physical network.
+
+Beside **127.0.0.1**, **127.0.0.53** is another loopback address which is used for DNS resolver.
 
 # IP addressing in the global Internet
 
