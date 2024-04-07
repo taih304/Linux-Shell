@@ -36,6 +36,8 @@ For ``/proc`` to monitor kernel and hardware:
 
 # tmpfs
 
+**tmpfs** is a temporary file system that resides in memory. It allows you to create a file system in RAM, which means that the data stored in a tmpfs file system exists only in volatile memory and is not persisted across reboots.
+
 The **tmpfs** filesystem is used for managing the [/tmp](File%20hierarchy.md#tmp) directory.
 
 # devpts
