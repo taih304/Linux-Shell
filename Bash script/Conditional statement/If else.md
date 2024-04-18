@@ -2,7 +2,7 @@
 ```sh
 a=123
 
-if [ $a == 123 ] 
+if [ $a == 123 ] # Must not be [$a == 123]
 then echo "a=123" 
 fi
 ```
