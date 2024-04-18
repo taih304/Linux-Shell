@@ -31,6 +31,14 @@ then echo "a is equal to b"
 fi 
 ```
 **Note**: There must be space in ``if [ $a == $b ]``
+
+# OR condition
+
+```sh
+if [ "$var" == "value1" ] || [ "$var" == "value2" ]; then
+    # Code to execute if var is equal to "value1" or "value2"
+fi
+```
 # if short form
 
 ```sh
