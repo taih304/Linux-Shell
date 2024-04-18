@@ -8,6 +8,14 @@ Unix operating system provides ``(( ))``, ``expr`` and ``bc`` commands for doing
 ((a=1 + 2)) #((a=1+2)) is still fine as space has no effect
 echo $a #3
 ```
+**Perform operation**
+```sh
+a=1
+b=2
+echo $((a + b))
+sum=$((a + b))
+echo $sum
+```
 **Test condition**
 ```sh
 if ((3 < 4))
