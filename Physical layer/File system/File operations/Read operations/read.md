@@ -1,7 +1,7 @@
 # Read value you enter and print out
 
 ```bash
-$ read enteredString
+$ read enteredString # Must not use "read $enteredString", this will return NULL to $enteredString
 $ echo $enteredString
 ```
 
