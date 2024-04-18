@@ -4,7 +4,9 @@ Print out from 1 to 10:
 
 Using syntax like C:
 ```sh
-for ((i=1; i <= 10; i++)) #Must be (()); () will give compilation error
+# Must be (())
+# () will give compilation error
+for ((i=1; i <= 10; i++))
 do
     echo $i
 done

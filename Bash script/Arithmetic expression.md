@@ -1,6 +1,6 @@
 Unix operating system provides ``(( ))``, ``expr`` and ``bc`` commands for doing arithmetic calculations.
 
-### (( ))
+# (( ))
 
 **Variable assignments**
 
@@ -15,7 +15,7 @@ then echo "smaller"
 else echo "greater"
 fi
 ```
-### expr
+# expr
 
 ```sh
 echo `expr 1 + 3` #4
@@ -25,8 +25,18 @@ a=10
 b=`expr $a + 3`
 echo $b  #13
 ```
-
-### bc
+# Modulus operator %
+Print out all odd number between {1..99}
+```sh
+for i in {1..99}
+do
+    if (( $i % 2 != 0 ))
+    then 
+        echo $i
+    fi
+done
+```
+# bc
 
 Enter ``bc`` on Terminal: Enter ``bc`` live execution mode. To quit that mode, type ``quit``
 
