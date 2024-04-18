@@ -39,8 +39,7 @@ Some common options for cut include:
 ## Extract specific characters from a line
 
 ```sh
-echo "Hello, World!" | cut -c 1-5
-# Output: Hello
+echo "Hello, World!" | cut -c 1-5 # Hello
 ```
 ## Extract specific fields from a line using a delimiter
 ```sh
@@ -50,13 +49,11 @@ echo "John:Doe:30" | cut -d ':' -f 1,3
 ## Extract specific fields from a file
 ```sh
 cat data.txt
-# data.txt:
 # Alice,Smith,25
 # Bob,Jones,30
 # Charlie,Brown,35
 
 cut -d ',' -f 2 data.txt
-# Output:
 # Smith
 # Jones
 # Brown

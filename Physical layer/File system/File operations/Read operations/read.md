@@ -5,6 +5,13 @@ $ read enteredString # Must not use "read $enteredString", this will return NULL
 $ echo $enteredString
 ```
 
+# Keep reading from stdin with while loop
+```sh
+while read stdin
+do    
+    echo $stdin
+done
+```
 # Read a line from the standard input and split it into fields
 
 Read the entered string into variable ``var_1`` and ``var_2``:
