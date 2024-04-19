@@ -41,6 +41,9 @@ Some common options for cut include:
 ```sh
 echo "Hello, World!" | cut -c 1-5 # Hello
 ```
+```sh
+echo "Hello, World!" | cut -c 1,5 # Ho: Get the 1st and 5th characters
+```
 ## Extract specific fields from a line using a delimiter
 ```sh
 echo "John:Doe:30" | cut -d ':' -f 1,3
