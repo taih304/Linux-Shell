@@ -109,6 +109,10 @@ field3,field3Value
 ```sh
 echo "field1,field1Value"| awk -F ',' '{print $2}' # field1Value
 ```
+awk takes a string as a delimiter:
+```sh
+echo "field1,field1Value"| awk -F ",f" '{print $2}' # ield1Value
+```
 Append parsed/read value to file ``result.csv``. ``awk`` can use regular expression to get data.
 
 ``[<:]`` will get all value between 2 character ``<`` and ``:``.
