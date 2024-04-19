@@ -96,23 +96,3 @@ We’ve seen that a server process **waits patiently** on an open port for conta
 Base on what we learn above, **a Web server that spawns a new process for each connection**. Each of these processes has its own connection socket through which HTTP requests arrive and HTTP responses are sent. We mention, however, that **there is not always a one-to-one correspondence between connection sockets and processes**. In fact, today’s high-performing Web servers often **use only one process**, and **create a new thread with a new connection socket for each new client connection**. (**A thread can be viewed as a lightweight subprocess**.). **For such a server, at any given time there may be many connection sockets (with different identifiers) attached to the same process**.
 
 **If the client and server are using persistent HTTP**, then throughout the duration of the persistent connection the client and server exchange HTTP messages via the same server socket. However, **if the client and server use non-persistent HTTP**, then **a new TCP connection is created and closed for every request/response**, and hence a new socket is created and later closed for every request/response. **This frequent creating and closing of sockets can severely impact the performance of a busy Web server** (although a number of operating system tricks can be used to mitigate the problem).
-
-# Securing TCP and UDP
-
-Neither **TCP nor UDP** provide any encryption—the data that the sending process passes into its socket is the same data that travels over the network to the destination process. So, for example, if the sending process sends a password in cleartext (i.e., unencrypted) into its socket, the cleartext password will travel over all the links between sender and receiver, potentially getting sniffed and discovered at any of the intervening links.
-
-Because privacy and other security issues have become critical for many applications, the Internet community has developed an enhancement for TCP, called **Secure Sockets Layer (SSL)**. TCP-enhanced-with-SSL not only does everything that traditional TCP does but also provides critical process-to-process security services, including encryption, data integrity, and end-point authentication.
-
-We emphasize that **SSL is not a third Internet transport protocol**, on the same level as TCP and UDP, but instead is an enhancement of TCP, with the enhancements being implemented in the **application layer**. In particular, if an application wants to use the services of SSL, it needs to include SSL code (existing, highly optimized libraries and classes) in both the client and server sides of the application. SSL has its own socket API that is similar to the traditional TCP socket API.
-
-When an application uses SSL, the sending process passes cleartext data to the SSL socket; SSL in the sending host then encrypts the data and passes the encrypted data to the TCP socket. The encrypted data travels over the Internet to the TCP socket in the receiving process. The receiving socket passes the encrypted data to SSL, which decrypts the data. Finally, SSL passes the cleartext data through its SSL socket to the receiving process.
-
-**Transport Layer Security (TLS)**, and its now-deprecated predecessor, **Secure Sockets Layer (SSL)**, are cryptographic protocols designed to provide communications security over a computer network. Both **TLS and SSL lies in the Application layer**.
-
-## SSL/TLS encryption process
-
-* **Step 1**: Client requests a SSL connection
-* **Step 2**: Server responses with the SSL certificate (with includes the public key)
-* **Step 3**: Client validates the certificate/public key
-* **Step 4**: Client generates a symmetric key (session key) and transmit it to the server
-* **Step 5**: SSL session is established
