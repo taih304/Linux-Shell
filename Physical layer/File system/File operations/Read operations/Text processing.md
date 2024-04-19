@@ -106,6 +106,9 @@ field3,field3Value
 
 ``awk -F, '{print $2}' data.csv`` and ``awk -F"," '{print $2}' data.csv``: Print argument 2 value of csv file.
 
+```sh
+echo "field1,field1Value"| awk -F ',' '{print $2}' # field1Value
+```
 Append parsed/read value to file ``result.csv``. ``awk`` can use regular expression to get data.
 
 ``[<:]`` will get all value between 2 character ``<`` and ``:``.
