@@ -67,7 +67,12 @@ a=29
 b='this is $a'
 echo $b #this is $a
 ```
-
+## String that involve tab
+For any variable string included tab, "" must be used so that tab is printed out
+```sh
+stdin="1	tab_value_1		2   tab value 2"
+echo "$stdin"
+```
 ## Command as variable
 
 ```sh
