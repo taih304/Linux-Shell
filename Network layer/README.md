@@ -71,7 +71,7 @@ The virtual circuit evolve from the telephony world. The Internet as **a datagra
 
 Since the resulting Internet network-layer service model makes **minimal (no!) service guarantees**, it imposes minimal requirements on the network layer. This **makes it easier** to interconnect networks that use very different link-layer technologies (for example, satellite, Ethernet, fiber, or radio) that have very different transmission rates and loss characteristics.
 # Firewall
-In **firewalls** (covered in Chapter 8)—devices that filter out selected incoming packets—an incoming packet whose header matches a given criteria (e.g., a combination of source/destination IP addresses and transport-layer port numbers) may be prevented from being forwarded (action).
+In **firewalls**, devices that filter out selected incoming packets—an incoming packet whose header matches a given criteria (e.g., a combination of source/destination IP addresses and transport-layer port numbers) may be prevented from being forwarded (action).
 # NAT
 In a **network address translator (NAT)**, an incoming packet whose transport-layer port number matches a given value will have its port number rewritten before forwarding (action).
 
@@ -83,7 +83,7 @@ NAT traversal is increasingly provided by **Universal Plug and Play (UPnP)**, wh
 
 Some programming language like Python, doesn't support port fowarding by default when building the HTTP server. For example, when running [this simple Python HTTP server](https://github.com/TranPhucVinh/Python/tree/master/Application%20layer/HTTP/HTTP%20server#a-simple-http-server-to-return-a-string), just only ``localhost:8000`` returns the webpage while the IP address, e.g ``192.168.1.3:8000`` doesn't. However, port forwarding, will allow listening on the other port for that IP address, e.g ``8001``.
 
-``socat`` command is used to implement the port forwarding. **socat isn't built-in and has to be installed**: ``sudo apt install iproute2 netcat-openbsd socat``
+We can use [socat](#socat) to implement the port forwarding. 
 
 After running the [simple Python HTTP server](https://github.com/TranPhucVinh/Python/tree/master/Application%20layer/HTTP/HTTP%20server#a-simple-http-server-to-return-a-string) above, run the following socat command so that the webpage will be available when getting to ``IP:<port 8001>``, e.g ``192.168.1.3:8001``:
 
@@ -97,12 +97,31 @@ socat tcp-listen:8001,fork tcp:localhost:8000
 * [NAT port in a local ISP router for a DDNS-supported domain registered from noip](https://www.youtube.com/watch?v=DoA5jc4PRHM)
 * [Port forwarding an HTTP server hosted on local PC to an EC2 domain](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Platforms%20interaction/AWS/README.md#port-forwarding-an-http-server-hosted-on-local-pc-to-an-ec2-domain)
 
-# ICMP
+# socat
+
+**socat isn't built-in and has to be installed**: ``sudo apt install iproute2 netcat-openbsd socat``.
+
+socat is a versatile command-line tool for establishing bidirectional data streams between various types of endpoints. 
+
+Address and Port Parameters:
+* tcp-listen: Listen for incoming TCP connections.
+* tcp-connect: Connect to a remote TCP server.
+
+Options:
+* fork: Fork a new process for each incoming connection.
+* reuseaddr: Allow reusing the address and port even if it's in use.
+
+**Implementations**
+* [Port forwarding](#NAT)
+* [TCP client receives data stream from a file of a TCP server, created by socat command](https://github.com/TranPhucVinh/C/tree/master/Transport%20layer#tcp-client)
+
+# Other protocols
+## ICMP
 
 **ICMP**, specified in [RFC 792], is used by hosts and routers to communicate network-layer information to each other. The most typical use of ICMP is for **error reporting**. For example, when running a Telnet, FTP, or HTTP session, you may have encountered an **error message** such as “Destination network unreachable.” This message had its origins in **ICMP**.
 
 **ICMP** is often considered part of IP but architecturally **it lies just above IP**, as **ICMP messages are carried inside IP datagrams**. That is, ICMP messages are carried **as IP payload**, just as **TCP or UDP segments are carried as IP payload**. Similarly, **when a host receives an IP datagram with ICMP specified as the upper-layer protocol**, it **demultiplexes** the datagram’s contents to ICMP, **just as it would demultiplex a datagram’s content to TCP or UDP**.
 
-# XCP
+## XCP
 
 XCP (or) "Universal Measurement and Calibration Protocol" is a **network protocol** originating from **ASAM** (Association for Standardisation of Automation and Measuring Systems) for connecting calibration systems to electronic control units, ECUs. It enables read and write access to variables and memory contents of microcontroller systems at runtime. Entire datasets can be acquired or stimulated synchronous to events triggered by timers or operating conditions. In addition, XCP also supports programming of flash memory.
