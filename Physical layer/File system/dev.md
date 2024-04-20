@@ -41,9 +41,13 @@ For input device like mouse (be not to confused between **pluggable mouse** and 
 
 # /dev/null
 
-``echo a > /dev/null``: Redirect the standard output but you'll still see any errors. Exit status ``0``
+**/dev/null** is a special file in Unix-like operating systems that serves as a "null device" or a bit-bucket. It is used to discard data written to it and provides a way to suppress output or input redirection.
 
-E.g: ``ecsdasdas &> /dev/null``: Redirect all output, including errors. Exit status ``127``
+**Discarding Output**: When data is written to /dev/null, it is discarded immediately. This is often used to suppress output from commands or programs. For example, if you want to run a command but don't need to see its output, you can redirect the output to /dev/null to discard it.
+
+```sh
+ls > /dev/null
+```
 
 # /dev/kmsg
 
