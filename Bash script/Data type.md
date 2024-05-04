@@ -44,7 +44,7 @@ a=0b1 # Wrong, give compilation error
 ```
 # float
 
-**float** isn't supported by Bash, use [bc]() for Floating-Point Arithmetic
+**float** isn't supported by Bash, use [bc](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Arithmetic%20expression.md#bc) for Floating-Point Arithmetic
 
 ```sh
 result=$(echo "scale=3; 10 / 3" | bc)
