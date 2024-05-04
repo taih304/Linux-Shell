@@ -54,7 +54,7 @@ Arithmetic Operators
 
 ``echo "10^2"|bc``: ``100``
 
-Set value for variable
+Set value for a variable
 
 ```sh
 a=`echo 10+2|bc`
@@ -73,7 +73,17 @@ Comparison operators:
 
 ``echo "1<2"|bc``: 1
 
-Arithmetic expressions in a file and then execute by ``bc``.
+**Floating point operation**
+
+```sh
+a=10
+b=3
+result=$(echo "scale=3; $a/$b" | bc)
+echo "a/b: $result"
+```
+**scale=3** sets the number of decimal places to three for the result of the division.
+
+Arithmetic expressions in a file and then executed by ``bc``.
 
 * Use ``#`` and ``/* */`` for comments
 * Support ``echo``  and ``print`` command inside text file
