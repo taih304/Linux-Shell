@@ -42,3 +42,20 @@ Result ``xxd messaage``:
 # This is not supported in Bash
 a=0b1 # Wrong, give compilation error
 ```
+# float
+
+**float** isn't supported by Bash, use [bc]() for Floating-Point Arithmetic
+
+```sh
+result=$(echo "scale=3; 10 / 3" | bc)
+echo "Result of division: $result"
+```
+
+```sh
+a=10
+b=3
+result=$(echo "scale=3; $a/$b" | bc)
+echo "a/b: $result"
+```
+**scale=3** sets the number of decimal places to three for the result of the division.
+
