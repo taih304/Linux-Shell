@@ -110,4 +110,10 @@ sudo /greengrass/v2/bin/greengrass-cli component list
 sudo -E /greengrass/v2/bin/greengrass-cli component stop --names "component_name"
 ```
 If successfully stopping, this component will have status "FINISHED"
+
+**Restart a component**
+```sh
+sudo /greengrass/v2/bin/greengrass-cli component restart --names "component_name"
+```
+
 **Remove a deployed component**: ``sudo /greengrass/v2/bin/greengrass-cli deployment create --remove="gg_core_device_component"``

@@ -56,6 +56,17 @@ done
 ```
 **Result**: ``name 1``, ``name 2``, ``name 3``,...
 
+**Sum from 0 to 10**
+
+```sh
+sum=0
+
+for (( i=0; i<=10; i++ )); do
+    (( sum += i ))
+done
+
+echo "The sum of numbers from 0 to 10 is: $sum"
+```
 # While loop
 
 Print out from 0 to 9
