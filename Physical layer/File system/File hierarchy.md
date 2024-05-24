@@ -34,6 +34,8 @@ Scripts run when the device is boot are stored in ``/etc/init``
 
 All user information is stored in ``/etc/passwd``
 
+``sudo su - user_name``: Login as ``user_name``
+
 ``sudo useradd user_name``: Add new user ``user_name`` (this require admin privilege)
 
 ``sudo deluser user_name``: Delete ``user_name``
