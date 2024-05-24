@@ -6,9 +6,7 @@ Shell builtins commands include: [alias](#alias), [cd](#cd), [echo](#echo), [tes
 
 ``cd`` to another folder can be perform with ``./folder_name``: ``cd ./folder_name``
 
-# echo
-
-Check ``Introduction.md`` in ``Bash script/Variable`` for ``echo`` document.
+# [echo](Variable/User%20define%20variable.md#echo)
 
 # alias
 
