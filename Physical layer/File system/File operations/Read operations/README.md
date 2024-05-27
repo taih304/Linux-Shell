@@ -27,6 +27,7 @@ E.g: File ``test.txt`` has content ``ls``
 
 ``source test.txt`` and ``. text.txt`` will run ``ls`` command
 # cut
+**cut** will cut out the specific pattern from its input.
 
 Some common options for cut include:
 
