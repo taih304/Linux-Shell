@@ -41,7 +41,7 @@ In component recipe file, e.g [gg_core_device_component.json](https://github.com
 ## Implement Greengrass components
 
 * [Shell commands to deploy components on AWS to core device]()
-* [Shell commands to develop components locally]()
+* [Shell commands to develop components locally](Shell%20commands%20to%20develop%20components%20locally.md)
 * [C source code component]()
 
 Components can also be build and publish with [GDK CLI](Components%20with%20GDK%20CLI.md).
