@@ -32,7 +32,7 @@ E.g: File ``test.txt`` has content ``ls``
 Some common options for cut include:
 
 * **-c**, **--characters=LIST**: Select only these characters.
-* **-f**, **--fields=LIST**: Select only these fields.
+* **-f**, **--fields=LIST**: Select only these fields. By default, **-f** takes tab (``\t``) as its delimiter.
 * **-d**, **--delimiter=DELIM**: Use **DELIM** instead of **TAB** for field delimiter.
 * **-s**, **--only-delimited**: Do not print lines not containing delimiters.
 * **--output-delimiter=STRING**: Use STRING as the output delimiter.
