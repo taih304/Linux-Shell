@@ -45,6 +45,9 @@ echo "Hello, World!" | cut -c 1-5 # Hello
 ```sh
 echo "Hello, World!" | cut -c 1,5 # Ho: Get the 1st and 5th characters
 ```
+```sh
+echo "Hello, World!" | cut -c 5- # o, World! # Cut from character 5 till the end
+```
 ## Extract specific fields from a line using a delimiter
 ```sh
 echo "John:Doe:30" | cut -d ':' -f 1,3
