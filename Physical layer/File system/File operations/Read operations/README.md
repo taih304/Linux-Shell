@@ -66,6 +66,10 @@ cut -d ',' -f 2 data.txt
 # Jones
 # Brown
 ```
+with **echo**
+```sh
+echo "Alice,Smith,25" | cut -d ',' -f 2 # Smith
+```
 # tree
 
 ``tree`` command is used to display the tree of all files inside a directory
