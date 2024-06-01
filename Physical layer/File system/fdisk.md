@@ -1,7 +1,8 @@
 ``sudo fdisk -l``: List all disks/partitions information
+
 # All fdisk commands
 ```sh
-username@hostname:~$ sudo fdisk /dev/sdc #Pass any device name as the argument to check for the command
+username@hostname:~$ sudo fdisk /dev/sdc # Pass any device name as the argument to check for the command
 Command (m for help): m
 
 Help:
@@ -47,27 +48,6 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disklabel type: dos
 Disk identifier: 0x30c19d12
-```
-# Delete existed partitions
-
-Delete 2 existed partitions (``/dev/sdc1`` and ``/dev/sdc2``) of SD card /dev/sdc
-
-```sh
-username@hostname:~$ sudo fdisk /dev/sdc
-[Omitting fdisk introduction line]
-Command (m for help): d
-Partition number (1,2, default 2): 1
-
-Partition 1 has been deleted.
-
-Command (m for help): d
-Selected partition 2
-Partition 2 has been deleted.
-
-Command (m for help): w #w will write the delete operation for 2 partitions /dev/sdc1 and /dev/sdc2 setting above
-The partition table has been altered.
-Calling ioctl() to re-read partition table.
-Syncing disks.
 ```
 # Format partitions inside a SD card
 
@@ -142,3 +122,24 @@ $ sudo mkfs.ext4 -L root /dev/sdc2
 * ``-n volume-name``
 ``mkfs.ext4``: Create an [ext4 filesystem](https://github.com/TranPhucVinh/Windows-Batch/blob/master/Physical%20layer/File%20system.md#windows-file-system)
 * ``-L``: Set the volume label for the filesystem
+# Delete existed partitions
+
+Delete 2 existed partitions (``/dev/sdc1`` and ``/dev/sdc2``) of SD card /dev/sdc
+
+```sh
+username@hostname:~$ sudo fdisk /dev/sdc
+[Omitting fdisk introduction line]
+Command (m for help): d
+Partition number (1,2, default 2): 1
+
+Partition 1 has been deleted.
+
+Command (m for help): d
+Selected partition 2
+Partition 2 has been deleted.
+
+Command (m for help): w #w will write the delete operation for 2 partitions /dev/sdc1 and /dev/sdc2 setting above
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+```

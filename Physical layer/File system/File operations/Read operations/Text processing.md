@@ -58,6 +58,25 @@ Then ``tac test.txt`` will be:
 2
 1
 ```
+# tr
+The **tr** command in Unix and Unix-like operating systems is used to translate or delete characters from the input provided to it. 
+
+**Convert all lowercase letters to uppercase**:
+```sh
+echo "hello world" | tr 'a-z' 'A-Z' # HELLO WORLD
+```
+**Delete all digits from the input**:
+```sh
+echo "hello123world" | tr -d '0-9' # helloworld
+```
+**Delete all characters except digits**:
+```sh
+echo "hello123world" | tr -cd '0-9' # 123
+```
+**Squeeze multiple spaces into a single space**:
+```sh
+echo "hello    world" | tr -s ' ' # hello world
+```
 # AWK
 
 ``Gawk``  is  the GNU Project's implementation of the ``AWK`` programming language, and is implemented with command ``awk``.
