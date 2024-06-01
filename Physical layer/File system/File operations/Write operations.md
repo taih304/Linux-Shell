@@ -49,7 +49,7 @@ If no explicit loop device is mentioned (but just an option ``-o loop`` is given
 
 E.g: ``mount -o loop boot.img /mnt/tmp``
 
-Notice that if the mount file is ``img``, as an image file of an OS (like ``rootfs.img``, the whole files from ``~``), after mounting it with ``mount`` to the ``target_folder``. The ``target_folder`` will then then have all files of that directory like ``boot``, ``bin``, ``home``,...
+Notice that if the mount file is ``img``, as an image file of an OS (e.g ``rootfs.img``), after mounting it with ``mount`` to the ``target_folder``, the ``target_folder`` will then then have all files of that directory like ``boot``, ``bin``, ``home``,...
 
 **remount**: Option ``remount`` will attempt to remount an already-mounted filesystem. This is commonly used to change the mount flags for a filesystem, especially to make a readonly filesystem writeable.
 ```sh
