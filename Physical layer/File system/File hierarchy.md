@@ -34,13 +34,15 @@ Scripts run when the device is boot are stored in ``/etc/init``
 
 All user information is stored in ``/etc/passwd``
 
+``sudo su - user_name``: Login as ``user_name``
+
 ``sudo useradd user_name``: Add new user ``user_name`` (this require admin privilege)
 
 ``sudo deluser user_name``: Delete ``user_name``
 
 ``sudo -sH``: Run as root (enter ``/root`` directory)
 
-* ``passwd current_login_username``: Change password of current logged in username, e.g ``passwd username`` where ``username`` is the current logged in username.
+* **passwd current_login_username**: Change password of ``current_login_username``
 * ``who``: show how many user has logged in the system
 * ``hostname``
 

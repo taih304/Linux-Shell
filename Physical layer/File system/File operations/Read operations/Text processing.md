@@ -25,7 +25,7 @@ Output the first part of files
 
 ``head -n`` with ``n`` is the specific number of first lines that wish to read
 
-``head -2 text.txt``: Read the last 2 lines of file ``text.txt``
+``head -2 text.txt``: Read the first 2 lines of file ``text.txt``
 
 # tail
 

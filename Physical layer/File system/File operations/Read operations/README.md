@@ -27,11 +27,12 @@ E.g: File ``test.txt`` has content ``ls``
 
 ``source test.txt`` and ``. text.txt`` will run ``ls`` command
 # cut
+**cut** will cut out the specific pattern from its input.
 
 Some common options for cut include:
 
 * **-c**, **--characters=LIST**: Select only these characters.
-* **-f**, **--fields=LIST**: Select only these fields.
+* **-f**, **--fields=LIST**: Select only these fields. By default, **-f** takes tab (``\t``) as its delimiter.
 * **-d**, **--delimiter=DELIM**: Use **DELIM** instead of **TAB** for field delimiter.
 * **-s**, **--only-delimited**: Do not print lines not containing delimiters.
 * **--output-delimiter=STRING**: Use STRING as the output delimiter.
@@ -43,6 +44,9 @@ echo "Hello, World!" | cut -c 1-5 # Hello
 ```
 ```sh
 echo "Hello, World!" | cut -c 1,5 # Ho: Get the 1st and 5th characters
+```
+```sh
+echo "Hello, World!" | cut -c 5- # o, World! # Cut from character 5 till the end
 ```
 ## Extract specific fields from a line using a delimiter
 ```sh
@@ -65,6 +69,10 @@ cut -d ',' -f 2 data.txt
 # Smith
 # Jones
 # Brown
+```
+with **echo**
+```sh
+echo "Alice,Smith,25" | cut -d ',' -f 2 # Smith
 ```
 # tree
 
