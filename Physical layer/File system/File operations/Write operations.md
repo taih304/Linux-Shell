@@ -43,7 +43,7 @@ E.g:
 
 **Mount to loop device**: ``mount`` allows mounting via a loop device
 
-E.g: ``mount -o loop=/dev/loop3 boot.img /mnt/tmp``
+E.g: ``mount -o loop=/dev/loop3 boot.img /mnt/tmp``. However, it must be sure that ``/dev/loop3`` isn't mounted to any other device yet. Use ``lsblk`` command to list out all loop devices mounted as the blocked ones.
 
 If no explicit loop device is mentioned (but just an option ``-o loop`` is given), then mount will try to find some unused loop device and use that.
 
