@@ -49,10 +49,11 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disklabel type: dos
 Disk identifier: 0x30c19d12
 ```
-# Format partitions inside a SD card
+# Format partitions inside an SD card
 
 Formating SD card ``/dev/sdc`` into 2 partitions ``/dev/sdc1`` (**bootfs partition**) in FAT32 format with 100 MiB and ``/dev/sdc2`` (**rootfs partition**) in ext4 format which takes size of the leftover of the SD card. This example will help formating bootfs and rootfs partition for an ARM Linux single board computer like Raspbian.
 
+**Step 1**: Create the FAT32 and ext4 partitions on /dev/sdc by fdisk command
 ```sh
 username@hostname:~$ sudo fdisk /dev/sdc
 [Omitting fdisk introduction line]
@@ -109,7 +110,7 @@ Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
 
-Format the partitions
+**Step 2**: Format the partitions
 ```sh
 # FAT32 for boot partition
 $ sudo mkfs.vfat -F 32 -n boot /dev/sdc1
@@ -122,7 +123,7 @@ $ sudo mkfs.ext4 -L root /dev/sdc2
 * ``-n volume-name``
 ``mkfs.ext4``: Create an [ext4 filesystem](https://github.com/TranPhucVinh/Windows-Batch/blob/master/Physical%20layer/File%20system.md#windows-file-system)
 * ``-L``: Set the volume label for the filesystem
-# Delete existed partitions
+# Delete existing partitions
 
 Delete 2 existed partitions (``/dev/sdc1`` and ``/dev/sdc2``) of SD card /dev/sdc
 
