@@ -51,7 +51,7 @@ Disk identifier: 0x30c19d12
 ```
 # Format partitions inside an SD card
 
-Formating SD card ``/dev/sdc`` into 2 partitions ``/dev/sdc1`` (**bootfs partition**) in FAT32 format with 100 MiB and ``/dev/sdc2`` (**rootfs partition**) in ext4 format which takes size of the leftover of the SD card. This example will help formating bootfs and rootfs partition for an ARM Linux single board computer like Raspbian.
+Formating SD card ``/dev/sdc`` into 2 partitions ``/dev/sdc1`` (**bootfs partition**) in FAT32 format with **100 MiB** and ``/dev/sdc2`` (**rootfs partition**) in ext4 format which takes size of the leftover of the SD card. This example will help formating bootfs and rootfs partition for an ARM Linux single board computer like Raspbian.
 
 **Step 1**: Create the FAT32 and ext4 partitions on /dev/sdc by fdisk command
 ```sh
