@@ -49,6 +49,10 @@ echo "Hello, World!" | cut -c 1,5 # Ho: Get the 1st and 5th characters
 echo "John:Doe:30" | cut -d ':' -f 1,3
 # Output: John:30
 ```
+Or
+```sh
+echo "John:Doe:30" | cut -d ':' -f1,3
+```
 **cut can't take a string as its delimiter**, use [awk]() instead.
 ## Extract specific fields from a file
 ```sh

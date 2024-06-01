@@ -8,10 +8,10 @@
 
 **fdisk**, abbreviated for **format disk**, is a dialog-driven program for the creation and manipulation of partition tables. Check [fdisk implementation document](fdisk.md).
 
-# [Read](Read%20operations.md)
+# [Read](Read%20operations)
 
 * [cat]()
-* [read]()
+* [read](Read%20operations/read.md)
 * [source and .]()
 * [printenv]()
 * [Other commands]()
