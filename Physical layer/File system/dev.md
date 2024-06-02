@@ -139,3 +139,30 @@ sdd      8:48   1  14.9G  0 disk
 # Loop device
 
 A loop device, ``vnd`` (vnode disk), or ``lofi`` (loop file interface) is a pseudo-device that makes a computer file accessible as a block device. Before use, a loop device must be connected to an existed file in the file system. 
+## losetup
+
+Set up and control loop devices.
+
+Let's say you have an image file **base_busybox.img** with the following partition table:
+
+```sh
+Device            Boot  Start    End Sectors Size Id Type
+base_busybox.img1        2048 104447  102400  50M  c W95 FAT32 (LBA)
+base_busybox.img2      104448 307199  202752  99M 83 Linux
+```
+
+If you want to create a loop device for the **first partition** (**base_busybox.img1**), which starts at sector 2048, you need to calculate the byte offset:
+
+```sh
+# Calculate the offset in bytes
+offset=$((2048 * 512))
+
+# Set up the loop device with the calculated offset
+losetup -o $offset /dev/loop3 base_busybox.img # Suppose that /dev/loop3 is available
+```
+
+The number 512 is commonly used because it represents the size of a sector in many disk and file system formats.
+
+Historically, the sector size for many disk drives is 512 bytes. Although modern disks often use 4096-byte sectors (4K sectors), 512 bytes is still widely used and is a standard size in many contexts.
+
+When working with disk images or partitions, tools like **fdisk**, display partition start addresses in terms of sectors, not bytes. For example, if a partition starts at sector 2048, it means it starts 2048 sectors from the beginning of the disk. To get the offset in bytes, you multiply the sector number by the size of a sector (512 bytes).
