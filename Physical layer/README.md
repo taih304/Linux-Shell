@@ -12,6 +12,8 @@ To view the available group in your account, use command: ``groups``
 
 To see all available groups type: ``compgen -g``
 
+To change group, use ``chgrp`` command. Change group to ``root`` for all files inside a folder: ``sudo chgrp root folder_name/*``
+
 # [Init script](Init%20script)
 Init script includes:
 * [Systemd](Init%20script/Systemd.md)
