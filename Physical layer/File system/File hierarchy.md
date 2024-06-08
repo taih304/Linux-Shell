@@ -32,6 +32,8 @@ Scripts run when the device is boot are stored in ``/etc/init``
 
 ## User setup
 
+Hostname is stored in ``/etc/hostname``.
+
 All user information is stored in ``/etc/passwd``
 
 ``sudo su - user_name``: Login as ``user_name``
