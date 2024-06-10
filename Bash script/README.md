@@ -41,6 +41,10 @@ chmod 775 hello.sh
 ./hello.sh
 ```
 
+**chroot** command will change root of the current subshell into the specified folder. E.g
+
+``chroot /path/to/newroot /bin/sh -l`` will change the root directory of the current subshell to folder ``newroot``, located at ``/path/to/newroot``.
+
 **Error**
 
 Error when running ``test.sh``:
