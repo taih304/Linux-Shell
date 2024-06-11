@@ -116,6 +116,20 @@ File ``/etc/rc.local`` runs when system is booted. Check [rc.local init script d
 
 ``rcS``, which is located in ``/etc/init.d``, stands for Run Control Scripts.  Check [rcS init script document](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Init%20script/README.md#rcs) for its implementation.
 
+## fstab
+The ``/etc/fstab`` file (short for "filesystem table") is a crucial configuration file in Unix-like operating systems, including Linux. The system uses this file to automatically mount filesystems at boot time and manage storage devices.
+
+Structure of /etc/fstab
+
+```sh
+<file system>  <mount point>  <type>  <options>  <dump>  <pass>
+```
+* **file system**: Specifies the device or remote filesystem to mount, such as a disk partition (e.g., /dev/sda1), a UUID, a label, or a network share.
+* **mount point**: The directory where the filesystem will be mounted (e.g. ``/``, ``/home``, ``/mnt/data``).
+* **type**: The type of filesystem (e.g., ext4, xfs, nfs, swap).
+* **options**: Mount options (e.g., defaults, ro, rw, noatime). These options control the behavior of the mounted filesystem.
+* **dump**: A field used by the dump utility to determine which filesystems need to be dumped (backed up). Typically set to 0 or 1.
+* **pass**: Determines the order in which filesystems are checked by fsck at boot time. 1 indicates the root filesystem, and 2 indicates other filesystems. 0 means the filesystem is not checked.
 # usr
 
 * ``/usr/local/bin`` and ``/usr/sbin``: [Set up command from a C process by using the /usr/local/bin or /usr/sbin directory](https://github.com/TranPhucVinh/C/blob/master/Environment/README.md#linux-environment).
