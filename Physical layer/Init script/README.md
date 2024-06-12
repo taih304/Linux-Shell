@@ -6,6 +6,8 @@
 | sudo service docker stop     | sudo systemctl stop docker    |
 | sudo service docker status     | sudo systemctl status docker    |
 
+SysV uses scripts stored in ``/etc/init.d/``. Processes are started and stopped using symbolic links in ``/etc/rc[0-6].d/``.
+
 ## rc.local
 File ``/etc/rc.local`` runs when system is booted. It exists in Ubuntu 16.04 and doesn't exist in Ubuntu 20.04 
 
@@ -75,6 +77,11 @@ mdev -s
 For the virtual filesystem, like procfs, sysfs, tmpfs, ``none`` can be added to mean that there is no physical disk partition linked to the mount point. The [rcS script in the customized Linux OS run on Raspbian](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Kernel/Customized%20Linux%20distro%20from%20scratch/rootfs.md) has that none value when setting procfs and sysfs.
 
 ``mdev -s`` will scan ``/sys`` to create ``/dev``. Base on [its implementation in Busybox](https://coral.googlesource.com/busybox/+/refs/tags/1_18_2/util-linux/mdev.c), ``mdev -s`` scans ``/sys/class/xxx``, looking for directories which have ``dev`` file, e.g ``/sys/class/tty/tty0/dev``. Then ``mdev`` creates the ``/dev/device_name`` node.
+
+# OpenRC
+
+OpenRC is a Linux init systems. It's compatible with SysVinit, can be used as a drop-in replacement. It provides dependency-based service management.
+
 # [.netrc](.netrc.md)
 # crontab
 
