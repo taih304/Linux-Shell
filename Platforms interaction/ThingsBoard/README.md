@@ -20,18 +20,18 @@ ThingsBoard API consists of two main parts: [device API](https://github.com/Tran
 ## Server-side API
 Server-side API is available as REST API.
 
-ThingsBoard support Swagger, a webpage to test its API. To access the Swagger webpage, add ``/swagger-ui`` after the ThingsBoard host. E.g ``demo.thingsboard.io/swagger-ui/``
+ThingsBoard supports Swagger, a webpage to test its API. Add ``/swagger-ui`` after the ThingsBoard host to access the Swagger webpage. E.g ``demo.thingsboard.io/swagger-ui/``
 
 ### JWT Tokens
 
 ThingsBoard uses JWT tokens for representing claims securely between the API client (browser, scripts, etc) and the platform. When you login to the platform, your username and password is exchanged to the pair of tokens. 
 
-The main token is short-lived token you should use to perform the API calls. The refresh token is used to get new main token once it is expired. The expiration time of main and refresh tokens is configurable in system settings via JWT_TOKEN_EXPIRATION_TIME and JWT_REFRESH_TOKEN_EXPIRATION_TIME parameters. Default expiration time values are 2.5 hours and 1 week respectively.
+The main token is the short-lived token you should use to perform the API calls. The refresh token is used to get new main token once it is expired. The main and refresh token expiration times are configurable in system settings via JWT_TOKEN_EXPIRATION_TIME and JWT_REFRESH_TOKEN_EXPIRATION_TIME parameters. Default expiration time values are 2.5 hours and 1 week respectively.
 
 Script to get a JWT
 
 ```sh
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"username":"tranphucvinh96@gmail.com", "password":"iotdev_admin"}' 'http://THINGSBOARD_URL/api/auth/login'
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"username":"tranphucvinh96@gmail.com", "password":"password"}' 'http://THINGSBOARD_URL/api/auth/login'
 ```
 
 ## Examples
