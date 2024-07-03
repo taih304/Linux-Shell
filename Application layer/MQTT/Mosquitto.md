@@ -1,4 +1,4 @@
-### MQTT client install
+# MQTT client install
 
 Mosquitto client: ``sudo apt install mosquitto-clients``
 
@@ -12,23 +12,21 @@ Mosquitto client: ``sudo apt install mosquitto-clients``
 * ``-p``: port
 * ``-P``: password
 
-### Send data to a MQTT broker
-
-MQTT cloud: ``broker.emqx.io``
+# Publish data
 
 ```sh
-mosquitto_pub -h broker.emqx.io -t "test/message" -m "Hello, World !"
+mosquitto_pub -h broker.emqx.io -t "test/message" -m "Hello, world" # MQTT cloud broker: broker.emqx.io
 ```
 
+# Subscribe to a topic
+
 ```sh
-mosquitto_sub -h broker.emqx.io -t "test/message"
+mosquitto_sub -h broker.emqx.io -t "test/message" # MQTT cloud broker: broker.emqx.io
 ```
 
 As testing on April 26th 2020, MQTT cloud ``mqtt.eclipse.org`` and ``iot.eclipse.org`` no longer work.
 
-As testing on April 15th 2021, MQTT cloud ``test.mosquitto.org`` no longer works.
-
-### Build MQTT broker with Mosquitto
+# Build MQTT broker with Mosquitto
 
 Install: ``sudo apt install mosquitto``. Default port is ``1883``.
 
@@ -52,6 +50,6 @@ Or pub/sub to the IP of the MQTT broker: ``mosquitto_sub -h 192.168.0.103 -t "te
 
 **Note**: If attached the port like ``mosquitto_sub -h 192.168.0.103:1883 -t "test/message"`` or ``mosquitto_sub -h localhost:1883 -t "test/message"``, there will be error: ``Unable to connect (Lookup error.).``
 
-### WebSocket is disabled
+# WebSocket is disabled
 
 According to [Mosquitto broker conf docs](https://mosquitto.org/man/mosquitto-conf-5.html), Websockets support is currently disabled by default at compile time. So you will need to build a version of Mosquitto from source for websocket support.
