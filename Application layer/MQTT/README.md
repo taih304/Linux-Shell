@@ -8,21 +8,9 @@ Commercialized cloud service nowadays supporting updating data by either using a
 
 # EMQ
 We use EMQ, a free EMQ broker for testing
-## Mosquitto
+# [Mosquitto](Mosquitto.md)
 
-Publish data
-
-```sh
-mosquitto_pub -h broker.emqx.io -t "test/message" -m "Hello, world"
-```
-
-Subscribe to a topic
-
-```sh
-mosquitto_sub -h broker.emqx.io -t "test/message"
-```
-
-## [MQTT.js](MQTT.js.md)
+# [MQTT.js](MQTT.js.md)
 
 # When to use MQTT, instead of REST ?
 
