@@ -18,3 +18,8 @@ To achieve those, a new AWS certificate is needed to be created as creating a ne
 In order to add those policies to the newly certificated, the AWS account must be **root**. 
 
 To create a new certificate: **AWS IoT** -> **Security** -> **Certificates** -> **Add certificate** -> **Auto-generate new certificate (recommended)** and **Active**. After pressing **Create**, download all CA files (AmazonRootCA1.pem, AmazonRootCA3.pem), certificate (*-certificate.pem.crt), public and private keys (``*-public.pem.key`` and ``*-private.pem.key``).
+
+To publish a message to the AWS MQTT broker:
+```sh
+mosquitto_pub -h a2qv1gbdc4mw4y-ats.iot.us-east-1.amazonaws.com -t "test_local_mqtt" -m "{}" --cert a7115d2093da32bf2877762b7c65bd701af9271f5671dec4f3122859a509d4e8-certificate.pem.crt --cafile AmazonRootCA1.pem --key a7115d2093da32bf2877762b7c65bd701af9271f5671dec4f3122859a509d4e8-private.pem.key -p 8883
+```
