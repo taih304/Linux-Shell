@@ -16,3 +16,5 @@ To achieve those, a new AWS certificate is needed to be created as creating a ne
 * 	GreengrassTESCertificatePolicyGreengrassCoreTokenExchangeRoleAlias
 
 In order to add those policies to the newly certificated, the AWS account must be **root**. 
+
+To create a new certificate: **AWS IoT** -> **Security** -> **Certificates** -> **Add certificate** -> **Auto-generate new certificate (recommended)** and **Active**. After pressing **Create**, download all CA files (AmazonRootCA1.pem, AmazonRootCA3.pem), certificate (*-certificate.pem.crt), public and private keys (``*-public.pem.key`` and ``*-private.pem.key``).
