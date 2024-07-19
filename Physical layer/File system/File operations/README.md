@@ -1,12 +1,4 @@
-# Create
-
-* ``touch filename.txt``: Create new file ``filename.txt``
-* ``mkdir foldername``: make a directory (a folder)
-* [File archive and compression](File%20archive%20and%20compression.md)
-
-## fdisk
-
-**fdisk**, abbreviated for **format disk**, is a dialog-driven program for the creation and manipulation of partition tables. Check [fdisk implementation document](fdisk.md).
+# [Create](Create20operations.md)
 
 # [Read](Read%20operations)
 
