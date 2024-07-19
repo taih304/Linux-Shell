@@ -1,3 +1,42 @@
+# cp
+
+``cp``: Copy ``SOURCE`` to ``DEST``, or multiple ``SOURCE(s)`` to ``DIRECTORY``.
+
+``cp test test_copy``: copy the file ``test`` to file/folder ``test_copy``. It will overwrite the content of file ``test_copy`` if existed or create ``test_copy`` if not exit. If folder ``test_copy`` exists, ``test`` will be copied inside.
+
+Copy file to folder can also end with ``/``: ``cp test test_copy/``
+
+Copy folder to folder with ``-R``: ``cp -R folder_1/ folder_2/``
+ 
+Copy a file to the current running terminal, i.e opening that file: ``cp test.c /dev/tty``
+
+Copy input from the current running terminal to a file, i.e writing to that file: ``cp /dev/tty test.c``
+# nano
+
+``nano filename``: edit the content of file ``filename`` or create a new one if not existed.
+
+In some cases nano will try to dump the buffer into an emergency  file. This  will  happen  mainly if ``nano`` receives a ``SIGHUP`` or ``SIGTERM`` or runs out of memory.  It will write the buffer into a file named ``nano.save`` if the  buffer didn't have a name already, or will add a ``.save`` suffix to the current filename.
+ 
+E.g: This is a wrong operation of nano with ``<`` operator and will result in the `SIGHUP``
+
+```sh
+nano fake.md < README.md
+```
+**Result**
+
+```
+Received SIGHUP or SIGTERM
+
+Buffer written to nano.save
+```
+
+``README.md`` is then written to ``fake.md.save``
+
+# mv
+
+``mv``: move a file from a directory to other
+
+``$ mv name_want_to_change name_wish_to_change``: rename
 # dd
 
 ``dd`` is used to convert and copy files:
@@ -18,48 +57,6 @@ Write content to a file
 
 ``tee -a filename``: Appened the written content to ``filename``
 
-# mount
-
-mount a filesystem. When the **mount** command is executed without any arguments, it provides a list of all currently mounted filesystems along with relevant details, e.g:
-```
-proc on /proc type proc (rw,relatime)
-sysfs on /sys type sysfs (rw,relatime)
-none on /dev type devtmpfs (rw,relatime,size=465564k,nr_inodes=116391,mode=755)
-```
-
-Everytime a block device like USB, SD card is plugged into an Ubuntu PC, it will **automatically mount** those devices into a file system.
-
-``mount source_block_device target_folder``: Mount ``source_block_device`` (the source block device like ``USB``, ``SD card``,...)  to ``target_folder`` (the target folder). Note that ``target_folder`` must exist before mounting.
-
-E.g: 
-
-``sudo mount /dev/sdc1 mount_folder``: Mount SD card ``sdc1`` to ``mount_folder`` 
-
-``mount /dev/sdb1 /mnt``: Mount the USB ``sdb1``
-
-**Options**:
-* ``-t``: indicate the filesystem type. The full list of all supported filesystems depends on your kernel.
-* ``-o``: mount options
-
-**Mount to loop device**: ``mount`` allows mounting via a loop device
-
-E.g: ``mount -o loop=/dev/loop3 boot.img /mnt/tmp``. However, it must be sure that ``/dev/loop3`` isn't mounted to any other device yet. Use ``lsblk`` command to list out all loop devices mounted as the blocked ones.
-
-If no explicit loop device is mentioned (but just an option ``-o loop`` is given), then mount will try to find some unused loop device and use that.
-
-E.g: ``mount -o loop boot.img /mnt/tmp``
-
-Notice that if the mount file is ``img``, as an image file of an OS (e.g ``rootfs.img``), after mounting it with ``mount`` to the ``target_folder``, the ``target_folder`` will then then have all files of that directory like ``boot``, ``bin``, ``home``,...
-
-**remount**: Option ``remount`` will attempt to remount an already-mounted filesystem. This is commonly used to change the mount flags for a filesystem, especially to make a readonly filesystem writeable.
-```sh
-mount -o remount,rw / #This will make path / (as rootfs) to be writeable
-```
-# umount
-
-``umount`` will detache/unmount a file system.
-
-E.g: ``umount /mnt/tmp``
 # printf
 
 ``printf hello`` and ``printf "hello"`` will printf to a stream.

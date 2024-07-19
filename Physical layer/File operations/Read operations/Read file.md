@@ -26,6 +26,7 @@ echo "$file_contents"
 E.g: File ``test.txt`` has content ``ls``
 
 ``source test.txt`` and ``. text.txt`` will run ``ls`` command
+
 # cut
 **cut** will cut out the specific pattern from its input.
 
@@ -74,25 +75,19 @@ with **echo**
 ```sh
 echo "Alice,Smith,25" | cut -d ',' -f 2 # Smith
 ```
-# tree
-
-``tree`` command is used to display the tree of all files inside a directory
-
-tree command install
-
-```sh
-sudo apt install tree
-```
-
-``tree directory_name``: Display the tree of all files inside ``directory_name``
 
 # Other commands
 
-``gnome-open filename``: gnome to open a file
+* ``gnome-open filename``: gnome to open a file
+* ``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
+* ``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
+* ``readlink``: Get path of a file. User have to be inside the folder where that file is in then type ``readlink -f file.txt``
+* ``realpath filename``: print out path of a file
 
-``less filename``: Read a file, the opened filename will be opened to cover the current terminal window.
+## file
+``file file_name``: determine file type of ``file_name``
 
-``stat``: Display file or file system status. E.g: ``stat folder_1``, ``stat test.txt``
+**E.g**: ``file main.c`` will return ``main.c: C source, ASCII text, with CRLF line terminators``
 
 ## sort
 
@@ -109,17 +104,3 @@ display_function("Hello, World !", 3);//Hel
 free(returned_string);
 //Other content follow the alphabetical order go here
 ```
-
-## df
-
-``df [OPTION] [FILE]``: Show information about the file system on which each FILE resides, or all file systems by default.
-
-* ``df -h``: list size of hardware, and usage of percentage
-* ``df -i``: list all inode
-
-## du
-
-`` du [OPTION] [FILE]``: Summarize disk usage of the set of FILEs, recursively for directories.
-
-* ``du -h``: list out disk usage in MB
-* ``sudo du -h --max-depth=1``: list the size of all file and folder in current directory

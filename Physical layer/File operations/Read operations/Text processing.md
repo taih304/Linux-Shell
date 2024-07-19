@@ -79,7 +79,7 @@ echo "hello    world" | tr -s ' ' # hello world
 ```
 # AWK
 
-``Gawk``  is  the GNU Project's implementation of the ``AWK`` programming language, and is implemented with command ``awk``.
+``Gawk`` is the GNU Project's implementation of the ``AWK`` programming language, and is implemented with command ``awk``.
 
 ``awk -f filename.txt``: Read content of file ``filename.txt``
 

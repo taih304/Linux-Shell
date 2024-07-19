@@ -4,7 +4,7 @@ Without a file system, data placed in a storage medium would be one large body o
 
 File systems can be used on **numerous different types of local storage devices** that use different kinds of media, like **hard disk drives**. For example, the **ISO 9660** file system is designed specifically for **optical discs**. In some cases, such as with [tmpfs](File%20system%20types.md#tmpfs), RAM (random-access memory) is used to create a temporary file system for short-term use.
 
-Some file systems also provide **file access via a network protocol** (for example, **NFS**, **SMB**, or **9P clients**). Some file systems are **virtual**, meaning that the supplied "files" (called virtual files) are computed on request (such as [procfs](File%20system%20types.md#procfs) and [sysfs](File%20system%20types.md#sysfs) or are merely a mapping into a different file system used as a backing store. The file system manages access to both the content of files and the metadata about those files.
+Some file systems also provide **file access via a network protocol** (for example, **NFS**, **SMB**, or **9P clients**). Some file systems are **virtual**, meaning that the supplied "files" (called virtual files) are computed on request (such as [procfs](File%20system%20types.md#procfs) and [sysfs](File%20system%20types.md#sysfs)) or are merely a mapping into a different file system used as a backing store. The file system manages access to both the content of files and the metadata about those files.
 
 # Filesystem architecture
 
