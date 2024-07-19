@@ -4,7 +4,9 @@
 
 Linux based operating system uses **Bash shell**, the shell environment used for several purposes like storing data, storing software configuration, locating terminal settings and changing shell environments.
 
-**Subshell**: A child process created by a shell, check [exec command](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/Process%20command.md#exec) to clarify this operation.
+In computing, a **shell** is a computer program which exposes an operating system's services to a human user or other programs. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer's role and particular operation. It is named a shell because it is the outermost layer around the operating system.
+
+**Subshell**: Whenever we run any command in a Bash shell, a **subshell** is created by default, and a new child process is spawned (forked) to execute the command. Check [exec command](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Physical%20layer/Process/Process%20command.md#exec) to clarify this operation.
 
 **Structure of a Unix command**:
 ```sh
@@ -12,7 +14,11 @@ command <mandatory_arg> [optional_arg]
 ```
 * ``<mandatory_arg>``: The mandatory arguments required for the command
 * ``[optional_arg]``: The optional arguments required for the command
-  
+
+```bash
+username$hostname # One host name can include many user_name
+```
+
 # Shell script overview
 
 The Shebang line is present at the top of the script, e.g:
@@ -34,7 +40,21 @@ Run a ``sh`` file: ``./test.sh``, ``/bin/bash test.sh``, ``. test.sh``, ``sh tes
 
 A file with no ``sh`` extension but include Bash script file can be run normally.
 
-If the shell script file is unable to run due to permission, use ``chmod``:
+**Error**
+
+Error when running ``test.sh``:
+
+```
+syntax error near unexpected token `$'{\r''
+```
+
+That error happen as there are mismatch when using new line
+
+Fix: ``sed -i 's/\r//' test.sh``
+
+# User priviledge
+
+**chmod**: If the shell script file is unable to run due to permission, use ``chmod``:
 
 ```cmd
 chmod 775 hello.sh
@@ -49,19 +69,9 @@ chroot [OPTIONS] NEW_ROOT [COMMAND [ARG]...]
 
 ``chroot /path/to/newroot /bin/sh`` will change the root directory of the current subshell to folder ``newroot``, located at ``/path/to/newroot``, then starts a subshell by calling ``/bin/sh``.
 
-**Error**
+**chgrp**: To change group, use ``chgrp`` command. Change group to ``root`` for all files inside a folder: ``sudo chgrp root folder_name/*``
 
-Error when running ``test.sh``:
-
-```
-syntax error near unexpected token `$'{\r''
-```
-
-That error happen as there are mismatch when using new line
-
-Fix: ``sed -i 's/\r//' test.sh``
-
-## Positional parameters
+# Positional parameters
 
 Positional parameters is the way to handle with command line argument when running a bash script
 

@@ -1,19 +1,3 @@
-# Shell
-
-In computing, a **shell** is a computer program which exposes an operating system's services to a human user or other programs. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer's role and particular operation. It is named a shell because it is the outermost layer around the operating system.
-
-Whenever we run any command in a Bash shell, a **subshell** is created by default, and a new child process is spawned (forked) to execute the command. 
-
-```bash
-username$hostname #One host name can include many user_name
-```
-
-To view the available group in your account, use command: ``groups``
-
-To see all available groups type: ``compgen -g``
-
-To change group, use ``chgrp`` command. Change group to ``root`` for all files inside a folder: ``sudo chgrp root folder_name/*``
-
 # [Init script](Init%20script)
 Init script includes:
 * [Systemd](Init%20script/Systemd.md)
@@ -36,15 +20,15 @@ Connectivity implementation on Linux Shell includes:
 
 # Miscellaneous system handler commands
 
-Other commands:
-
+* ``groups``: View the available group in your account, use command:
+* ``compgen -g``: See all available groups type: 
+* ``uname``: Name of OS
 * ``shutdown``
 * ``reboot``
 * ``cat /etc/os-release``: View OS information
 
 Name of OS:
 
-* ``uname``: Name of OS
 * ``uname -v``: Name of Kernel version, e.g: ``#82-Ubuntu SMP Fri Sep 4 12:23:10 UTC 2020``
 * ``uname -m``: Machine hardware name, e.g ``x86_64``
 * ``sudo lshw``: list system hardware information
