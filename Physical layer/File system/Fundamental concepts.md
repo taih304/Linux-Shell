@@ -36,12 +36,6 @@ The **inode** for each file includes the following information:
 * a pointer to a list of locks held on this file
 * Various properties of the file: owner information, size, time stamp (creation and modification), data block (pointers to the actual data),...
 
-# [File system types](File%20system%20types.md)
-* sysfs: Kernel, GPIO
-* procfs
-* tmpfs
-* devpts
-* FAT and FatFs
 # File permission
 
 ``r``,``w``: stand for read, write
