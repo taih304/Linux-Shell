@@ -1,3 +1,4 @@
+**Platform as a service** (**PaaS**), which offers a develop-and-deploy environment to build cloud apps.
 # Github
 ## Commands
 
