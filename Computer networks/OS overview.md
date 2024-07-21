@@ -14,7 +14,7 @@ In computing, a **system image** is a serialized copy of the entire state of a c
 
 # RTOS
 
-RTOS is an OS for realtime application as well as it gives realtime response to its related events. That happens as scheduler inside the RTOS takes a very short time when switching between the tasks/context switching which makes us feel like the RTOS has realtime response to the events.
+RTOS is an OS for real-time applications as well as it gives real-time responses to its related events. That happens as scheduler inside the RTOS takes a very short time when switching between the tasks/context switching which makes us feel like the RTOS has realtime response to the events.
 
 The RTOS also has short latency when handling with interrupt, as well as having reliable and timebound when doing inter-task communication.
 
@@ -52,6 +52,11 @@ EMAC OE linux is an Embedded Linux. EMAC OE is EMAC's standard Linux distributio
 * **Root filesystem**
 
 When an embedded Linux is commercialized, e.g Raspberry Pi board, IMX board, Beaglebone board, their vendors will provide us the 4 main components (Bootloader, Kernel, Rootfs and toolchain) in a single package, known as  **BSP** - **Board Support Package**.
+
+Embedded Linux software development can be separated into 3 categories:
+* Linux system programming: Linux IPC (FileIO, Process, Thread, Signal, etc), multithread programming
+* Linux Porting: Optimize and customize embedded Linux system. This requires knowledge on Makefile, shell scripts; build system like build-root, yocto; OS booting process, bootloader modification, rootfs package modification
+* Linux device driver: Develop driver for I2C, SPI, UART, USB, Watchdog,…
 
 # Building a Linux Embedded System
 Building an embedded Linux system requires:
