@@ -1,3 +1,4 @@
+**Software as a service** (**SaaS**), delivers apps as services, where users get access to software on a subscription basis.
 # Telegram
 ## curl
 
