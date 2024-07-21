@@ -3,6 +3,7 @@
 * CentOS
 * Armbian with Orange Pi
 
+**Infrastructure as a Service**, abbreviated as **IaaS**, offers compute and storage services.
 # [Platform as a service](Platform%20as%20a%20service.md)
 * [ThingsBoard](ThingsBoard)
 * [Heroku](Platform%20as%20a%20service.md#heroku)
