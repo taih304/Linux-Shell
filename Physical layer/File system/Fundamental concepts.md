@@ -6,6 +6,8 @@ File systems can be used on **numerous different types of local storage devices*
 
 Some file systems also provide **file access via a network protocol** (for example, **NFS**, **SMB**, or **9P clients**). Some file systems are **virtual**, meaning that the supplied "files" (called virtual files) are computed on request (such as [procfs](File%20system%20types.md#procfs) and [sysfs](File%20system%20types.md#sysfs)) or are merely a mapping into a different file system used as a backing store. The file system manages access to both the content of files and the metadata about those files.
 
+In computing, a **system image** is a serialized copy of the entire state of a computer system stored in some non-volatile form such as a **file**. This can be an **OS image**, **disk image** and **process image**.
+
 # Filesystem architecture
 
 A file system consists of two or three layers. Sometimes the layers are explicitly separated, and sometimes the functions are combined.
