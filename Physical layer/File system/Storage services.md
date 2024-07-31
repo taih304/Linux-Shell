@@ -22,9 +22,9 @@ NAS disadvantages:
 
 # SAN (Storage Area Network)
 
-SAN (Storage Area Network) is a high speed private network dedicated for data transfering between hosts or storage devices inside a storage system. SAN allows centralize control and sharing storage data and resource. Most of nowadays SAN based on optical fiber, which is easy to expand, increase performance and availability.
+SAN (Storage Area Network) is a high speed private network dedicated for data transfering between hosts or storage devices inside a storage system. SAN allows centralized control and sharing storage data and resource. Most of nowadays SAN based on optical fiber, which is easy to expand, increase performance and availability.
 
-SAN are divided into 2 level: physcial and logic
+SAN is divided into 2 level: physical and logic
 * Physical level: refer to the connection inside the SAN network which creates a monolithic system and is available at the same time for multiple users and application
 * Logic level: including applications, management tools and services built on "physical level devices" which supports controlling the SAN system.
 
@@ -41,4 +41,8 @@ With those advantages, SAN are mainly used in big data center.
 
 # Comparison between storage solutions
 * NAS and SAN both solve the disadvantages of DAS. With NAS and SAN, the storing process is seperated from server and merged into the network which allows a wide range to access for server, users and applications to access and transfer data. Maintaining the system will then be easier, and decreasing system cost. NAS is available for file sharing but is limited in the working environment with databases. Sharing the same network infrastructure with other applications will cause NAS to slow down the network speed and also decrease the system performance.
-* SAN solves NAS disadvantages and is best for high speed, low-latency applications. Moreover, SAN is high reliability to change request in the network infrastructure. However, SAN is high cost compared to DAS and NAS. 
+* SAN solves NAS disadvantages and is best for high-speed, low-latency applications. Moreover, SAN has high reliability to change requests in the network infrastructure. However, SAN is more expensive than DAS and NAS. 
+# Cloud infrastructure
+
+Compared to cloud infrastructure, on-premises infrastructure's hardware procurement process can take a long time.
+
