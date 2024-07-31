@@ -18,7 +18,7 @@ NAS advantages:
 
 NAS disadvantages:
 * As sharing the network infrastructure with other host devices, NAS can slow down the LAN network, especially when the stored data is big
-* For database like SQL and NoSQL, NAS is not efficient as those database are stored as block, not file.
+* For databases like SQL and NoSQL, NAS is not efficient as those database are stored as block, not file.
 
 # SAN (Storage Area Network)
 
@@ -43,6 +43,8 @@ With those advantages, SAN are mainly used in big data center.
 * NAS and SAN both solve the disadvantages of DAS. With NAS and SAN, the storing process is seperated from server and merged into the network which allows a wide range to access for server, users and applications to access and transfer data. Maintaining the system will then be easier, and decreasing system cost. NAS is available for file sharing but is limited in the working environment with databases. Sharing the same network infrastructure with other applications will cause NAS to slow down the network speed and also decrease the system performance.
 * SAN solves NAS disadvantages and is best for high-speed, low-latency applications. Moreover, SAN has high reliability to change requests in the network infrastructure. However, SAN is more expensive than DAS and NAS. 
 # Cloud infrastructure
+
+When an organization uses new digital technologies to create or modify business processes, culture, and customer experiences, it's **digital transformation**.
 
 Compared to cloud infrastructure, on-premises infrastructure's hardware procurement process can take a long time.
 
