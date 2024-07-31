@@ -6,7 +6,7 @@ Signin with username, password then enter MFA password. Get the MFA password fro
 
 ## IAM user
 
-**Identity and Access Management** (**IAM**) lets administrators authorize who can take action on specific resources, giving you full control and visibility to manage Google Cloud resources centrally.
+**Identity and Access Management** (**IAM**) lets administrators authorize who can take action on specific resources, giving you full control and visibility to manage AWS and Google Cloud resources centrally. An Identity Access Management policy, or **IAM policy**, is made of three parts: “Who”, “can do what”, and “on which resource”.
 
 After you create an AWS accout, this is treated as a root account. This root account will then automatically have a 12-digit account ID along with a Sign-in URL for IAM users in this account. As the name infered, this sign-in URL for IAM users will be used for all IAM users created by this root account to login.
 
