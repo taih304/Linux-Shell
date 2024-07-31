@@ -5,6 +5,12 @@
 * Firebase
 * [Google Apps Script]()
 
+**Serverless computing** is a cloud computing execution model in which **the cloud provider allocates machine resources on demand**, taking care of the servers on behalf of their customers. Businesses provide code for the function they want to run and the cloud provider handles all infrastructure management. Resources such as computing power are automatically provisioned behind the scenes as needed.
+
+**Serverless computing**, also known as **Function as a service**, are managed VMs running managed containers.
+
+**App Engine**, **Cloud Functions** and **Cloud Run** are all **Serverless computing**.
+
 **Anthos** is a **managed application platform** that allows organization to build an application once and **run it anywhere**, across **on-premises data centers** and **multiple public clouds**. Anthos enables you to run **Kubernetes clusters** anywhere, in both cloud and on-premises environments.
 
 Anthos is the core enterprise technology that empowers Google Kubernetes Engine (GKE) and Google Distributed Cloud (GDC). (edited) 
