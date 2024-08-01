@@ -1,3 +1,7 @@
+**Databases** are built and optimized to enable ingesting large amounts of data from many different sources efficiently.
+
+A **data lake** is a repository designed to store, process, and secure large amounts of **structured**, **semi-structured** and **unstructured data**.
+
 On-premise storage:
 * DAS (Direct Attached Storage): Store data by direct attached storage media
 * NAS (Network Attached Storage): Store data into storage device by IP network
