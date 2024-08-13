@@ -43,7 +43,7 @@ echo "Hello, World !"
 
 Must have Shebang line for systemctl to run the shell script
 
-``my-startup.service`` must located inside ``/etc/systemd/system``:
+``my-startup.service`` must be located inside ``/etc/systemd/system``:
 
 ```c
 [Unit]
