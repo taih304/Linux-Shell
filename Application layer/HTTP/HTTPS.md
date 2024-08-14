@@ -1,3 +1,4 @@
+OpenSSL is a robust, full-featured open-source toolkit that **implements the Secure Sockets Layer** (**SSL**) and **Transport Layer Security** (**TLS**) protocols, as well as a general-purpose cryptography library.
 # Get the valid certificate
 
 A valid digital certificate last for more than one year (the expiry date can be checked easily)
