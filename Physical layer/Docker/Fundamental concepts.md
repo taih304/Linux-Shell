@@ -38,3 +38,6 @@ docker push tranphucvinh96/esp8266_rtos_sdk_docker
 # Docker Engine
 
 **Docker Engine** is an application that supports launching Docker daemon process
+
+# Docker Compose
+Docker Compose is a tool for defining and running multi-container Docker applications. It allows you to manage all the services your app relies on (like databases, caches, web servers) from a single configuration file (``docker-compose.yml``). Using Compose, you can define the infrastructure for your application and manage it easily through Docker
