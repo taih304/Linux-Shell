@@ -13,7 +13,7 @@
 
 **Anthos** is a **managed application platform** that allows organization to build an application once and **run it anywhere**, across **on-premises data centers** and **multiple public clouds**. Anthos enables you to run **Kubernetes clusters** anywhere, in both cloud and on-premises environments.
 
-Anthos is the core enterprise technology that empowers Google Kubernetes Engine (GKE) and Google Distributed Cloud (GDC). (edited) 
+Anthos is the core enterprise technology that empowers **Google Kubernetes Engine** (**GKE**) and **Google Distributed Cloud** (**GDC**). GKE is comprised of a group of Google Compute Engine instances running Kubernetes.
 
 For AWS, Anthos clusters on AWS (GKE on AWS) lets you manage GKE clusters running on AWS infrastructure through the Anthos Multi-Cloud API.
 
