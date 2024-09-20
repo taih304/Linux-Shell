@@ -58,4 +58,14 @@ Example:
 
 # pipe
 
-``|`` (pipe): send the output of the program on the left to the input of the program on the right, **not file**.
+``|`` (pipe): send the output of the program on the left to the input of the program on the right, **not file**. Pipe provides a data flow between processes.
+
+Pipe provides the data flow between the ``ls`` and ``grep``:
+```sh
+ls|grep "a"
+```
+Without pipe, this command will be:
+```sh
+ls > temp.txt
+grep "a" < temp.txt
+```
