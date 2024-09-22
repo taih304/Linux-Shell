@@ -125,9 +125,7 @@ When the service performance meets or exceeds the SLO, end users, customers, and
 
 SLO is treated as a part of SLA
 
-Why is the expectation for 100% service availability misleading ?
-
-Because service maintenance is **inevitable** and **requires downtime**. In order to roll out updates, operators have to take a system offline. Ensuring 100% service availability is also incredibly expensive for any business.
+Why is the expectation for 100% service availability misleading ? Because service maintenance is **inevitable** and **requires downtime**. In order to roll out updates, operators have to take a system offline. Ensuring 100% service availability is also incredibly expensive for any business.
 
 Error budget is the space between SLA and SLO
 
