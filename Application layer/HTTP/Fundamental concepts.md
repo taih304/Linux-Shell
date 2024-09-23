@@ -1,11 +1,11 @@
 # Implementations of HTTP
 **HTTP** is implemented in two programs: a **client** program and a **server** program.
 
-The client program and server program, executing on different end systems, talk to each other by exchanging HTTP messages. HTTP defines the structure of these messages and how the client and server exchange the messages.
+The client program and server program, executing on different end systems, talk to each other by exchanging **HTTP messages**. HTTP defines **the structure of these messages** and how the client and server exchange the messages.
 
 **Web servers**, which implement the server side of HTTP, house Web objects, each addressable by a URL. Popular Web servers include **Apache** and **Microsoft Internet Information Server**.
 
-**HTTP uses TCP** as its underlying transport protocol (rather than running on top of **UDP**). The HTTP client first initiates a TCP connection with the server. Once the connection is established, the browser and the server processes access TCP through their socket interfaces. However, **HTTP** can be adapted to use unreliable protocols such as the **UDP**, for example in **HTTPU** and **Simple Service Discovery Protocol** (**SSDP**).
+**HTTP uses TCP** as its underlying transport protocol (rather than running on top of UDP). The HTTP client first initiates a TCP connection with the server. Once the connection is established, the browser and the server processes access TCP through their socket interfaces. However, **HTTP** can be adapted to use unreliable protocols such as the **UDP**, for example in **HTTPU** and **Simple Service Discovery Protocol** (**SSDP**).
 
 **On the client side**, **the socket interface** is the door between the **client process** and the **TCP connection**; on the server side it is the door between the **server process** and the **TCP connection**.
 
