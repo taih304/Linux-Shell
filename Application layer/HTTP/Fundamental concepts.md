@@ -21,7 +21,7 @@ User-agent: Mozilla/5.0
 Accept-language: fr
 ```
 
-We would be remiss if we didn’t mention that **a request generated with a form does not necessarily use the POST method**. Instead, HTML forms often use the GET method and include the inputted data (in the form fields) in the requested URL.
+**A request generated with a form does not necessarily use the POST method**. Instead, HTML forms often use the GET method and include the inputted data (in the form fields) in the requested URL.
 
 **For example, if a form uses the GET method, has two fields, and the inputs to the two fields are monkeys and bananas, then the URL will have the structure www.somesite.com/animalsearch?monkeys&bananas**. In your day-to-day Web surfing, you have probably noticed extended URLs of this sort.
 
