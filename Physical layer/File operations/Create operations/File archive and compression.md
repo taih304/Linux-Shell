@@ -70,6 +70,7 @@ You can't archive or unarchive other types of file like ``.zip``, ``rar`` with `
 **Archive**
 * ``-c``: create a new archive
 * ``-f``: use archive file or device ARCHIVE
+* ``-cvf`` to archive the folder. ``tar -cvf archive_name.tar /path/to/folder``
 
 Archive multiple files to a ``.tar`` file: ``tar -cf test.tar file1.md file2.md``
 
