@@ -57,7 +57,11 @@ Adding echo log like this won't print out on ``/var/log/syslog``.
 echo "Hello, World !"
 exec /etc/init.d/rc S
 ```
+For the virtual filesystem, like procfs, sysfs, tmpfs, ``none`` can be added to mean that there is no physical disk partition linked to the mount point. The [rcS script in the customized Linux OS run on Raspbian](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Kernel/Customized%20Linux%20distro%20from%20scratch/rootfs.md) has that none value when setting procfs and sysfs.
+
 **Mdev** has a config file for controlling ownership/permissions of device nodes if your system needs something more than the default root/root ``660`` permissions. For this, you need to have hotplugging enabled in your kernel.
+
+``mdev -s`` will scan ``/sys`` to create ``/dev``. Base on [its implementation in Busybox](https://coral.googlesource.com/busybox/+/refs/tags/1_18_2/util-linux/mdev.c), ``mdev -s`` scans ``/sys/class/xxx``, looking for directories which have ``dev`` file, e.g ``/sys/class/tty/tty0/dev``. Then ``mdev`` creates the ``/dev/device_name`` node.
 
 So a typical code snippet from the ``rcS`` init script will be:
 ```sh
@@ -66,9 +70,7 @@ mount -t sysfs sysfs /sys
 echo /sbin/mdev > /proc/sys/kernel/hotplug
 mdev -s
 ```
-For the virtual filesystem, like procfs, sysfs, tmpfs, ``none`` can be added to mean that there is no physical disk partition linked to the mount point. The [rcS script in the customized Linux OS run on Raspbian](https://github.com/TranPhucVinh/Raspberry-Pi-GNU/blob/main/Kernel/Customized%20Linux%20distro%20from%20scratch/rootfs.md) has that none value when setting procfs and sysfs.
 
-``mdev -s`` will scan ``/sys`` to create ``/dev``. Base on [its implementation in Busybox](https://coral.googlesource.com/busybox/+/refs/tags/1_18_2/util-linux/mdev.c), ``mdev -s`` scans ``/sys/class/xxx``, looking for directories which have ``dev`` file, e.g ``/sys/class/tty/tty0/dev``. Then ``mdev`` creates the ``/dev/device_name`` node.
 # /etc/inittab
 /etc/inittab is a configuration file used by the traditional SysV-style init system in Unix-like operating systems to define how the system should set up and manage various processes during startup and while the system is running. 
 
