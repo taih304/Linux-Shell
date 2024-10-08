@@ -42,7 +42,7 @@ Then go to Github or Gitlab and add this key.
 
 ## Add SSH key to known host
 
-If a SSH key is not known to host, there will be error. To solve that isuse, add that SSH key to known host:
+If a SSH key is not known to host, there will be error. To solve that issue, add that SSH key to known host:
 
 **Step 1**: Get the RSA key of your server, where ``server_ip`` is your server's IP address, such as ``192.168.1.1``: ``ssh-keyscan -t rsa server_ip``
 
