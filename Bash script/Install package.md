@@ -54,4 +54,4 @@ dpkg -x libi2c-dev.deb .
             └── dev-interface.gz
 ```
 
-``i2c/smbus.h`` can be used as the header file for other source code while ``libi2c.a`` is the static library source code. Check [libi2c-dev static library in Bazel for this implementation](https://github.com/TranPhucVinh/Linux-Shell/blob/master/Bash%20script/Build%20automation%20tools/Bazel/C%20source%20files.md#static-library).
+``i2c/smbus.h`` can be used as the header file for other source code while ``libi2c.a`` is the static library source code. Check [static library in Bazel for this implementation](https://github.com/TranPhucVinh/C/blob/master/Environment/Bazel/Bazel%20for%20library.md#static-library).
